@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{150FCB89-AB9E-4EDD-A5A9-DDAC9747E5A0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HHMES.ConfigModule</RootNamespace>
+    <AssemblyName>HHMES.ConfigModule</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmConfigMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfigMain.Designer.cs">
+      <DependentUpon>frmConfigMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\HHMES.Server\HHMES.Server.DataAccess\HHMES.Server.DataAccess.csproj">
+      <Project>{D1317673-F72E-404C-B7FA-D5B09EF40665}</Project>
+      <Name>HHMES.Server.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HHMES.Common\HHMES.Common.csproj">
+      <Project>{269ECEFF-B6C2-4708-86BA-AFBB1A2B045C}</Project>
+      <Name>HHMES.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HHMES.Core\HHMES.Core.csproj">
+      <Project>{2A59861C-5D4D-4768-B31F-7F59A8517DAE}</Project>
+      <Name>HHMES.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HHMES.Library\HHMES.Library.csproj">
+      <Project>{CC733F2A-65DE-411F-9093-71CD3A5D9B27}</Project>
+      <Name>HHMES.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HHMES.ORM\HHMES.ORM.csproj">
+      <Project>{34000ABD-4169-45B5-A668-1901F1EB5FDE}</Project>
+      <Name>HHMES.ORM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HHMES.Business\HHMES.Business.csproj">
+      <Project>{A674DB78-C6CB-409B-893D-728ABF88EC84}</Project>
+      <Name>HHMES.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HHMES.Interfaces\HHMES.Interfaces.csproj">
+      <Project>{E96FA431-A247-49F3-892B-03E411957180}</Project>
+      <Name>HHMES.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HHMES.Models\HHMES.Models.csproj">
+      <Project>{2CF256B2-F5E0-4670-8644-08DDF65B0009}</Project>
+      <Name>HHMES.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmConfigMain.resx">
+      <DependentUpon>frmConfigMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48_Dept.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48_Expense.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48_GRN.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48_GRNReturn.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48_ImportCard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48_MaintainItem.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48_MenuAuth1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48_MenuAuth.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48_OperateLog.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48_PeriodEnd.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48_Pn.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48_PromotionPlan.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48_Quotation1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48_Quotation.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48_SalesInvoice.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48_SalesOrder.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48_SignCard.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48_StockTakeOpenReport.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\60_Export.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\64_Check.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bk_reg.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonCascade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-for-app1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find50x50.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

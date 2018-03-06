@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A674DB78-C6CB-409B-893D-728ABF88EC84}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HHMES.Business</RootNamespace>
+    <AssemblyName>HHMES.Business</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HHMES.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bllAttachmentLib.cs" />
+    <Compile Include="bllCompanyInfo.cs" />
+    <Compile Include="BLL_Base\bllBase.cs" />
+    <Compile Include="BLL_Base\bllBaseBusiness.cs" />
+    <Compile Include="BLL_Base\bllBaseDataDict.cs" />
+    <Compile Include="bllLocalLog.cs" />
+    <Compile Include="BLL_Business\bllBusinessLog.cs" />
+    <Compile Include="BLL_Business\bllUnknow.cs" />
+    <Compile Include="BLL_Business\bllWMS_BillIn.cs" />
+    <Compile Include="BLL_Business\bllWMS_BillOut.cs" />
+    <Compile Include="BLL_Business\bllWMS_BillAccount.cs" />
+    <Compile Include="BLL_Business\bllWMS_BillAdjust.cs" />
+    <Compile Include="BLL_Business\bllWMS_BillCheck.cs" />
+    <Compile Include="BLL_Business\bllWMS_BillMove.cs" />
+    <Compile Include="BLL_Business\bllWMS_Task.cs" />
+    <Compile Include="BLL_DataDict\bllCommonDataDict.cs" />
+    <Compile Include="BLL_DataDict\bllCustomer.cs" />
+    <Compile Include="BLL_DataDict\bllNullObjectDataDict.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL_DataDict\bllPerson.cs" />
+    <Compile Include="BLL_DataDict\bllWMS_Material.cs" />
+    <Compile Include="BLL_DataDict\bllWMS_WareCell.cs" />
+    <Compile Include="BLL_DataDict\bllWMS_Warehouse.cs" />
+    <Compile Include="BLL_DataDict\bllWMS_Pallet.cs" />
+    <Compile Include="BLL_DataDict\bllWMS_Stock.cs" />
+    <Compile Include="BLL_DataDict\bllWMS_StockHistory.cs" />
+    <Compile Include="CommonData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataDictCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Security\ActionNodeTag.cs" />
+    <Compile Include="Security\AuthNodeTag.cs" />
+    <Compile Include="Security\bllGroupAuthority.cs" />
+    <Compile Include="Security\bllMenuMgr.cs" />
+    <Compile Include="Security\DomainLdapTools.cs" />
+    <Compile Include="Security\LoginAuthorization.cs" />
+    <Compile Include="Security\NovellLdapTools.cs" />
+    <Compile Include="Security\bllUser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\HHMES.Server\HHMES.Server.DataAccess\HHMES.Server.DataAccess.csproj">
+      <Project>{D1317673-F72E-404C-B7FA-D5B09EF40665}</Project>
+      <Name>HHMES.Server.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HHMES.Core\HHMES.Core.csproj">
+      <Project>{2A59861C-5D4D-4768-B31F-7F59A8517DAE}</Project>
+      <Name>HHMES.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HHMES.ORM\HHMES.ORM.csproj">
+      <Project>{34000ABD-4169-45B5-A668-1901F1EB5FDE}</Project>
+      <Name>HHMES.ORM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HHMES.Bridge\HHMES.Bridge.csproj">
+      <Project>{C722EFFF-6985-478D-9BB2-C536821AC2FE}</Project>
+      <Name>HHMES.Bridge</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HHMES.Interfaces\HHMES.Interfaces.csproj">
+      <Project>{E96FA431-A247-49F3-892B-03E411957180}</Project>
+      <Name>HHMES.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HHMES.Models\HHMES.Models.csproj">
+      <Project>{2CF256B2-F5E0-4670-8644-08DDF65B0009}</Project>
+      <Name>HHMES.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HHMES.WebServiceReference\HHMES.WebServiceReference.csproj">
+      <Project>{830D9756-D0F4-4140-8AFC-500E8ECA03C4}</Project>
+      <Name>HHMES.WebServiceReference</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

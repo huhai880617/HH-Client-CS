@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSFramework.Tools.ClassGenerator", "CSFramework.Tools.ClassGenerator.csproj", "{7167CA15-E74C-4730-B967-7233EF56BD5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSFramework.ORM", "..\CSFramework.ORM\CSFramework.ORM.csproj", "{34000ABD-4169-45B5-A668-1901F1EB5FDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7167CA15-E74C-4730-B967-7233EF56BD5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7167CA15-E74C-4730-B967-7233EF56BD5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7167CA15-E74C-4730-B967-7233EF56BD5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7167CA15-E74C-4730-B967-7233EF56BD5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34000ABD-4169-45B5-A668-1901F1EB5FDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34000ABD-4169-45B5-A668-1901F1EB5FDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34000ABD-4169-45B5-A668-1901F1EB5FDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34000ABD-4169-45B5-A668-1901F1EB5FDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

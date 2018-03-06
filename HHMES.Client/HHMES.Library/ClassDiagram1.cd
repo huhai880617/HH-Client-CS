@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HHMES.Library.ColumnFieldTool" Collapsed="true">
+    <Position X="21.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>CommonClass\ColumnFieldTool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.DataBinder">
+    <Position X="25.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAIAAgAABAwICAEAAAkQQgEAABAIAQFAgQA=</HashCode>
+      <FileName>CommonClass\DataBinder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.DevGridView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="30.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAACCAABAggAAAAAACAAAEAABAQAAICAAAAAgAgA=</HashCode>
+      <FileName>CommonClass\DevGridView.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HHMES.Library.DevStyle" Collapsed="true">
+    <Position X="21.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAgAAAADAABAAAAAAQAAAAAAgAAAAAABAwAAAAAA=</HashCode>
+      <FileName>CommonClass\DevStyle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.GenerateSortID" Collapsed="true">
+    <Position X="25.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAgABAAAQAAAAAAAAAAAAAAAAAABAAEwAAEAAAAA=</HashCode>
+      <FileName>CommonClass\GenerateSortID.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.MdiTools" Collapsed="true">
+    <Position X="28.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAEAAIAAAAAAAAAAAAAAAAAAAAAACQA=</HashCode>
+      <FileName>CommonClass\MdiTools.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.ModuleLoadDevComponent" Collapsed="true">
+    <Position X="30.5" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommonClass\ModuleLoadDevComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.ModuleManager" Collapsed="true">
+    <Position X="21.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ICAAAAAAAAAAAAAiAIBACASAEAAAAAKAAEgEAAAQAAA=</HashCode>
+      <FileName>CommonClass\ModuleManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.NavigatorBase" Collapsed="true">
+    <Position X="6.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAQoAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommonClass\NavigatorLoader.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HHMES.Library.NavigatorBarList" Collapsed="true">
+    <Position X="5.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQEAAAICAAAAAAAAAAAAAAAAAAAAAAAAAAAABAEA=</HashCode>
+      <FileName>CommonClass\NavigatorLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.NavigatorTreeView" Collapsed="true">
+    <Position X="7.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQMAAAAGAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAIA=</HashCode>
+      <FileName>CommonClass\NavigatorLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.SkinTools" Collapsed="true">
+    <Position X="30.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAACAAACAAgAAAEAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>CommonClass\SkinTools.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.DevBarButtonInfo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAgAAQAAAigAAAAAAAACAQCABAAABAECAGAQAAAAAA=</HashCode>
+      <FileName>CommonClass\ToolbarButtons.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HHMES.Library.ToolStripButtonInfo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAgAAQAAAigAAAAAAAACAQCABAAABAACAGAQAAAAAA=</HashCode>
+      <FileName>CommonClass\ToolbarButtons.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HHMES.Library.ToolStripButtonSeperator" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAgAAQAAACgAAAAAAAACAQAABAAABAACAGAQQAAAAA=</HashCode>
+      <FileName>CommonClass\ToolbarButtons.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HHMES.Library.MyButton" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAgAAQAAAigAAAAAAAACAQCABAAABAACAGAQAAAAAA=</HashCode>
+      <FileName>CommonClass\ToolbarButtons.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HHMES.Library.MyButtonSeperator" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAgAAAAAACgAAAAAAAACAQAABAAABAACAGAQQAAAAA=</HashCode>
+      <FileName>CommonClass\ToolbarButtons.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HHMES.Library.ToolStripRegister" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAhAAAEAAAQAAAAAAAAAAAABA=</HashCode>
+      <FileName>CommonClass\ToolbarRegister.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HHMES.Library.DevBarRegister" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAhAAAEAAAQAAAAAgAAAAAAAA=</HashCode>
+      <FileName>CommonClass\ToolbarRegister.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HHMES.Library.MyToolbarRegister" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAACAAAACAAAAABAAAEAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommonClass\ToolbarRegister.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HHMES.Library.frmBusinessLog" Collapsed="true">
+    <Position X="11" Y="7.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>CAEgQFAAgCEAIAAAAIKBAAACsCAgAAkRJAAWBAAKAOA=</HashCode>
+      <FileName>CommonForms\frmBusinessLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.frmFuzzySearch" Collapsed="true">
+    <Position X="7.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAMAAACAAIBQBgACAAkACAAAAAAAAAAAGAQBIAEA=</HashCode>
+      <FileName>CommonForms\frmFuzzySearch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.frmGridCustomize" Collapsed="true">
+    <Position X="10.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAwBAICBCABAAAKCABAACBgCAYBACQIgQIQIEBwA=</HashCode>
+      <FileName>CommonForms\frmGridCustomize.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.GridConfig" Collapsed="true">
+    <Position X="27" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAgAABMAAAAAICAAAMAAAAAEAAAAIEAAAAAABAA=</HashCode>
+      <FileName>CommonForms\frmGridCustomize.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.frmModifyLog" Collapsed="true">
+    <Position X="11" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAEgQXIAhCABoBAAAAKAACBCkAAAYIsQYACGGAQOAAA=</HashCode>
+      <FileName>CommonForms\frmModifyLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.frmModifyPwd" Collapsed="true">
+    <Position X="5.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>sAAAAIAAACAAABQAAACAAlACEAAAQIBAAFAAAARAIAA=</HashCode>
+      <FileName>CommonForms\frmModifyPwd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.frmBase" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAEAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>BaseForms\frmBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HHMES.Library.frmBaseBusinessForm" Collapsed="true">
+    <Position X="14.5" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAAEAAAYICABQAgAwAGAgAAyAAAAAQABAAAIAFAAIIA=</HashCode>
+      <FileName>BaseForms\frmBaseBusinessForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HHMES.Library.frmBaseChild" Collapsed="true">
+    <Position X="12.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAACBgCAAUFEGAkBACAAQFIACAABAAgAQgUBA=</HashCode>
+      <FileName>BaseForms\frmBaseChild.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HHMES.Library.frmBaseDataDictionary" Collapsed="true">
+    <Position X="12" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAICAAEAgAgECAAAgSAAIAAAABAAAIABAAAIA=</HashCode>
+      <FileName>BaseForms\frmBaseDataDictionary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.frmBaseDataForm" Collapsed="true">
+    <Position X="12.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iAgAGDYBoSQdlAgQQGGKoBiSQIEj6QIAgAIcS5FAJYA=</HashCode>
+      <FileName>BaseForms\frmBaseDataForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HHMES.Library.frmBaseDialog" Collapsed="true">
+    <Position X="6.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAACAAAAEAAACAAEACgAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseForms\frmBaseDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.frmModuleBase" Collapsed="true">
+    <Position X="8.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEUAAAACAAEAgIAQCAECACAAAAAAICAggAAAAEAAA=</HashCode>
+      <FileName>BaseForms\frmModuleBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HHMES.Library.frmModuleContainer" Collapsed="true">
+    <Position X="14.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAgAAAAACAAAAAAAAGAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseForms\frmModuleContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.ResImage" Collapsed="true">
+    <Position X="28.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YABAAAAQQAgAAgIAAAEBVAAAEQEAgAACUBCECiIACoA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.UserControls.ucAttachment" Collapsed="true">
+    <Position X="27" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAgABoCEAIQAECAaABDACkAEBgEICAAAMBAAAAAI=</HashCode>
+      <FileName>UserControls\ucAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.UserControls.ucCheckEdit" Collapsed="true">
+    <Position X="28.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAQADAAAgACAACAAAACAAAAAAgAACAAAAQAQAA=</HashCode>
+      <FileName>UserControls\ucCheckEdit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.UserControls.ucCheckedListBoxBinding" Collapsed="true">
+    <Position X="30.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAgAQAAiACAABAQCCAAAADAAAAEAAAEAAACAAAAAA=</HashCode>
+      <FileName>UserControls\ucCheckedListBoxBinding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.UserControls.ucCheckedListBoxEditor" Collapsed="true">
+    <Position X="21.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAgAQAAigCAABAQCaAAAADkgAIkAAAUAAACAAAACI=</HashCode>
+      <FileName>UserControls\ucCheckedListBoxEditor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.UserControls.ucDT_CustomerLookup" Collapsed="true">
+    <Position X="23.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QgCgCAAACCAgAgBAUADAAAgCBAAAAAAAABAACAAAAAA=</HashCode>
+      <FileName>UserControls\ucDT_CustomerLookup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.UserControls.ucDT_UserLookup" Collapsed="true">
+    <Position X="25.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QACgCAAAACAgAgBAQACAAAACAAAAAAAAABAACAAAAAA=</HashCode>
+      <FileName>UserControls\ucDT_UserLookup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HHMES.Library.UserControls.ucValueEdit" Collapsed="true">
+    <Position X="27" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAQAAAAAACAACAAAAACAiAAKIAAEACAAEAAAAAAAAAA=</HashCode>
+      <FileName>UserControls\ucValueEdit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="HHMES.Library.INavigatorStyle" Collapsed="true">
+    <Position X="21.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommonClass\NavigatorLoader.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="HHMES.Library.NavigatorStyle" Collapsed="true">
+    <Position X="23.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommonClass\NavigatorLoader.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="HHMES.Library.ModifyPwdType" Collapsed="true">
+    <Position X="21.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommonForms\frmModifyPwd.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="HHMES.Library.SearchCallBack" Collapsed="true">
+    <Position X="23.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>CommonForms\frmFuzzySearch.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="HHMES.Library.UserControls.PostAttachmentData" Collapsed="true">
+    <Position X="21.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserControls\ucAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="宋体" Size="9" />
+</ClassDiagram>

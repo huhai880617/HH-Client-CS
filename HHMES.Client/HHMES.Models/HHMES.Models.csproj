@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2CF256B2-F5E0-4670-8644-08DDF65B0009}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HHMES.Models</RootNamespace>
+    <AssemblyName>HHMES.Models</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessModels\tb_WMS_BillOut.cs" />
+    <Compile Include="BusinessModels\tb_WMS_BillOutDtl.cs" />
+    <Compile Include="BusinessModels\tb_WMS_BillAccount.cs" />
+    <Compile Include="BusinessModels\tb_WMS_BillAccountDtl.cs" />
+    <Compile Include="BusinessModels\tb_WMS_BillAdjust.cs" />
+    <Compile Include="BusinessModels\tb_WMS_BillAdjustDtl.cs" />
+    <Compile Include="BusinessModels\tb_WMS_BillCheck.cs" />
+    <Compile Include="BusinessModels\tb_WMS_BillCheckDtl.cs" />
+    <Compile Include="BusinessModels\tb_WMS_BillMove.cs" />
+    <Compile Include="BusinessModels\tb_WMS_BillMoveDtl.cs" />
+    <Compile Include="BusinessModels\tb_WMS_Stock.cs" />
+    <Compile Include="BusinessModels\tb_WMS_StockDtl.cs" />
+    <Compile Include="BusinessModels\tb_WMS_Task.cs" />
+    <Compile Include="BusinessModels\tb_WMS_TaskDtl.cs" />
+    <Compile Include="BusinessModels\tb_WMS_StockHistory.cs" />
+    <Compile Include="DataDictModels\tb_AccountIDs.cs" />
+    <Compile Include="DataDictModels\tb_Currency.cs" />
+    <Compile Include="DataDictModels\tb_Location.cs" />
+    <Compile Include="DataDictModels\sys_BusinessTables.cs" />
+    <Compile Include="DataDictModels\tb_WMS_Department.cs" />
+    <Compile Include="DataDictModels\tb_WMS_Material.cs" />
+    <Compile Include="DataDictModels\tb_WMS_Pallet.cs" />
+    <Compile Include="DataDictModels\tb_WMS_WareCell.cs" />
+    <Compile Include="DataDictModels\tb_WMS_Warehouse.cs" />
+    <Compile Include="SystemModels\tb_DataSet.cs" />
+    <Compile Include="DataDictModels\tb_CommonDataDict.cs" />
+    <Compile Include="DataDictModels\tb_CommonDataDictType.cs" />
+    <Compile Include="DataDictModels\tb_Customer.cs" />
+    <Compile Include="DataDictModels\tb_CustomerAttribute.cs" />
+    <Compile Include="DataDictModels\tb_PayType.cs" />
+    <Compile Include="DataDictModels\tb_Person.cs" />
+    <Compile Include="SystemModels\BusinessCommonFields.cs" />
+    <Compile Include="SystemModels\tb_CompanyInfo.cs" />
+    <Compile Include="SystemModels\TEmailBody.cs" />
+    <Compile Include="SystemModels\TAttachFile.cs" />
+    <Compile Include="DataDictModels\tb_AttachFile.cs" />
+    <Compile Include="SystemModels\TCompanyInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemModels\TMenu.cs" />
+    <Compile Include="SystemModels\TFormTagName.cs" />
+    <Compile Include="SystemModels\TUser.cs" />
+    <Compile Include="SystemModels\TUserRole.cs" />
+    <Compile Include="SystemModels\TUserGroup.cs" />
+    <Compile Include="SystemModels\TUserGroupRe.cs" />
+    <Compile Include="BusinessModels\tb_WMS_BillIn.cs" />
+    <Compile Include="BusinessModels\tb_WMS_BillInDtl.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HHMES.ORM\HHMES.ORM.csproj">
+      <Project>{34000abd-4169-45b5-a668-1901f1eb5fde}</Project>
+      <Name>HHMES.ORM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
