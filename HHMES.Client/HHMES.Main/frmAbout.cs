@@ -1,11 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
 using HHMES.Library;
+using HHMES.Business;
 
 namespace HHMES.Main
 {
@@ -14,6 +10,8 @@ namespace HHMES.Main
         public frmAbout()
         {
             InitializeComponent();
+            CommonData.GetCommonInfos(); //获取公司信息数据
+            lblCompany.Text= CommonData.CompanyInfo.NativeName;
         }
 
         private void btnClose_Click(object sender, EventArgs e)

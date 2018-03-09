@@ -30,7 +30,7 @@ namespace HHMES.SystemModule
             chkAllowRunMultiInstance.Checked = SystemConfig.CurrentConfig.AllowRunMultiInstance;
             chkDoubleClickIntoEditMode.Checked = SystemConfig.CurrentConfig.DoubleClickIntoEditMode;
 
-            rgAuthType.SelectedIndex = SystemConfig.CurrentConfig.LoginAuthType - 1;
+            //rgAuthType.SelectedIndex = SystemConfig.CurrentConfig.LoginAuthType - 1;
             rgUpgraderType.SelectedIndex = SystemConfig.CurrentConfig.UpgradeType - 1;
             txtUpgraderIP.Text = SystemConfig.CurrentConfig.UpgraderServerIP;
             txtUpgraderPort.Text = SystemConfig.CurrentConfig.UpgraderServerPort;
@@ -46,7 +46,7 @@ namespace HHMES.SystemModule
             SystemConfig.CurrentConfig.WriteLocalLog = chkLocalLog.Checked;
             SystemConfig.CurrentConfig.AllowRunMultiInstance = chkAllowRunMultiInstance.Checked;
             SystemConfig.CurrentConfig.DoubleClickIntoEditMode = chkDoubleClickIntoEditMode.Checked;
-            SystemConfig.CurrentConfig.LoginAuthType = rgAuthType.SelectedIndex + 1;
+            //SystemConfig.CurrentConfig.LoginAuthType = rgAuthType.SelectedIndex + 1;
             SystemConfig.CurrentConfig.UpgradeType = rgUpgraderType.SelectedIndex + 1;
             SystemConfig.CurrentConfig.UpgraderServerIP = txtUpgraderIP.Text;
             SystemConfig.CurrentConfig.UpgraderServerPort = txtUpgraderPort.Text;

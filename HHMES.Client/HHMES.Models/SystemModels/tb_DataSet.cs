@@ -18,7 +18,7 @@ namespace HHMES.Models
         public static string __KeyName = "DataSetID";
 
         [ORM_FieldAttribute(SqlDbType.Int,4,false,false,false,false,false)]
-        public static string isid = "isid"; 
+        public static string ID = "ID"; 
 
         [ORM_FieldAttribute(SqlDbType.VarChar,20,false,true,true,false,false)]
         public static string DataSetID = "DataSetID"; 

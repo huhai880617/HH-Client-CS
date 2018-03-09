@@ -29,7 +29,7 @@ namespace HHMES.Models
         public static string __KeyName = "Warehouse_Id";
 
         //[ORM_FieldAttribute(SqlDbType.Int,4,false,true,false,false,false)]
-        //public static string IsId = "IsId"; 
+        //public static string ID = "ID"; 
 
         [ORM_FieldAttribute(SqlDbType.NVarChar,100,false,true,false,false,false)]
         public static string Warehouse_Id = "Warehouse_Id"; 

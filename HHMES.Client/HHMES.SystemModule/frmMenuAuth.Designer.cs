@@ -59,7 +59,7 @@
             this.tpSummary.Appearance.PageClient.BackColor = System.Drawing.SystemColors.Control;
             this.tpSummary.Appearance.PageClient.Options.UseBackColor = true;
             this.tpSummary.Controls.Add(this.splitContainerControl1);
-            this.tpSummary.Size = new System.Drawing.Size(904, 483);
+            this.tpSummary.Size = new System.Drawing.Size(905, 484);
             // 
             // pnlSummary
             // 
@@ -74,7 +74,7 @@
             this.tpDetail.Appearance.PageClient.BackColor = System.Drawing.SystemColors.Control;
             this.tpDetail.Appearance.PageClient.Options.UseBackColor = true;
             this.tpDetail.Controls.Add(this.pnlDetail);
-            this.tpDetail.Size = new System.Drawing.Size(904, 483);
+            this.tpDetail.Size = new System.Drawing.Size(905, 484);
             this.tpDetail.Text = "此页隐藏";
             // 
             // gcNavigator
@@ -95,7 +95,6 @@
             // lblAboutInfo
             // 
             this.lblAboutInfo.Location = new System.Drawing.Point(536, 2);
-            this.lblAboutInfo.Text = "";
             // 
             // gcMenus
             // 
@@ -110,7 +109,7 @@
             this.gcMenus.Location = new System.Drawing.Point(0, 0);
             this.gcMenus.MainView = this.gvMenus;
             this.gcMenus.Name = "gcMenus";
-            this.gcMenus.Size = new System.Drawing.Size(684, 483);
+            this.gcMenus.Size = new System.Drawing.Size(684, 484);
             this.gcMenus.TabIndex = 0;
             this.gcMenus.UseEmbeddedNavigator = true;
             this.gcMenus.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -213,7 +212,7 @@
             this.splitContainerControl1.Panel2.Controls.Add(this.pcActions);
             this.splitContainerControl1.Panel2.MinSize = 190;
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(904, 483);
+            this.splitContainerControl1.Size = new System.Drawing.Size(905, 484);
             this.splitContainerControl1.SplitterPosition = 684;
             this.splitContainerControl1.TabIndex = 1;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -224,7 +223,7 @@
             this.pcActions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pcActions.Location = new System.Drawing.Point(0, 0);
             this.pcActions.Name = "pcActions";
-            this.pcActions.Size = new System.Drawing.Size(214, 483);
+            this.pcActions.Size = new System.Drawing.Size(216, 484);
             this.pcActions.TabIndex = 0;
             // 
             // pnlDetail
@@ -232,7 +231,7 @@
             this.pnlDetail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDetail.Location = new System.Drawing.Point(0, 0);
             this.pnlDetail.Name = "pnlDetail";
-            this.pnlDetail.Size = new System.Drawing.Size(904, 483);
+            this.pnlDetail.Size = new System.Drawing.Size(905, 484);
             this.pnlDetail.TabIndex = 0;
             // 
             // frmMenuAuth

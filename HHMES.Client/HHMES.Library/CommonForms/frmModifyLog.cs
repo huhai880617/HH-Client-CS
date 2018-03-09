@@ -72,8 +72,8 @@ namespace HHMES.Library
             this.InitButtons();
 
             txtDateTo.DateTime = DateTime.Today;
-
-            DataBinder.BindingLookupEditDataSource(cbBusiness, DataDictCache.Cache.BusinessTables, "FormCaption", "FormName");
+            DataTable BusinessTables = DataDictCache.GetCacheTableData("BUSINESSTABLE");
+            DataBinder.BindingLookupEditDataSource(cbBusiness, BusinessTables, "FormCaption", "FormName");
         }
 
         public void ShowModifyLog(string formName)

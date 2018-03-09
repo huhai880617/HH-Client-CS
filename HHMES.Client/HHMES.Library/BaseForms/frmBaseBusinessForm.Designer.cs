@@ -40,7 +40,7 @@ namespace HHMES.Library
             // 
             this.tpSummary.Appearance.PageClient.BackColor = System.Drawing.SystemColors.Control;
             this.tpSummary.Appearance.PageClient.Options.UseBackColor = true;
-            this.tpSummary.Size = new System.Drawing.Size(931, 565);
+            this.tpSummary.Size = new System.Drawing.Size(932, 566);
             // 
             // pnlSummary
             // 
@@ -54,6 +54,7 @@ namespace HHMES.Library
             // 
             this.tpDetail.Appearance.PageClient.BackColor = System.Drawing.SystemColors.Control;
             this.tpDetail.Appearance.PageClient.Options.UseBackColor = true;
+            this.tpDetail.Size = new System.Drawing.Size(776, 484);
             // 
             // gcNavigator
             // 

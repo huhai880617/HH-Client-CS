@@ -282,8 +282,8 @@ namespace HHMES.SystemModule
                 if (summary == null) return;
 
                 DataBinder.BindingTextEdit(txtAccount, summary, TUser.Account);
-                DataBinder.BindingTextEdit(txtNovellAccount, summary, TUser.NovellAccount);
-                DataBinder.BindingTextEdit(txtDomainName, summary, TUser.DomainName);
+                //DataBinder.BindingTextEdit(txtNovellAccount, summary, TUser.NovellAccount);
+                //DataBinder.BindingTextEdit(txtDomainName, summary, TUser.DomainName);
                 DataBinder.BindingTextEdit(txtUserName, summary, TUser.UserName);
                 DataBinder.BindingTextEdit(txtTel, summary, TUser.Tel);
                 DataBinder.BindingTextEdit(txtEmail, summary, TUser.Email);

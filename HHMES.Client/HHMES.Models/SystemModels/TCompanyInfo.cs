@@ -9,7 +9,7 @@ namespace HHMES.Models
     /// </summary>
     public class TCompanyInfo
     {
-        private int _ISID = 0;
+        private int _ID = 0;
         private string _CompanyCode = string.Empty;
         private string _NativeName = string.Empty;
         private string _EnglishName = string.Empty;
@@ -20,7 +20,7 @@ namespace HHMES.Models
         private DateTime _LastUpdateDate;
         private string _LastUpdatedBy = string.Empty;
 
-        public int ISID { get { return _ISID; } set { _ISID = value; } }
+        public int ID { get { return _ID; } set { _ID = value; } }
         public string CompanyCode { get { return _CompanyCode; } set { _CompanyCode = value; } }
         public string NativeName { get { return _NativeName; } set { _NativeName = value; } }
         public string EnglishName { get { return _EnglishName; } set { _EnglishName = value; } }

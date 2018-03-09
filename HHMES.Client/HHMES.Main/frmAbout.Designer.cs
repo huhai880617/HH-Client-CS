@@ -33,7 +33,7 @@ namespace HHMES.Main
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblCompany = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -87,19 +87,19 @@ namespace HHMES.Main
             this.label6.ForeColor = System.Drawing.Color.Gray;
             this.label6.Location = new System.Drawing.Point(147, 200);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(220, 14);
+            this.label6.Size = new System.Drawing.Size(191, 14);
             this.label6.TabIndex = 15;
-            this.label6.Text = "版权声明 Copyright by SunEast.com.cn";
+            this.label6.Text = "版权声明 Copyright by annto.com";
             // 
-            // label7
+            // lblCompany
             // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(148, 34);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(175, 14);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "日东电子发展（深圳）有限公司";
+            this.lblCompany.AutoSize = true;
+            this.lblCompany.ForeColor = System.Drawing.Color.Gray;
+            this.lblCompany.Location = new System.Drawing.Point(148, 34);
+            this.lblCompany.Name = "lblCompany";
+            this.lblCompany.Size = new System.Drawing.Size(175, 14);
+            this.lblCompany.TabIndex = 16;
+            this.lblCompany.Text = "日东电子发展（深圳）有限公司";
             // 
             // label8
             // 
@@ -107,9 +107,9 @@ namespace HHMES.Main
             this.label8.ForeColor = System.Drawing.Color.Gray;
             this.label8.Location = new System.Drawing.Point(148, 77);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 14);
+            this.label8.Size = new System.Drawing.Size(47, 14);
             this.label8.TabIndex = 17;
-            this.label8.Text = "软件部";
+            this.label8.Text = "IT-服务";
             // 
             // panel1
             // 
@@ -151,7 +151,7 @@ namespace HHMES.Main
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblCompany);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
@@ -178,7 +178,7 @@ namespace HHMES.Main
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblCompany;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraEditors.PanelControl panelControl1;

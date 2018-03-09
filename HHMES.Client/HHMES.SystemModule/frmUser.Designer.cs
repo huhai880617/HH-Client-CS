@@ -31,8 +31,6 @@ namespace HHMES.SystemModule
             this.gcSummary = new DevExpress.XtraGrid.GridControl();
             this.gvSummary = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colAccount = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNovellAccount = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDomainName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUserName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTel = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -59,13 +57,7 @@ namespace HHMES.SystemModule
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.lbMyGroups = new DevExpress.XtraEditors.ListBoxControl();
             this.ucDataSets = new HHMES.Library.UserControls.ucCheckedListBoxBinding();
-            this.txtDomainName = new DevExpress.XtraEditors.MemoEdit();
-            this.txtNovellAccount = new DevExpress.XtraEditors.MemoEdit();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtLoginCounter = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtLastLogoutTime = new DevExpress.XtraEditors.TextEdit();
@@ -95,8 +87,6 @@ namespace HHMES.SystemModule
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lbMyGroups)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDomainName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNovellAccount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLoginCounter.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLastLogoutTime.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPassword)).BeginInit();
@@ -108,7 +98,7 @@ namespace HHMES.SystemModule
             this.tpSummary.Appearance.PageClient.BackColor = System.Drawing.SystemColors.Control;
             this.tpSummary.Appearance.PageClient.Options.UseBackColor = true;
             this.tpSummary.Controls.Add(this.gcSummary);
-            this.tpSummary.Size = new System.Drawing.Size(881, 498);
+            this.tpSummary.Size = new System.Drawing.Size(882, 499);
             // 
             // pnlSummary
             // 
@@ -125,7 +115,7 @@ namespace HHMES.SystemModule
             this.tpDetail.Appearance.PageClient.Options.UseBackColor = true;
             this.tpDetail.Controls.Add(this.gcDetailEditor);
             this.tpDetail.Padding = new System.Windows.Forms.Padding(5);
-            this.tpDetail.Size = new System.Drawing.Size(775, 481);
+            this.tpDetail.Size = new System.Drawing.Size(882, 499);
             // 
             // gcNavigator
             // 
@@ -147,7 +137,6 @@ namespace HHMES.SystemModule
             // 
             this.lblAboutInfo.Location = new System.Drawing.Point(513, 2);
             this.lblAboutInfo.Size = new System.Drawing.Size(197, 24);
-            this.lblAboutInfo.Text = "";
             // 
             // gcSummary
             // 
@@ -162,8 +151,8 @@ namespace HHMES.SystemModule
             this.gcSummary.Location = new System.Drawing.Point(0, 0);
             this.gcSummary.MainView = this.gvSummary;
             this.gcSummary.Name = "gcSummary";
-            this.gcSummary.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gcSummary.Size = new System.Drawing.Size(881, 498);
+            this.gcSummary.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.gcSummary.Size = new System.Drawing.Size(882, 499);
             this.gcSummary.TabIndex = 7;
             this.gcSummary.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSummary});
@@ -172,8 +161,6 @@ namespace HHMES.SystemModule
             // 
             this.gvSummary.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colAccount,
-            this.colNovellAccount,
-            this.colDomainName,
             this.colUserName,
             this.colTel,
             this.colEmail,
@@ -200,24 +187,6 @@ namespace HHMES.SystemModule
             this.colAccount.Visible = true;
             this.colAccount.VisibleIndex = 1;
             // 
-            // colNovellAccount
-            // 
-            this.colNovellAccount.Caption = "Novell帐户";
-            this.colNovellAccount.FieldName = "NovellAccount";
-            this.colNovellAccount.Name = "colNovellAccount";
-            this.colNovellAccount.Visible = true;
-            this.colNovellAccount.VisibleIndex = 2;
-            this.colNovellAccount.Width = 120;
-            // 
-            // colDomainName
-            // 
-            this.colDomainName.Caption = "域用户";
-            this.colDomainName.FieldName = "DomainName";
-            this.colDomainName.Name = "colDomainName";
-            this.colDomainName.Visible = true;
-            this.colDomainName.VisibleIndex = 3;
-            this.colDomainName.Width = 107;
-            // 
             // colUserName
             // 
             this.colUserName.AppearanceCell.Options.UseTextOptions = true;
@@ -227,8 +196,8 @@ namespace HHMES.SystemModule
             this.colUserName.Caption = "用户名称";
             this.colUserName.FieldName = "UserName";
             this.colUserName.Name = "colUserName";
-            this.colUserName.SummaryItem.DisplayFormat = "Count:{0}";
-            this.colUserName.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Count;
+            this.colUserName.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "UserName", "Count:{0}")});
             this.colUserName.Visible = true;
             this.colUserName.VisibleIndex = 0;
             // 
@@ -240,7 +209,7 @@ namespace HHMES.SystemModule
             this.colTel.FieldName = "Tel";
             this.colTel.Name = "colTel";
             this.colTel.Visible = true;
-            this.colTel.VisibleIndex = 5;
+            this.colTel.VisibleIndex = 3;
             this.colTel.Width = 120;
             // 
             // colEmail
@@ -251,7 +220,7 @@ namespace HHMES.SystemModule
             this.colEmail.FieldName = "Email";
             this.colEmail.Name = "colEmail";
             this.colEmail.Visible = true;
-            this.colEmail.VisibleIndex = 4;
+            this.colEmail.VisibleIndex = 2;
             this.colEmail.Width = 148;
             // 
             // colLastLoginTime
@@ -264,7 +233,7 @@ namespace HHMES.SystemModule
             this.colLastLoginTime.FieldName = "LastLoginTime";
             this.colLastLoginTime.Name = "colLastLoginTime";
             this.colLastLoginTime.Visible = true;
-            this.colLastLoginTime.VisibleIndex = 6;
+            this.colLastLoginTime.VisibleIndex = 4;
             this.colLastLoginTime.Width = 100;
             // 
             // colLastLogoutTime
@@ -273,7 +242,7 @@ namespace HHMES.SystemModule
             this.colLastLogoutTime.FieldName = "LastLogoutTime";
             this.colLastLogoutTime.Name = "colLastLogoutTime";
             this.colLastLogoutTime.Visible = true;
-            this.colLastLogoutTime.VisibleIndex = 7;
+            this.colLastLogoutTime.VisibleIndex = 5;
             this.colLastLogoutTime.Width = 96;
             // 
             // colIsLocked
@@ -286,7 +255,7 @@ namespace HHMES.SystemModule
             this.colIsLocked.FieldName = "IsLocked";
             this.colIsLocked.Name = "colIsLocked";
             this.colIsLocked.Visible = true;
-            this.colIsLocked.VisibleIndex = 8;
+            this.colIsLocked.VisibleIndex = 6;
             this.colIsLocked.Width = 44;
             // 
             // colCreateTime
@@ -299,7 +268,7 @@ namespace HHMES.SystemModule
             this.colCreateTime.FieldName = "CreateTime";
             this.colCreateTime.Name = "colCreateTime";
             this.colCreateTime.Visible = true;
-            this.colCreateTime.VisibleIndex = 9;
+            this.colCreateTime.VisibleIndex = 7;
             this.colCreateTime.Width = 100;
             // 
             // colFlagAdmin
@@ -308,7 +277,7 @@ namespace HHMES.SystemModule
             this.colFlagAdmin.FieldName = "FlagAdmin";
             this.colFlagAdmin.Name = "colFlagAdmin";
             this.colFlagAdmin.Visible = true;
-            this.colFlagAdmin.VisibleIndex = 10;
+            this.colFlagAdmin.VisibleIndex = 8;
             // 
             // colLoginCounter
             // 
@@ -316,7 +285,7 @@ namespace HHMES.SystemModule
             this.colLoginCounter.FieldName = "LoginCounter";
             this.colLoginCounter.Name = "colLoginCounter";
             this.colLoginCounter.Visible = true;
-            this.colLoginCounter.VisibleIndex = 11;
+            this.colLoginCounter.VisibleIndex = 9;
             // 
             // txtPassword2
             // 
@@ -325,7 +294,7 @@ namespace HHMES.SystemModule
             this.txtPassword2.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtPassword2.Properties.Appearance.Options.UseBackColor = true;
             this.txtPassword2.Properties.PasswordChar = '*';
-            this.txtPassword2.Size = new System.Drawing.Size(117, 21);
+            this.txtPassword2.Size = new System.Drawing.Size(117, 20);
             this.txtPassword2.TabIndex = 1;
             // 
             // txtPassword1
@@ -335,7 +304,7 @@ namespace HHMES.SystemModule
             this.txtPassword1.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtPassword1.Properties.Appearance.Options.UseBackColor = true;
             this.txtPassword1.Properties.PasswordChar = '*';
-            this.txtPassword1.Size = new System.Drawing.Size(117, 21);
+            this.txtPassword1.Size = new System.Drawing.Size(117, 20);
             this.txtPassword1.TabIndex = 0;
             // 
             // labPassword1
@@ -370,23 +339,23 @@ namespace HHMES.SystemModule
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(94, 209);
+            this.txtEmail.Location = new System.Drawing.Point(94, 120);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(278, 21);
+            this.txtEmail.Size = new System.Drawing.Size(278, 20);
             this.txtEmail.TabIndex = 5;
             // 
             // txtTel
             // 
-            this.txtTel.Location = new System.Drawing.Point(94, 181);
+            this.txtTel.Location = new System.Drawing.Point(94, 92);
             this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(278, 21);
+            this.txtTel.Size = new System.Drawing.Size(278, 20);
             this.txtTel.TabIndex = 4;
             // 
             // txtUserName
             // 
             this.txtUserName.Location = new System.Drawing.Point(94, 62);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(155, 21);
+            this.txtUserName.Size = new System.Drawing.Size(155, 20);
             this.txtUserName.TabIndex = 93;
             // 
             // txtAccount
@@ -395,13 +364,13 @@ namespace HHMES.SystemModule
             this.txtAccount.Name = "txtAccount";
             this.txtAccount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtAccount.Properties.Appearance.Options.UseBackColor = true;
-            this.txtAccount.Size = new System.Drawing.Size(155, 21);
+            this.txtAccount.Size = new System.Drawing.Size(155, 20);
             this.txtAccount.TabIndex = 92;
             // 
             // labEmail
             // 
             this.labEmail.AutoSize = true;
-            this.labEmail.Location = new System.Drawing.Point(23, 212);
+            this.labEmail.Location = new System.Drawing.Point(23, 123);
             this.labEmail.Name = "labEmail";
             this.labEmail.Size = new System.Drawing.Size(59, 14);
             this.labEmail.TabIndex = 105;
@@ -419,7 +388,7 @@ namespace HHMES.SystemModule
             // labTel
             // 
             this.labTel.AutoSize = true;
-            this.labTel.Location = new System.Drawing.Point(23, 185);
+            this.labTel.Location = new System.Drawing.Point(23, 96);
             this.labTel.Name = "labTel";
             this.labTel.Size = new System.Drawing.Size(35, 14);
             this.labTel.TabIndex = 104;
@@ -438,13 +407,7 @@ namespace HHMES.SystemModule
             // 
             this.gcDetailEditor.Controls.Add(this.groupControl1);
             this.gcDetailEditor.Controls.Add(this.ucDataSets);
-            this.gcDetailEditor.Controls.Add(this.txtDomainName);
-            this.gcDetailEditor.Controls.Add(this.txtNovellAccount);
-            this.gcDetailEditor.Controls.Add(this.label10);
-            this.gcDetailEditor.Controls.Add(this.label9);
             this.gcDetailEditor.Controls.Add(this.label8);
-            this.gcDetailEditor.Controls.Add(this.label7);
-            this.gcDetailEditor.Controls.Add(this.label6);
             this.gcDetailEditor.Controls.Add(this.txtLoginCounter);
             this.gcDetailEditor.Controls.Add(this.labelControl2);
             this.gcDetailEditor.Controls.Add(this.txtLastLogoutTime);
@@ -463,7 +426,7 @@ namespace HHMES.SystemModule
             this.gcDetailEditor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcDetailEditor.Location = new System.Drawing.Point(5, 5);
             this.gcDetailEditor.Name = "gcDetailEditor";
-            this.gcDetailEditor.Size = new System.Drawing.Size(765, 471);
+            this.gcDetailEditor.Size = new System.Drawing.Size(872, 489);
             this.gcDetailEditor.TabIndex = 119;
             // 
             // groupControl1
@@ -478,53 +441,19 @@ namespace HHMES.SystemModule
             // lbMyGroups
             // 
             this.lbMyGroups.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbMyGroups.Location = new System.Drawing.Point(2, 23);
+            this.lbMyGroups.Location = new System.Drawing.Point(2, 21);
             this.lbMyGroups.Name = "lbMyGroups";
-            this.lbMyGroups.Size = new System.Drawing.Size(248, 318);
+            this.lbMyGroups.Size = new System.Drawing.Size(248, 320);
             this.lbMyGroups.TabIndex = 0;
             // 
             // ucDataSets
             // 
             this.ucDataSets.EditValue = "";
-            this.ucDataSets.Location = new System.Drawing.Point(94, 233);
+            this.ucDataSets.Location = new System.Drawing.Point(94, 144);
             this.ucDataSets.Margin = new System.Windows.Forms.Padding(0);
             this.ucDataSets.Name = "ucDataSets";
             this.ucDataSets.Size = new System.Drawing.Size(278, 123);
             this.ucDataSets.TabIndex = 141;
-            // 
-            // txtDomainName
-            // 
-            this.txtDomainName.Location = new System.Drawing.Point(94, 135);
-            this.txtDomainName.Name = "txtDomainName";
-            this.txtDomainName.Size = new System.Drawing.Size(278, 40);
-            this.txtDomainName.TabIndex = 140;
-            // 
-            // txtNovellAccount
-            // 
-            this.txtNovellAccount.Location = new System.Drawing.Point(94, 89);
-            this.txtNovellAccount.Name = "txtNovellAccount";
-            this.txtNovellAccount.Size = new System.Drawing.Size(278, 40);
-            this.txtNovellAccount.TabIndex = 139;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(375, 138);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(14, 14);
-            this.label10.TabIndex = 137;
-            this.label10.Text = "*";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(375, 91);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(14, 14);
-            this.label9.TabIndex = 136;
-            this.label9.Text = "*";
             // 
             // label8
             // 
@@ -536,34 +465,16 @@ namespace HHMES.SystemModule
             this.label8.TabIndex = 135;
             this.label8.Text = "*";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 138);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 14);
-            this.label7.TabIndex = 134;
-            this.label7.Text = "域帐号:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(23, 99);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 14);
-            this.label6.TabIndex = 132;
-            this.label6.Text = "Novell帐号:";
-            // 
             // txtLoginCounter
             // 
-            this.txtLoginCounter.Location = new System.Drawing.Point(305, 359);
+            this.txtLoginCounter.Location = new System.Drawing.Point(305, 270);
             this.txtLoginCounter.Name = "txtLoginCounter";
-            this.txtLoginCounter.Size = new System.Drawing.Size(67, 21);
+            this.txtLoginCounter.Size = new System.Drawing.Size(67, 20);
             this.txtLoginCounter.TabIndex = 130;
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(251, 362);
+            this.labelControl2.Location = new System.Drawing.Point(251, 273);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(52, 14);
             this.labelControl2.TabIndex = 129;
@@ -571,14 +482,14 @@ namespace HHMES.SystemModule
             // 
             // txtLastLogoutTime
             // 
-            this.txtLastLogoutTime.Location = new System.Drawing.Point(94, 359);
+            this.txtLastLogoutTime.Location = new System.Drawing.Point(94, 270);
             this.txtLastLogoutTime.Name = "txtLastLogoutTime";
-            this.txtLastLogoutTime.Size = new System.Drawing.Size(144, 21);
+            this.txtLastLogoutTime.Size = new System.Drawing.Size(144, 20);
             this.txtLastLogoutTime.TabIndex = 128;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(23, 362);
+            this.labelControl1.Location = new System.Drawing.Point(23, 273);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(52, 14);
             this.labelControl1.TabIndex = 127;
@@ -590,7 +501,7 @@ namespace HHMES.SystemModule
             this.gcPassword.Controls.Add(this.labPassword2);
             this.gcPassword.Controls.Add(this.labPassword1);
             this.gcPassword.Controls.Add(this.txtPassword1);
-            this.gcPassword.Location = new System.Drawing.Point(94, 386);
+            this.gcPassword.Location = new System.Drawing.Point(94, 297);
             this.gcPassword.Name = "gcPassword";
             this.gcPassword.Size = new System.Drawing.Size(188, 92);
             this.gcPassword.TabIndex = 124;
@@ -646,8 +557,6 @@ namespace HHMES.SystemModule
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lbMyGroups)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDomainName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNovellAccount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLoginCounter.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLastLogoutTime.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPassword)).EndInit();
@@ -691,17 +600,9 @@ namespace HHMES.SystemModule
         private DevExpress.XtraEditors.TextEdit txtLastLogoutTime;
         private DevExpress.XtraEditors.TextEdit txtLoginCounter;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private DevExpress.XtraGrid.Columns.GridColumn colLastLogoutTime;
         private DevExpress.XtraGrid.Columns.GridColumn colLoginCounter;
-        private DevExpress.XtraGrid.Columns.GridColumn colNovellAccount;
-        private DevExpress.XtraGrid.Columns.GridColumn colDomainName;
-        private DevExpress.XtraEditors.MemoEdit txtDomainName;
-        private DevExpress.XtraEditors.MemoEdit txtNovellAccount;
         private HHMES.Library.UserControls.ucCheckedListBoxBinding ucDataSets;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.ListBoxControl lbMyGroups;

@@ -46,8 +46,8 @@ namespace HHMES.Server.DataAccess.DAL_System
         /// <returns></returns>
         public DataTable GetAuthorityItem()
         {
-            string sql = " select * from dbo.tb_MyAuthorityItem order by AuthorityValue";
-            return DataProvider.Instance.GetTable(_Loginer.DBName, sql, "tb_MyAuthorityItem");
+            string sql = " select * from C_AuthorityItem order by AuthorityValue";
+            return DataProvider.Instance.GetTable(_Loginer.DBName, sql, "C_AuthorityItem");
         }
 
         /// <summary>
@@ -56,8 +56,8 @@ namespace HHMES.Server.DataAccess.DAL_System
         /// <returns></returns>
         public DataTable GetUserGroup()
         {
-            string sql = "select * from [tb_MyUserGroup]";
-            return DataProvider.Instance.GetTable(_Loginer.DBName, sql, "tb_MyUserGroup");
+            string sql = "select * from [C_UserGroup]";
+            return DataProvider.Instance.GetTable(_Loginer.DBName, sql, "C_UserGroup");
         }
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace HHMES.Server.DataAccess.DAL_System
         /// <returns></returns>
         public override bool CheckNoExists(string groupCode)
         {
-            string sql = "select count(*) from [tb_MyUserGroup] where [GroupCode]=@GroupCode";
+            string sql = "select count(*) from [C_UserGroup] where [GroupCode]=@GroupCode";
             SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(sql);
             cmd.AddParam("@GroupCode", SqlDbType.VarChar, groupCode);
             object o = DataProvider.Instance.ExecuteScalar(_Loginer.DBName, cmd.SqlCommand);
@@ -81,7 +81,7 @@ namespace HHMES.Server.DataAccess.DAL_System
         /// <returns></returns>
         public bool DeleteGroupByKey(string groupCode)
         {
-            SqlProcedure sp = SqlBuilder.BuildSqlProcedure("sp_MyDeleteGroupData");
+            SqlProcedure sp = SqlBuilder.BuildSqlProcedure("p_sys_DeleteGroupData");
             sp.AddParam("@GroupCode", SqlDbType.VarChar, groupCode);
             object o = DataProvider.Instance.ExecuteNoQuery(_Loginer.DBName, sp.SqlCommand);
             return ConvertEx.ToInt(o) != 0;
@@ -94,7 +94,7 @@ namespace HHMES.Server.DataAccess.DAL_System
         /// <returns></returns>
         public DataSet GetUserGroup(string groupCode)
         {
-            SqlProcedure sp = SqlBuilder.BuildSqlProcedure("sp_MyGetGroupData");
+            SqlProcedure sp = SqlBuilder.BuildSqlProcedure("p_sys_GetGroupData");
             sp.AddParam("@GroupCode", SqlDbType.VarChar, groupCode);
             DataSet ds = DataProvider.Instance.GetDataSet(_Loginer.DBName, sp.SqlCommand);
             ds.Tables[BusinessDataSetIndex.Groups].TableName = TUserGroup.__TableName;
@@ -113,7 +113,7 @@ namespace HHMES.Server.DataAccess.DAL_System
         /// <returns></returns>
         public int GetFormAuthority(string account, int moduleID, string menuName)
         {
-            SqlProcedure sp = SqlBuilder.BuildSqlProcedure("sp_GetFormAuthority");
+            SqlProcedure sp = SqlBuilder.BuildSqlProcedure("p_sys_GetFormAuthority");
             sp.AddParam("@account", SqlDbType.VarChar, account);
             sp.AddParam("@moduleID", SqlDbType.Int, moduleID);
             sp.AddParam("@menuName", SqlDbType.VarChar, menuName);
@@ -127,8 +127,8 @@ namespace HHMES.Server.DataAccess.DAL_System
         /// <returns></returns>
         public DataTable GetFormTagCustomName()
         {
-            string sql = "select * from [tb_MyFormTagName]";
-            return DataProvider.Instance.GetTable(_Loginer.DBName, sql, "tb_MyFormTagName");
+            string sql = "select * from [C_FormTagName]";
+            return DataProvider.Instance.GetTable(_Loginer.DBName, sql, "C_FormTagName");
         }
     }
 }

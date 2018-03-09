@@ -28,53 +28,53 @@ namespace HHMES.Bridge.DataDictModule
         }
     }
 
-    public class WebService_CommonDataDict : IBridge_CommonDataDict
-    {
+    //public class WebService_CommonDataDict : IBridge_CommonDataDict
+    //{
 
-        public WebService_CommonDataDict()
-        {
+    //    public WebService_CommonDataDict()
+    //    {
 
-        }
+    //    }
 
-        #region IBridge_CommonDataDict Members
+    //    //#region IBridge_CommonDataDict Members
 
-        public System.Data.DataTable SearchBy(int dataType)
-        {
-            using (DataDictServiceClient client = SoapClientFactory.CreateDataDictClient())
-            {
-                byte[] loginTicket = WebServiceSecurity.EncryptLoginer(Loginer.CurrentUser);
-                byte[] receivedData = client.SearchCommonType(loginTicket, dataType);
-                return ZipTools.DecompressionDataSet(receivedData).Tables[0];
-            }
-        }
+    //    //public System.Data.DataTable SearchBy(string dataType)
+    //    //{
+    //    //    using (DataDictServiceClient client = SoapClientFactory.CreateDataDictClient())
+    //    //    {
+    //    //        byte[] loginTicket = WebServiceSecurity.EncryptLoginer(Loginer.CurrentUser);
+    //    //        byte[] receivedData = client.SearchCommonType(loginTicket, dataType);
+    //    //        return ZipTools.DecompressionDataSet(receivedData).Tables[0];
+    //    //    }
+    //    //}
 
-        public bool AddCommonType(int code, string name)
-        {
-            using (DataDictServiceClient client = SoapClientFactory.CreateDataDictClient())
-            {
-                byte[] loginTicket = WebServiceSecurity.EncryptLoginer(Loginer.CurrentUser);
-                return client.AddCommonType(loginTicket, code, name);
-            }
-        }
+    //    //public bool AddCommonType(string code, string name)
+    //    //{
+    //    //    using (DataDictServiceClient client = SoapClientFactory.CreateDataDictClient())
+    //    //    {
+    //    //        byte[] loginTicket = WebServiceSecurity.EncryptLoginer(Loginer.CurrentUser);
+    //    //        return client.AddCommonType(loginTicket, code, name);
+    //    //    }
+    //    //}
 
-        public bool DeleteCommonType(int code)
-        {
-            using (DataDictServiceClient client = SoapClientFactory.CreateDataDictClient())
-            {
-                byte[] loginTicket = WebServiceSecurity.EncryptLoginer(Loginer.CurrentUser);
-                return client.DeleteCommonType(loginTicket, code);
-            }
-        }
+    //    //public bool DeleteCommonType(string code)
+    //    //{
+    //    //    using (DataDictServiceClient client = SoapClientFactory.CreateDataDictClient())
+    //    //    {
+    //    //        byte[] loginTicket = WebServiceSecurity.EncryptLoginer(Loginer.CurrentUser);
+    //    //        return client.DeleteCommonType(loginTicket, code);
+    //    //    }
+    //    //}
 
-        public bool IsExistsCommonType(int code)
-        {
-            using (DataDictServiceClient client = SoapClientFactory.CreateDataDictClient())
-            {
-                byte[] loginTicket = WebServiceSecurity.EncryptLoginer(Loginer.CurrentUser);
-                return client.IsExistsCommonType(loginTicket, code);
-            }
-        }
+    //    //public bool IsExistsCommonType(string code)
+    //    //{
+    //    //    using (DataDictServiceClient client = SoapClientFactory.CreateDataDictClient())
+    //    //    {
+    //    //        byte[] loginTicket = WebServiceSecurity.EncryptLoginer(Loginer.CurrentUser);
+    //    //        return client.IsExistsCommonType(loginTicket, code);
+    //    //    }
+    //    //}
 
-        #endregion
-    }
+    //    //#endregion
+    //}
 }

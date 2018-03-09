@@ -14,8 +14,8 @@ namespace HHMES.ORM
         private int _size; //字段长度
         private bool _isLookup;//是否是视图或Lookup字段
         private bool _isAddOrUpdate;//是否需要更新的字段
-        private bool _isPrimaryKey; //是否主键字段  isid/ 32bit string
-        private bool _isForeignKey;//是否外键字段 isid /32bit string
+        private bool _isPrimaryKey; //是否主键字段  ID/ 32bit string
+        private bool _isForeignKey;//是否外键字段 ID /32bit string
         private bool _isDocFieldName;//是否单据号码 
         
         /// <summary>

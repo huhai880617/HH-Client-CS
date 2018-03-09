@@ -168,7 +168,7 @@
             this.tpSummary.Appearance.PageClient.BackColor = System.Drawing.SystemColors.Control;
             this.tpSummary.Appearance.PageClient.Options.UseBackColor = true;
             this.tpSummary.Controls.Add(this.tableLayoutPanel1);
-            this.tpSummary.Size = new System.Drawing.Size(826, 565);
+            this.tpSummary.Size = new System.Drawing.Size(827, 566);
             // 
             // pnlSummary
             // 
@@ -183,7 +183,7 @@
             this.tpDetail.Appearance.PageClient.BackColor = System.Drawing.SystemColors.Control;
             this.tpDetail.Appearance.PageClient.Options.UseBackColor = true;
             this.tpDetail.Controls.Add(this.gcDetailEditor);
-            this.tpDetail.Size = new System.Drawing.Size(931, 565);
+            this.tpDetail.Size = new System.Drawing.Size(932, 566);
             // 
             // gcNavigator
             // 
@@ -217,8 +217,8 @@
             this.gcSummary.Location = new System.Drawing.Point(3, 63);
             this.gcSummary.MainView = this.gvSummary;
             this.gcSummary.Name = "gcSummary";
-            this.gcSummary.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gcSummary.Size = new System.Drawing.Size(820, 499);
+            this.gcSummary.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.gcSummary.Size = new System.Drawing.Size(821, 500);
             this.gcSummary.TabIndex = 10;
             this.gcSummary.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSummary});
@@ -261,9 +261,8 @@
             this.colCustomerCode.Caption = "公司编码";
             this.colCustomerCode.FieldName = "CustomerCode";
             this.colCustomerCode.Name = "colCustomerCode";
-            this.colCustomerCode.SummaryItem.DisplayFormat = "总计:{0}";
-            this.colCustomerCode.SummaryItem.FieldName = "ProductCode";
-            this.colCustomerCode.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Count;
+            this.colCustomerCode.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "ProductCode", "总计:{0}")});
             this.colCustomerCode.Visible = true;
             this.colCustomerCode.VisibleIndex = 0;
             this.colCustomerCode.Width = 86;
@@ -524,7 +523,7 @@
             this.gcDetailEditor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcDetailEditor.Location = new System.Drawing.Point(0, 0);
             this.gcDetailEditor.Name = "gcDetailEditor";
-            this.gcDetailEditor.Size = new System.Drawing.Size(931, 565);
+            this.gcDetailEditor.Size = new System.Drawing.Size(932, 566);
             this.gcDetailEditor.TabIndex = 0;
             // 
             // txtBank
@@ -537,7 +536,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DataCode", 60, "银行编号"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NativeName", 100, "名称")});
             this.txtBank.Properties.NullText = "";
-            this.txtBank.Size = new System.Drawing.Size(114, 21);
+            this.txtBank.Size = new System.Drawing.Size(114, 20);
             this.txtBank.TabIndex = 52;
             // 
             // ucCusAttributes
@@ -561,28 +560,28 @@
             // 
             this.txtPaymentTerm.Location = new System.Drawing.Point(483, 320);
             this.txtPaymentTerm.Name = "txtPaymentTerm";
-            this.txtPaymentTerm.Size = new System.Drawing.Size(134, 21);
+            this.txtPaymentTerm.Size = new System.Drawing.Size(134, 20);
             this.txtPaymentTerm.TabIndex = 48;
             // 
             // txtContactPerson
             // 
             this.txtContactPerson.Location = new System.Drawing.Point(276, 23);
             this.txtContactPerson.Name = "txtContactPerson";
-            this.txtContactPerson.Size = new System.Drawing.Size(134, 21);
+            this.txtContactPerson.Size = new System.Drawing.Size(134, 20);
             this.txtContactPerson.TabIndex = 47;
             // 
             // txtBankAddress
             // 
             this.txtBankAddress.Location = new System.Drawing.Point(89, 347);
             this.txtBankAddress.Name = "txtBankAddress";
-            this.txtBankAddress.Size = new System.Drawing.Size(322, 21);
+            this.txtBankAddress.Size = new System.Drawing.Size(322, 20);
             this.txtBankAddress.TabIndex = 46;
             // 
             // txtBankAccount
             // 
             this.txtBankAccount.Location = new System.Drawing.Point(276, 320);
             this.txtBankAccount.Name = "txtBankAccount";
-            this.txtBankAccount.Size = new System.Drawing.Size(134, 21);
+            this.txtBankAccount.Size = new System.Drawing.Size(134, 20);
             this.txtBankAccount.TabIndex = 45;
             // 
             // chkInUse
@@ -605,112 +604,112 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(91, 293);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(320, 21);
+            this.txtEmail.Size = new System.Drawing.Size(320, 20);
             this.txtEmail.TabIndex = 41;
             // 
             // txtWebAddress
             // 
             this.txtWebAddress.Location = new System.Drawing.Point(91, 266);
             this.txtWebAddress.Name = "txtWebAddress";
-            this.txtWebAddress.Size = new System.Drawing.Size(320, 21);
+            this.txtWebAddress.Size = new System.Drawing.Size(320, 20);
             this.txtWebAddress.TabIndex = 40;
             // 
             // txtTel
             // 
             this.txtTel.Location = new System.Drawing.Point(91, 239);
             this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(121, 21);
+            this.txtTel.Size = new System.Drawing.Size(121, 20);
             this.txtTel.TabIndex = 39;
             // 
             // txtCountryCode
             // 
             this.txtCountryCode.Location = new System.Drawing.Point(91, 212);
             this.txtCountryCode.Name = "txtCountryCode";
-            this.txtCountryCode.Size = new System.Drawing.Size(121, 21);
+            this.txtCountryCode.Size = new System.Drawing.Size(121, 20);
             this.txtCountryCode.TabIndex = 38;
             // 
             // txtPostalCode
             // 
             this.txtPostalCode.Location = new System.Drawing.Point(91, 185);
             this.txtPostalCode.Name = "txtPostalCode";
-            this.txtPostalCode.Size = new System.Drawing.Size(121, 21);
+            this.txtPostalCode.Size = new System.Drawing.Size(121, 20);
             this.txtPostalCode.TabIndex = 37;
             // 
             // txtCity
             // 
             this.txtCity.Location = new System.Drawing.Point(483, 257);
             this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(134, 21);
+            this.txtCity.Size = new System.Drawing.Size(134, 20);
             this.txtCity.TabIndex = 36;
             // 
             // txtZipCode
             // 
             this.txtZipCode.Location = new System.Drawing.Point(290, 185);
             this.txtZipCode.Name = "txtZipCode";
-            this.txtZipCode.Size = new System.Drawing.Size(121, 21);
+            this.txtZipCode.Size = new System.Drawing.Size(121, 20);
             this.txtZipCode.TabIndex = 35;
             // 
             // txtFax
             // 
             this.txtFax.Location = new System.Drawing.Point(290, 238);
             this.txtFax.Name = "txtFax";
-            this.txtFax.Size = new System.Drawing.Size(121, 21);
+            this.txtFax.Size = new System.Drawing.Size(121, 20);
             this.txtFax.TabIndex = 33;
             // 
             // txtCityCode
             // 
             this.txtCityCode.Location = new System.Drawing.Point(290, 211);
             this.txtCityCode.Name = "txtCityCode";
-            this.txtCityCode.Size = new System.Drawing.Size(121, 21);
+            this.txtCityCode.Size = new System.Drawing.Size(121, 20);
             this.txtCityCode.TabIndex = 32;
             // 
             // txtRegion
             // 
             this.txtRegion.Location = new System.Drawing.Point(483, 230);
             this.txtRegion.Name = "txtRegion";
-            this.txtRegion.Size = new System.Drawing.Size(134, 21);
+            this.txtRegion.Size = new System.Drawing.Size(134, 20);
             this.txtRegion.TabIndex = 31;
             // 
             // txtCountry
             // 
             this.txtCountry.Location = new System.Drawing.Point(483, 202);
             this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(134, 21);
+            this.txtCountry.Size = new System.Drawing.Size(134, 20);
             this.txtCountry.TabIndex = 30;
             // 
             // txtAddress3
             // 
             this.txtAddress3.Location = new System.Drawing.Point(91, 158);
             this.txtAddress3.Name = "txtAddress3";
-            this.txtAddress3.Size = new System.Drawing.Size(320, 21);
+            this.txtAddress3.Size = new System.Drawing.Size(320, 20);
             this.txtAddress3.TabIndex = 29;
             // 
             // txtAddress2
             // 
             this.txtAddress2.Location = new System.Drawing.Point(91, 131);
             this.txtAddress2.Name = "txtAddress2";
-            this.txtAddress2.Size = new System.Drawing.Size(320, 21);
+            this.txtAddress2.Size = new System.Drawing.Size(320, 20);
             this.txtAddress2.TabIndex = 28;
             // 
             // txtAddress1
             // 
             this.txtAddress1.Location = new System.Drawing.Point(91, 104);
             this.txtAddress1.Name = "txtAddress1";
-            this.txtAddress1.Size = new System.Drawing.Size(320, 21);
+            this.txtAddress1.Size = new System.Drawing.Size(320, 20);
             this.txtAddress1.TabIndex = 27;
             // 
             // txtEnglishName
             // 
             this.txtEnglishName.Location = new System.Drawing.Point(91, 76);
             this.txtEnglishName.Name = "txtEnglishName";
-            this.txtEnglishName.Size = new System.Drawing.Size(320, 21);
+            this.txtEnglishName.Size = new System.Drawing.Size(320, 20);
             this.txtEnglishName.TabIndex = 26;
             // 
             // txtNativeName
             // 
             this.txtNativeName.Location = new System.Drawing.Point(91, 50);
             this.txtNativeName.Name = "txtNativeName";
-            this.txtNativeName.Size = new System.Drawing.Size(320, 21);
+            this.txtNativeName.Size = new System.Drawing.Size(320, 20);
             this.txtNativeName.TabIndex = 25;
             // 
             // labelControl24
@@ -893,7 +892,7 @@
             // 
             this.txtCode.Location = new System.Drawing.Point(91, 23);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(121, 21);
+            this.txtCode.Size = new System.Drawing.Size(121, 20);
             this.txtCode.TabIndex = 1;
             // 
             // labelControl1
@@ -916,7 +915,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(826, 565);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(827, 566);
             this.tableLayoutPanel1.TabIndex = 11;
             // 
             // panelControl3
@@ -935,7 +934,7 @@
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(3, 3);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(820, 54);
+            this.panelControl3.Size = new System.Drawing.Size(821, 54);
             this.panelControl3.TabIndex = 11;
             // 
             // txt_Attr
@@ -949,14 +948,14 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NativeName", 100, "名称"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("EnglishName", 100, "名称(英)")});
             this.txt_Attr.Properties.NullText = "";
-            this.txt_Attr.Size = new System.Drawing.Size(114, 21);
+            this.txt_Attr.Size = new System.Drawing.Size(114, 20);
             this.txt_Attr.TabIndex = 29;
             // 
             // txt_Name
             // 
             this.txt_Name.Location = new System.Drawing.Point(335, 4);
             this.txt_Name.Name = "txt_Name";
-            this.txt_Name.Size = new System.Drawing.Size(114, 21);
+            this.txt_Name.Size = new System.Drawing.Size(114, 20);
             this.txt_Name.TabIndex = 27;
             // 
             // labelControl22
@@ -1005,7 +1004,7 @@
             // 
             this.txt_CustomerTo.Location = new System.Drawing.Point(142, 28);
             this.txt_CustomerTo.Name = "txt_CustomerTo";
-            this.txt_CustomerTo.Size = new System.Drawing.Size(100, 21);
+            this.txt_CustomerTo.Size = new System.Drawing.Size(100, 20);
             this.txt_CustomerTo.TabIndex = 15;
             // 
             // pictureBox3
@@ -1022,7 +1021,7 @@
             // 
             this.txt_CustomerFrom.Location = new System.Drawing.Point(142, 4);
             this.txt_CustomerFrom.Name = "txt_CustomerFrom";
-            this.txt_CustomerFrom.Size = new System.Drawing.Size(100, 21);
+            this.txt_CustomerFrom.Size = new System.Drawing.Size(100, 20);
             this.txt_CustomerFrom.TabIndex = 14;
             // 
             // labelControl27

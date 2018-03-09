@@ -72,7 +72,9 @@ namespace HHMES.Library.UserControls
         /// </summary>
         public void DoRetriveData()
         {
-            DataTable data = DataDictCache.Cache.User;
+            //TODO:
+            DataTable data = null;
+           // DataTable data = DataDictCache.Cache.User;
             this.DoBindingDataSource(data);
         }
 

@@ -46,7 +46,7 @@ namespace HHMES.Library
             {
                 item = code;                
                 string filter = tb_CustomerAttribute.AttributeCode + "='" + code + "'";
-                DataRow[] rows = DataDictCache.Cache.CustomerAttributes.Select(filter);
+                DataRow[] rows = DataDictCache.GetCacheTableData("COMPANYTYPE").Select(filter);
                 if (rows.Length > 0)
                     item = item + "=" + rows[0][tb_CustomerAttribute.NativeName].ToString();
                 sb.Append(item + ",");

@@ -10,15 +10,15 @@ namespace HHMES.Models
     ///<summary>
     /// ORM模型, 数据表:sys_BusinessTables,由ClassGenerator自动生成
     /// </summary>
-    [ORM_ObjectClassAttribute("sys_BusinessTables", "isid", true)]
+    [ORM_ObjectClassAttribute("sys_BusinessTables", "ID", true)]
     public sealed class sys_BusinessTables
     {
         public static string __TableName ="sys_BusinessTables";
 
-        public static string __KeyName = "isid";
+        public static string __KeyName = "ID";
 
         [ORM_FieldAttribute(SqlDbType.Int,4,false,false,true,false,false)]
-        public static string isid = "isid"; 
+        public static string ID = "ID"; 
 
         [ORM_FieldAttribute(SqlDbType.Int,4,false,true,false,false,false)]
         public static string ModuleID = "ModuleID"; 

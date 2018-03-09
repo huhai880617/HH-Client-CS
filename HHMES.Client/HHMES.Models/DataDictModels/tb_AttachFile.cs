@@ -11,10 +11,10 @@ namespace HHMES.Models
     {
         public static string __TableName = "tb_AttachFile";
 
-        public static string __KeyName = "FileID"; //isid
+        public static string __KeyName = "FileID"; //ID
 
         [ORM_FieldAttribute(SqlDbType.Int, 4, false, false, true, false, false)]
-        public static string FileID = "FileID";//isid
+        public static string FileID = "FileID";//ID
 
         [ORM_FieldAttribute(SqlDbType.NVarChar, 20, false, true, false, true, false)]
         public static string DocID = "DocID";

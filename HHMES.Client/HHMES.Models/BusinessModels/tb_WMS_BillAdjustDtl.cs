@@ -21,15 +21,15 @@ namespace HHMES.Models
     ///<summary>
     /// ORM模型, 数据表:WMS_BillInDtl,由ClassGenerator自动生成
     /// </summary>
-    [ORM_ObjectClassAttribute("WMS_BillAdjustDtl", "IsId", false)]
+    [ORM_ObjectClassAttribute("WMS_BillAdjustDtl", "ID", false)]
     public sealed class tb_WMS_BillAdjustDtl
     {
         public static string __TableName ="WMS_BillAdjustDtl";
 
-        public static string __KeyName = "IsId";
+        public static string __KeyName = "ID";
 
         [ORM_FieldAttribute(SqlDbType.Int,4,false,false,true,false,false)]
-        public static string IsId = "IsId"; 
+        public static string ID = "ID"; 
 
         [ORM_FieldAttribute(SqlDbType.NVarChar,40,false,true,false,true,false)]
         public static string BillDtl_BillNo = "Bill_BillNo";

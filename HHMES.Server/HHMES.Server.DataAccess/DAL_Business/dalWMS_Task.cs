@@ -86,7 +86,7 @@ namespace HHMES.Server.DataAccess
          public System.Data.DataSet GetBusinessByKey(string docNo)
          {
              string sql1 = " select * from [WMS_Task]    where [" + tb_WMS_Task.__KeyName + "]=@DocNo1 ;";
-             string sql2 = " select * from [WMS_TaskDtl]   where [" + tb_WMS_Task.__KeyName + "]=@DocNo2 ORDER BY IsId "; //明细表排序
+             string sql2 = " select * from [WMS_TaskDtl]   where [" + tb_WMS_Task.__KeyName + "]=@DocNo2 ORDER BY ID "; //明细表排序
              SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(sql1 + sql2);
              cmd.AddParam("@DocNo1", SqlDbType.VarChar, docNo.Trim());
              cmd.AddParam("@DocNo2", SqlDbType.VarChar, docNo.Trim());

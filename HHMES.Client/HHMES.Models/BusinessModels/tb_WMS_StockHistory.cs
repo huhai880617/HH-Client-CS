@@ -24,15 +24,15 @@ namespace HHMES.Models
    ///         bool islookup, bool isAddorUpdate, bool isPrimaryKey,
    ///       bool isForeignKey, bool isDocFieldName)
     /// </summary>
-    [ORM_ObjectClassAttribute("WMS_StockDtl_History", "IsId", true)]
+    [ORM_ObjectClassAttribute("WMS_StockDtl_History", "ID", true)]
     public sealed class tb_WMS_StockHistory
     {
         public static string __TableName = "WMS_StockDtl_History";
 
-        public static string __KeyName = "IsId";
+        public static string __KeyName = "ID";
 
         [ORM_FieldAttribute(SqlDbType.Int, 4, false, false, true, false, false)]
-        public static string IsId = "IsId";
+        public static string ID = "ID";
 
         [ORM_FieldAttribute(SqlDbType.NVarChar, 40, true, true, false, false, false)]
         public static string StockDtl_BillNo = "StockDtl_BillNo";

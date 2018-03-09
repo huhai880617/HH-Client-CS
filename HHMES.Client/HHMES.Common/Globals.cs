@@ -30,14 +30,16 @@ namespace HHMES.Common
         public const string DEF_CURRENCY = "RMB";//预设货币
         public const string DEF_DECIMAL_FORMAT = "0.00"; //输出格式        
         public const string DEF_NO_TEXT = "*自动生成*";
+        public const string DEF_WAREHOUSECODE = "MIDEA1";
+        public const int DEF_WAREHOUSECODEID = 1;
         /// <summary>
         /// 系统数据库名。开发框架2.2版支持多帐套管理，帐套表定义在系统数据库。
         /// 打开登录窗体时加载帐套数据给用户选择。        
         /// 
         /// 帐套数据由系统管理员在后台配置，不提供配置窗体。
         /// </summary>
-        public const string DEF_SYSTEM_DB = "HHMES.System";
-        public const string DEF_MASTER_DB = "master";
+        public const string DEF_SYSTEM_DB = "WCS_SYSTEM";  // 注意一定要大写
+        public const string DEF_MASTER_DB = "MASTER";
 
         public const int DEF_DECIMAL_ROUND = 2;//四舍五入小数位
 

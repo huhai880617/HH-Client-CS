@@ -46,9 +46,9 @@ namespace HHMES.Server.DataAccess.DAL_System
         /// <returns></returns>
         public DataTable GetUsers()
         {
-            string sql = "select * from [tb_MyUser]";
+            string sql = "select * from [C_User]";
 
-            return DataProvider.Instance.GetTable(_Loginer.DBName, sql, "tb_MyUser");
+            return DataProvider.Instance.GetTable(_Loginer.DBName, sql, "C_User");
         }
 
         /// <summary>
@@ -58,7 +58,7 @@ namespace HHMES.Server.DataAccess.DAL_System
         /// <returns></returns>
         public bool ExistsUser(string account)
         {
-            string sql = "select count(*) from [tb_MyUser] where [Account]=@Account";
+            string sql = "select count(*) from [C_User] where [Account]=@Account";
             SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(sql);
             cmd.AddParam("@Account", SqlDbType.VarChar, account);
             object o = DataProvider.Instance.ExecuteScalar(_Loginer.DBName, cmd.SqlCommand);
@@ -71,7 +71,7 @@ namespace HHMES.Server.DataAccess.DAL_System
         /// <param name="account">登录帐号</param>
         public void Logout(string account)
         {
-            SqlCommandBase cmd = SqlBuilder.BuildSqlProcedure("sp_Logout");
+            SqlCommandBase cmd = SqlBuilder.BuildSqlProcedure("p_sys_Logout");
             cmd.AddParam("@Account", SqlDbType.VarChar, account);
             DataProvider.Instance.ExecuteNoQuery(_Loginer.DBName, cmd.SqlCommand);
         }
@@ -83,7 +83,7 @@ namespace HHMES.Server.DataAccess.DAL_System
         /// <returns></returns>
         public DataTable Login(LoginUser loginUser, char LoginUserType)
         {
-            SqlCommandBase cmd = SqlBuilder.BuildSqlProcedure("sp_Login");
+            SqlCommandBase cmd = SqlBuilder.BuildSqlProcedure("p_sys_Login");
             cmd.AddParam("@Account", SqlDbType.VarChar, loginUser.Account);
             cmd.AddParam("@Password", SqlDbType.VarChar, loginUser.Password);
             cmd.AddParam("@DataSetID", SqlDbType.VarChar, loginUser.DataSetID);
@@ -106,7 +106,7 @@ namespace HHMES.Server.DataAccess.DAL_System
         /// <returns></returns>
         public DataTable GetUserByNovellID(string novellAccount)
         {
-            string sql = "select * from [tb_MyUser] where [NovellAccount]=@novellAccount";
+            string sql = "select * from [C_User] where [NovellAccount]=@novellAccount";
             SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(sql);
             cmd.AddParam("@novellAccount", SqlDbType.VarChar, novellAccount);
             DataTable dt = DataProvider.Instance.GetTable(_Loginer.DBName, cmd.SqlCommand, TUser.__TableName);
@@ -120,7 +120,7 @@ namespace HHMES.Server.DataAccess.DAL_System
         /// <returns></returns>
         public DataTable GetUserAuthorities(Loginer user)
         {
-            SqlProcedure sp = SqlBuilder.BuildSqlProcedure("sp_MyGetAuthorities");
+            SqlProcedure sp = SqlBuilder.BuildSqlProcedure("p_sys_GetAuthorities");
             sp.AddParam("@UserOrGroup", SqlDbType.VarChar, user.Account);
             sp.AddParam("@Type", SqlDbType.Int, 1);
             DataTable dt = DataProvider.Instance.GetTable(user.DBName, sp.SqlCommand, TUserRole.__TableName);
@@ -134,7 +134,7 @@ namespace HHMES.Server.DataAccess.DAL_System
         /// <returns></returns>
         public DataTable GetUserGroups(string account)
         {
-            string SQL = "SELECT * FROM tb_MyUserGroup WHERE GroupCode IN (SELECT GroupCode FROM tb_MyUserGroupRe WHERE Account=@Account)";
+            string SQL = "SELECT * FROM C_UserGroup WHERE GroupCode IN (SELECT GroupCode FROM C_UserGroupRe WHERE Account=@Account)";
             SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(SQL);
             cmd.AddParam("@Account", SqlDbType.VarChar, account);
             DataTable dt = DataProvider.Instance.GetTable(_Loginer.DBName, cmd.SqlCommand, TUserGroup.__TableName);
@@ -148,7 +148,7 @@ namespace HHMES.Server.DataAccess.DAL_System
         /// <returns></returns>
         public DataTable GetUser(string account)
         {
-            string sql = "select * from [tb_MyUser] where [Account]=@Account";
+            string sql = "select * from [C_User] where [Account]=@Account";
             SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(sql);
             cmd.AddParam("@Account", SqlDbType.VarChar, account);
             DataTable dt = DataProvider.Instance.GetTable(_Loginer.DBName, cmd.SqlCommand, TUser.__TableName);
@@ -162,7 +162,7 @@ namespace HHMES.Server.DataAccess.DAL_System
         /// <returns></returns>
         public bool DeleteUser(string account)
         {
-            string sql = "Delete [tb_MyUser] where [Account]=@Account";
+            string sql = "Delete [C_User] where [Account]=@Account";
             SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(sql);
             cmd.AddParam("@Account", SqlDbType.VarChar, account);
             int i = DataProvider.Instance.ExecuteNoQuery(_Loginer.DBName, cmd.SqlCommand);
@@ -177,7 +177,7 @@ namespace HHMES.Server.DataAccess.DAL_System
         /// <returns></returns>
         public bool ModifyPassword(string account, string pwd)
         {
-            string sql = "update tb_MyUser set password=@password where account=@account";
+            string sql = "update C_MyUser set password=@password where account=@account";
             SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(sql);
             cmd.AddParam("password", SqlDbType.VarChar, pwd);
             cmd.AddParam("account", SqlDbType.VarChar, account);
@@ -187,7 +187,7 @@ namespace HHMES.Server.DataAccess.DAL_System
 
         public DataTable GetUserDirect(string account, string DBName)
         {
-            string sql = "select * from [tb_MyUser] where [Account]=@Account";
+            string sql = "select * from [C_User] where [Account]=@Account";
             SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(sql);
             cmd.AddParam("@Account", SqlDbType.VarChar, account);
             DataTable dt = DataProvider.Instance.GetTable(DBName, cmd.SqlCommand, TUser.__TableName);
@@ -196,7 +196,7 @@ namespace HHMES.Server.DataAccess.DAL_System
 
         public bool ModifyPwdDirect(string account, string pwd, string DBName)
         {
-            string sql = "update tb_MyUser set password=@password where account=@account";
+            string sql = "update C_User set password=@password where account=@account";
             SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(sql);
             cmd.AddParam("password", SqlDbType.VarChar, pwd);
             cmd.AddParam("account", SqlDbType.VarChar, account);
@@ -207,7 +207,7 @@ namespace HHMES.Server.DataAccess.DAL_System
 
         public DataSet GetUserReportData(DateTime createDateFrom, DateTime createDateTo)
         {
-            StringBuilder sb = new StringBuilder("select * from [tb_MyUser] where 1=1 ");
+            StringBuilder sb = new StringBuilder("select * from [C_User] where 1=1 ");
 
             if (createDateFrom.Year > 1901)
                 sb.Append(" AND CONVERT(VARCHAR,[CreateTime],112)>='" + createDateFrom.ToString("yyyyMMdd") + "'");

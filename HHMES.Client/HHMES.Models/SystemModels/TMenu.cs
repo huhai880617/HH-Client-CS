@@ -6,15 +6,15 @@ using HHMES.ORM;
 
 namespace HHMES.Models
 {
-    [ORM_ObjectClassAttribute("tb_MyMenu", "MenuName", true)]
+    [ORM_ObjectClassAttribute("C_Menu", "MenuName", true)]
     public class TMenu
     {
-        public static string __TableName = "tb_MyMenu";
+        public static string __TableName = "C_Menu";
 
         public static string __KeyName = "MenuName";
 
         [ORM_FieldAttribute(SqlDbType.Int, 4, false, false, false, false, false)]
-        public static string isid = "isid";
+        public static string ID = "ID";
 
         [ORM_FieldAttribute(SqlDbType.VarChar, 50, false, true, false, false, false)]
         public static string MenuName = "MenuName";

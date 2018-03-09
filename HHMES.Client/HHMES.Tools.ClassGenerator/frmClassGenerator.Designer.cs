@@ -223,6 +223,7 @@ namespace HHMES.Tools.ClassGenerator
             this.xtraTabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSolutionFolder.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -716,8 +717,8 @@ namespace HHMES.Tools.ClassGenerator
             // txtConnString
             // 
             this.txtConnString.AllowDrop = true;
-            this.txtConnString.EditValue = "Data Source=HH\\MSSQL2008R2;Initial Catalog=HHMES.Normal;Integrated Security=True;" +
-    "User ID=sa; Password=!QAZ1qaz;";
+            this.txtConnString.EditValue = "Data Source=.;Initial Catalog=wcs_info;Integrated Security=True;User ID=sa; Passw" +
+    "ord=hh2014;";
             this.txtConnString.Location = new System.Drawing.Point(95, 5);
             this.txtConnString.Name = "txtConnString";
             this.txtConnString.Size = new System.Drawing.Size(673, 39);
@@ -1590,6 +1591,7 @@ namespace HHMES.Tools.ClassGenerator
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 

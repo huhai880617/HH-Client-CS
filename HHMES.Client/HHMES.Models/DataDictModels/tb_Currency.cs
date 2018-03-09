@@ -19,7 +19,7 @@ namespace HHMES.Models
         public static string __KeyName = "Currency";
 
         [ORM_FieldAttribute(SqlDbType.Int,4,false,false,false,false,false)]
-        public static string isid = "isid"; 
+        public static string ID = "ID"; 
 
         [ORM_FieldAttribute(SqlDbType.VarChar,10,false,true,true,false,false)]
         public static string Currency = "Currency"; 

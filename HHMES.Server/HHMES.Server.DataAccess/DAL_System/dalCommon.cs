@@ -42,9 +42,9 @@ namespace HHMES.Server.DataAccess.DAL_System
         /// <returns></returns>
         public DataTable GetTableFields(string tableName)
         {
-            SqlProcedure sp = SqlBuilder.BuildSqlProcedure("sp_sys_GetTableFieldType");
+            SqlProcedure sp = SqlBuilder.BuildSqlProcedure("p_sys_GetTableFieldType");
             sp.AddParam("@TableName", SqlDbType.VarChar, 50, tableName);
-            return DataProvider.Instance.GetTable(_Loginer.DBName, sp.SqlCommand, "tb_TableFieldTypeData");
+            return DataProvider.Instance.GetTable(_Loginer.DBName, sp.SqlCommand, "TableFieldTypeData");
         }
 
         /// <summary>
@@ -53,8 +53,8 @@ namespace HHMES.Server.DataAccess.DAL_System
         /// <returns></returns>
         public DataTable GetBusinessTables()
         {
-            string SQL = "SELECT * FROM sys_BusinessTables ORDER BY ModuleID,SortID";
-            return DataProvider.Instance.GetTable(_Loginer.DBName, SQL, "sys_BusinessTables");
+            string SQL = "SELECT * FROM C_BusinessTables ORDER BY ModuleID,SortID";
+            return DataProvider.Instance.GetTable(_Loginer.DBName, SQL, "BusinessTables");
         }
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace HHMES.Server.DataAccess.DAL_System
         /// <returns></returns>
         public DataTable GetModules()
         {
-            return DataProvider.Instance.GetTable(_Loginer.DBName, "SELECT * FROM sys_Modules", "sys_Modules");
+            return DataProvider.Instance.GetTable(_Loginer.DBName, "SELECT * FROM C_Modules", "C_Modules");
         }
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace HHMES.Server.DataAccess.DAL_System
         public DataTable GetTableFieldsDef(string tableName, bool onlyDisplayField)
         {
             string flag = onlyDisplayField ? "N" : "Y";
-            string sql = "sp_sys_GetTableFieldsForPicker '" + tableName + "','" + flag + "' ";
+            string sql = "p_sys_GetTableFieldsForPicker '" + tableName + "','" + flag + "' ";
             return DataProvider.Instance.GetTable(_Loginer.DBName, sql, "Fields");
         }
 

@@ -6,15 +6,15 @@ using HHMES.ORM;
 
 namespace HHMES.Models
 {
-    [ORM_ObjectClassAttribute("tb_MyUserRole", "isid", true)]
+    [ORM_ObjectClassAttribute("C_UserRole", "ID", true)]
     public class TUserRole
     {
-        public static string __TableName = "tb_MyUserRole";
+        public static string __TableName = "C_UserRole";
 
-        public static string __KeyName = "isid";
+        public static string __KeyName = "ID";
 
         [ORM_FieldAttribute(SqlDbType.Int, 4, false, false, true, false, false)]
-        public static string isid = "isid";
+        public static string ID = "ID";
 
         [ORM_FieldAttribute(SqlDbType.VarChar, 30, false, true, false, false, false)]
         public static string GroupCode = "GroupCode";

@@ -24,22 +24,22 @@ namespace HHMES.Server.DataAccess.DAL_DataDict
     /// <summary>
     /// 公共数据字典数据层
     /// </summary>
-    [DefaultORM_UpdateMode(typeof(tb_CommonDataDict), true)]
+    [DefaultORM_UpdateMode(typeof(tb_CONFIG_DETAIL), true)]
     public class dalCommonDataDict : dalBaseDataDict, IBridge_CommonDataDict
     {
         public dalCommonDataDict(Loginer loginer)
             : base(loginer)
         {
-            _KeyName = tb_CommonDataDict.__KeyName; //主键字段
-            _TableName = tb_CommonDataDict.__TableName;//表名
-            _ModelType = typeof(tb_CommonDataDict);//字典表ORM
+            _KeyName = tb_CONFIG_DETAIL.__KeyName; //主键字段
+            _TableName = tb_CONFIG_DETAIL.__TableName;//表名
+            _ModelType = typeof(tb_CONFIG_DETAIL);//字典表ORM
         }
 
         protected override IGenerateSqlCommand CreateSqlGenerator(string tableName)
         {
             Type ORM = null;
 
-            if (tableName == tb_CommonDataDict.__TableName) ORM = typeof(tb_CommonDataDict);
+            if (tableName == tb_CONFIG_DETAIL.__TableName) ORM = typeof(tb_CONFIG_DETAIL);
 
             if (ORM == null) throw new Exception(tableName + "表没有ORM模型！");
 
@@ -82,18 +82,18 @@ namespace HHMES.Server.DataAccess.DAL_DataDict
         /// </summary>
         /// <param name="DataType">数据类型</param>
         /// <returns></returns>
-        public DataTable SearchBy(int DataType)
+        public DataTable SearchBy(string DataType)
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("SELECT * FROM tb_CommonDataDict WHERE 1=1 ");
+            sb.Append("SELECT * FROM CONFIG_DETAIL WHERE 1=1 ");
 
-            if (DataType > 0)
-                sb.Append(" AND DataType=" + DataType.ToString());
+            if (DataType != "")
+                sb.Append("AND ISDELETED=0 AND CONFIG_HEADERID =" + DataType);
 
-            sb.Append(" ORDER BY DataType,DataCode ");
+            sb.Append(" ORDER BY [SEQUENCE] ");
 
             SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(sb.ToString());
-            return DataProvider.Instance.GetTable(_Loginer.DBName, cmd.SqlCommand, tb_CommonDataDict.__TableName);
+            return DataProvider.Instance.GetTable(_Loginer.DBName, cmd.SqlCommand, tb_CONFIG_DETAIL.__TableName);
 
         }
 
@@ -103,13 +103,12 @@ namespace HHMES.Server.DataAccess.DAL_DataDict
         /// <param name="code">类型编号</param>
         /// <param name="name">类型名称</param>
         /// <returns></returns>
-        public bool AddCommonType(int code, string name)
+        public bool AddCommonType(string code, string name)
         {
-            string sql = "INSERT INTO tb_CommDataDictType (DataType,TypeName) VALUES (@DataType,@TypeName)";
-            SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(sql);
-            cmd.AddParam("@DataType", SqlDbType.Int, code);
-            cmd.AddParam("@TypeName", SqlDbType.NVarChar, name);
-            int i = DataProvider.Instance.ExecuteNoQuery(_Loginer.DBName, cmd.SqlCommand);
+            string sql = "INSERT INTO CONFIG_HEADER (CODE,NAME,WAREHOUSECODE_ID,SYSTEMCREATED,CREATEBY,CREATETIME,"
+              +"MODIFYBY,MODIFYTIME,ISDELETED ) VALUES ('{0}','{1}',{2},1,'{3}',getdate(),'{4}',getdate(),0);";
+            string execSql = string.Format(sql, code, name, Globals.DEF_WAREHOUSECODEID, Loginer.CurrentUser, Loginer.CurrentUser);
+            int i = DataProvider.Instance.ExecuteNoQuery(_Loginer.DBName, execSql);
             return i > 0;
         }
 
@@ -118,23 +117,21 @@ namespace HHMES.Server.DataAccess.DAL_DataDict
         /// </summary>
         /// <param name="code">数据类型编号</param>
         /// <returns></returns>
-        public bool DeleteCommonType(int code)
+        public bool DeleteCommonType(string code)
         {
-            string sql = "DELETE tb_CommDataDictType WHERE DataType=@DataType";
-            SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(sql);
-            cmd.AddParam("@DataType", SqlDbType.Int, code);
-            int i = DataProvider.Instance.ExecuteNoQuery(_Loginer.DBName, cmd.SqlCommand);
+            string sql =string.Format( "UPDATE CONFIG_HEADER SET ISDELETED=1 WHERE CODE='{0}'; UPDATE CONFIG_DETAIL SET ISDELETED=1 WHERE CONFIG_HEADERID=(SELECT ID FROM CONFIG_HEADER WHERE CODE='{1}')",code,code);
+            int i = DataProvider.Instance.ExecuteNoQuery(_Loginer.DBName, sql);
             return i > 0;
         }
 
         /// <summary>
         /// 检查数据类型是否存在
         /// </summary>
-        /// <param name="id">数据类型编号</param>
+        /// <param CODE="CODE">数据类型编号</param>
         /// <returns></returns>
-        public bool IsExistsCommonType(int id)
+        public bool IsExistsCommonType(string CODE)
         {
-            string sql = "SELECT COUNT(*) C FROM tb_CommDataDictType WHERE DataType=" + id.ToString();
+            string sql =String.Format( "SELECT COUNT(*) C FROM CONFIG_HEADER WHERE CODE='{0}' AND ISDELETED=0",CODE);
             object o = DataProvider.Instance.ExecuteScalar(_Loginer.DBName, sql);
             return ConvertEx.ToInt(o) > 0;
         }

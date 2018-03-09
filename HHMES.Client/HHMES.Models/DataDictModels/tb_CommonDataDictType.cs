@@ -23,7 +23,7 @@ namespace HHMES.Models
         public static string __KeyName = "DataType";
 
         [ORM_FieldAttribute(SqlDbType.Int, 4, false, false, false, false, false)]
-        public static string isid = "isid";
+        public static string ID = "ID";
 
         [ORM_FieldAttribute(SqlDbType.Int, 4, false, true, true, false, false)]
         public static string DataType = "DataType";

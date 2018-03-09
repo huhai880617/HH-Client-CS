@@ -51,21 +51,22 @@ namespace HHMES.InventoryModule
             BindingSummarySearchPanel(btnQuery, btnEmpty, panelSearch);//绑定搜索面板
 
             //DataBinder.BindingLookupEditDataSource(repositoryItemLookUpEdit1, DataDictCache.Cache.StockType, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataTable dt = DataDictCache.Cache.StockType.Clone();
-            DataRow dr1 = dt.NewRow();
-            dr1["DataCode"] = "3";
-            dr1["NativeName"] = "入库记录";
-            DataRow dr2 = dt.NewRow();
-            dr2["DataCode"] = "4";
-            dr2["NativeName"] = "出库记录";
-            dt.Rows.Add(dr1);
-            dt.Rows.Add(dr2);
-            DataBinder.BindingLookupEditDataSource(repositoryItemLookUpEdit1, dt, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(lookUpEdit3,dt, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(repositoryItemLookUpEdit2, DataDictCache.Cache.StockStatus, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(lookUpEdit1, DataDictCache.Cache.StockStatus, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(lookUpEdit_PalletSpec, DataDictCache.Cache.PalletSpec, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(lookUpEditInvType, dt, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+
+            //DataTable dt = DataDictCache.Cache.StockType.Clone();
+            //DataRow dr1 = dt.NewRow();
+            //dr1["DataCode"] = "3";
+            //dr1["NativeName"] = "入库记录";
+            //DataRow dr2 = dt.NewRow();
+            //dr2["DataCode"] = "4";
+            //dr2["NativeName"] = "出库记录";
+            //dt.Rows.Add(dr1);
+            //dt.Rows.Add(dr2);
+            //DataBinder.BindingLookupEditDataSource(repositoryItemLookUpEdit1, dt, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(lookUpEdit3,dt, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(repositoryItemLookUpEdit2, DataDictCache.Cache.StockStatus, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(lookUpEdit1, DataDictCache.Cache.StockStatus, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(lookUpEdit_PalletSpec, DataDictCache.Cache.PalletSpec, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(lookUpEditInvType, dt, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
 
             gvSummary.DoubleClick += new EventHandler(OnGridViewDoubleClick); //主表DoubleClict;
 

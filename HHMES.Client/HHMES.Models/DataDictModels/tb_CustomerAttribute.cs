@@ -23,7 +23,7 @@ namespace HHMES.Models
         public static string __KeyName = "AttributeCode";
 
         [ORM_FieldAttribute(SqlDbType.Int,4,false,false,false,false,false)]
-        public static string ISID = "ISID"; 
+        public static string ID = "ID"; 
 
         [ORM_FieldAttribute(SqlDbType.VarChar,10,false,true,true,false,false)]
         public static string AttributeCode = "AttributeCode"; 

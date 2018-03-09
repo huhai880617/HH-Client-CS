@@ -14,7 +14,7 @@ namespace HHMES.Models
     public sealed class tb_Person
     {
         #region 所有字段的局部变量定义
-        private int F_ISID;
+        private int F_ID;
         private string F_SalesCode;
         private string F_SalesName;
         private string F_Department;
@@ -29,7 +29,7 @@ namespace HHMES.Models
         public static string __KeyName = "SalesCode";
 
         #region 所有字段名常量
-        public const string _ISID = "ISID";
+        public const string _ID = "ID";
         public const string _SalesCode = "SalesCode";
         public const string _SalesName = "SalesName";
         public const string _Department = "Department";
@@ -43,7 +43,7 @@ namespace HHMES.Models
         #region 所有字段属性
 
         [ORM_FieldAttribute(SqlDbType.Int, 4, false, false, false, false, false)]
-        public int ISID { get { return F_ISID; } set { F_ISID = value; } }
+        public int ID { get { return F_ID; } set { F_ID = value; } }
 
         [ORM_FieldAttribute(SqlDbType.VarChar, 20, false, true, true, false, false)]
         public string SalesCode { get { return F_SalesCode; } set { F_SalesCode = value; } }

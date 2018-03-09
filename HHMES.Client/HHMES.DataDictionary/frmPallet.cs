@@ -42,12 +42,12 @@ namespace HHMES.DataDictionary
             
             BindingSummarySearchPanel(btnQuery, btnEmpty, panelSearch);//绑定搜索面板
 
-            DataBinder.BindingLookupEditDataSource(txt_Spec, DataDictCache.Cache.PalletSpec, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(repositoryItemLookUpEdit1, DataDictCache.Cache.PalletSpec, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(lookUpEdit1, DataDictCache.Cache.PalletSpec, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(lookUpEdit2, DataDictCache.Cache.PalletStatus, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(txtPalletStatus, DataDictCache.Cache.PalletStatus, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(repositoryItemLookUpEdit2, DataDictCache.Cache.PalletStatus, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(txt_Spec, DataDictCache.Cache.PalletSpec, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(repositoryItemLookUpEdit1, DataDictCache.Cache.PalletSpec, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(lookUpEdit1, DataDictCache.Cache.PalletSpec, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(lookUpEdit2, DataDictCache.Cache.PalletStatus, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(txtPalletStatus, DataDictCache.Cache.PalletStatus, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(repositoryItemLookUpEdit2, DataDictCache.Cache.PalletStatus, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
         }
 
         protected override void ButtonStateChanged(UpdateType currentState)

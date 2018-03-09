@@ -186,8 +186,8 @@ namespace HHMES.Bridge
             if (BridgeFactory.BridgeType == BridgeType.ADODirect)
                 return new ADODirect_CommonDataDict().GetInstance();
 
-            if (BridgeFactory.BridgeType == BridgeType.WebService)
-                return new WebService_CommonDataDict();
+            //if (BridgeFactory.BridgeType == BridgeType.WebService)
+            //    return new WebService_CommonDataDict();
 
             throw new CustomException(UNKNOW_BRIDGE_TYPE);
         }

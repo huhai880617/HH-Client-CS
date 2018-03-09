@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b76739a5310744e08862f495ff6a388c" Name="Diagram1">
+        <EntityTypeShape EntityType="wcs_infoModel.C__MigrationHistory" Width="1.5" PointX="8.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.ADJUSTBILL_DETAIL" Width="1.5" PointX="3" PointY="76.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.ADJUSTBILL_HEADER" Width="1.5" PointX="6" PointY="76.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.B_Module" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.B_ModulePermission" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.B_OperateLog" Width="1.5" PointX="6" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.B_Permission" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.B_Role" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.B_RoleModulePermission" Width="1.5" PointX="6" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.B_User" Width="1.5" PointX="3.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.B_UserRole" Width="1.5" PointX="6" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.BILL_DETAIL" Width="1.5" PointX="5.25" PointY="92.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.BILL_HEADER" Width="1.5" PointX="8.25" PointY="92.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.C_AuthorityItem" Width="1.5" PointX="8.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.C_BusinessTables" Width="1.5" PointX="8.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.C_CompanyInfo" Width="1.5" PointX="10.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.C_FieldNameDefs" Width="1.5" PointX="10.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.C_FormTagName" Width="1.5" PointX="10.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.C_Log" Width="1.5" PointX="12.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.C_LogDtl" Width="1.5" PointX="2.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.C_LogFields" Width="1.5" PointX="12.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.C_LoginLog" Width="1.5" PointX="4.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.C_Menu" Width="1.5" PointX="6.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.C_Modules" Width="1.5" PointX="12.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.C_Product" Width="1.5" PointX="8.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.C_ProductBOM" Width="1.5" PointX="10.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.C_User" Width="1.5" PointX="12.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.C_UserGroup" Width="1.5" PointX="14.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.C_UserGroupRe" Width="1.5" PointX="14.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.C_UserRole" Width="1.5" PointX="14.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.CHECKBILL_DETAIL" Width="1.5" PointX="22" PointY="95.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.CHECKBILL_HEADER" Width="1.5" PointX="11.25" PointY="92.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.COMPANY" Width="1.5" PointX="3" PointY="108.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.CONFIG_DETAIL" Width="1.5" PointX="5.25" PointY="111" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.CONFIG_HEADER" Width="1.5" PointX="3" PointY="116.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.EQUIPMENT" Width="1.5" PointX="7.5" PointY="108.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.EQUIPMENT_ADDRESS" Width="1.5" PointX="9.75" PointY="108" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.EQUIPMENT_ALARMRECORD" Width="1.5" PointX="15.25" PointY="114" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.EQUIPMENT_ALARMTEXT" Width="1.5" PointX="12" PointY="109.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.INF_BILLIN" Width="1.5" PointX="14.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.INF_BILLSTOCKTAKING" Width="1.5" PointX="0.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.INF_ITEM" Width="1.5" PointX="2.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.INVENTORY" Width="1.5" PointX="18.75" PointY="99" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.INVENTORY_HISTORY" Width="1.5" PointX="21" PointY="104.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.ITEM" Width="1.5" PointX="14.25" PointY="89.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.ITEM_PALLET_CAPACITY" Width="1.5" PointX="19.5" PointY="94.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.ITEM_ZONE_CAPACITY" Width="1.5" PointX="16.5" PointY="107.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.LOG_EXCEPTION" Width="1.5" PointX="16.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.LOG_OPERATOR" Width="1.5" PointX="16.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.PALLET" Width="1.5" PointX="7.5" PointY="113.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.PALLETSPEC" Width="1.5" PointX="5.25" PointY="125.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.PORT" Width="1.5" PointX="15.5" PointY="126.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.POSITION" Width="1.5" PointX="9.75" PointY="115" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.ROADWAY" Width="1.5" PointX="15.5" PointY="131.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.ROUTE_HEADER" Width="1.5" PointX="3" PointY="104.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.SERIAL_NUMBER" Width="1.5" PointX="4.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.STACKER" Width="1.5" PointX="17.75" PointY="130.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.STOCKTAKINGBILL_DETAIL" Width="1.5" PointX="25" PointY="99" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.STOCKTAKINGBILL_HEADER" Width="1.5" PointX="5.25" PointY="101.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.STRATEGY_DETAIL" Width="1.5" PointX="7.5" PointY="126.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.STRATEGY_HEADER" Width="1.5" PointX="7.5" PointY="130.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.STRATEGY_RELATION" Width="1.5" PointX="9.75" PointY="129.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.SUPPLIERCUSTOMER" Width="1.5" PointX="5.25" PointY="85.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.TASK_DETAIL" Width="1.5" PointX="16.5" PointY="94.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.TASK_HEADER" Width="1.5" PointX="17.75" PointY="112.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.WARECELL" Width="1.5" PointX="14.75" PointY="118.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.WARECELLSPEC" Width="1.5" PointX="12.5" PointY="124.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.WAREHOUSE" Width="1.5" PointX="0.75" PointY="77" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.WAVE" Width="1.5" PointX="12.5" PointY="116.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.WAVE_DETAIL" Width="1.5" PointX="5.25" PointY="120.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.WAVE_HEADER" Width="1.5" PointX="3" PointY="120.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.ZONE" Width="1.5" PointX="3" PointY="125" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.INF_BILLMOVE" Width="1.5" PointX="6.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.INF_BILLOUT" Width="1.5" PointX="16.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.INF_BILLREPLENISHIMENT" Width="1.5" PointX="8.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcs_infoModel.ITEM_CLASS" Width="1.5" PointX="10.75" PointY="18.5" IsExpanded="true" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ADJUSTBILL_DETAIL_dbo_ADJUSTBILL_HEADER_ADJUSTBILL_HEADERID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ADJUSTBILL_DETAIL_dbo_CONFIG_DETAIL_INVENTORYSTS_CFG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ADJUSTBILL_DETAIL_dbo_CONFIG_DETAIL_STATUS_CFG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ADJUSTBILL_DETAIL_dbo_INVENTORY_INVENTORYID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ADJUSTBILL_DETAIL_dbo_ITEM_ITEM_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ADJUSTBILL_DETAIL_dbo_WAREHOUSE_WAREHOUSEID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_TASK_DETAIL_dbo_ADJUSTBILL_DETAIL_ADJUSTBILL_DETAILID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ADJUSTBILL_HEADER_dbo_CHECKBILL_HEADER_CHECKBILL_HEADERID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ADJUSTBILL_HEADER_dbo_CONFIG_DETAIL_STATUS_CFG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ADJUSTBILL_HEADER_dbo_STOCKTAKINGBILL_HEADER_STOCKTAKINGBILL_HEADERID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ADJUSTBILL_HEADER_dbo_WAREHOUSE_WAREHOUSEID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_B_Module_dbo_B_Module_ParentId" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_B_ModulePermission_dbo_B_Module_ModuleId" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_B_RoleModulePermission_dbo_B_Module_ModuleId" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_B_ModulePermission_dbo_B_Permission_PermissionId" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_B_OperateLog_dbo_B_User_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_B_RoleModulePermission_dbo_B_Permission_PermissionId" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_B_RoleModulePermission_dbo_B_Role_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_B_UserRole_dbo_B_Role_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_B_UserRole_dbo_B_User_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_BILL_DETAIL_dbo_BILL_HEADER_BILL_HEADERID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_BILL_DETAIL_dbo_COMPANY_COMPANYID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_BILL_DETAIL_dbo_CONFIG_DETAIL_INVENTORYSTS_CFG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_BILL_DETAIL_dbo_CONFIG_DETAIL_STATUS_CFG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_BILL_DETAIL_dbo_ITEM_ITEMID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_BILL_DETAIL_dbo_WAREHOUSE_WAREHOUSEID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_BILL_DETAIL_dbo_WAVE_WAVEID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_INVENTORY_HISTORY_dbo_BILL_DETAIL_BILL_DETAILID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_TASK_DETAIL_dbo_BILL_DETAIL_BILL_DETAILID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_BILL_HEADER_dbo_COMPANY_COMPANYID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_BILL_HEADER_dbo_CONFIG_DETAIL_STATUS_CFG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_BILL_HEADER_dbo_CONFIG_DETAIL_TYPE_CFG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_BILL_HEADER_dbo_SUPPLIERCUSTOMER_SUPPLIERCUSTOMERID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_BILL_HEADER_dbo_WAREHOUSE_WAREHOUSEID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_CHECKBILL_DETAIL_dbo_CHECKBILL_HEADER_CHECKBILL_HEADERID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_CHECKBILL_DETAIL_dbo_COMPANY_COMPANYID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_CHECKBILL_DETAIL_dbo_CONFIG_DETAIL_STATUS_CFG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_CHECKBILL_DETAIL_dbo_INVENTORY_INVENTORYID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_CHECKBILL_DETAIL_dbo_ITEM_ITEMID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_CHECKBILL_DETAIL_dbo_PALLET_PALLETID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_CHECKBILL_DETAIL_dbo_WAREHOUSE_WAREHOUSEID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_TASK_DETAIL_dbo_CHECKBILL_DETAIL_CHECKBILL_DETAILID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_CHECKBILL_HEADER_dbo_COMPANY_COMPANYID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_CHECKBILL_HEADER_dbo_CONFIG_DETAIL_STATUS_CFG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_CHECKBILL_HEADER_dbo_SUPPLIERCUSTOMER_SUPPLIERCUSTOMERID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_CHECKBILL_HEADER_dbo_WAREHOUSE_WAREHOUSEID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_COMPANY_dbo_WAREHOUSE_WAREHOUSEID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ITEM_dbo_COMPANY_COMPANYID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ITEM_ZONE_CAPACITY_dbo_COMPANY_COMPANYID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_STOCKTAKINGBILL_DETAIL_dbo_COMPANY_COMPANYID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_STOCKTAKINGBILL_HEADER_dbo_COMPANY_COMPANYID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_SUPPLIERCUSTOMER_dbo_COMPANY_COMPANYID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_CONFIG_DETAIL_dbo_CONFIG_HEADER_CONFIG_HEADERID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_CONFIG_DETAIL_dbo_ROUTE_HEADER_ROUTE_HEADERID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_EQUIPMENT_ADDRESS_dbo_CONFIG_DETAIL_TYPE_CFG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_EQUIPMENT_dbo_CONFIG_DETAIL_TYPE_CFG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_INVENTORY_HISTORY_dbo_CONFIG_DETAIL_INVENTORYSTS_CFG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_INVENTORY_HISTORY_dbo_CONFIG_DETAIL_TYPE_CFG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_PALLET_dbo_CONFIG_DETAIL_STATUS_CFG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_POSITION_dbo_CONFIG_DETAIL_CONFIG_DETAIL_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_STOCKTAKINGBILL_DETAIL_dbo_CONFIG_DETAIL_STATUS_CFG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_STOCKTAKINGBILL_HEADER_dbo_CONFIG_DETAIL_STATUS_CFG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_STRATEGY_DETAIL_dbo_CONFIG_DETAIL_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_STRATEGY_HEADER_dbo_CONFIG_DETAIL_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_TASK_DETAIL_dbo_CONFIG_DETAIL_INVENTORYSTS_CFG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_TASK_HEADER_dbo_CONFIG_DETAIL_STATUS_CFG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_TASK_HEADER_dbo_CONFIG_DETAIL_TYPE_CFG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_WARECELL_dbo_CONFIG_DETAIL_STATUS_CFG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_WAVE_dbo_CONFIG_DETAIL_STATUS_CFG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_CONFIG_HEADER_dbo_WAREHOUSE_WAREHOUSEID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_EQUIPMENT_ADDRESS_dbo_EQUIPMENT_EQUIPMENTID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_POSITION_dbo_EQUIPMENT_EQUIPMENTID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_EQUIPMENT_ALARMTEXT_dbo_EQUIPMENT_ADDRESS_EQUIPMENT_ADDRESSID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_EQUIPMENT_ALARMRECORD_dbo_EQUIPMENT_ALARMTEXT_EQUIPMENT_ALARMTEXTID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_EQUIPMENT_ALARMRECORD_dbo_POSITION_POSITIONID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_INVENTORY_dbo_TASK_DETAIL_TASK_DETAIL_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_INVENTORY_dbo_TASK_DETAIL_TASK_DETAILID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_INVENTORY_HISTORY_dbo_INVENTORY_INVENTORYID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_STOCKTAKINGBILL_DETAIL_dbo_INVENTORY_INVENTORYID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_TASK_DETAIL_dbo_INVENTORY_INVENTORY_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_INVENTORY_HISTORY_dbo_ITEM_ITEMID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_INVENTORY_HISTORY_dbo_PALLET_PALLETID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_INVENTORY_HISTORY_dbo_TASK_DETAIL_TASK_DETAILID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_INVENTORY_HISTORY_dbo_WARECELL_WARECELLID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ITEM_dbo_STRATEGY_HEADER_ALLOCATIONRULE_STRATEGY_HEADERID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ITEM_dbo_STRATEGY_HEADER_MOVERULE_STRATEGY_HEADERID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ITEM_dbo_STRATEGY_HEADER_RECEIPTRULE_STRATEGY_HEADERID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ITEM_dbo_STRATEGY_HEADER_REPLENISHMENTRULE_STRATEGY_HEADERID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ITEM_dbo_STRATEGY_HEADER_ROADWAYRULE_STRATEGY_HEADERID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ITEM_dbo_STRATEGY_HEADER_WARECELLRULE_STRATEGY_HEADERID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ITEM_dbo_STRATEGY_HEADER_ZONERULE_STRATEGY_HEADERID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ITEM_dbo_WAREHOUSE_WAREHOUSEID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ITEM_PALLET_CAPACITY_dbo_ITEM_ITEMID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ITEM_ZONE_CAPACITY_dbo_ITEM_ITEMID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_STOCKTAKINGBILL_DETAIL_dbo_ITEM_ITEMID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_TASK_DETAIL_dbo_ITEM_ITEMID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ITEM_PALLET_CAPACITY_dbo_PALLETSPEC_PALLETSPECID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ITEM_ZONE_CAPACITY_dbo_ZONE_ZONEID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_PALLET_dbo_PALLETSPEC_PALLETSPECID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_STOCKTAKINGBILL_DETAIL_dbo_PALLET_PALLETID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_TASK_HEADER_dbo_PALLET_PALLETID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_WARECELL_dbo_PALLET_PALLETID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_POSITION_dbo_PORT_PORTID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_TASK_HEADER_dbo_PORT_PORT_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_TASK_HEADER_dbo_PORT_PORT_ID1" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_POSITION_dbo_ZONE_ZONEID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_STACKER_dbo_ROADWAY_ROADWAYID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_TASK_HEADER_dbo_ROADWAY_ROADWAYID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_WARECELL_dbo_ROADWAY_ROADWAYID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_STOCKTAKINGBILL_DETAIL_dbo_STOCKTAKINGBILL_HEADER_STOCKTAKINGBILL_HEADERID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_STOCKTAKINGBILL_DETAIL_dbo_WAREHOUSE_WAREHOUSEID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_TASK_DETAIL_dbo_STOCKTAKINGBILL_DETAIL_STOCKTAKINGBILL_DETAILID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_STOCKTAKINGBILL_HEADER_dbo_STRATEGY_HEADER_STRATEGY_HEADERID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_STOCKTAKINGBILL_HEADER_dbo_WAREHOUSE_WAREHOUSEID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_STOCKTAKINGBILL_HEADER_dbo_ZONE_ZONEID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_STRATEGY_RELATION_dbo_STRATEGY_DETAIL_STRATEGY_DETAILID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_STRATEGY_RELATION_dbo_STRATEGY_HEADER_STRATEGY_HEADERID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_SUPPLIERCUSTOMER_dbo_WAREHOUSE_WAREHOUSEID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_TASK_DETAIL_dbo_TASK_HEADER_TASK_HEADERID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_TASK_HEADER_dbo_WARECELL_WARECELL_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_TASK_HEADER_dbo_WARECELL_WARECELL_ID1" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_TASK_HEADER_dbo_WAVE_WAVEID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_WARECELL_dbo_WARECELLSPEC_WARECELLSPECID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_WARECELL_dbo_ZONE_ZONEID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_WAVE_HEADER_dbo_WAREHOUSE_WAREHOUSEID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_ZONE_dbo_WAREHOUSE_WAREHOUSEID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_WAVE_dbo_WAVE_HEADER_WAVE_HEADERID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_WAVE_WAVE_DETAIL_C_WAVE_DETAILID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_WAVE_WAVE_DETAIL_L_WAVE_DETAILID" ManuallyRouted="false" />
+        <AssociationConnector Association="wcs_infoModel.FK_dbo_WAVE_DETAIL_dbo_WAVE_HEADER_WAVE_HEADERID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

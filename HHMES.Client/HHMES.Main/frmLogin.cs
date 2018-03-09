@@ -56,7 +56,7 @@ namespace HHMES.Main
         {
             this.BindingDataSet();//绑定帐套数据源
             this.ReadLoginInfo(); //读取保存的登录信息
-            this.Text += " (后台连接:" + BridgeFactory.BridgeType.ToString() + ")";
+           // this.Text += " (后台连接:" + BridgeFactory.BridgeType.ToString() + ")";
 
             SystemAuthentication.Current = null;
 

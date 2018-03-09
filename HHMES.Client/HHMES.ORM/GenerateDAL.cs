@@ -183,7 +183,7 @@ namespace HHMES.ORM
             builder.AppendLine("          public System.Data.DataSet GetBusinessByKey(string docNo)");
             builder.AppendLine("          {");
             builder.AppendLine("              string sql1 = \" select * from [VW_" + param.ConcretelyName + "]    where [\"+" + param.ORM_Name + ".__KeyName+\"]=@DocNo1 \";");
-            builder.AppendLine("              string sql2 = \" select * from [VW_" + param.ConcretelyName + "Dtl]   where [\"+" + param.ORM_Name + "Dtl.__KeyName+\"]=@DocNo2 ORDER BY ISID \"; //明细表排序");
+            builder.AppendLine("              string sql2 = \" select * from [VW_" + param.ConcretelyName + "Dtl]   where [\"+" + param.ORM_Name + "Dtl.__KeyName+\"]=@DocNo2 ORDER BY ID \"; //明细表排序");
             builder.AppendLine("              SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(sql1 + sql2);");
             builder.AppendLine("              cmd.AddParam(\"@DocNo1\", SqlDbType.VarChar, docNo.Trim());");
             builder.AppendLine("              cmd.AddParam(\"@DocNo2\", SqlDbType.VarChar, docNo.Trim());");

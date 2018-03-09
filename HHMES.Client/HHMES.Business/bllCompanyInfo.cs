@@ -64,7 +64,7 @@ namespace HHMES.Business
             if (_SummaryTable.Rows.Count == 0)
             {
                 DataRow row = _SummaryTable.NewRow();
-                row[tb_CompanyInfo.ISID] = "1";
+                row[tb_CompanyInfo.ID] = "1";
                 row[tb_CompanyInfo.CreatedBy] = Loginer.CurrentUser.Account;
                 row[tb_CompanyInfo.CreationDate] = DateTime.Now;
                 _SummaryTable.Rows.Add(row);

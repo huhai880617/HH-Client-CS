@@ -20,6 +20,7 @@ namespace HHMES.DataDictionary
     /// </summary>
     public partial class frmCommonDataDict : frmBaseDataDictionary
     {
+        private string tableName="CONFIG_DETAIL";
         public frmCommonDataDict()
         {
             InitializeComponent();
@@ -34,23 +35,23 @@ namespace HHMES.DataDictionary
         {
             _SummaryView = new DevGridView(gvSummary);//每个业务窗体必需给这个变量赋值.
             _ActiveEditor = txtNativeName;
-            _KeyEditor = txtDataCode;
+           // _KeyEditor = txtDataCode;
             _DetailGroupControl = gcDetailEditor;
             _BLL = new bllCommonDataDict(); //业务逻辑实例
 
             //绑定相关缓存数据
-            DataBinder.BindingLookupEditDataSource(txt_CommonType, DataDictCache.Cache.CommonDataDictType, "TypeName", "DataType");
-            DataBinder.BindingLookupEditDataSource(txtDataType, DataDictCache.Cache.CommonDataDictType, "TypeName", "DataType");
+            DataBinder.BindingLookupEditDataSource(txt_CommonType, DataDictCache._DataDictType, "HEADERNAME", "ID");
+            DataBinder.BindingLookupEditDataSource(txtDataType, DataDictCache._DataDictType, "HEADERNAME", "ID");
 
-            DataBinder.BindingLookupEditDataSource(colDataType.ColumnEdit as RepositoryItemLookUpEdit,
-                DataDictCache.Cache.CommonDataDictType, "TypeName", "DataType");
+            DataBinder.BindingLookupEditDataSource(repositoryItemLookUpEdit1 as RepositoryItemLookUpEdit,
+                DataDictCache._DataDictType, "HEADERNAME", "ID");
 
             base.InitializeForm();
         }
 
         private void btnQuery_Click(object sender, EventArgs e)
         {//搜索数据                        
-            ((bllCommonDataDict)_BLL).SearchBy(ConvertEx.ToInt(txt_CommonType.EditValue), true);
+            ((bllCommonDataDict)_BLL).SearchBy(txt_CommonType.EditValue.ToString(), true);
             this.DoBindingSummaryGrid(_BLL.SummaryTable); //绑定主表的Grid
             this.ShowSummaryPage(true); //显示Summary页面. 
         }
@@ -86,8 +87,8 @@ namespace HHMES.DataDictionary
 
             if (_UpdateType == UpdateType.Add)
             {
-                string sqlCondition = string.Format(" And DataType='{0}' and DataCode='{1}'", txtDataType.EditValue, txtDataCode.Text);
-                if (_BLL.CheckNoExists("tb_CommonDataDict",sqlCondition))
+                string sqlCondition = string.Format(" And NAME='{0}' and CODE='{1}'", txtDataType.EditValue, txtDataCode.Text);
+                if (_BLL.CheckNoExists("CONFIG_HEADER",sqlCondition))
                 {
                     Msg.Warning("编号已存在!");
                     txtDataCode.Focus();
@@ -105,10 +106,11 @@ namespace HHMES.DataDictionary
             try
             {
                 if (summary == null) return;
-                DataBinder.BindingTextEdit(txtDataCode, summary, tb_CommonDataDict.DataCode);
-                DataBinder.BindingTextEdit(txtDataType, summary, tb_CommonDataDict.DataType);
-                DataBinder.BindingTextEdit(txtEnglishName, summary, tb_CommonDataDict.EnglishName);
-                DataBinder.BindingTextEdit(txtNativeName, summary, tb_CommonDataDict.NativeName);
+                DataBinder.BindingTextEdit(txtDataCode, summary, "CODE");
+                DataBinder.BindingTextEdit(txtDataType, summary, "CONFIG_HEADERID");
+                DataBinder.BindingTextEdit(txtDescription, summary, "DESCRIPTION");
+                DataBinder.BindingTextEdit(txtNativeName, summary, "NAME");
+                DataBinder.BindingTextEdit(txtSequence, summary, "SEQUENCE");
             }
             catch (Exception ex)
             { Msg.ShowException(ex); }
@@ -128,7 +130,7 @@ namespace HHMES.DataDictionary
 
             if (ret.Success)
             {
-                _BLL.DataBinder.Rows[0][tb_CommonDataDict.DataCode] = ret.PrimaryKey;//生成的主键
+                _BLL.DataBinder.Rows[0]["ID"] = ret.PrimaryKey;//生成的主键
 
                 this.UpdateSummaryRow(_BLL.DataBinder.Rows[0]); //刷新表格内的数据.                                    
                 this._UpdateType = UpdateType.None;
@@ -153,16 +155,16 @@ namespace HHMES.DataDictionary
         /// <returns></returns>
         private bool ValidateCommonType()
         {
-            int id = 0;
+            //int id = 0;
 
-            Int32.TryParse(txtCommonTypeId.Text, out id);
-            if (id == 0)
-            {
-                Msg.Warning("编号必须大于0!");
-                txtCommonTypeId.Focus();
-                return false;
-            }
-
+            //Int32.TryParse(txtCommonTypeId.Text, out id);
+            //if (id == 0)
+            //{
+            //    Msg.Warning("编号必须大于0!");
+            //    txtCommonTypeId.Focus();
+            //    return false;
+            //}
+            String id = txtCommonTypeId.Text;
             bool exists = ((bllCommonDataDict)_BLL).IsExistsCommonType(id);
             if (exists)
             {
@@ -186,33 +188,33 @@ namespace HHMES.DataDictionary
             if (false == ValidateCommonType()) return;
 
             //增加一个字典类型
-            bool success = (_BLL as bllCommonDataDict).AddCommonType(int.Parse(txtCommonTypeId.Text), txtCommonTypeName.Text);
+            bool success = (_BLL as bllCommonDataDict).AddCommonType(txtCommonTypeId.Text, txtCommonTypeName.Text);
             if (success)
             {
-                DataDictCache.RefreshCache(tb_CommDataDictType.__TableName);
+                DataDictCache.RefreshCache();
                 Msg.ShowInformation("新增成功！");
             }
         }
 
         private void btnDelCommonType_Click(object sender, EventArgs e)
         {
-            int id = 0;
+            //int id = 0;
 
-            Int32.TryParse(txtCommonTypeId.Text, out id);
-            if (id == 0)
-            {
-                Msg.Warning("编号必须大于0!");
-                txtCommonTypeId.Focus();
-                return;
-            }
+            //Int32.TryParse(txtCommonTypeId.Text, out id);
+            //if (id == 0)
+            //{
+            //    Msg.Warning("编号必须大于0!");
+            //    txtCommonTypeId.Focus();
+            //    return;
+            //}
 
             if (false == Msg.AskQuestion("确认要删除 '" + txtCommonTypeId.Text + "' 的记录!")) return;
 
             //删除字典类型
-            bool success = (_BLL as bllCommonDataDict).DeleteCommonType(int.Parse(txtCommonTypeId.Text));
+            bool success = (_BLL as bllCommonDataDict).DeleteCommonType(txtCommonTypeId.Text);
             if (success)
             {
-                DataDictCache.Cache.DeleteCacheRow(tb_CommDataDictType.__TableName, tb_CommDataDictType.__KeyName, txtCommonTypeId.Text);
+                //DataDictCache.Cache.DeleteCacheRow(tb_CommDataDictType.__TableName, tb_CommDataDictType.__KeyName, txtCommonTypeId.Text);
                 Msg.ShowInformation("删除成功！");
             }
         }
@@ -233,8 +235,8 @@ namespace HHMES.DataDictionary
             {
                 if (_UpdateType == UpdateType.Add)
                 {
-                    string sqlCondition = string.Format(" And DataType='{0}' and DataCode='{1}'", txtDataType.EditValue, txtDataCode.Text);
-                    if (_BLL.CheckNoExists("tb_CommonDataDict", sqlCondition))
+                    string sqlCondition = string.Format(" And NAME='{0}' and Code='{1}'", txtDataType.EditValue, txtDataCode.Text);
+                    if (_BLL.CheckNoExists(tableName, sqlCondition))
                     {
                         Msg.Warning("编号已存在!");
                         txtDataCode.Focus();

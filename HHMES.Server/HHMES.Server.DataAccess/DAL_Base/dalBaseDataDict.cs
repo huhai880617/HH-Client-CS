@@ -147,7 +147,7 @@ namespace HHMES.Server.DataAccess.DAL_Base
             bool success = this.Update(data);//调用预设的保存方法
 
             //返回一个对象类型的结果
-            return new SaveResultEx(success ? (int)ResultID.SUCCESS : (int)ResultID.FAILED, "");
+            return new SaveResultEx(success ? (int)ResultID.SUCCESS : (int)ResultID.FAILED, 0);
         }
 
         /// <summary>
@@ -193,7 +193,7 @@ namespace HHMES.Server.DataAccess.DAL_Base
         public virtual DataTable GetSummaryData()
         {
             this.AssertTableName();
-            string sql = string.Format("SELECT * FROM [{0}]", _TableName);
+            string sql = string.Format("SELECT * FROM [{0}] WHERE ISDELETED=0 ", _TableName);
             return DataProvider.Instance.GetTable(_Loginer.DBName, sql, _TableName);
         }
 
@@ -204,7 +204,7 @@ namespace HHMES.Server.DataAccess.DAL_Base
         /// <returns></returns>
         public virtual DataTable GetDataByKey(string key)
         {
-            string sql = string.Format("SELECT * FROM [{0}] WHERE [{1}]=@KEY", _TableName, _KeyName);
+            string sql = string.Format("SELECT * FROM [{0}] WHERE ISDELETED=0 AND [{1}]=@KEY", _TableName, _KeyName);
             SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(sql);
             cmd.AddParam("@KEY", SqlDbType.VarChar, key);
             return DataProvider.Instance.GetTable(_Loginer.DBName, cmd.SqlCommand, _TableName);
@@ -218,7 +218,7 @@ namespace HHMES.Server.DataAccess.DAL_Base
         public virtual DataTable GetDataDictByTableName(string tableName)
         {
             if (String.IsNullOrEmpty(tableName)) throw new Exception("表名不能为空！");
-            string sql = string.Format("SELECT * FROM [{0}]", tableName);
+            string sql = string.Format("SELECT H.CODE,h.NAME,D.CODE,D.NAME FROM CONFIG_HEADER H INNER JOIN CONFIG_DETAIL D ON H.ID=D.CONFIG_HEADERID AND D.ISDELETED=0 AND H.ISDELETED=0 AND H.CODE='{0}';", tableName);
             return DataProvider.Instance.GetTable(_Loginer.DBName, sql, tableName);
         }
 
@@ -233,7 +233,7 @@ namespace HHMES.Server.DataAccess.DAL_Base
         /// <returns></returns>
         public DataSet DownloadDicts()
         {
-            SqlProcedure cmd = SqlBuilder.BuildSqlProcedure("sp_GetDataDicts");
+            SqlProcedure cmd = SqlBuilder.BuildSqlProcedure("p_sys_GetDataDicts");
             return DataProvider.Instance.GetDataSet(_Loginer.DBName, cmd.SqlCommand);
         }
 
@@ -274,7 +274,7 @@ namespace HHMES.Server.DataAccess.DAL_Base
         /// <returns></returns>
         public virtual bool Delete(string keyValue)
         {
-            string sql = string.Format("Delete [{0}] where [{1}]=@KEY", _TableName, _KeyName);
+            string sql = string.Format("UPDATE [{0}] set ISDELETED=1 where [{1}]=@KEY", _TableName, _KeyName);
             SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(sql);
             cmd.AddParam("@KEY", SqlDbType.VarChar, keyValue);
             int i = DataProvider.Instance.ExecuteNoQuery(_Loginer.DBName, cmd.SqlCommand);

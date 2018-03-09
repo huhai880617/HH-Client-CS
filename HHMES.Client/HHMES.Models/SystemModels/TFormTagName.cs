@@ -6,10 +6,10 @@ using HHMES.ORM;
 
 namespace HHMES.Models
 {
-    [ORM_ObjectClassAttribute("tb_MyFormTagName", "AUID", true)]
+    [ORM_ObjectClassAttribute("C_FormTagName", "AUID", true)]
     public class TFormTagName
     {
-        public static string __TableName = "tb_MyFormTagName";
+        public static string __TableName = "C_FormTagName";
 
         public static string __KeyName = "AUID";
 

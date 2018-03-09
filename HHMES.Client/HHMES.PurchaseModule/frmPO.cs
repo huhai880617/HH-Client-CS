@@ -42,41 +42,41 @@ namespace HHMES.PurchaseModule
         /// </summary>
         protected override void InitializeForm()
         {
-            _BLL = new bllPO();// 业务逻辑管理类
+            //_BLL = new bllPO();// 业务逻辑管理类
 
-            _SummaryView = new DevGridView(gvSummary);
-            _ActiveEditor = txtPONo;
-            _DetailGroupControl = panelControl3;
+            //_SummaryView = new DevGridView(gvSummary);
+            //_ActiveEditor = txtPONo;
+            //_DetailGroupControl = panelControl3;
 
-            base.InitializeForm();
+            //base.InitializeForm();
 
-            frmGridCustomize.RegisterGrid(gvSummary);
-            DevStyle.SetGridControlLayout(gcSummary, false);//表格设置   
-            DevStyle.SetGridControlLayout(gcDetail, true);//表格设置   
-            DevStyle.SetSummaryGridViewLayout(gvSummary);
-            DevStyle.SetDetailGridViewLayout(gvDetail);
+            //frmGridCustomize.RegisterGrid(gvSummary);
+            //DevStyle.SetGridControlLayout(gcSummary, false);//表格设置   
+            //DevStyle.SetGridControlLayout(gcDetail, true);//表格设置   
+            //DevStyle.SetSummaryGridViewLayout(gvSummary);
+            //DevStyle.SetDetailGridViewLayout(gvDetail);
 
-            BindingSummaryNavigator(controlNavigatorSummary, gcSummary); //Summary导航条.
-            BindingSummarySearchPanel(btnQuery, btnEmpty, gcFindGroup);
+            //BindingSummaryNavigator(controlNavigatorSummary, gcSummary); //Summary导航条.
+            //BindingSummarySearchPanel(btnQuery, btnEmpty, gcFindGroup);
 
-            gcDetail.EmbeddedNavigator.ButtonClick += new NavigatorButtonClickEventHandler(this.OnEmbeddedNavigatorButtonClick); //表格按钮事件
-            gvDetail.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(OnCellValueChanged); //表格值改变
-            gvSummary.DoubleClick += new EventHandler(OnGridViewDoubleClick); //主表DoubleClict
+            //gcDetail.EmbeddedNavigator.ButtonClick += new NavigatorButtonClickEventHandler(this.OnEmbeddedNavigatorButtonClick); //表格按钮事件
+            //gvDetail.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(OnCellValueChanged); //表格值改变
+            //gvSummary.DoubleClick += new EventHandler(OnGridViewDoubleClick); //主表DoubleClict
 
-            txt_DocDateTo.DateTime = DateTime.Today; //查询条件
+            //txt_DocDateTo.DateTime = DateTime.Today; //查询条件
 
-            DataBinder.BindingLookupEditDataSource(txtCreatedBy, DataDictCache.Cache.User, "UserName", "Account");
-            DataBinder.BindingLookupEditDataSource(txtPayType, DataDictCache.Cache.PayType, "TypeName", "PayType");
-            DataBinder.BindingLookupEditDataSource(txtAppUser, DataDictCache.Cache.User, "UserName", "Account");
-            DataBinder.BindingLookupEditDataSource(txtPOUser, DataDictCache.Cache.Person, "SalesName", "SalesCode");
-            DataBinder.BindingLookupEditDataSource(txtCurrency, DataDictCache.Cache.Currency, "CurrencyName", "Currency");
+            //DataBinder.BindingLookupEditDataSource(txtCreatedBy, DataDictCache.Cache.User, "UserName", "Account");
+            //DataBinder.BindingLookupEditDataSource(txtPayType, DataDictCache.Cache.PayType, "TypeName", "PayType");
+            //DataBinder.BindingLookupEditDataSource(txtAppUser, DataDictCache.Cache.User, "UserName", "Account");
+            //DataBinder.BindingLookupEditDataSource(txtPOUser, DataDictCache.Cache.Person, "SalesName", "SalesCode");
+            //DataBinder.BindingLookupEditDataSource(txtCurrency, DataDictCache.Cache.Currency, "CurrencyName", "Currency");
 
-            (colD_ProductCode.ColumnEdit as RepositoryItemButtonEdit).ButtonClick += new ButtonPressedEventHandler(OnStockCode_ButtonClick);
-            (colD_ProductCode.ColumnEdit as RepositoryItemButtonEdit).Validating += new CancelEventHandler(OnStockCode_Validating);
+            //(colD_ProductCode.ColumnEdit as RepositoryItemButtonEdit).ButtonClick += new ButtonPressedEventHandler(OnStockCode_ButtonClick);
+            //(colD_ProductCode.ColumnEdit as RepositoryItemButtonEdit).Validating += new CancelEventHandler(OnStockCode_Validating);
 
-            _BLL.GetBusinessByKey("-", true);//加载一个空的业务对象.
+            //_BLL.GetBusinessByKey("-", true);//加载一个空的业务对象.
 
-            ShowSummaryPage(true); //一切初始化完毕后显示SummaryPage          
+            //ShowSummaryPage(true); //一切初始化完毕后显示SummaryPage          
         }
 
         private void OnStockCode_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -101,23 +101,23 @@ namespace HHMES.PurchaseModule
             this.SetEditorBindingValue(txtAmount, amt);
         }
 
-        private void UpdateDetailAmount()
-        {
-            decimal price = ConvertEx.ToDecimal(gvDetail.GetDataRow(gvDetail.FocusedRowHandle)[tb_POs.Price]);
-            decimal quantity = ConvertEx.ToDecimal(gvDetail.GetDataRow(gvDetail.FocusedRowHandle)[tb_POs.Quantity]);
-            decimal amt = Math.Round(price * quantity, 2, MidpointRounding.ToEven);
-            gvDetail.SetFocusedRowCellValue(colD_Amount, amt);//采购金额
-            gvDetail.UpdateCurrentRow();
-        }
+        //private void UpdateDetailAmount()
+        //{
+        //    decimal price = ConvertEx.ToDecimal(gvDetail.GetDataRow(gvDetail.FocusedRowHandle)[tb_POs.Price]);
+        //    decimal quantity = ConvertEx.ToDecimal(gvDetail.GetDataRow(gvDetail.FocusedRowHandle)[tb_POs.Quantity]);
+        //    decimal amt = Math.Round(price * quantity, 2, MidpointRounding.ToEven);
+        //    gvDetail.SetFocusedRowCellValue(colD_Amount, amt);//采购金额
+        //    gvDetail.UpdateCurrentRow();
+        //}
 
-        protected override bool DoSearchSummary()//查询功能
-        {
-            DataTable dt = (_BLL as bllPO).GetSummaryByParam(txt_DocNoFrom.Text, txt_DocNoTo.Text,
-                txt_DocDateFrom.DateTime, txt_DocDateTo.DateTime, txt_StockCode.Text, txt_Supplier.Text);
-            DoBindingSummaryGrid(dt); //绑定主表的Grid
-            ShowSummaryPage(true); //显示Summary页面.                         
-            return dt != null && dt.Rows.Count > 0;
-        }
+        //protected override bool DoSearchSummary()//查询功能
+        //{
+        //    DataTable dt = (_BLL as bllPO).GetSummaryByParam(txt_DocNoFrom.Text, txt_DocNoTo.Text,
+        //        txt_DocDateFrom.DateTime, txt_DocDateTo.DateTime, txt_StockCode.Text, txt_Supplier.Text);
+        //    DoBindingSummaryGrid(dt); //绑定主表的Grid
+        //    ShowSummaryPage(true); //显示Summary页面.                         
+        //    return dt != null && dt.Rows.Count > 0;
+        //}
 
         protected override void SetDetailEditorsAccessable(Control gc, bool value)
         {

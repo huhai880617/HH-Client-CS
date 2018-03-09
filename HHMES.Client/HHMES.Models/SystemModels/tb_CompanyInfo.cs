@@ -6,15 +6,15 @@ using HHMES.ORM;
 
 namespace HHMES.Models
 {
-    [ORM_ObjectClassAttribute("tb_CompanyInfo", "ISID", true)]
+    [ORM_ObjectClassAttribute("C_CompanyInfo", "ID", true)]
     public class tb_CompanyInfo
     {
-        public static string __TableName = "tb_CompanyInfo";
+        public static string __TableName = "C_CompanyInfo";
 
-        public static string __KeyName = "ISID";
+        public static string __KeyName = "ID";
 
         [ORM_FieldAttribute(SqlDbType.Int, 4, false, false, true, false, false)]
-        public static string ISID = "ISID";
+        public static string ID = "ID";
 
         [ORM_FieldAttribute(SqlDbType.VarChar, 3, false, true, false, false, false)]
         public static string CompanyCode = "CompanyCode";

@@ -20,10 +20,10 @@ namespace HHMES.Business
 
         public bllCommonDataDict()
         {
-            _KeyFieldName = tb_CommonDataDict.__KeyName; //主键字段
-            _SummaryTableName = tb_CommonDataDict.__TableName;//表名
+            _KeyFieldName = tb_CONFIG_DETAIL.__KeyName; //主键字段
+            _SummaryTableName = tb_CONFIG_DETAIL.__TableName;//表名
             _WriteDataLog = true;//是否保存日志            
-            _DataDictBridge = BridgeFactory.CreateDataDictBridge(typeof(tb_CommonDataDict));
+            _DataDictBridge = BridgeFactory.CreateDataDictBridge(typeof(tb_CONFIG_DETAIL));
             _SelfBridge = BridgeFactory.CreateCommonDataDictBridge();
         }
 
@@ -33,7 +33,7 @@ namespace HHMES.Business
         /// <param name="dataType">字典类型</param>
         /// <param name="resetCurrent">重置当前处理的数据</param>
         /// <returns></returns>
-        public DataTable SearchBy(int dataType, bool resetCurrent)
+        public DataTable SearchBy(string dataType, bool resetCurrent)
         {
             DataTable data = _SelfBridge.SearchBy(dataType);
             if (resetCurrent) _SummaryTable = data;
@@ -47,7 +47,7 @@ namespace HHMES.Business
         /// <param name="code">编号</param>
         /// <param name="name">名称</param>
         /// <returns></returns>
-        public bool AddCommonType(int code, string name)
+        public bool AddCommonType(string code, string name)
         {
             return _SelfBridge.AddCommonType(code, name);
         }
@@ -57,7 +57,7 @@ namespace HHMES.Business
         /// </summary>
         /// <param name="code">编号</param>
         /// <returns></returns>
-        public bool DeleteCommonType(int code)
+        public bool DeleteCommonType(string code)
         {
             return _SelfBridge.DeleteCommonType(code);
         }
@@ -67,7 +67,7 @@ namespace HHMES.Business
         /// </summary>
         /// <param name="id">编号</param>
         /// <returns></returns>
-        public bool IsExistsCommonType(int id)
+        public bool IsExistsCommonType(string id)
         {
             return _SelfBridge.IsExistsCommonType(id);
         }

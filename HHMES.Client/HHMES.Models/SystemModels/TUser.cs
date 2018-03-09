@@ -6,15 +6,15 @@ using HHMES.ORM;
 
 namespace HHMES.Models
 {
-    [ORM_ObjectClassAttribute("tb_MyUser", "Account", true)]
+    [ORM_ObjectClassAttribute("C_User", "Account", true)]
     public class TUser
     {
-        public static string __TableName = "tb_MyUser";
+        public static string __TableName = "C_User";
 
         public static string __KeyName = "Account";
 
         [ORM_FieldAttribute(SqlDbType.Int, 4, false, false, false, false, false)]
-        public static string isid = "isid";
+        public static string ID = "ID";
 
         [ORM_FieldAttribute(SqlDbType.NVarChar, 30, false, true, false, false, false)]
         public static string Account = "Account";

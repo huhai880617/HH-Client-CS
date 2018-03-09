@@ -64,7 +64,7 @@ namespace HHMES.Main
             else
                 btnLogout.Caption = "用户:" + Loginer.CurrentUser.Account;
 
-            btnConnStatus.Caption = "后台:" + BridgeFactory.BridgeType.ToString();
+            //btnConnStatus.Caption = "后台:" + BridgeFactory.BridgeType.ToString();
         }
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace HHMES.Main
                 _ModuleManager.CreateNavBarButtons(this.navBarControl1, _moduleMenus, NavigatorStyle.BarContainer); //创建导航工具栏按钮
 
                 splash.UpdateMessage("下载基础数据...");
-                CommonData.GetCommonInfos(); //获取其它公共数据
+                CommonData.GetCommonInfos(); //获取公司信息数据
                 DataDictCache.RefreshCache();
 
                 splash.UpdateMessage("加载完毕.");

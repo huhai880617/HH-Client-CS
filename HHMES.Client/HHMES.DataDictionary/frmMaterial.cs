@@ -44,13 +44,13 @@ namespace HHMES.DataDictionary
 
             base.InitializeForm();
 
-            DataBinder.BindingLookupEditDataSource(txtAttr, DataDictCache.Cache.MaterialAttribute, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(lookUpEdit1, DataDictCache.Cache.MaterialType, tb_CommonDataDict.NativeName,tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(lookUpEdit2, DataDictCache.Cache.MaterialType, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(lookUpEdit3, DataDictCache.Cache.MaterialAttribute, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(textEdit1, DataDictCache.Cache.MaterialUnit, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(repositoryItemLookUpEdit2, DataDictCache.Cache.MaterialAttribute, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(repositoryItemLookUpEdit1, DataDictCache.Cache.MaterialType, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(txtAttr, DataDictCache.Cache.MaterialAttribute, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(lookUpEdit1, DataDictCache.Cache.MaterialType, tb_CommonDataDict.NativeName,tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(lookUpEdit2, DataDictCache.Cache.MaterialType, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(lookUpEdit3, DataDictCache.Cache.MaterialAttribute, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(textEdit1, DataDictCache.Cache.MaterialUnit, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(repositoryItemLookUpEdit2, DataDictCache.Cache.MaterialAttribute, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(repositoryItemLookUpEdit1, DataDictCache.Cache.MaterialType, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
 
         }
 

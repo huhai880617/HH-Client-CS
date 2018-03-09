@@ -226,10 +226,6 @@
       <Project>{2A59861C-5D4D-4768-B31F-7F59A8517DAE}</Project>
       <Name>HHMES.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HHMES.Library\HHMES.Library.csproj">
-      <Project>{CC733F2A-65DE-411F-9093-71CD3A5D9B27}</Project>
-      <Name>HHMES.Library</Name>
-    </ProjectReference>
     <ProjectReference Include="..\HHMES.Business\HHMES.Business.csproj">
       <Project>{A674DB78-C6CB-409B-893D-728ABF88EC84}</Project>
       <Name>HHMES.Business</Name>
@@ -237,6 +233,10 @@
     <ProjectReference Include="..\HHMES.Interfaces\HHMES.Interfaces.csproj">
       <Project>{E96FA431-A247-49F3-892B-03E411957180}</Project>
       <Name>HHMES.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HHMES.Library\HHMES.Library.csproj">
+      <Project>{cc733f2a-65de-411f-9093-71cd3a5d9b27}</Project>
+      <Name>HHMES.Library</Name>
     </ProjectReference>
     <ProjectReference Include="..\HHMES.Models\HHMES.Models.csproj">
       <Project>{2CF256B2-F5E0-4670-8644-08DDF65B0009}</Project>

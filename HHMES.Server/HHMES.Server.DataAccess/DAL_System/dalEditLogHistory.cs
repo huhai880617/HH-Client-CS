@@ -30,19 +30,19 @@ namespace HHMES.Server.DataAccess.DAL_System
         /// </summary>
         public bool SaveFieldDef(DataTable data)
         {
-            string sqlAdd = "INSERT INTO tb_LogFields(TableName,FieldName) VALUES (@TableName,@FieldName)";
-            string sqlEdt = "UPDATE tb_LogFields SET TableName=@TableName,FieldName=@FieldName WHERE isid=@isid ";
-            string sqlDel = "DELETE tb_LogFields WHERE isid=@isid";
+            string sqlAdd = "INSERT INTO C_LogFields(TableName,FieldName) VALUES (@TableName,@FieldName)";
+            string sqlEdt = "UPDATE C_LogFields SET TableName=@TableName,FieldName=@FieldName WHERE ID=@ID ";
+            string sqlDel = "UPDATE C_LogFields SET ISDELETED=1 WHERE ID=@ID";
 
             SqlConnection conn = DataProvider.Instance.CreateConnection(_Loginer.DBName);
 
             SqlCommand cmdUpdate = new SqlCommand(sqlEdt, conn);
             cmdUpdate.Parameters.Add("@TableName", SqlDbType.VarChar, 50, "TableName");
             cmdUpdate.Parameters.Add("@FieldName", SqlDbType.VarChar, 20, "FieldName");
-            cmdUpdate.Parameters.Add("@isid", SqlDbType.Int, 4, "isid");
+            cmdUpdate.Parameters.Add("@ID", SqlDbType.Int, 4, "ID");
 
             SqlCommand cmdDelete = new SqlCommand(sqlDel, conn);
-            cmdDelete.Parameters.Add("@isid", SqlDbType.Int, 4, "isid");
+            cmdDelete.Parameters.Add("@ID", SqlDbType.Int, 4, "ID");
 
             SqlCommand cmdInsert = new SqlCommand(sqlAdd, conn);
             cmdInsert.Parameters.Add("@TableName", SqlDbType.VarChar, 50, "TableName");
@@ -62,15 +62,15 @@ namespace HHMES.Server.DataAccess.DAL_System
         /// <param name="log"></param>
         private void WriteLog(LogDef log)
         {
-            string sql1 = "INSERT INTO tb_Log(GUID32 ,LogUser ,LogDate ,OPType ,DocNo ,TableName ,KeyFieldName,IsMaster) " +
+            string sql1 = "INSERT INTO C_Log(GUID32 ,LogUser ,LogDate ,OPType ,DocNo ,TableName ,KeyFieldName,IsMaster) " +
                          "           VALUES (@GUID32,@LogUser,@LogDate,@OPType,@DocNo,@TableName,@KeyFieldName,@IsMaster)";
 
-            string sql2 = "INSERT INTO [tb_LogDtl] ([GUID32],[TableName],[FieldName],[OldValue],[NewValue]) VALUES(@GUID32,@TableName,@FieldName,@OldValue,@NewValue)";
+            string sql2 = "INSERT INTO [C_LogDtl] ([GUID32],[TableName],[FieldName],[OldValue],[NewValue]) VALUES(@GUID32,@TableName,@FieldName,@OldValue,@NewValue)";
 
             SqlConnection conn = DataProvider.Instance.CreateConnection(_Loginer.DBName);
             try
             {
-                if (log.IsMaster == true) //注意! 只有主表才写入tb_Log表
+                if (log.IsMaster == true) //注意! 只有主表才写入C_Log表
                 {
                     SqlCommand cmd = new SqlCommand(sql1, conn);
                     cmd.Parameters.Add("@GUID32", SqlDbType.VarChar, 32, "GUID32").Value = log.GUID32;
@@ -196,8 +196,8 @@ namespace HHMES.Server.DataAccess.DAL_System
         /// <param name="tableName">表名</param>        
         public DataTable GetLogFieldDef(string tableName)
         {
-            string sql = "select * from tb_LogFields where TableName='" + tableName + "'";
-            return DataProvider.Instance.GetTable(_Loginer.DBName, sql, "tb_LogFields");
+            string sql = "select * from C_LogFields where TableName='" + tableName + "'";
+            return DataProvider.Instance.GetTable(_Loginer.DBName, sql, "C_LogFields");
         }
 
         /// <summary>

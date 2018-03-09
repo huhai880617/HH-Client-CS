@@ -40,19 +40,19 @@ namespace HHMES.DataDictionary
             BindingSummarySearchPanel(btnQuery, btnEmpty, panelSearch);//绑定搜索面板
 
             
-            DataBinder.BindingLookupEditDataSource(repositoryItemLookUpEdit1, DataDictCache.Cache.Location, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(lookUpEdit1, DataDictCache.Cache.Location, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(lookUpEdit4, DataDictCache.Cache.Location, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(lookUpEdit7, DataDictCache.Cache.Location, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(repositoryItemLookUpEdit1, DataDictCache.Cache.Location, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(lookUpEdit1, DataDictCache.Cache.Location, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(lookUpEdit4, DataDictCache.Cache.Location, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(lookUpEdit7, DataDictCache.Cache.Location, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
 
-            DataBinder.BindingLookupEditDataSource(repositoryItemLookUpEdit3, DataDictCache.Cache.WareCellSpec, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(lookUpEdit3, DataDictCache.Cache.WareCellSpec, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(lookUpEdit5, DataDictCache.Cache.WareCellSpec, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(lookUpEdit8, DataDictCache.Cache.WareCellSpec, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(repositoryItemLookUpEdit3, DataDictCache.Cache.WareCellSpec, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(lookUpEdit3, DataDictCache.Cache.WareCellSpec, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(lookUpEdit5, DataDictCache.Cache.WareCellSpec, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(lookUpEdit8, DataDictCache.Cache.WareCellSpec, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
 
-            DataBinder.BindingLookupEditDataSource(repositoryItemLookUpEdit2, DataDictCache.Cache.WareCellStatus, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(lookUpEdit2, DataDictCache.Cache.WareCellStatus, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            DataBinder.BindingLookupEditDataSource(lookUpEdit6, DataDictCache.Cache.WareCellStatus, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(repositoryItemLookUpEdit2, DataDictCache.Cache.WareCellStatus, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(lookUpEdit2, DataDictCache.Cache.WareCellStatus, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            //DataBinder.BindingLookupEditDataSource(lookUpEdit6, DataDictCache.Cache.WareCellStatus, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
 
         }
 

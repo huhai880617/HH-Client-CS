@@ -124,7 +124,9 @@ namespace HHMES.Library
         /// 虚方法,用于绑定当前记录的数据到输入框
         /// </summary>
         /// <param name="dataBinder">数据源</param>
-        protected virtual void DoBindingSummaryEditor(DataTable dataBinder) { }
+        protected virtual void DoBindingSummaryEditor(DataTable dataBinder) {
+           
+        }
 
 
         public override void DoEdit(IButtonInfo sender)

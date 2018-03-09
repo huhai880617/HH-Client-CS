@@ -30,11 +30,11 @@ namespace HHMES.Common
     public class SaveResultEx
     {
         private int _ResultID;
-        private string _PrimaryKey;
+        private int _PrimaryKey;
         private string _Tag;
 
         public SaveResultEx() { }
-        public SaveResultEx(int resultID, string primaryKey)
+        public SaveResultEx(int resultID, int primaryKey)
         {
             _ResultID = resultID;
             _PrimaryKey = primaryKey;
@@ -43,7 +43,7 @@ namespace HHMES.Common
         /// <summary>
         /// 主键
         /// </summary>
-        public string PrimaryKey
+        public int PrimaryKey
         {
             get { return _PrimaryKey; }
             set { _PrimaryKey = value; }

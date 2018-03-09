@@ -43,9 +43,9 @@ namespace HHMES.DataDictionary
             base.InitializeForm();
 
             //绑定相关缓存数据
-            DataBinder.BindingLookupEditDataSource(txt_Attr, DataDictCache.Cache.CustomerAttributes, "NativeName", "AttributeCode");
-            DataBinder.BindingLookupEditDataSource(txtBank, DataDictCache.Cache.Bank, "NativeName", "DataCode");
-            ucCusAttributes.BindingDataSource(DataDictCache.Cache.CustomerAttributes, "AttributeCode", "NativeName");
+            //DataBinder.BindingLookupEditDataSource(txt_Attr, DataDictCache.Cache.CustomerAttributes, "NativeName", "AttributeCode");
+            //DataBinder.BindingLookupEditDataSource(txtBank, DataDictCache.Cache.Bank, "NativeName", "DataCode");
+            //ucCusAttributes.BindingDataSource(DataDictCache.Cache.CustomerAttributes, "AttributeCode", "NativeName");
         }
 
         private void btnQuery_Click(object sender, EventArgs e)

@@ -10,7 +10,7 @@ namespace HHMES.Core.Log
     /// </summary>
     public class LogDef
     {
-        private int _isid;
+        private int _ID;
         private string _GUID32;
         private string _LogUser;
         private DateTime _LogDate;
@@ -27,7 +27,7 @@ namespace HHMES.Core.Log
             _Details = new ArrayList();
         }
 
-        public int isid { get { return _isid; } set { _isid = value; } }
+        public int ID { get { return _ID; } set { _ID = value; } }
         public string GUID32 { get { return _GUID32; } set { _GUID32 = value; } }
         public string LogUser { get { return _LogUser; } set { _LogUser = value; } }
         public DateTime LogDate { get { return _LogDate; } set { _LogDate = value; } }
@@ -57,14 +57,14 @@ namespace HHMES.Core.Log
     /// </summary>
     public class LogDefDtl
     {
-        private int _isid;
+        private int _ID;
         private string _GUID32;
         private string _TableName;
         private string _FieldName;
         private string _OldValue;
         private string _NewValue;
 
-        public int isid { get { return _isid; } set { _isid = value; } }
+        public int ID { get { return _ID; } set { _ID = value; } }
         public string GUID32 { get { return _GUID32; } set { _GUID32 = value; } }
         public string TableName { get { return _TableName; } set { _TableName = value; } }
         public string FieldName { get { return _FieldName; } set { _FieldName = value; } }
