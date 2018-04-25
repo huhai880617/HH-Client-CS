@@ -9,7 +9,7 @@ namespace HHMES.Interfaces
     public interface IBridge_Customer
     {
         //模糊查询客户数据
-        DataTable SearchBy(string CustomerFrom, string CustomerTo, string Name, string Attribute);
+        DataTable SearchBy(string code,  string Name, string type_cfg);
 
         //由客户类别获取客户数据
         DataTable GetCustomerByAttributeCodes(string attributeCodes, bool nameWithCode);

@@ -73,7 +73,7 @@
     <Compile Include="SystemModels\tb_DataSet.cs" />
     <Compile Include="DataDictModels\tb_CommonDataDict.cs" />
     <Compile Include="DataDictModels\tb_CommonDataDictType.cs" />
-    <Compile Include="DataDictModels\tb_Customer.cs" />
+    <Compile Include="DataDictModels\tb_SUPPLIERCUSTOMER.cs" />
     <Compile Include="DataDictModels\tb_CustomerAttribute.cs" />
     <Compile Include="DataDictModels\tb_PayType.cs" />
     <Compile Include="DataDictModels\tb_Person.cs" />

@@ -34,6 +34,11 @@ namespace HHMES.Server.DataAccess.DAL_Base
         /// </summary>
         protected string _KeyName = string.Empty;
 
+        /// <summary>
+        /// CODE字段名
+        /// </summary>
+        protected string _CodeName = "CODE";
+
         public Type ORM
         {
             get { return _ModelType; }
@@ -244,7 +249,7 @@ namespace HHMES.Server.DataAccess.DAL_Base
         /// <returns></returns>
         public virtual bool CheckNoExists(string keyValue)
         {
-            string sql = string.Format("SELECT COUNT(*) C FROM [{0}] WHERE [{1}]=@KEY", _TableName, _KeyName);
+            string sql = string.Format("SELECT COUNT(*) C FROM [{0}] WHERE [{1}]=@KEY", _TableName, _CodeName);
             SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(sql);
             cmd.AddParam("@KEY", SqlDbType.VarChar, keyValue);
             object o = DataProvider.Instance.ExecuteScalar(_Loginer.DBName, cmd.SqlCommand);

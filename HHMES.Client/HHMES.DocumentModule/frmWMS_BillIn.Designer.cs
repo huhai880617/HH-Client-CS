@@ -88,7 +88,6 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txtRefNo = new DevExpress.XtraEditors.TextEdit();
             this.txtRemark = new DevExpress.XtraEditors.MemoEdit();
-            this.txtSupplierCode = new HHMES.Library.UserControls.ucDT_CustomerEditor();
             this.lbStateName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -153,9 +152,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEditDocLinkNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDocStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDocType.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_DocDateTo.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_DocDateTo.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_DocDateTo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_DocDateFrom.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_DocDateFrom.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_DocDateFrom.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_DocNoTo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_DocNoFrom.Properties)).BeginInit();
@@ -180,7 +179,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit16)).BeginInit();
@@ -194,15 +193,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSupplierName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRefNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSupplierCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkFlagApp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDeliver.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAppUser.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAppDate.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAppDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAppDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDepartment.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDocUser.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDocDate.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDocDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDocDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtINNO.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DocCheck)).BeginInit();
@@ -219,7 +217,7 @@
             this.tpSummary.Controls.Add(this.gcSummary);
             this.tpSummary.Controls.Add(this.gcFindGroup);
             this.tpSummary.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.tpSummary.Size = new System.Drawing.Size(996, 425);
+            this.tpSummary.Size = new System.Drawing.Size(997, 426);
             // 
             // pnlSummary
             // 
@@ -237,7 +235,7 @@
             this.tpDetail.Appearance.PageClient.Options.UseBackColor = true;
             this.tpDetail.Controls.Add(this.panelDetailPage);
             this.tpDetail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tpDetail.Size = new System.Drawing.Size(931, 565);
+            this.tpDetail.Size = new System.Drawing.Size(932, 566);
             // 
             // gcNavigator
             // 
@@ -291,21 +289,21 @@
             this.gcFindGroup.Dock = System.Windows.Forms.DockStyle.Top;
             this.gcFindGroup.Location = new System.Drawing.Point(0, 0);
             this.gcFindGroup.Name = "gcFindGroup";
-            this.gcFindGroup.Size = new System.Drawing.Size(996, 68);
+            this.gcFindGroup.Size = new System.Drawing.Size(997, 68);
             this.gcFindGroup.TabIndex = 2;
             // 
             // textEditCustomer
             // 
             this.textEditCustomer.Location = new System.Drawing.Point(698, 32);
             this.textEditCustomer.Name = "textEditCustomer";
-            this.textEditCustomer.Size = new System.Drawing.Size(117, 21);
+            this.textEditCustomer.Size = new System.Drawing.Size(117, 20);
             this.textEditCustomer.TabIndex = 21;
             // 
             // textEditDocLinkNo
             // 
             this.textEditDocLinkNo.Location = new System.Drawing.Point(698, 5);
             this.textEditDocLinkNo.Name = "textEditDocLinkNo";
-            this.textEditDocLinkNo.Size = new System.Drawing.Size(117, 21);
+            this.textEditDocLinkNo.Size = new System.Drawing.Size(117, 20);
             this.textEditDocLinkNo.TabIndex = 20;
             // 
             // labelControl15
@@ -338,7 +336,7 @@
             this.lookUpEditDocStatus.Properties.PopupWidth = 180;
             this.lookUpEditDocStatus.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
             this.lookUpEditDocStatus.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.lookUpEditDocStatus.Size = new System.Drawing.Size(100, 21);
+            this.lookUpEditDocStatus.Size = new System.Drawing.Size(100, 20);
             this.lookUpEditDocStatus.TabIndex = 19;
             // 
             // labelControl14
@@ -363,7 +361,7 @@
             this.lookUpEditDocType.Properties.PopupWidth = 180;
             this.lookUpEditDocType.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
             this.lookUpEditDocType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.lookUpEditDocType.Size = new System.Drawing.Size(100, 21);
+            this.lookUpEditDocType.Size = new System.Drawing.Size(100, 20);
             this.lookUpEditDocType.TabIndex = 17;
             // 
             // labelControl13
@@ -381,9 +379,9 @@
             this.txt_DocDateTo.Name = "txt_DocDateTo";
             this.txt_DocDateTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txt_DocDateTo.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txt_DocDateTo.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txt_DocDateTo.Size = new System.Drawing.Size(117, 21);
+            this.txt_DocDateTo.Size = new System.Drawing.Size(117, 20);
             this.txt_DocDateTo.TabIndex = 3;
             // 
             // txt_DocDateFrom
@@ -393,23 +391,23 @@
             this.txt_DocDateFrom.Name = "txt_DocDateFrom";
             this.txt_DocDateFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txt_DocDateFrom.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txt_DocDateFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txt_DocDateFrom.Size = new System.Drawing.Size(117, 21);
+            this.txt_DocDateFrom.Size = new System.Drawing.Size(117, 20);
             this.txt_DocDateFrom.TabIndex = 2;
             // 
             // txt_DocNoTo
             // 
             this.txt_DocNoTo.Location = new System.Drawing.Point(125, 32);
             this.txt_DocNoTo.Name = "txt_DocNoTo";
-            this.txt_DocNoTo.Size = new System.Drawing.Size(117, 21);
+            this.txt_DocNoTo.Size = new System.Drawing.Size(117, 20);
             this.txt_DocNoTo.TabIndex = 1;
             // 
             // txt_DocNoFrom
             // 
             this.txt_DocNoFrom.Location = new System.Drawing.Point(125, 5);
             this.txt_DocNoFrom.Name = "txt_DocNoFrom";
-            this.txt_DocNoFrom.Size = new System.Drawing.Size(117, 21);
+            this.txt_DocNoFrom.Size = new System.Drawing.Size(117, 20);
             this.txt_DocNoFrom.TabIndex = 0;
             // 
             // labelControl4
@@ -477,7 +475,7 @@
             this.panelDetailPage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDetailPage.Location = new System.Drawing.Point(0, 0);
             this.panelDetailPage.Name = "panelDetailPage";
-            this.panelDetailPage.Size = new System.Drawing.Size(931, 565);
+            this.panelDetailPage.Size = new System.Drawing.Size(932, 566);
             this.panelDetailPage.TabIndex = 3;
             this.panelDetailPage.Text = "单据明细数据";
             // 
@@ -485,9 +483,9 @@
             // 
             this.panelControl2.Controls.Add(this.gcDetail);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(2, 261);
+            this.panelControl2.Location = new System.Drawing.Point(2, 259);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(927, 302);
+            this.panelControl2.Size = new System.Drawing.Size(928, 305);
             this.panelControl2.TabIndex = 2;
             // 
             // gcDetail
@@ -525,7 +523,7 @@
             this.repositoryItemLookUpEdit19,
             this.repositoryItemComboBox2});
             this.gcDetail.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gcDetail.Size = new System.Drawing.Size(923, 298);
+            this.gcDetail.Size = new System.Drawing.Size(924, 301);
             this.gcDetail.TabIndex = 1;
             this.gcDetail.UseEmbeddedNavigator = true;
             this.gcDetail.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -561,9 +559,8 @@
             this.colBillDtlMaterialCode.FieldName = "BillDtl_MaterialCode";
             this.colBillDtlMaterialCode.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colBillDtlMaterialCode.Name = "colBillDtlMaterialCode";
-            this.colBillDtlMaterialCode.SummaryItem.DisplayFormat = "{0}";
-            this.colBillDtlMaterialCode.SummaryItem.FieldName = "StockCode";
-            this.colBillDtlMaterialCode.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Count;
+            this.colBillDtlMaterialCode.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "StockCode", "{0}")});
             this.colBillDtlMaterialCode.Visible = true;
             this.colBillDtlMaterialCode.VisibleIndex = 0;
             this.colBillDtlMaterialCode.Width = 130;
@@ -610,9 +607,8 @@
             this.colBillDtlMaterialQty.Caption = "货品数量";
             this.colBillDtlMaterialQty.FieldName = "BillDtl_MaterialQty";
             this.colBillDtlMaterialQty.Name = "colBillDtlMaterialQty";
-            this.colBillDtlMaterialQty.SummaryItem.DisplayFormat = "{0}";
-            this.colBillDtlMaterialQty.SummaryItem.FieldName = "Quantity";
-            this.colBillDtlMaterialQty.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            this.colBillDtlMaterialQty.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Quantity", "{0}")});
             this.colBillDtlMaterialQty.Visible = true;
             this.colBillDtlMaterialQty.VisibleIndex = 3;
             this.colBillDtlMaterialQty.Width = 115;
@@ -724,9 +720,9 @@
             this.repositoryItemDateEdit1.AutoHeight = false;
             this.repositoryItemDateEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemDateEdit1.Name = "repositoryItemDateEdit1";
-            this.repositoryItemDateEdit1.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.repositoryItemDateEdit1.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.repositoryItemDateEdit1.Name = "repositoryItemDateEdit1";
             // 
             // repositoryItemLookUpEdit15
             // 
@@ -807,7 +803,6 @@
             this.panelControl1.Controls.Add(this.labelControl5);
             this.panelControl1.Controls.Add(this.txtRefNo);
             this.panelControl1.Controls.Add(this.txtRemark);
-            this.panelControl1.Controls.Add(this.txtSupplierCode);
             this.panelControl1.Controls.Add(this.lbStateName);
             this.panelControl1.Controls.Add(this.label2);
             this.panelControl1.Controls.Add(this.label1);
@@ -835,9 +830,9 @@
             this.panelControl1.Controls.Add(this.labelControl24);
             this.panelControl1.Controls.Add(this.txtINNO);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(2, 23);
+            this.panelControl1.Location = new System.Drawing.Point(2, 21);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(927, 238);
+            this.panelControl1.Size = new System.Drawing.Size(928, 238);
             this.panelControl1.TabIndex = 0;
             // 
             // LookUpEditWarehouseId
@@ -854,7 +849,7 @@
             this.LookUpEditWarehouseId.Properties.PopupWidth = 180;
             this.LookUpEditWarehouseId.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
             this.LookUpEditWarehouseId.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.LookUpEditWarehouseId.Size = new System.Drawing.Size(100, 21);
+            this.LookUpEditWarehouseId.Size = new System.Drawing.Size(100, 20);
             this.LookUpEditWarehouseId.TabIndex = 238;
             // 
             // lookUpEditDocType1
@@ -871,7 +866,7 @@
             this.lookUpEditDocType1.Properties.PopupWidth = 180;
             this.lookUpEditDocType1.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
             this.lookUpEditDocType1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.lookUpEditDocType1.Size = new System.Drawing.Size(100, 21);
+            this.lookUpEditDocType1.Size = new System.Drawing.Size(100, 20);
             this.lookUpEditDocType1.TabIndex = 237;
             // 
             // labelControl19
@@ -887,13 +882,12 @@
             this.txtSupplierName.EditValue = "";
             this.txtSupplierName.Location = new System.Drawing.Point(189, 90);
             this.txtSupplierName.Name = "txtSupplierName";
-            this.txtSupplierName.Size = new System.Drawing.Size(417, 21);
+            this.txtSupplierName.Size = new System.Drawing.Size(417, 20);
             this.txtSupplierName.TabIndex = 235;
             // 
             // labelControl12
             // 
             this.labelControl12.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.labelControl12.Appearance.Options.UseForeColor = true;
             this.labelControl12.Location = new System.Drawing.Point(611, 69);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(7, 14);
@@ -913,7 +907,7 @@
             this.txtRefNo.EditValue = "";
             this.txtRefNo.Location = new System.Drawing.Point(291, 147);
             this.txtRefNo.Name = "txtRefNo";
-            this.txtRefNo.Size = new System.Drawing.Size(100, 21);
+            this.txtRefNo.Size = new System.Drawing.Size(100, 20);
             this.txtRefNo.TabIndex = 233;
             // 
             // txtRemark
@@ -923,18 +917,6 @@
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Size = new System.Drawing.Size(518, 54);
             this.txtRemark.TabIndex = 231;
-            // 
-            // txtSupplierCode
-            // 
-            this.txtSupplierCode.CustomerAttributeCodes = ",SPL,";
-            this.txtSupplierCode.CustomerNameControl = this.txtSupplierName;
-            this.txtSupplierCode.CustomerNameField = "NativeName";
-            this.txtSupplierCode.Location = new System.Drawing.Point(87, 90);
-            this.txtSupplierCode.Name = "txtSupplierCode";
-            this.txtSupplierCode.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtSupplierCode.Size = new System.Drawing.Size(100, 21);
-            this.txtSupplierCode.TabIndex = 230;
             // 
             // lbStateName
             // 
@@ -968,7 +950,6 @@
             // labelControl23
             // 
             this.labelControl23.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.labelControl23.Appearance.Options.UseForeColor = true;
             this.labelControl23.Location = new System.Drawing.Point(397, 124);
             this.labelControl23.Name = "labelControl23";
             this.labelControl23.Size = new System.Drawing.Size(7, 14);
@@ -978,7 +959,6 @@
             // labelControl22
             // 
             this.labelControl22.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.labelControl22.Appearance.Options.UseForeColor = true;
             this.labelControl22.Location = new System.Drawing.Point(195, 124);
             this.labelControl22.Name = "labelControl22";
             this.labelControl22.Size = new System.Drawing.Size(7, 14);
@@ -988,7 +968,6 @@
             // labelControl20
             // 
             this.labelControl20.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.labelControl20.Appearance.Options.UseForeColor = true;
             this.labelControl20.Location = new System.Drawing.Point(397, 66);
             this.labelControl20.Name = "labelControl20";
             this.labelControl20.Size = new System.Drawing.Size(7, 14);
@@ -998,7 +977,6 @@
             // labelControl18
             // 
             this.labelControl18.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.labelControl18.Appearance.Options.UseForeColor = true;
             this.labelControl18.Location = new System.Drawing.Point(195, 151);
             this.labelControl18.Name = "labelControl18";
             this.labelControl18.Size = new System.Drawing.Size(7, 14);
@@ -1016,7 +994,6 @@
             // labelControl11
             // 
             this.labelControl11.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.labelControl11.Appearance.Options.UseForeColor = true;
             this.labelControl11.Location = new System.Drawing.Point(611, 94);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(7, 14);
@@ -1049,7 +1026,7 @@
             this.txtDeliver.Properties.PopupWidth = 180;
             this.txtDeliver.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
             this.txtDeliver.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.txtDeliver.Size = new System.Drawing.Size(100, 21);
+            this.txtDeliver.Size = new System.Drawing.Size(100, 20);
             this.txtDeliver.TabIndex = 17;
             // 
             // labelControl10
@@ -1071,7 +1048,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("UserName", 100, "用户名")});
             this.txtAppUser.Properties.NullText = "";
             this.txtAppUser.Properties.PopupWidth = 180;
-            this.txtAppUser.Size = new System.Drawing.Size(100, 21);
+            this.txtAppUser.Size = new System.Drawing.Size(100, 20);
             this.txtAppUser.TabIndex = 33;
             // 
             // labelControl37
@@ -1089,9 +1066,9 @@
             this.txtAppDate.Name = "txtAppDate";
             this.txtAppDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtAppDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txtAppDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtAppDate.Size = new System.Drawing.Size(100, 21);
+            this.txtAppDate.Size = new System.Drawing.Size(100, 20);
             this.txtAppDate.TabIndex = 35;
             // 
             // labelControl21
@@ -1116,7 +1093,7 @@
             this.txtDepartment.Properties.PopupWidth = 180;
             this.txtDepartment.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
             this.txtDepartment.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.txtDepartment.Size = new System.Drawing.Size(100, 21);
+            this.txtDepartment.Size = new System.Drawing.Size(100, 20);
             this.txtDepartment.TabIndex = 15;
             // 
             // labelControl6
@@ -1138,7 +1115,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("UserName", 100, "用户名")});
             this.txtDocUser.Properties.NullText = "";
             this.txtDocUser.Properties.PopupWidth = 180;
-            this.txtDocUser.Size = new System.Drawing.Size(100, 21);
+            this.txtDocUser.Size = new System.Drawing.Size(100, 20);
             this.txtDocUser.TabIndex = 20;
             // 
             // labelControl7
@@ -1172,9 +1149,9 @@
             this.txtDocDate.Name = "txtDocDate";
             this.txtDocDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtDocDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txtDocDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtDocDate.Size = new System.Drawing.Size(100, 21);
+            this.txtDocDate.Size = new System.Drawing.Size(100, 20);
             this.txtDocDate.TabIndex = 6;
             // 
             // labelControl36
@@ -1198,7 +1175,7 @@
             this.txtINNO.EditValue = "";
             this.txtINNO.Location = new System.Drawing.Point(506, 12);
             this.txtINNO.Name = "txtINNO";
-            this.txtINNO.Size = new System.Drawing.Size(100, 21);
+            this.txtINNO.Size = new System.Drawing.Size(100, 20);
             this.txtINNO.TabIndex = 4;
             // 
             // DocCheck
@@ -1275,9 +1252,8 @@
             this.colBillNo.FieldName = "Bill_BillNo";
             this.colBillNo.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colBillNo.Name = "colBillNo";
-            this.colBillNo.SummaryItem.DisplayFormat = "记录：{0}";
-            this.colBillNo.SummaryItem.FieldName = "DocNo";
-            this.colBillNo.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Count;
+            this.colBillNo.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "DocNo", "记录：{0}")});
             this.colBillNo.Visible = true;
             this.colBillNo.VisibleIndex = 0;
             // 
@@ -1436,7 +1412,7 @@
             this.DocCheck,
             this.DocType,
             this.DocStatus});
-            this.gcSummary.Size = new System.Drawing.Size(996, 357);
+            this.gcSummary.Size = new System.Drawing.Size(997, 358);
             this.gcSummary.TabIndex = 3;
             this.gcSummary.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSummary});
@@ -1465,9 +1441,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEditDocLinkNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDocStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDocType.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_DocDateTo.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_DocDateTo.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_DocDateTo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_DocDateFrom.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_DocDateFrom.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_DocDateFrom.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_DocNoTo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_DocNoFrom.Properties)).EndInit();
@@ -1491,7 +1467,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit3)).EndInit();
@@ -1507,15 +1483,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSupplierName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRefNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSupplierCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkFlagApp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDeliver.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAppUser.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAppDate.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAppDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAppDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDepartment.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDocUser.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDocDate.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDocDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDocDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtINNO.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DocCheck)).EndInit();

@@ -43,14 +43,23 @@ namespace HHMES.DataDictionary
             base.InitializeForm();
 
             //绑定相关缓存数据
-            //DataBinder.BindingLookupEditDataSource(txt_Attr, DataDictCache.Cache.CustomerAttributes, "NativeName", "AttributeCode");
-            //DataBinder.BindingLookupEditDataSource(txtBank, DataDictCache.Cache.Bank, "NativeName", "DataCode");
-            //ucCusAttributes.BindingDataSource(DataDictCache.Cache.CustomerAttributes, "AttributeCode", "NativeName");
+            //search 
+            DataBinder.BindingLookupEditDataSource(txt_Attr, DataDictCache.GetCacheConfigData("COMPANYTYPE"), "NAME", "ID");
+
+            //summary
+            DataBinder.BindingLookupEditDataSource(LookUpEdit_TYPE_CFG, DataDictCache.GetCacheConfigData("COMPANYTYPE"), "NAME", "ID");
+            DataBinder.BindingLookupEditDataSource(LookUpEdit_WAREHOUSEID, DataDictCache.GetCacheTableData("WAREHOUSE"), "NAME", "ID");
+            DataBinder.BindingLookupEditDataSource(LookUpEdit_COMPANYID, DataDictCache.GetCacheTableData("COMPANY"), "NAME", "ID");
+
+            //detail
+            DataBinder.BindingLookupEditDataSource(lookUpEdit1_typecfg, DataDictCache.GetCacheConfigData("COMPANYTYPE"), "NAME", "ID");
+            DataBinder.BindingLookupEditDataSource(lookUpEdit1_warehouse, DataDictCache.GetCacheTableData("WAREHOUSE"), "NAME", "ID");
+            DataBinder.BindingLookupEditDataSource(lookUpEdit1_company, DataDictCache.GetCacheTableData("COMPANY"), "NAME", "ID");
         }
 
         private void btnQuery_Click(object sender, EventArgs e)
         {//搜索数据            
-            this._BllCustomer.SearchBy(txt_CustomerFrom.Text, txt_CustomerTo.Text, txt_Name.Text, ConvertEx.ToString(txt_Attr.EditValue), true);
+            this._BllCustomer.SearchBy(txt_CODE.Text, txt_Name.Text, ConvertEx.ToString(txt_Attr.EditValue), true);
             this.DoBindingSummaryGrid(_BLL.SummaryTable); //绑定主表的Grid
             this.ShowSummaryPage(true); //显示Summary页面. 
         }
@@ -65,17 +74,17 @@ namespace HHMES.DataDictionary
                 return false;
             }
 
-            if (txtNativeName.Text.Trim() == string.Empty)
+            if (txtName.Text.Trim() == string.Empty)
             {
                 Msg.Warning("客户名称不能为空!");
-                txtNativeName.Focus();
+                txtName.Focus();
                 return false;
             }
 
-            if (ucCusAttributes.Text == string.Empty)
+            if (lookUpEdit1_typecfg.Text == string.Empty)
             {
                 Msg.Warning("公司类型不能为空!");
-                ucCusAttributes.Focus();
+                lookUpEdit1_typecfg.Focus();
                 return false;
             }
 
@@ -100,32 +109,23 @@ namespace HHMES.DataDictionary
             try
             {
                 if (summary == null) return;
-                DataBinder.BindingTextEdit(txtCode, summary, tb_Customer.CustomerCode);
-                DataBinder.BindingTextEdit(txtAddress1, summary, tb_Customer.Address1);
-                DataBinder.BindingTextEdit(txtAddress2, summary, tb_Customer.Address2);
-                DataBinder.BindingTextEdit(txtAddress3, summary, tb_Customer.Address3);
-                DataBinder.BindingTextEdit(txtBank, summary, tb_Customer.Bank);
-                DataBinder.BindingTextEdit(txtBankAccount, summary, tb_Customer.BankAccount);
-                DataBinder.BindingTextEdit(txtBankAddress, summary, tb_Customer.BankAddress);
-                DataBinder.BindingTextEdit(txtCity, summary, tb_Customer.City);
-                DataBinder.BindingTextEdit(txtCityCode, summary, tb_Customer.CityCode);
-                DataBinder.BindingTextEdit(txtContactPerson, summary, tb_Customer.ContactPerson);
-                DataBinder.BindingTextEdit(txtCountry, summary, tb_Customer.Country);
-                DataBinder.BindingTextEdit(txtCountryCode, summary, tb_Customer.CountryCode);
-                DataBinder.BindingTextEdit(txtEmail, summary, tb_Customer.Email);
-                DataBinder.BindingTextEdit(txtEnglishName, summary, tb_Customer.EnglishName);
-                DataBinder.BindingTextEdit(txtFax, summary, tb_Customer.Fax);
-                DataBinder.BindingTextEdit(txtNativeName, summary, tb_Customer.NativeName);
-                DataBinder.BindingTextEdit(txtPaymentTerm, summary, tb_Customer.PaymentTerm);
-                DataBinder.BindingTextEdit(txtPostalCode, summary, tb_Customer.PostalCode);
-                DataBinder.BindingTextEdit(txtRegion, summary, tb_Customer.Region);
-                DataBinder.BindingTextEdit(txtRemark, summary, tb_Customer.Remark);
-                DataBinder.BindingTextEdit(txtTel, summary, tb_Customer.Tel);
-                DataBinder.BindingTextEdit(txtWebAddress, summary, tb_Customer.WebAddress);
-                DataBinder.BindingTextEdit(txtZipCode, summary, tb_Customer.ZipCode);
-                DataBinder.BindingCheckEdit(chkInUse, summary, tb_Customer.InUse);
+                DataBinder.BindingTextEdit(txtCode, summary, tb_SUPPLIERCUSTOMER.CODE);
+                DataBinder.BindingTextEdit(txtAddress1, summary, tb_SUPPLIERCUSTOMER.ADDRESS1);
+                DataBinder.BindingTextEdit(txtAddress2, summary, tb_SUPPLIERCUSTOMER.ADDRESS2);
+                DataBinder.BindingTextEdit(txtCity, summary, tb_SUPPLIERCUSTOMER.CITY);
+                DataBinder.BindingTextEdit(txtAttentionTo, summary, tb_SUPPLIERCUSTOMER.ATTENTIONTO);
+                DataBinder.BindingTextEdit(txtCountry, summary, tb_SUPPLIERCUSTOMER.COUNTRY);
+                DataBinder.BindingTextEdit(txtEmail, summary, tb_SUPPLIERCUSTOMER.EMAIL);
+                DataBinder.BindingTextEdit(txtFax, summary, tb_SUPPLIERCUSTOMER.FAXNUM);
+                DataBinder.BindingTextEdit(txtName, summary, tb_SUPPLIERCUSTOMER.NAME);
+                DataBinder.BindingTextEdit(txtRegion, summary, tb_SUPPLIERCUSTOMER.STATE);
+                DataBinder.BindingTextEdit(txtTel, summary, tb_SUPPLIERCUSTOMER.PHONENUM);
+                DataBinder.BindingTextEdit(txtZipCode, summary, tb_SUPPLIERCUSTOMER.POSTALCODE);
+                DataBinder.BindingCheckEdit(chkInUse, summary, tb_SUPPLIERCUSTOMER.ENABLE);
 
-                DataBinder.BindingControl(ucCusAttributes, summary, tb_Customer.AttributeCodes, "EditValue");
+                DataBinder.BindingTextEdit(lookUpEdit1_company, summary, tb_SUPPLIERCUSTOMER.COMPANYID);
+                DataBinder.BindingTextEdit(lookUpEdit1_warehouse, summary, tb_SUPPLIERCUSTOMER.WAREHOUSEID);
+                DataBinder.BindingTextEdit(lookUpEdit1_typecfg, summary, tb_SUPPLIERCUSTOMER.TYPE_CFG);
             }
             catch (Exception ex)
             { Msg.ShowException(ex); }

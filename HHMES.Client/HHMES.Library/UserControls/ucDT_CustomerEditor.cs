@@ -77,7 +77,7 @@ namespace HHMES.Library.UserControls
             set { _CustomerNameControl = value; }
         }
 
-        private string _CustomerNameField = tb_Customer.NativeName;
+        private string _CustomerNameField = tb_SUPPLIERCUSTOMER.NAME;
 
         [Description("从资料行取客户名称的字段名。")]
         public string CustomerNameField
@@ -90,7 +90,7 @@ namespace HHMES.Library.UserControls
         {
             try
             {                
-                string customerCode = ConvertEx.ToString(resultRow[tb_Customer.CustomerCode]);
+                string customerCode = ConvertEx.ToString(resultRow[tb_SUPPLIERCUSTOMER.CODE]);
                 string customerName = ConvertEx.ToString(resultRow[_CustomerNameField]);
 
                 _LastValue = customerCode;//记录最后一次获取的客户编号

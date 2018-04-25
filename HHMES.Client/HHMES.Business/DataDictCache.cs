@@ -43,7 +43,7 @@ namespace HHMES.Business
         /// </summary>
         public static void RefreshCache()
         {
-            DataDictCache.Cache.DownloadBaseCacheData();
+            Cache.DownloadBaseCacheData();
         }
 
         ///// <summary>
@@ -70,10 +70,11 @@ namespace HHMES.Business
 
         public static DataSet _AllDataDicts = null;
         public static DataTable _DataDictType = null;
-       
+        
+
         #endregion
 
-
+        // 获取所有字典数据
         public void DownloadBaseCacheData()
         {
             IBridge_DataDict bridge = BridgeFactory.CreateDataDictBridge("");
@@ -81,22 +82,42 @@ namespace HHMES.Business
             //下载小字典表数据
             _AllDataDicts = bridge.DownloadDicts();
             _DataDictType = _AllDataDicts.Tables[1];
+            string[] TableNames = new string[] { "CONFIG_DETAIL","CONFIG_HEADER","WAREHOUSE","COMPANY"};
+            for (int i = 0; i < _AllDataDicts.Tables.Count; i++)
+            {
+                _AllDataDicts.Tables[i].TableName = TableNames[i];
+            }
            
         }
 
         /// <summary>
         /// 跟据表名取数据表实例
         /// </summary>
+        /// <param name="tableName">字典表名</param>
+        /// <returns></returns>
+        public static DataTable GetCacheTableData(string tableName)
+        {
+            //if(_AllDataDicts.Tables.Contains(tableName))
+                
+            return _AllDataDicts.Tables[tableName];
+        }
+        /// <summary>
+        /// 跟据CODE名取数据表实例
+        /// </summary>
         /// <param name="HeaderCode">字典表名</param>
         /// <returns></returns>
-        public static DataTable GetCacheTableData(string headerCode)
+        public static DataTable GetCacheConfigData(string headerCode)
         {
-            DataTable dt = _AllDataDicts.Tables[0].Clone();
+            DataTable dt = _AllDataDicts.Tables[1].Clone();
             foreach (DataRow dr in _AllDataDicts.Tables[0].Rows)
             {
                 if (dr["HEADERCODE"].ToString() == headerCode)
                 {
-                    dt.Rows.Add(dr);
+                    DataRow r = dt.NewRow();
+                    r["ID"] = dr["ID"].ToString();
+                    r["CODE"] = dr["CODE"].ToString();
+                    r["NAME"] = dr["NAME"].ToString();
+                    dt.Rows.Add(r);
                 }
             }
             if (dt.Rows.Count > 0)

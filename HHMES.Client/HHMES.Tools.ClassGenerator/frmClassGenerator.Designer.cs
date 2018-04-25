@@ -370,7 +370,7 @@ namespace HHMES.Tools.ClassGenerator
             // 
             this.txtPrimaryKey.Location = new System.Drawing.Point(95, 168);
             this.txtPrimaryKey.Name = "txtPrimaryKey";
-            this.txtPrimaryKey.Size = new System.Drawing.Size(119, 21);
+            this.txtPrimaryKey.Size = new System.Drawing.Size(119, 20);
             this.txtPrimaryKey.TabIndex = 37;
             // 
             // cbxDbType
@@ -428,7 +428,7 @@ namespace HHMES.Tools.ClassGenerator
             this.txtSpaceName.EditValue = "HHMES.Models";
             this.txtSpaceName.Location = new System.Drawing.Point(392, 168);
             this.txtSpaceName.Name = "txtSpaceName";
-            this.txtSpaceName.Size = new System.Drawing.Size(377, 21);
+            this.txtSpaceName.Size = new System.Drawing.Size(377, 20);
             this.txtSpaceName.TabIndex = 46;
             // 
             // lbxTables
@@ -437,14 +437,13 @@ namespace HHMES.Tools.ClassGenerator
             this.lbxTables.Name = "lbxTables";
             this.lbxTables.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lbxTables.Size = new System.Drawing.Size(201, 21);
+            this.lbxTables.Size = new System.Drawing.Size(201, 20);
             this.lbxTables.TabIndex = 48;
             this.lbxTables.SelectedIndexChanged += new System.EventHandler(this.lbxTables_SelectedIndexChanged);
             // 
             // label5
             // 
             this.label5.Appearance.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Appearance.Options.UseForeColor = true;
             this.label5.Location = new System.Drawing.Point(234, 171);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 14);
@@ -455,8 +454,6 @@ namespace HHMES.Tools.ClassGenerator
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Maroon;
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Appearance.Options.UseForeColor = true;
             this.labelControl1.Location = new System.Drawing.Point(41, 55);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(44, 17);
@@ -467,8 +464,6 @@ namespace HHMES.Tools.ClassGenerator
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.DarkRed;
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Appearance.Options.UseForeColor = true;
             this.labelControl2.Location = new System.Drawing.Point(41, 140);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(44, 17);
@@ -479,8 +474,6 @@ namespace HHMES.Tools.ClassGenerator
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.DarkRed;
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Appearance.Options.UseForeColor = true;
             this.labelControl3.Location = new System.Drawing.Point(15, 535);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(44, 17);
@@ -490,7 +483,6 @@ namespace HHMES.Tools.ClassGenerator
             // label7
             // 
             this.label7.Appearance.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Appearance.Options.UseForeColor = true;
             this.label7.Location = new System.Drawing.Point(220, 55);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(82, 14);
@@ -571,7 +563,7 @@ namespace HHMES.Tools.ClassGenerator
             this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage4.Size = new System.Drawing.Size(784, 567);
+            this.tabPage4.Size = new System.Drawing.Size(785, 568);
             this.tabPage4.Text = "生成的代码";
             // 
             // panel1
@@ -579,9 +571,9 @@ namespace HHMES.Tools.ClassGenerator
             this.panel1.Controls.Add(this.btnSaveCS);
             this.panel1.Controls.Add(this.btnCopy);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(3, 536);
+            this.panel1.Location = new System.Drawing.Point(3, 537);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(778, 29);
+            this.panel1.Size = new System.Drawing.Size(779, 29);
             this.panel1.TabIndex = 42;
             // 
             // btnSaveCS
@@ -618,7 +610,7 @@ namespace HHMES.Tools.ClassGenerator
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Size = new System.Drawing.Size(784, 567);
+            this.tabPage3.Size = new System.Drawing.Size(785, 568);
             this.tabPage3.Text = "生成->ORM";
             // 
             // chkExportToFileORM
@@ -642,7 +634,6 @@ namespace HHMES.Tools.ClassGenerator
             // label44
             // 
             this.label44.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label44.Appearance.Options.UseForeColor = true;
             this.label44.Location = new System.Drawing.Point(107, 492);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(52, 14);
@@ -658,15 +649,13 @@ namespace HHMES.Tools.ClassGenerator
             this.txtOutpup_ORM.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtOutpup_ORM.Properties.Appearance.Options.UseFont = true;
             this.txtOutpup_ORM.Properties.Appearance.Options.UseForeColor = true;
-            this.txtOutpup_ORM.Size = new System.Drawing.Size(617, 21);
+            this.txtOutpup_ORM.Size = new System.Drawing.Size(617, 20);
             this.txtOutpup_ORM.TabIndex = 94;
             // 
             // label45
             // 
             this.label45.Appearance.Font = new System.Drawing.Font("Tahoma", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label45.Appearance.Options.UseFont = true;
-            this.label45.Appearance.Options.UseForeColor = true;
             this.label45.Location = new System.Drawing.Point(2, 493);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(83, 42);
@@ -711,7 +700,7 @@ namespace HHMES.Tools.ClassGenerator
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(778, 197);
+            this.groupBox1.Size = new System.Drawing.Size(779, 197);
             this.groupBox1.TabIndex = 60;
             // 
             // txtConnString
@@ -727,7 +716,6 @@ namespace HHMES.Tools.ClassGenerator
             // label6
             // 
             this.label6.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.label6.Appearance.Options.UseForeColor = true;
             this.label6.Location = new System.Drawing.Point(772, 177);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(7, 14);
@@ -737,7 +725,6 @@ namespace HHMES.Tools.ClassGenerator
             // label4
             // 
             this.label4.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.label4.Appearance.Options.UseForeColor = true;
             this.label4.Location = new System.Drawing.Point(299, 114);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(7, 14);
@@ -747,7 +734,6 @@ namespace HHMES.Tools.ClassGenerator
             // label3
             // 
             this.label3.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.label3.Appearance.Options.UseForeColor = true;
             this.label3.Location = new System.Drawing.Point(217, 174);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(7, 14);
@@ -759,7 +745,7 @@ namespace HHMES.Tools.ClassGenerator
             this.txtComment.EditValue = "";
             this.txtComment.Location = new System.Drawing.Point(392, 141);
             this.txtComment.Name = "txtComment";
-            this.txtComment.Size = new System.Drawing.Size(377, 21);
+            this.txtComment.Size = new System.Drawing.Size(377, 20);
             this.txtComment.TabIndex = 61;
             // 
             // labelControl4
@@ -781,7 +767,6 @@ namespace HHMES.Tools.ClassGenerator
             // label1
             // 
             this.label1.Appearance.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Appearance.Options.UseForeColor = true;
             this.label1.Location = new System.Drawing.Point(320, 111);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(191, 14);
@@ -792,7 +777,7 @@ namespace HHMES.Tools.ClassGenerator
             // 
             this.txtClassName.Location = new System.Drawing.Point(95, 107);
             this.txtClassName.Name = "txtClassName";
-            this.txtClassName.Size = new System.Drawing.Size(201, 21);
+            this.txtClassName.Size = new System.Drawing.Size(201, 20);
             this.txtClassName.TabIndex = 23;
             // 
             // xtraTabPage1
@@ -800,7 +785,7 @@ namespace HHMES.Tools.ClassGenerator
             this.xtraTabPage1.Controls.Add(this.groupBox3);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(784, 567);
+            this.xtraTabPage1.Size = new System.Drawing.Size(785, 568);
             this.xtraTabPage1.Text = "生成 -> BLL";
             // 
             // groupBox3
@@ -837,7 +822,7 @@ namespace HHMES.Tools.ClassGenerator
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(784, 567);
+            this.groupBox3.Size = new System.Drawing.Size(785, 568);
             this.groupBox3.TabIndex = 59;
             this.groupBox3.Text = "生成业务逻辑层代码";
             this.groupBox3.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox3_Paint);
@@ -886,7 +871,7 @@ namespace HHMES.Tools.ClassGenerator
             // 
             this.txtFormName.Location = new System.Drawing.Point(98, 24);
             this.txtFormName.Name = "txtFormName";
-            this.txtFormName.Size = new System.Drawing.Size(147, 21);
+            this.txtFormName.Size = new System.Drawing.Size(147, 20);
             this.txtFormName.TabIndex = 72;
             // 
             // chkBusinessLog
@@ -916,7 +901,6 @@ namespace HHMES.Tools.ClassGenerator
             // label41
             // 
             this.label41.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label41.Appearance.Options.UseForeColor = true;
             this.label41.Location = new System.Drawing.Point(46, 476);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(52, 14);
@@ -932,13 +916,12 @@ namespace HHMES.Tools.ClassGenerator
             this.txtOutpup_BLL_Business.Properties.Appearance.ForeColor = System.Drawing.Color.DarkRed;
             this.txtOutpup_BLL_Business.Properties.Appearance.Options.UseFont = true;
             this.txtOutpup_BLL_Business.Properties.Appearance.Options.UseForeColor = true;
-            this.txtOutpup_BLL_Business.Size = new System.Drawing.Size(721, 21);
+            this.txtOutpup_BLL_Business.Size = new System.Drawing.Size(721, 20);
             this.txtOutpup_BLL_Business.TabIndex = 81;
             // 
             // label40
             // 
             this.label40.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label40.Appearance.Options.UseForeColor = true;
             this.label40.Location = new System.Drawing.Point(46, 394);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(52, 14);
@@ -954,15 +937,13 @@ namespace HHMES.Tools.ClassGenerator
             this.txtOutpup_BLL_DataDict.Properties.Appearance.ForeColor = System.Drawing.Color.DarkRed;
             this.txtOutpup_BLL_DataDict.Properties.Appearance.Options.UseFont = true;
             this.txtOutpup_BLL_DataDict.Properties.Appearance.Options.UseForeColor = true;
-            this.txtOutpup_BLL_DataDict.Size = new System.Drawing.Size(723, 21);
+            this.txtOutpup_BLL_DataDict.Size = new System.Drawing.Size(723, 20);
             this.txtOutpup_BLL_DataDict.TabIndex = 79;
             // 
             // label23
             // 
             this.label23.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Appearance.ForeColor = System.Drawing.Color.Maroon;
-            this.label23.Appearance.Options.UseFont = true;
-            this.label23.Appearance.Options.UseForeColor = true;
             this.label23.Location = new System.Drawing.Point(537, 525);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(60, 17);
@@ -973,8 +954,6 @@ namespace HHMES.Tools.ClassGenerator
             // 
             this.label22.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Appearance.ForeColor = System.Drawing.Color.Maroon;
-            this.label22.Appearance.Options.UseFont = true;
-            this.label22.Appearance.Options.UseForeColor = true;
             this.label22.Location = new System.Drawing.Point(537, 446);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(60, 17);
@@ -1010,13 +989,12 @@ namespace HHMES.Tools.ClassGenerator
             // 
             this.txtORM.Location = new System.Drawing.Point(145, 121);
             this.txtORM.Name = "txtORM";
-            this.txtORM.Size = new System.Drawing.Size(147, 21);
+            this.txtORM.Size = new System.Drawing.Size(147, 20);
             this.txtORM.TabIndex = 69;
             // 
             // label19
             // 
             this.label19.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label19.Appearance.Options.UseForeColor = true;
             this.label19.Location = new System.Drawing.Point(45, 204);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(89, 14);
@@ -1026,7 +1004,6 @@ namespace HHMES.Tools.ClassGenerator
             // label10
             // 
             this.label10.Appearance.ForeColor = System.Drawing.Color.Gray;
-            this.label10.Appearance.Options.UseForeColor = true;
             this.label10.Location = new System.Drawing.Point(45, 229);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(70, 14);
@@ -1046,7 +1023,7 @@ namespace HHMES.Tools.ClassGenerator
             this.txtBllNamespace.EditValue = "HHMES.Business";
             this.txtBllNamespace.Location = new System.Drawing.Point(145, 149);
             this.txtBllNamespace.Name = "txtBllNamespace";
-            this.txtBllNamespace.Size = new System.Drawing.Size(309, 21);
+            this.txtBllNamespace.Size = new System.Drawing.Size(309, 20);
             this.txtBllNamespace.TabIndex = 64;
             // 
             // label17
@@ -1085,14 +1062,14 @@ namespace HHMES.Tools.ClassGenerator
             // 
             this.txtDAL.Location = new System.Drawing.Point(145, 93);
             this.txtDAL.Name = "txtDAL";
-            this.txtDAL.Size = new System.Drawing.Size(147, 21);
+            this.txtDAL.Size = new System.Drawing.Size(147, 20);
             this.txtDAL.TabIndex = 58;
             // 
             // txtConcretelyName
             // 
             this.txtConcretelyName.Location = new System.Drawing.Point(145, 37);
             this.txtConcretelyName.Name = "txtConcretelyName";
-            this.txtConcretelyName.Size = new System.Drawing.Size(147, 21);
+            this.txtConcretelyName.Size = new System.Drawing.Size(147, 20);
             this.txtConcretelyName.TabIndex = 49;
             this.txtConcretelyName.EditValueChanged += new System.EventHandler(this.txtConcretelyName_EditValueChanged);
             // 
@@ -1133,7 +1110,7 @@ namespace HHMES.Tools.ClassGenerator
             // 
             this.txtBLL.Location = new System.Drawing.Point(145, 65);
             this.txtBLL.Name = "txtBLL";
-            this.txtBLL.Size = new System.Drawing.Size(147, 21);
+            this.txtBLL.Size = new System.Drawing.Size(147, 20);
             this.txtBLL.TabIndex = 50;
             // 
             // xtraTabPage2
@@ -1141,7 +1118,7 @@ namespace HHMES.Tools.ClassGenerator
             this.xtraTabPage2.Controls.Add(this.groupBox2);
             this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(784, 567);
+            this.xtraTabPage2.Size = new System.Drawing.Size(785, 568);
             this.xtraTabPage2.Text = "生成 -> DAL";
             // 
             // groupBox2
@@ -1174,7 +1151,7 @@ namespace HHMES.Tools.ClassGenerator
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(784, 567);
+            this.groupBox2.Size = new System.Drawing.Size(785, 568);
             this.groupBox2.TabIndex = 60;
             this.groupBox2.Text = "生成数据访问层代码";
             // 
@@ -1207,7 +1184,6 @@ namespace HHMES.Tools.ClassGenerator
             // label42
             // 
             this.label42.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label42.Appearance.Options.UseForeColor = true;
             this.label42.Location = new System.Drawing.Point(50, 391);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(52, 14);
@@ -1217,7 +1193,6 @@ namespace HHMES.Tools.ClassGenerator
             // label43
             // 
             this.label43.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label43.Appearance.Options.UseForeColor = true;
             this.label43.Location = new System.Drawing.Point(48, 274);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(52, 14);
@@ -1233,7 +1208,7 @@ namespace HHMES.Tools.ClassGenerator
             this.txtOutpup_DAL_DataDict.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.txtOutpup_DAL_DataDict.Properties.Appearance.Options.UseFont = true;
             this.txtOutpup_DAL_DataDict.Properties.Appearance.Options.UseForeColor = true;
-            this.txtOutpup_DAL_DataDict.Size = new System.Drawing.Size(724, 21);
+            this.txtOutpup_DAL_DataDict.Size = new System.Drawing.Size(724, 20);
             this.txtOutpup_DAL_DataDict.TabIndex = 83;
             // 
             // txtOutpup_DAL_Business
@@ -1245,15 +1220,13 @@ namespace HHMES.Tools.ClassGenerator
             this.txtOutpup_DAL_Business.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.txtOutpup_DAL_Business.Properties.Appearance.Options.UseFont = true;
             this.txtOutpup_DAL_Business.Properties.Appearance.Options.UseForeColor = true;
-            this.txtOutpup_DAL_Business.Size = new System.Drawing.Size(725, 21);
+            this.txtOutpup_DAL_Business.Size = new System.Drawing.Size(725, 20);
             this.txtOutpup_DAL_Business.TabIndex = 82;
             // 
             // label30
             // 
             this.label30.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.Appearance.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label30.Appearance.Options.UseFont = true;
-            this.label30.Appearance.Options.UseForeColor = true;
             this.label30.Location = new System.Drawing.Point(49, 434);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(60, 17);
@@ -1264,8 +1237,6 @@ namespace HHMES.Tools.ClassGenerator
             // 
             this.label37.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.Appearance.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label37.Appearance.Options.UseFont = true;
-            this.label37.Appearance.Options.UseForeColor = true;
             this.label37.Location = new System.Drawing.Point(48, 317);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(60, 17);
@@ -1301,13 +1272,12 @@ namespace HHMES.Tools.ClassGenerator
             // 
             this.txtORM_DAL.Location = new System.Drawing.Point(146, 85);
             this.txtORM_DAL.Name = "txtORM_DAL";
-            this.txtORM_DAL.Size = new System.Drawing.Size(147, 21);
+            this.txtORM_DAL.Size = new System.Drawing.Size(147, 20);
             this.txtORM_DAL.TabIndex = 69;
             // 
             // label26
             // 
             this.label26.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label26.Appearance.Options.UseForeColor = true;
             this.label26.Location = new System.Drawing.Point(46, 168);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(89, 14);
@@ -1317,7 +1287,6 @@ namespace HHMES.Tools.ClassGenerator
             // label27
             // 
             this.label27.Appearance.ForeColor = System.Drawing.Color.Gray;
-            this.label27.Appearance.Options.UseForeColor = true;
             this.label27.Location = new System.Drawing.Point(46, 193);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(70, 14);
@@ -1337,7 +1306,7 @@ namespace HHMES.Tools.ClassGenerator
             this.txtNamespace_DAL.EditValue = "HHMES.Server.DataAccess";
             this.txtNamespace_DAL.Location = new System.Drawing.Point(146, 113);
             this.txtNamespace_DAL.Name = "txtNamespace_DAL";
-            this.txtNamespace_DAL.Size = new System.Drawing.Size(309, 21);
+            this.txtNamespace_DAL.Size = new System.Drawing.Size(309, 20);
             this.txtNamespace_DAL.TabIndex = 64;
             // 
             // label29
@@ -1368,14 +1337,14 @@ namespace HHMES.Tools.ClassGenerator
             // 
             this.txtDAL_DAL.Location = new System.Drawing.Point(146, 57);
             this.txtDAL_DAL.Name = "txtDAL_DAL";
-            this.txtDAL_DAL.Size = new System.Drawing.Size(147, 21);
+            this.txtDAL_DAL.Size = new System.Drawing.Size(147, 20);
             this.txtDAL_DAL.TabIndex = 58;
             // 
             // txtConcretelyName_DAL
             // 
             this.txtConcretelyName_DAL.Location = new System.Drawing.Point(146, 29);
             this.txtConcretelyName_DAL.Name = "txtConcretelyName_DAL";
-            this.txtConcretelyName_DAL.Size = new System.Drawing.Size(147, 21);
+            this.txtConcretelyName_DAL.Size = new System.Drawing.Size(147, 20);
             this.txtConcretelyName_DAL.TabIndex = 49;
             this.txtConcretelyName_DAL.EditValueChanged += new System.EventHandler(this.txtConcretelyName_DAL_EditValueChanged);
             // 
@@ -1409,7 +1378,7 @@ namespace HHMES.Tools.ClassGenerator
             this.xtraTabPage3.Controls.Add(this.groupControl1);
             this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(784, 567);
+            this.xtraTabPage3.Size = new System.Drawing.Size(785, 568);
             this.xtraTabPage3.Text = "生成->数据字典窗体";
             // 
             // groupControl1
@@ -1417,7 +1386,7 @@ namespace HHMES.Tools.ClassGenerator
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(784, 567);
+            this.groupControl1.Size = new System.Drawing.Size(785, 568);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "生成->数据字典窗体";
             // 
@@ -1426,7 +1395,7 @@ namespace HHMES.Tools.ClassGenerator
             this.xtraTabPage4.Controls.Add(this.groupControl2);
             this.xtraTabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(784, 567);
+            this.xtraTabPage4.Size = new System.Drawing.Size(785, 568);
             this.xtraTabPage4.Text = "生成->业务数据窗体";
             // 
             // groupControl2
@@ -1434,7 +1403,7 @@ namespace HHMES.Tools.ClassGenerator
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(784, 567);
+            this.groupControl2.Size = new System.Drawing.Size(785, 568);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "生成->业务数据窗体";
             // 
@@ -1443,7 +1412,7 @@ namespace HHMES.Tools.ClassGenerator
             this.xtraTabPage5.Controls.Add(this.groupControl3);
             this.xtraTabPage5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(784, 567);
+            this.xtraTabPage5.Size = new System.Drawing.Size(785, 568);
             this.xtraTabPage5.Text = "生成->报表窗体";
             // 
             // groupControl3
@@ -1451,7 +1420,7 @@ namespace HHMES.Tools.ClassGenerator
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(784, 567);
+            this.groupControl3.Size = new System.Drawing.Size(785, 568);
             this.groupControl3.TabIndex = 1;
             this.groupControl3.Text = "生成->报表窗体";
             // 
@@ -1460,7 +1429,7 @@ namespace HHMES.Tools.ClassGenerator
             this.txtSolutionFolder.EditValue = "D:\\HH\\File\\Source";
             this.txtSolutionFolder.Location = new System.Drawing.Point(97, 2);
             this.txtSolutionFolder.Name = "txtSolutionFolder";
-            this.txtSolutionFolder.Size = new System.Drawing.Size(634, 21);
+            this.txtSolutionFolder.Size = new System.Drawing.Size(634, 20);
             this.txtSolutionFolder.TabIndex = 62;
             this.txtSolutionFolder.EditValueChanged += new System.EventHandler(this.txtSolutionFolder_EditValueChanged);
             // 
@@ -1468,8 +1437,6 @@ namespace HHMES.Tools.ClassGenerator
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Maroon;
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Appearance.Options.UseForeColor = true;
             this.labelControl5.Location = new System.Drawing.Point(11, 4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(80, 17);

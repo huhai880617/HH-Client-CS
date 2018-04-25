@@ -131,13 +131,15 @@ namespace HHMES.ORM
                 sb.Append("insert into " + tableName + " ( ");
                 foreach (ColoumnProperty colProper in field)
                 {
-                    sb.Append("[" + colProper.ColumnName + "],");
+                    if(colProper.ColumnName!="ID")
+                        sb.Append("[" + colProper.ColumnName + "],");
                 }
                 sb.Remove(sb.Length - 1, 1);
                 sb.Append(" ) values ( ");
                 foreach (ColoumnProperty colProper in field)
                 {
-                    sb.Append("@" + colProper.ColumnName + ",");
+                    if (colProper.ColumnName != "ID")
+                        sb.Append("@" + colProper.ColumnName + ",");
                 }
                 sb.Remove(sb.Length - 1, 1);
                 sb.Append(" )");

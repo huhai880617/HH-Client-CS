@@ -28,7 +28,6 @@ namespace HHMES.SystemModule
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGroup));
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.txtGroupName = new DevExpress.XtraEditors.MemoEdit();
@@ -37,9 +36,9 @@ namespace HHMES.SystemModule
             this.labMemo = new System.Windows.Forms.Label();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.treeAuthority = new System.Windows.Forms.TreeView();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
             this.menuChangeName = new System.Windows.Forms.ToolStripMenuItem();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList();
             this.label1 = new System.Windows.Forms.Label();
             this.gcSummary = new DevExpress.XtraGrid.GridControl();
             this.gvSummary = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -90,7 +89,7 @@ namespace HHMES.SystemModule
             this.tpSummary.Appearance.PageClient.BackColor = System.Drawing.SystemColors.Control;
             this.tpSummary.Appearance.PageClient.Options.UseBackColor = true;
             this.tpSummary.Controls.Add(this.groupControl1);
-            this.tpSummary.Size = new System.Drawing.Size(885, 610);
+            this.tpSummary.Size = new System.Drawing.Size(886, 611);
             // 
             // pnlSummary
             // 
@@ -99,6 +98,7 @@ namespace HHMES.SystemModule
             // 
             // tcBusiness
             // 
+            this.tcBusiness.SelectedTabPage = this.tpSummary;
             this.tcBusiness.Size = new System.Drawing.Size(892, 640);
             // 
             // tpDetail
@@ -106,7 +106,7 @@ namespace HHMES.SystemModule
             this.tpDetail.Appearance.PageClient.BackColor = System.Drawing.SystemColors.Control;
             this.tpDetail.Appearance.PageClient.Options.UseBackColor = true;
             this.tpDetail.Controls.Add(this.splitContainerControl1);
-            this.tpDetail.Size = new System.Drawing.Size(775, 481);
+            this.tpDetail.Size = new System.Drawing.Size(886, 611);
             // 
             // gcNavigator
             // 
@@ -128,7 +128,6 @@ namespace HHMES.SystemModule
             // 
             this.lblAboutInfo.Location = new System.Drawing.Point(517, 2);
             this.lblAboutInfo.Size = new System.Drawing.Size(197, 24);
-            this.lblAboutInfo.Text = "";
             // 
             // groupControl3
             // 
@@ -153,7 +152,7 @@ namespace HHMES.SystemModule
             // 
             this.txtGroupCode.Location = new System.Drawing.Point(49, 26);
             this.txtGroupCode.Name = "txtGroupCode";
-            this.txtGroupCode.Size = new System.Drawing.Size(224, 21);
+            this.txtGroupCode.Size = new System.Drawing.Size(224, 20);
             this.txtGroupCode.TabIndex = 8;
             // 
             // labGroupName
@@ -180,7 +179,7 @@ namespace HHMES.SystemModule
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(470, 481);
+            this.groupControl2.Size = new System.Drawing.Size(582, 611);
             this.groupControl2.TabIndex = 26;
             this.groupControl2.Text = "组权限";
             // 
@@ -192,10 +191,10 @@ namespace HHMES.SystemModule
             this.treeAuthority.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeAuthority.ImageIndex = 0;
             this.treeAuthority.ImageList = this.imageList1;
-            this.treeAuthority.Location = new System.Drawing.Point(2, 23);
+            this.treeAuthority.Location = new System.Drawing.Point(2, 21);
             this.treeAuthority.Name = "treeAuthority";
             this.treeAuthority.SelectedImageIndex = 0;
-            this.treeAuthority.Size = new System.Drawing.Size(466, 456);
+            this.treeAuthority.Size = new System.Drawing.Size(578, 588);
             this.treeAuthority.TabIndex = 0;
             this.treeAuthority.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeAuthority_NodeMouseDoubleClick);
             this.treeAuthority.MouseDown += new System.Windows.Forms.MouseEventHandler(this.treeAuthority_MouseDown);
@@ -236,10 +235,10 @@ namespace HHMES.SystemModule
             // gcSummary
             // 
             this.gcSummary.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcSummary.Location = new System.Drawing.Point(2, 23);
+            this.gcSummary.Location = new System.Drawing.Point(2, 21);
             this.gcSummary.MainView = this.gvSummary;
             this.gcSummary.Name = "gcSummary";
-            this.gcSummary.Size = new System.Drawing.Size(881, 585);
+            this.gcSummary.Size = new System.Drawing.Size(882, 588);
             this.gcSummary.TabIndex = 0;
             this.gcSummary.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSummary});
@@ -278,7 +277,7 @@ namespace HHMES.SystemModule
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(885, 610);
+            this.groupControl1.Size = new System.Drawing.Size(886, 611);
             this.groupControl1.TabIndex = 2;
             // 
             // groupControl4
@@ -310,9 +309,9 @@ namespace HHMES.SystemModule
             this.lbAvailableUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbAvailableUser.FormattingEnabled = true;
             this.lbAvailableUser.ItemHeight = 14;
-            this.lbAvailableUser.Location = new System.Drawing.Point(2, 23);
+            this.lbAvailableUser.Location = new System.Drawing.Point(2, 21);
             this.lbAvailableUser.Name = "lbAvailableUser";
-            this.lbAvailableUser.Size = new System.Drawing.Size(118, 340);
+            this.lbAvailableUser.Size = new System.Drawing.Size(118, 345);
             this.lbAvailableUser.TabIndex = 0;
             // 
             // btnAllToLeft
@@ -340,9 +339,9 @@ namespace HHMES.SystemModule
             this.lbSelectedUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbSelectedUser.FormattingEnabled = true;
             this.lbSelectedUser.ItemHeight = 14;
-            this.lbSelectedUser.Location = new System.Drawing.Point(2, 23);
+            this.lbSelectedUser.Location = new System.Drawing.Point(2, 21);
             this.lbSelectedUser.Name = "lbSelectedUser";
-            this.lbSelectedUser.Size = new System.Drawing.Size(118, 340);
+            this.lbSelectedUser.Size = new System.Drawing.Size(118, 347);
             this.lbSelectedUser.TabIndex = 2;
             // 
             // btnSingleToLeft
@@ -388,7 +387,7 @@ namespace HHMES.SystemModule
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.groupControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(775, 481);
+            this.splitContainerControl1.Size = new System.Drawing.Size(886, 611);
             this.splitContainerControl1.SplitterPosition = 299;
             this.splitContainerControl1.TabIndex = 39;
             this.splitContainerControl1.Text = "splitContainerControl1";

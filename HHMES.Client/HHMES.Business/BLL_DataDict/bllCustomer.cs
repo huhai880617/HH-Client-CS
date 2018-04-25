@@ -21,10 +21,10 @@ namespace HHMES.Business
 
         public bllCustomer()
         {
-            _KeyFieldName = tb_Customer.__KeyName; //主键字段
-            _SummaryTableName = tb_Customer.__TableName;//表名
+            _KeyFieldName = tb_SUPPLIERCUSTOMER.__KeyName; //主键字段
+            _SummaryTableName = tb_SUPPLIERCUSTOMER.__TableName;//表名
             _WriteDataLog = true;//是否保存日志
-            _DataDictBridge = BridgeFactory.CreateDataDictBridge(typeof(tb_Customer));
+            _DataDictBridge = BridgeFactory.CreateDataDictBridge(typeof(tb_SUPPLIERCUSTOMER));
             _MyBridge = this.CreateBridge();
         }
 
@@ -43,10 +43,10 @@ namespace HHMES.Business
             return null;
         }
 
-        public DataTable SearchBy(string CustomerFrom, string CustomerTo, string Name,
+        public DataTable SearchBy(string code, string Name,
             string Attribute, bool resetCurrent)
         {
-            DataTable data = _MyBridge.SearchBy(CustomerFrom, CustomerTo, Name, Attribute);
+            DataTable data = _MyBridge.SearchBy(code,  Name, Attribute);
             if (resetCurrent) _SummaryTable = data;
             this.SetDefault(_SummaryTable);
             return data;

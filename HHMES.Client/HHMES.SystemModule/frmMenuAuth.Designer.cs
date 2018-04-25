@@ -67,6 +67,7 @@
             // 
             // tcBusiness
             // 
+            this.tcBusiness.SelectedTabPage = this.tpSummary;
             this.tcBusiness.Size = new System.Drawing.Size(911, 513);
             // 
             // tpDetail

@@ -66,8 +66,10 @@ namespace HHMES.ORM
                     if (fieldAttr.IsAddOrUpdate)
                     {
                         //取得最多的参数，与生成的sql语句作匹配,构造SQL参数语句                                             
-                        if (!_cmdInsert.Parameters.Contains("@" + fieldName)) _cmdInsert.Parameters.Add("@" + fieldName, fieldAttr.Type, fieldAttr.Size, fieldName);
-                        if (!_cmdUpdate.Parameters.Contains("@" + fieldName)) _cmdUpdate.Parameters.Add("@" + fieldName, fieldAttr.Type, fieldAttr.Size, fieldName);
+                        if (!_cmdInsert.Parameters.Contains("@" + fieldName)&&info.Name!="ID")
+                            _cmdInsert.Parameters.Add("@" + fieldName, fieldAttr.Type, fieldAttr.Size, fieldName);
+                        if (!_cmdUpdate.Parameters.Contains("@" + fieldName))
+                            _cmdUpdate.Parameters.Add("@" + fieldName, fieldAttr.Type, fieldAttr.Size, fieldName);
 
                         ColoumnProperty colProper = new ColoumnProperty(fieldName, fieldAttr.IsPrimaryKey ? true : false);
                         fieldArr.Add(colProper);

@@ -23,22 +23,22 @@ namespace HHMES.Server.DataAccess.DAL_DataDict
     /// <summary>
     /// Customer的数据访问层
     /// </summary>
-    [DefaultORM_UpdateMode(typeof(tb_Customer), true)]
+    [DefaultORM_UpdateMode(typeof(tb_SUPPLIERCUSTOMER), true)]
     public class dalCustomer : dalBaseDataDict, IBridge_Customer
     {
         public dalCustomer(Loginer loginer)
             : base(loginer)
         {
-            _KeyName = tb_Customer.__KeyName; //主键字段
-            _TableName = tb_Customer.__TableName;//表名
-            _ModelType = typeof(tb_Customer);
+            _KeyName = tb_SUPPLIERCUSTOMER.__KeyName; //主键字段
+            _TableName = tb_SUPPLIERCUSTOMER.__TableName;//表名
+            _ModelType = typeof(tb_SUPPLIERCUSTOMER);
         }
 
         protected override IGenerateSqlCommand CreateSqlGenerator(string tableName)
         {
             Type ORM = null;
 
-            if (tableName == tb_Customer.__TableName) ORM = typeof(tb_Customer);
+            if (tableName == tb_SUPPLIERCUSTOMER.__TableName) ORM = typeof(tb_SUPPLIERCUSTOMER);
 
             if (ORM == null) throw new Exception(tableName + "表没有ORM模型！");
 
@@ -46,27 +46,25 @@ namespace HHMES.Server.DataAccess.DAL_DataDict
         }
 
 
-        public DataTable SearchBy(string CustomerFrom, string CustomerTo, string Name, string Attribute)
+        public DataTable SearchBy(string code,  string Name, string type_CFG)
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("SELECT * FROM tb_Customer WHERE 1=1 ");
+            sb.Append("SELECT * FROM [SUPPLIERCUSTOMER] WHERE ISDELETED=0 ");
 
-            if (String.IsNullOrEmpty(CustomerFrom) == false)
-                sb.Append(" AND CustomerCode>='" + CustomerFrom + "'");
-
-            if (String.IsNullOrEmpty(CustomerTo) == false)
-                sb.Append(" AND CustomerCode<='" + CustomerTo + "'");
+            if (String.IsNullOrEmpty(code) == false)
+                sb.Append(" AND CODE ='" + code + "'");
+           
 
             if (String.IsNullOrEmpty(Name) == false)
-                sb.Append(" AND (NativeName LIKE '%" + Name + "%' OR NativeName LIKE '%" + Name + "%')");
+                sb.Append(" AND Name LIKE '%" + Name + "%'");
 
-            if (String.IsNullOrEmpty(Attribute) == false)
-                sb.Append(" AND CHARINDEX('," + Attribute + ",',AttributeCodes)>0 ");
+            if (String.IsNullOrEmpty(type_CFG) == false)
+                sb.Append(" AND type_CFG=" + type_CFG );
 
-            sb.Append(" ORDER BY CustomerCode ");
+            sb.Append(" ORDER BY CODE ");
 
             SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(sb.ToString());
-            return DataProvider.Instance.GetTable(_Loginer.DBName, cmd.SqlCommand, tb_Customer.__TableName);
+            return DataProvider.Instance.GetTable(_Loginer.DBName, cmd.SqlCommand, tb_SUPPLIERCUSTOMER.__TableName);
 
         }
 
@@ -75,7 +73,7 @@ namespace HHMES.Server.DataAccess.DAL_DataDict
             SqlProcedure sp = SqlBuilder.BuildSqlProcedure("sp_GetCustomerByAttributeCodes");
             sp.AddParam("@AttributeCodes", SqlDbType.VarChar, attributeCodes);
             sp.AddParam("@NameWithCode", SqlDbType.VarChar, nameWithCode ? "Y" : "N");
-            return DataProvider.Instance.GetTable(_Loginer.DBName, sp.SqlCommand, "tb_Customer");
+            return DataProvider.Instance.GetTable(_Loginer.DBName, sp.SqlCommand, "tb_SUPPLIERCUSTOMER");
         }
 
         public DataTable FuzzySearch(string content)
@@ -83,7 +81,7 @@ namespace HHMES.Server.DataAccess.DAL_DataDict
             SqlProcedure sp = SqlBuilder.BuildSqlProcedure("sp_FuzzySearchCustomer");
             sp.AddParam("@Content", SqlDbType.VarChar, content);
             sp.AddParam("@AttributeCodes", SqlDbType.VarChar, "");
-            return DataProvider.Instance.GetTable(_Loginer.DBName, sp.SqlCommand, tb_Customer.__TableName);
+            return DataProvider.Instance.GetTable(_Loginer.DBName, sp.SqlCommand, tb_SUPPLIERCUSTOMER.__TableName);
         }
 
         public DataTable FuzzySearch(string attributeCodes, string content)
@@ -91,7 +89,7 @@ namespace HHMES.Server.DataAccess.DAL_DataDict
             SqlProcedure sp = SqlBuilder.BuildSqlProcedure("sp_FuzzySearchCustomer");
             sp.AddParam("@Content", SqlDbType.VarChar, content);
             sp.AddParam("@AttributeCodes", SqlDbType.VarChar, attributeCodes);
-            return DataProvider.Instance.GetTable(_Loginer.DBName, sp.SqlCommand, tb_Customer.__TableName);
+            return DataProvider.Instance.GetTable(_Loginer.DBName, sp.SqlCommand, tb_SUPPLIERCUSTOMER.__TableName);
         }
     }
 }

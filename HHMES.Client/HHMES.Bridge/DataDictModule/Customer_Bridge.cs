@@ -46,14 +46,15 @@ namespace HHMES.Bridge.DataDictModule
 
         #region IBridge_Customer 成员
 
-        public DataTable SearchBy(string CustomerFrom, string CustomerTo, string Name, string Attribute)
+        public DataTable SearchBy(string Code,  string Name, string type_Cfg)
         {
-            using (DataDictServiceClient client = SoapClientFactory.CreateDataDictClient())
-            {
-                byte[] loginTicket = WebServiceSecurity.EncryptLoginer(Loginer.CurrentUser);
-                byte[] receivedData = client.FuzzySearchCustomer(loginTicket, CustomerFrom, CustomerTo, Name, Attribute);
-                return ZipTools.DecompressionDataSet(receivedData).Tables[0];
-            }
+            //using (DataDictServiceClient client = SoapClientFactory.CreateDataDictClient())
+            //{
+            //    byte[] loginTicket = WebServiceSecurity.EncryptLoginer(Loginer.CurrentUser);
+            //    byte[] receivedData = client.FuzzySearchCustomer(loginTicket,Code,  Name, type_Cfg);
+            //    return ZipTools.DecompressionDataSet(receivedData).Tables[0];
+            //}
+            return null;
         }
 
         public DataTable GetCustomerByAttributeCodes(string attributeCodes, bool nameWithCode)
