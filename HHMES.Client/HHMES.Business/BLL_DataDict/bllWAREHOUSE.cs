@@ -14,7 +14,7 @@ using HHMES.Bridge.DataDictModule;
 using HHMES.Interfaces.Interfaces_Bridge;
 
 /*==========================================
- *   程序说明: WMS_Warehouse的业务逻辑层
+ *   程序说明: WAREHOUSE的业务逻辑层
  *   作者姓名: HHMES.com
  *   创建日期: 2016-09-29 03:02:11
  *   最后修改: 2016-09-29 03:02:11
@@ -25,25 +25,25 @@ using HHMES.Interfaces.Interfaces_Bridge;
 
 namespace HHMES.Business
 {
-    public class bllWMS_Warehouse : bllBaseDataDict
+    public class bllWAREHOUSE : bllBaseDataDict
     {
-        private IBridge_WMS_Warehouse _MyBridge = null;
-         public bllWMS_Warehouse()
+        private IBridge_WAREHOUSE _MyBridge = null;
+         public bllWAREHOUSE()
          {
-             _KeyFieldName = tb_WMS_Warehouse.__KeyName; //主键字段
-             _SummaryTableName = tb_WMS_Warehouse.__TableName;//表名
+             _KeyFieldName = tb_WAREHOUSE.__KeyName; //主键字段
+             _SummaryTableName = tb_WAREHOUSE.__TableName;//表名
              _WriteDataLog = true;//是否保存日志
-             _DataDictBridge = new dalWMS_Warehouse(Loginer.CurrentUser);//数据层的实例
+             _DataDictBridge = new dalWAREHOUSE(Loginer.CurrentUser);//数据层的实例
              _MyBridge = this.CreateBridge();
          }
 
-         private IBridge_WMS_Warehouse CreateBridge()
+         private IBridge_WAREHOUSE CreateBridge()
          {
              if (BridgeFactory.BridgeType == BridgeType.ADODirect)
-                 return new ADODirect_WMS_Warehouse().GetInstance();
+                 return new ADODirect_WAREHOUSE().GetInstance();
 
              if (BridgeFactory.BridgeType == BridgeType.WebService)
-                 return new WebService_WMS_Warehouse();
+                 return new WebService_WAREHOUSE();
 
              return null;
          }

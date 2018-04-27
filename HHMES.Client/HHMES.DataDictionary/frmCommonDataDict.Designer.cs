@@ -125,6 +125,7 @@
             // tcBusiness
             // 
             this.tcBusiness.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.tcBusiness.SelectedTabPage = this.tpSummary;
             this.tcBusiness.Size = new System.Drawing.Size(822, 413);
             // 
             // tpDetail
@@ -133,7 +134,7 @@
             this.tpDetail.Appearance.PageClient.Options.UseBackColor = true;
             this.tpDetail.Controls.Add(this.gcDetailEditor);
             this.tpDetail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tpDetail.Size = new System.Drawing.Size(932, 566);
+            this.tpDetail.Size = new System.Drawing.Size(816, 384);
             // 
             // gcNavigator
             // 
@@ -184,8 +185,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txt_CommonType.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识", 20, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("HEADERCODE", 30, "编码"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("HEADERNAME", 30, "名称")});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", 30, "编码"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", 30, "名称")});
             this.txt_CommonType.Properties.DisplayMember = "HEADERNAME";
             this.txt_CommonType.Properties.NullText = "";
             this.txt_CommonType.Properties.ValueMember = "HEADERCODE";
@@ -392,7 +393,7 @@
             this.gcDetailEditor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcDetailEditor.Location = new System.Drawing.Point(0, 0);
             this.gcDetailEditor.Name = "gcDetailEditor";
-            this.gcDetailEditor.Size = new System.Drawing.Size(932, 566);
+            this.gcDetailEditor.Size = new System.Drawing.Size(816, 384);
             this.gcDetailEditor.TabIndex = 0;
             // 
             // groupControl2
@@ -609,8 +610,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtDataType.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("HEADERCODE", 50, "编码"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("HEADERNAME", 100, "名称")});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", 50, "编码"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", 100, "名称")});
             this.txtDataType.Properties.DisplayMember = "HEADERNAME";
             this.txtDataType.Properties.NullText = "";
             this.txtDataType.Properties.ValueMember = "HEADERCODE";

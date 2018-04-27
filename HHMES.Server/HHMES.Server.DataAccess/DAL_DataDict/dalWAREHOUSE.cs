@@ -10,7 +10,7 @@ using HHMES.Interfaces;
 using HHMES.Server.DataAccess.DAL_Base;
 
 /*==========================================
- *   程序说明: WMS_Warehouse的数据访问层
+ *   程序说明: WAREHOUSE的数据访问层
  *   作者姓名: HHMES.com
  *   创建日期: 2016-09-29 03:02:44
  *   最后修改: 2016-09-29 03:02:44
@@ -22,19 +22,19 @@ using HHMES.Server.DataAccess.DAL_Base;
 namespace HHMES.Server.DataAccess
 {
     /// <summary>
-    /// dalWMS_Warehouse
+    /// dalWAREHOUSE
     /// </summary>
-    public class dalWMS_Warehouse : dalBaseDataDict, IBridge_WMS_Warehouse
+    public class dalWAREHOUSE : dalBaseDataDict, IBridge_WAREHOUSE
     {
          /// <summary>
          /// 构造器
          /// </summary>
          /// <param name="loginer">当前登录用户</param>
-         public dalWMS_Warehouse(Loginer loginer): base(loginer)
+         public dalWAREHOUSE(Loginer loginer): base(loginer)
          {
-             _KeyName = tb_WMS_Warehouse.__KeyName; //主键字段
-             _TableName = tb_WMS_Warehouse.__TableName;//表名
-             _ModelType = typeof(tb_WMS_Warehouse);
+             _KeyName = tb_WAREHOUSE.__KeyName; //主键字段
+             _TableName = tb_WAREHOUSE.__TableName;//表名
+             _ModelType = typeof(tb_WAREHOUSE);
          }
 
          /// <summary>
@@ -45,7 +45,7 @@ namespace HHMES.Server.DataAccess
          protected override IGenerateSqlCommand CreateSqlGenerator(string tableName)
          {
            Type ORM = null;
-           if (tableName == tb_WMS_Warehouse.__TableName) ORM = typeof(tb_WMS_Warehouse);
+           if (tableName == tb_WAREHOUSE.__TableName) ORM = typeof(tb_WAREHOUSE);
            if (ORM == null) throw new Exception(tableName + "表没有ORM模型！");
            return new GenerateSqlCmdByTableFields(ORM);
          }

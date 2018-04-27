@@ -23,7 +23,7 @@ namespace HHMES.Server.DataAccess.DAL_Base
         /// ORM模型
         /// </summary>
         protected Type _ModelType = null;
-
+       
         /// <summary>
         /// 字典表名
         /// </summary>

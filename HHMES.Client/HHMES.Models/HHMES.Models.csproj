@@ -65,11 +65,11 @@
     <Compile Include="DataDictModels\tb_Currency.cs" />
     <Compile Include="DataDictModels\tb_Location.cs" />
     <Compile Include="DataDictModels\sys_BusinessTables.cs" />
+    <Compile Include="DataDictModels\tb_WAREHOUSE.cs" />
     <Compile Include="DataDictModels\tb_WMS_Department.cs" />
     <Compile Include="DataDictModels\tb_WMS_Material.cs" />
     <Compile Include="DataDictModels\tb_WMS_Pallet.cs" />
     <Compile Include="DataDictModels\tb_WMS_WareCell.cs" />
-    <Compile Include="DataDictModels\tb_WMS_Warehouse.cs" />
     <Compile Include="SystemModels\tb_DataSet.cs" />
     <Compile Include="DataDictModels\tb_CommonDataDict.cs" />
     <Compile Include="DataDictModels\tb_CommonDataDictType.cs" />

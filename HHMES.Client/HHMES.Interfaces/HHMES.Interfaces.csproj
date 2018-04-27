@@ -54,7 +54,7 @@
     <Compile Include="Interfaces_Bridge\IBridge_SystemLog.cs" />
     <Compile Include="Interfaces_Bridge\IBridge_UserGroup.cs" />
     <Compile Include="Interfaces_Bridge\DocumentModule\IBridge_WMS_BillIn.cs" />
-    <Compile Include="Interfaces_Bridge\IBridge_WMS_Warehouse.cs" />
+    <Compile Include="Interfaces_Bridge\IBridge_WAREHOUSE.cs" />
     <Compile Include="Interfaces_Bridge\IBridge_WMS_WareCell.cs" />
     <Compile Include="Interfaces_Bridge\IBridge_WMS_Pallet.cs" />
     <Compile Include="Interfaces_Bridge\DocumentModule\IBridge_WMS_BillOut.cs" />

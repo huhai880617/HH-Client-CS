@@ -105,9 +105,9 @@ namespace HHMES.Server.DataAccess.DAL_DataDict
         /// <returns></returns>
         public bool AddCommonType(string code, string name)
         {
-            string sql = "INSERT INTO CONFIG_HEADER (CODE,NAME,WAREHOUSECODE_ID,SYSTEMCREATED,CREATEBY,CREATETIME,"
+            string sql = "INSERT INTO CONFIG_HEADER (CODE,NAME,WAREHOUSEID,SYSTEMCREATED,CREATEBY,CREATETIME,"
               +"MODIFYBY,MODIFYTIME,ISDELETED ) VALUES ('{0}','{1}',{2},1,'{3}',getdate(),'{4}',getdate(),0);";
-            string execSql = string.Format(sql, code, name, Globals.DEF_WAREHOUSECODEID, Loginer.CurrentUser, Loginer.CurrentUser);
+            string execSql = string.Format(sql, code, name, Globals.DEF_WAREHOUSECODEID, Loginer.CurrentUser.Account, Loginer.CurrentUser.Account);
             int i = DataProvider.Instance.ExecuteNoQuery(_Loginer.DBName, execSql);
             return i > 0;
         }

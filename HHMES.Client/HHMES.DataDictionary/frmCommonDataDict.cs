@@ -40,20 +40,23 @@ namespace HHMES.DataDictionary
             _BLL = new bllCommonDataDict(); //业务逻辑实例
 
             //绑定相关缓存数据
-            DataBinder.BindingLookupEditDataSource(txt_CommonType, DataDictCache._DataDictType, "HEADERNAME", "ID");
-            DataBinder.BindingLookupEditDataSource(txtDataType, DataDictCache._DataDictType, "HEADERNAME", "ID");
+            DataBinder.BindingLookupEditDataSource(txt_CommonType, DataDictCache._DataDictType, "NAME", "ID");
+            DataBinder.BindingLookupEditDataSource(txtDataType, DataDictCache._DataDictType, "NAME", "ID");
 
             DataBinder.BindingLookupEditDataSource(repositoryItemLookUpEdit1 as RepositoryItemLookUpEdit,
-                DataDictCache._DataDictType, "HEADERNAME", "ID");
+                DataDictCache._DataDictType, "NAME", "ID");
 
             base.InitializeForm();
         }
 
         private void btnQuery_Click(object sender, EventArgs e)
-        {//搜索数据                        
-            ((bllCommonDataDict)_BLL).SearchBy(txt_CommonType.EditValue.ToString(), true);
-            this.DoBindingSummaryGrid(_BLL.SummaryTable); //绑定主表的Grid
-            this.ShowSummaryPage(true); //显示Summary页面. 
+        {//搜索数据    
+            if (txt_CommonType.EditValue != null)
+            {
+                ((bllCommonDataDict)_BLL).SearchBy(txt_CommonType.EditValue.ToString(), true);
+                this.DoBindingSummaryGrid(_BLL.SummaryTable); //绑定主表的Grid
+                this.ShowSummaryPage(true); //显示Summary页面. 
+            }
         }
 
         protected override void ButtonStateChanged(UpdateType currentState)
@@ -235,7 +238,7 @@ namespace HHMES.DataDictionary
             {
                 if (_UpdateType == UpdateType.Add)
                 {
-                    string sqlCondition = string.Format(" And NAME='{0}' and Code='{1}'", txtDataType.EditValue, txtDataCode.Text);
+                    string sqlCondition = string.Format("AND ISDELETED=0 And NAME='{0}' and Code='{1}'", txtDataType.EditValue, txtDataCode.Text);
                     if (_BLL.CheckNoExists(tableName, sqlCondition))
                     {
                         Msg.Warning("编号已存在!");

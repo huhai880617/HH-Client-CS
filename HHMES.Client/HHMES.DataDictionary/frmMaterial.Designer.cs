@@ -133,6 +133,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvSummary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -144,7 +145,7 @@
             this.tpSummary.Appearance.PageClient.Options.UseBackColor = true;
             this.tpSummary.Controls.Add(this.splitContainer1);
             this.tpSummary.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.tpSummary.Size = new System.Drawing.Size(958, 497);
+            this.tpSummary.Size = new System.Drawing.Size(959, 498);
             // 
             // pnlSummary
             // 
@@ -164,8 +165,8 @@
             this.tpDetail.Controls.Add(this.splitterControl1);
             this.tpDetail.Controls.Add(this.gcDetailEditor);
             this.tpDetail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tpDetail.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.tpDetail.Size = new System.Drawing.Size(814, 425);
+            this.tpDetail.Padding = new System.Windows.Forms.Padding(5);
+            this.tpDetail.Size = new System.Drawing.Size(932, 564);
             // 
             // gcNavigator
             // 
@@ -199,7 +200,7 @@
             // 
             this.txtPcode.Location = new System.Drawing.Point(104, 47);
             this.txtPcode.Name = "txtPcode";
-            this.txtPcode.Size = new System.Drawing.Size(211, 21);
+            this.txtPcode.Size = new System.Drawing.Size(211, 20);
             this.txtPcode.TabIndex = 2;
             // 
             // labelControl1
@@ -222,7 +223,7 @@
             // 
             this.txtPname.Location = new System.Drawing.Point(104, 77);
             this.txtPname.Name = "txtPname";
-            this.txtPname.Size = new System.Drawing.Size(211, 21);
+            this.txtPname.Size = new System.Drawing.Size(211, 20);
             this.txtPname.TabIndex = 4;
             // 
             // labelControl3
@@ -237,7 +238,7 @@
             // 
             this.txtBarcode.Location = new System.Drawing.Point(104, 107);
             this.txtBarcode.Name = "txtBarcode";
-            this.txtBarcode.Size = new System.Drawing.Size(211, 21);
+            this.txtBarcode.Size = new System.Drawing.Size(211, 20);
             this.txtBarcode.TabIndex = 6;
             // 
             // labelControl4
@@ -317,7 +318,7 @@
             this.textEdit1.Properties.PopupWidth = 180;
             this.textEdit1.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
             this.textEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.textEdit1.Size = new System.Drawing.Size(209, 21);
+            this.textEdit1.Size = new System.Drawing.Size(209, 20);
             this.textEdit1.TabIndex = 81;
             // 
             // lookUpEdit3
@@ -334,7 +335,7 @@
             this.lookUpEdit3.Properties.PopupWidth = 180;
             this.lookUpEdit3.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
             this.lookUpEdit3.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.lookUpEdit3.Size = new System.Drawing.Size(209, 21);
+            this.lookUpEdit3.Size = new System.Drawing.Size(209, 20);
             this.lookUpEdit3.TabIndex = 80;
             // 
             // lookUpEdit2
@@ -351,7 +352,7 @@
             this.lookUpEdit2.Properties.PopupWidth = 180;
             this.lookUpEdit2.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
             this.lookUpEdit2.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.lookUpEdit2.Size = new System.Drawing.Size(209, 21);
+            this.lookUpEdit2.Size = new System.Drawing.Size(209, 20);
             this.lookUpEdit2.TabIndex = 79;
             // 
             // labelControl15
@@ -394,7 +395,7 @@
             // 
             this.txtWarehouseCreator.Location = new System.Drawing.Point(104, 350);
             this.txtWarehouseCreator.Name = "txtWarehouseCreator";
-            this.txtWarehouseCreator.Size = new System.Drawing.Size(211, 21);
+            this.txtWarehouseCreator.Size = new System.Drawing.Size(211, 20);
             this.txtWarehouseCreator.TabIndex = 71;
             this.txtWarehouseCreator.Visible = false;
             // 
@@ -402,7 +403,7 @@
             // 
             this.txtWarehouseCreateTime.Location = new System.Drawing.Point(104, 381);
             this.txtWarehouseCreateTime.Name = "txtWarehouseCreateTime";
-            this.txtWarehouseCreateTime.Size = new System.Drawing.Size(211, 21);
+            this.txtWarehouseCreateTime.Size = new System.Drawing.Size(211, 20);
             this.txtWarehouseCreateTime.TabIndex = 72;
             this.txtWarehouseCreateTime.Visible = false;
             // 
@@ -410,7 +411,7 @@
             // 
             this.txtWarehouseEditor.Location = new System.Drawing.Point(104, 411);
             this.txtWarehouseEditor.Name = "txtWarehouseEditor";
-            this.txtWarehouseEditor.Size = new System.Drawing.Size(211, 21);
+            this.txtWarehouseEditor.Size = new System.Drawing.Size(211, 20);
             this.txtWarehouseEditor.TabIndex = 73;
             this.txtWarehouseEditor.Visible = false;
             // 
@@ -418,7 +419,7 @@
             // 
             this.txtWarehouseEditTime.Location = new System.Drawing.Point(104, 440);
             this.txtWarehouseEditTime.Name = "txtWarehouseEditTime";
-            this.txtWarehouseEditTime.Size = new System.Drawing.Size(211, 21);
+            this.txtWarehouseEditTime.Size = new System.Drawing.Size(211, 20);
             this.txtWarehouseEditTime.TabIndex = 74;
             this.txtWarehouseEditTime.Visible = false;
             // 
@@ -426,7 +427,7 @@
             // 
             this.textEdit4.Location = new System.Drawing.Point(104, 315);
             this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(211, 21);
+            this.textEdit4.Size = new System.Drawing.Size(211, 20);
             this.textEdit4.TabIndex = 53;
             // 
             // labelControl14
@@ -449,7 +450,7 @@
             // 
             this.textEdit2.Location = new System.Drawing.Point(104, 255);
             this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(211, 21);
+            this.textEdit2.Size = new System.Drawing.Size(211, 20);
             this.textEdit2.TabIndex = 49;
             // 
             // labelControl12
@@ -464,7 +465,7 @@
             // 
             this.textEdit3.Location = new System.Drawing.Point(104, 285);
             this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(211, 21);
+            this.textEdit3.Size = new System.Drawing.Size(211, 20);
             this.textEdit3.TabIndex = 51;
             // 
             // labelControl13
@@ -490,7 +491,7 @@
             // 
             this.splitterControl1.Location = new System.Drawing.Point(5, 5);
             this.splitterControl1.Name = "splitterControl1";
-            this.splitterControl1.Size = new System.Drawing.Size(6, 415);
+            this.splitterControl1.Size = new System.Drawing.Size(5, 554);
             this.splitterControl1.TabIndex = 16;
             this.splitterControl1.TabStop = false;
             // 
@@ -514,7 +515,7 @@
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(958, 52);
+            this.panelControl3.Size = new System.Drawing.Size(959, 52);
             this.panelControl3.TabIndex = 11;
             this.panelControl3.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl3_Paint);
             // 
@@ -541,7 +542,7 @@
             this.lookUpEdit1.Properties.PopupWidth = 180;
             this.lookUpEdit1.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
             this.lookUpEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.lookUpEdit1.Size = new System.Drawing.Size(142, 21);
+            this.lookUpEdit1.Size = new System.Drawing.Size(142, 20);
             this.lookUpEdit1.TabIndex = 47;
             // 
             // txtAttr
@@ -558,7 +559,7 @@
             this.txtAttr.Properties.PopupWidth = 180;
             this.txtAttr.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
             this.txtAttr.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.txtAttr.Size = new System.Drawing.Size(142, 21);
+            this.txtAttr.Size = new System.Drawing.Size(142, 20);
             this.txtAttr.TabIndex = 46;
             // 
             // chkInUse
@@ -582,7 +583,7 @@
             // 
             this.txt_Name.Location = new System.Drawing.Point(382, 3);
             this.txt_Name.Name = "txt_Name";
-            this.txt_Name.Size = new System.Drawing.Size(142, 21);
+            this.txt_Name.Size = new System.Drawing.Size(142, 20);
             this.txt_Name.TabIndex = 27;
             // 
             // labelControl22
@@ -631,7 +632,7 @@
             // 
             this.txt_Barcode.Location = new System.Drawing.Point(142, 28);
             this.txt_Barcode.Name = "txt_Barcode";
-            this.txt_Barcode.Size = new System.Drawing.Size(149, 21);
+            this.txt_Barcode.Size = new System.Drawing.Size(149, 20);
             this.txt_Barcode.TabIndex = 15;
             // 
             // pictureBox3
@@ -648,7 +649,7 @@
             // 
             this.txt_Id.Location = new System.Drawing.Point(142, 4);
             this.txt_Id.Name = "txt_Id";
-            this.txt_Id.Size = new System.Drawing.Size(149, 21);
+            this.txt_Id.Size = new System.Drawing.Size(149, 20);
             this.txt_Id.TabIndex = 14;
             // 
             // labelControl27
@@ -676,7 +677,7 @@
             this.repositoryItemLookUpEdit1,
             this.repositoryItemLookUpEdit2});
             this.gcSummary.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gcSummary.Size = new System.Drawing.Size(958, 442);
+            this.gcSummary.Size = new System.Drawing.Size(959, 443);
             this.gcSummary.TabIndex = 10;
             this.gcSummary.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSummary});
@@ -710,9 +711,8 @@
             this.colMaterialCode.Caption = "编码";
             this.colMaterialCode.FieldName = "Material_Code";
             this.colMaterialCode.Name = "colMaterialCode";
-            this.colMaterialCode.SummaryItem.DisplayFormat = "总计:{0}";
-            this.colMaterialCode.SummaryItem.FieldName = "ProductCode";
-            this.colMaterialCode.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Count;
+            this.colMaterialCode.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "ProductCode", "总计:{0}")});
             this.colMaterialCode.Visible = true;
             this.colMaterialCode.VisibleIndex = 0;
             this.colMaterialCode.Width = 86;
@@ -885,7 +885,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.gcSummary);
-            this.splitContainer1.Size = new System.Drawing.Size(958, 497);
+            this.splitContainer1.Size = new System.Drawing.Size(959, 498);
             this.splitContainer1.SplitterDistance = 52;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 2;
@@ -942,6 +942,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

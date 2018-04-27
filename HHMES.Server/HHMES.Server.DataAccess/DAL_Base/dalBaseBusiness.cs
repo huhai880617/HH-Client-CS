@@ -14,6 +14,7 @@ namespace HHMES.Server.DataAccess.DAL_Base
     /// </summary>
     public class dalBaseBusiness : dalBase
     {
+       
         /// <summary>
         /// 主表表名
         /// </summary>
@@ -37,7 +38,6 @@ namespace HHMES.Server.DataAccess.DAL_Base
         public dalBaseBusiness(Loginer loginer)
             : base(loginer)
         {
-            //
         }
 
         /// <summary>
@@ -269,8 +269,8 @@ namespace HHMES.Server.DataAccess.DAL_Base
         /// <param name="appDate">审核日期</param>
         public virtual void ApprovalBusiness(string keyValue, string flagApp, string appUser, DateTime appDate)
         {
-            string sql = "UPDATE {0} SET FlagApp=@FlagApp,AppUser=@AppUser,AppDate=@AppDate WHERE {1}=@DocNo";
-            sql = string.Format(sql, _SummaryTableName, _SummaryKeyName);
+            string sql = "UPDATE [{0}] SET FlagApp=@FlagApp,AppUser=@AppUser,AppDate=@AppDate WHERE {1}=@DocNo";
+            sql = string.Format(sql,_SummaryTableName, _SummaryKeyName);
             SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(sql);
             cmd.AddParam("@FlagApp", SqlDbType.VarChar, flagApp);
             cmd.AddParam("@AppUser", SqlDbType.VarChar, appUser);
@@ -281,7 +281,7 @@ namespace HHMES.Server.DataAccess.DAL_Base
 
         public virtual void ClearAppInfo(string keyValue)
         {
-            string sql = "UPDATE {0} SET FlagApp=null,AppUser=null,AppDate=null WHERE {1}=@DocNo";
+            string sql = "UPDATE [{0}] SET FlagApp=null,AppUser=null,AppDate=null WHERE {1}=@DocNo";
             sql = string.Format(sql, _SummaryTableName, _SummaryKeyName);
             SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(sql);
             cmd.AddParam("@DocNo", SqlDbType.VarChar, keyValue);

@@ -15,28 +15,28 @@ using HHMES.Server.DataAccess;
 
 namespace HHMES.Bridge.DataDictModule
 {
-    public class ADODirect_WMS_Warehouse
+    public class ADODirect_WAREHOUSE
     {
-        private IBridge_WMS_Warehouse _DAL_Instance = null;//数据层实例
+        private IBridge_WAREHOUSE _DAL_Instance = null;//数据层实例
 
-        public ADODirect_WMS_Warehouse()
+        public ADODirect_WAREHOUSE()
         {
-            _DAL_Instance = new dalWMS_Warehouse(Loginer.CurrentUser);
+            _DAL_Instance = new dalWAREHOUSE(Loginer.CurrentUser);
         }
 
-        public IBridge_WMS_Warehouse GetInstance()
+        public IBridge_WAREHOUSE GetInstance()
         {
             return _DAL_Instance;
         }
     }
 
-    public class WebService_WMS_Warehouse : IBridge_WMS_Warehouse
+    public class WebService_WAREHOUSE : IBridge_WAREHOUSE
     {
-        public WebService_WMS_Warehouse()
+        public WebService_WAREHOUSE()
         {
         }
 
-        #region IBridge_WMS_Warehouse 成员
+        #region IBridge_WAREHOUSE 成员
 
         public DataTable FuzzySearch(string content)
         {

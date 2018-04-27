@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HHMES.Interfaces
 {
-    public interface IBridge_WMS_Warehouse
+    public interface IBridge_WAREHOUSE
     {
         System.Data.DataTable FuzzySearch(string content);
     }

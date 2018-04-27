@@ -58,7 +58,8 @@ namespace HHMES.DataDictionary
         }
 
         private void btnQuery_Click(object sender, EventArgs e)
-        {//搜索数据            
+        {//搜索数据  
+             
             this._BllCustomer.SearchBy(txt_CODE.Text, txt_Name.Text, ConvertEx.ToString(txt_Attr.EditValue), true);
             this.DoBindingSummaryGrid(_BLL.SummaryTable); //绑定主表的Grid
             this.ShowSummaryPage(true); //显示Summary页面. 

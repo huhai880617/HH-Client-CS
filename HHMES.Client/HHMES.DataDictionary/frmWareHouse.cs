@@ -17,7 +17,7 @@ namespace HHMES.DataDictionary
 {
     public partial class frmWareHouse : HHMES.Library.frmBaseDataDictionary
     {
-        private bllWMS_Warehouse _BllInstance;//业务层逻辑引用；
+        private bllWAREHOUSE _BllInstance;//业务层逻辑引用；
 
         public frmWareHouse()
         {
@@ -35,8 +35,8 @@ namespace HHMES.DataDictionary
             _ActiveEditor = txtWarehouseId;
             _KeyEditor = txtWarehouseId;
             _DetailGroupControl = gcDetailEditor;
-            _BLL = new bllWMS_Warehouse(); //业务逻辑实例
-            _BllInstance = _BLL as bllWMS_Warehouse; //本窗体引用
+            _BLL = new bllWAREHOUSE(); //业务逻辑实例
+            _BllInstance = _BLL as bllWAREHOUSE; //本窗体引用
 
             base.InitializeForm();
         }
@@ -50,16 +50,16 @@ namespace HHMES.DataDictionary
             try
             {
                 if (summary == null) return;
-                DataBinder.BindingTextEdit(txtWarehouseId, summary, tb_WMS_Warehouse.Warehouse_Id);
-                DataBinder.BindingTextEdit(txtWarehouseName, summary, tb_WMS_Warehouse.Warehouse_Name);
-                DataBinder.BindingTextEdit(txtWarehousePosition, summary, tb_WMS_Warehouse.Warehouse_Location);
-                DataBinder.BindingTextEdit(txtWarehouseRemark, summary, tb_WMS_Warehouse.Warehouse_Notes);
-                //DataBinder.BindingTextEdit(chkWarehouse_Status, summary, tb_WMS_Warehouse.Warehouse_Status);
-                DataBinder.BindingCheckEdit(chkWarehouse_Status, summary, tb_WMS_Warehouse.Warehouse_IsUse);
-                DataBinder.BindingTextEdit(txtWarehouseCreator, summary, tb_WMS_Warehouse.Warehouse_Creator);
-                DataBinder.BindingTextEdit(txtWarehouseCreateTime, summary, tb_WMS_Warehouse.Warehouse_CreateTime);
-                DataBinder.BindingTextEdit(txtWarehouseEditor, summary, tb_WMS_Warehouse.Warehouse_EditWho);
-                DataBinder.BindingTextEdit(txtWarehouseEditTime, summary, tb_WMS_Warehouse.Warehouse_EditTime);
+                DataBinder.BindingTextEdit(txtWarehouseId, summary, tb_WAREHOUSE.CODE);
+                DataBinder.BindingTextEdit(txtWarehouseName, summary, tb_WAREHOUSE.NAME);
+                DataBinder.BindingTextEdit(txtWarehousePosition, summary, tb_WAREHOUSE.ADDRESS);
+                
+                //DataBinder.BindingTextEdit(chkWarehouse_Status, summary, tb_WAREHOUSE.Warehouse_Status);
+                DataBinder.BindingCheckEdit(chkWarehouse_Status, summary, tb_WAREHOUSE.ENABLE);
+                DataBinder.BindingTextEdit(txtWarehouseCreator, summary, tb_WAREHOUSE.CREATEBY);
+                DataBinder.BindingTextEdit(txtWarehouseCreateTime, summary, tb_WAREHOUSE.CREATETIME);
+                DataBinder.BindingTextEdit(txtWarehouseEditor, summary, tb_WAREHOUSE.MODIFYBY);
+                DataBinder.BindingTextEdit(txtWarehouseEditTime, summary, tb_WAREHOUSE.MODIFYTIME);
             }
             catch (Exception ex)
             { Msg.ShowException(ex); }
@@ -111,6 +111,8 @@ namespace HHMES.DataDictionary
            SetEditorBindingValue(txtWarehouseEditTime, ConvertEx.ToCharYYYY_MM_DD_HHMMSS(DateTime.Now));
         }
 
+       
+
         private void btnEmpty_Click(object sender, EventArgs e)
         {
             base.ClearContainerEditorText(panelControl3);   
@@ -118,18 +120,18 @@ namespace HHMES.DataDictionary
 
         private void btnQuery_Click(object sender, EventArgs e)
         {
-            string sql="";
+            string sql="AND ISDELETED=0 ";
             if(txtId.Text!="")
             {
-                sql+= string.Format(" and Warehouse_Id like '%{0}%' ", txtId.Text);
+                sql+= string.Format(" and CODE like '%{0}%' ", txtId.Text);
             }
             if(txt_Name.Text!="")
             {
-                sql+= string.Format(" and Warehouse_Name like '%{0}%' ", txtId.Text);
+                sql+= string.Format(" and NAME like '%{0}%' ", txtId.Text);
             }
             if(txtSpec.Text!="")
             {
-                sql+= string.Format(" and Warehouse_Location like '%{0}%' ", txtId.Text);
+                sql+= string.Format(" and ADDRESS like '%{0}%' ", txtId.Text);
             }
             
             this.DoBindingSummaryGrid(this._BllInstance.FuzzySearch(sql)); //绑定主表的Grid

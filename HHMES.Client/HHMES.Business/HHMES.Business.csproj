@@ -77,7 +77,7 @@
     <Compile Include="BLL_DataDict\bllPerson.cs" />
     <Compile Include="BLL_DataDict\bllWMS_Material.cs" />
     <Compile Include="BLL_DataDict\bllWMS_WareCell.cs" />
-    <Compile Include="BLL_DataDict\bllWMS_Warehouse.cs" />
+    <Compile Include="BLL_DataDict\bllWAREHOUSE.cs" />
     <Compile Include="BLL_DataDict\bllWMS_Pallet.cs" />
     <Compile Include="BLL_DataDict\bllWMS_Stock.cs" />
     <Compile Include="BLL_DataDict\bllWMS_StockHistory.cs" />

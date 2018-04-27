@@ -116,7 +116,7 @@ namespace HHMES.DataDictionary
 
         private void btnQuery_Click(object sender, EventArgs e)
         {
-            string Sql = "";
+            string Sql = " AND ISDELETED=0 ";
             if (txt_Id.Text != "")
             {
                 Sql += string.Format(" and Material_Code like '%{0}%' ", txt_Id.Text);
