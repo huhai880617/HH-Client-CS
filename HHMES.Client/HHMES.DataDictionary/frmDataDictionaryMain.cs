@@ -84,7 +84,7 @@ namespace HHMES.DataDictionary
 
         private void menuProduct_Click(object sender, EventArgs e)
         {
-            MdiTools.OpenChildForm(this.MdiParent as IMdiForm, typeof(frmMaterial), menuProduct);
+            MdiTools.OpenChildForm(this.MdiParent as IMdiForm, typeof(frmITEM), menuProduct);
         }
 
         private void MenuItemWarehouse_Click(object sender, EventArgs e)

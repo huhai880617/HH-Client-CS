@@ -155,7 +155,7 @@
             this.tpDetail.Appearance.PageClient.BackColor = System.Drawing.SystemColors.Control;
             this.tpDetail.Appearance.PageClient.Options.UseBackColor = true;
             this.tpDetail.Controls.Add(this.gcDetailEditor);
-            this.tpDetail.Size = new System.Drawing.Size(932, 566);
+            this.tpDetail.Size = new System.Drawing.Size(827, 566);
             // 
             // gcNavigator
             // 
@@ -469,7 +469,7 @@
             this.gcDetailEditor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcDetailEditor.Location = new System.Drawing.Point(0, 0);
             this.gcDetailEditor.Name = "gcDetailEditor";
-            this.gcDetailEditor.Size = new System.Drawing.Size(932, 566);
+            this.gcDetailEditor.Size = new System.Drawing.Size(827, 566);
             this.gcDetailEditor.TabIndex = 0;
             // 
             // lookUpEdit1_warehouse

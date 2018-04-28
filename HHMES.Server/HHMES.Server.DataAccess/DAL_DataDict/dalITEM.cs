@@ -23,15 +23,15 @@ namespace HHMES.Server.DataAccess.DAL_DataDict
     /// <summary>
     /// Product的数据访问层
     /// </summary>
-    [DefaultORM_UpdateMode(typeof(tb_WMS_Material), true)]
-    public class dalWMS_Material : dalBaseDataDict, IBridge_Material
+    [DefaultORM_UpdateMode(typeof(tb_ITEM), true)]
+    public class dalITEM : dalBaseDataDict, IBridge_ITEM
     {
-        public dalWMS_Material(Loginer loginer)
+        public dalITEM(Loginer loginer)
             : base(loginer)
         {
-            _KeyName = tb_WMS_Material.__KeyName; //主键字段
-            _TableName = tb_WMS_Material.__TableName;//表名
-            _ModelType = typeof(tb_WMS_Material);
+            _KeyName = tb_ITEM.__KeyName; //主键字段
+            _TableName = tb_ITEM.__TableName;//表名
+            _ModelType = typeof(tb_ITEM);
         }
 
 
@@ -39,7 +39,7 @@ namespace HHMES.Server.DataAccess.DAL_DataDict
         {
             Type ORM = null;
 
-            if (tableName == tb_WMS_Material.__TableName) ORM = typeof(tb_WMS_Material);
+            if (tableName == tb_ITEM.__TableName) ORM = typeof(tb_ITEM);
 
             if (ORM == null) throw new Exception(tableName + "表没有ORM模型！");
 
@@ -50,7 +50,7 @@ namespace HHMES.Server.DataAccess.DAL_DataDict
         {
             if (content.ToLower().Contains("like"))
             {
-                string sql = ("select * from WMS_Material where 1=1 ");
+                string sql = ("select * from ITEM where ISDELETED=0 ");
                 if (content != "")
                 {
                     sql += content;
@@ -62,7 +62,7 @@ namespace HHMES.Server.DataAccess.DAL_DataDict
             {
                 SqlProcedure sp = SqlBuilder.BuildSqlProcedure("sp_FuzzySearchProduct");
                 sp.AddParam("@Content", SqlDbType.NVarChar, content);
-                return DataProvider.Instance.GetTable(_Loginer.DBName, sp.SqlCommand, tb_WMS_Material.__TableName);
+                return DataProvider.Instance.GetTable(_Loginer.DBName, sp.SqlCommand, tb_ITEM.__TableName);
             }
             
         }

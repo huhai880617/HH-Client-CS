@@ -67,7 +67,7 @@
     <Compile Include="DataDictModels\sys_BusinessTables.cs" />
     <Compile Include="DataDictModels\tb_WAREHOUSE.cs" />
     <Compile Include="DataDictModels\tb_WMS_Department.cs" />
-    <Compile Include="DataDictModels\tb_WMS_Material.cs" />
+    <Compile Include="DataDictModels\tb_ITEM.cs" />
     <Compile Include="DataDictModels\tb_WMS_Pallet.cs" />
     <Compile Include="DataDictModels\tb_WMS_WareCell.cs" />
     <Compile Include="SystemModels\tb_DataSet.cs" />

@@ -88,7 +88,7 @@
     <Compile Include="Interfaces_Bridge\IBridge_CommonDataDict.cs" />
     <Compile Include="Interfaces_Bridge\IBridge_Customer.cs" />
     <Compile Include="Interfaces_Bridge\IBridge_DataDict.cs" />
-    <Compile Include="Interfaces_Bridge\IBridge_Material.cs" />
+    <Compile Include="Interfaces_Bridge\IBridge_ITEM.cs" />
     <Compile Include="Interfaces_Bridge\IBridge_User.cs" />
     <Compile Include="Interfaces_System\IExecuteProcedure.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

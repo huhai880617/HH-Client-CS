@@ -12,26 +12,26 @@ using HHMES.Business.BLL_Base;
 
 namespace HHMES.Business
 {
-    public class bllWMS_Material : bllBaseDataDict
+    public class bllITEM : bllBaseDataDict
     {
-        private IBridge_Material _MyBridge = null;
+        private IBridge_ITEM _MyBridge = null;
 
-        public bllWMS_Material()
+        public bllITEM()
         {
-            _KeyFieldName = tb_WMS_Material.__KeyName; //主键字段
-            _SummaryTableName = tb_WMS_Material.__TableName;//表名
+            _KeyFieldName = tb_ITEM.__KeyName; //主键字段
+            _SummaryTableName = tb_ITEM.__TableName;//表名
             _WriteDataLog = true;//是否保存日志
-            _DataDictBridge = BridgeFactory.CreateDataDictBridge(typeof(tb_WMS_Material));
+            _DataDictBridge = BridgeFactory.CreateDataDictBridge(typeof(tb_ITEM));
             _MyBridge = this.CreateBridge();
         }
 
-        private IBridge_Material CreateBridge()
+        private IBridge_ITEM CreateBridge()
         {
             if (BridgeFactory.BridgeType == BridgeType.ADODirect)
-                return new ADODirect_Material().GetInstance();
+                return new ADODirect_ITEM().GetInstance();
 
             if (BridgeFactory.BridgeType == BridgeType.WebService)
-                return new WebService_Material();
+                return new WebService_ITEM();
 
             return null;
         }

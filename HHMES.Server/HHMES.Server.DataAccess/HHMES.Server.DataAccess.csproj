@@ -75,7 +75,7 @@
     <Compile Include="DAL_DataDict\dalCommonDataDict.cs" />
     <Compile Include="DAL_DataDict\dalCustomer.cs" />
     <Compile Include="DAL_DataDict\dalPerson.cs" />
-    <Compile Include="DAL_DataDict\dalWMS_Material.cs" />
+    <Compile Include="DAL_DataDict\dalITEM.cs" />
     <Compile Include="DAL_System\dalEditLogHistory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

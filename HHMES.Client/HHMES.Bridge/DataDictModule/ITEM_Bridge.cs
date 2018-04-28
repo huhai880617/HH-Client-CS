@@ -14,24 +14,24 @@ using HHMES.WebServiceReference.WCF_DataDictService;
 
 namespace HHMES.Bridge.DataDictModule
 {
-    public class ADODirect_Material
+    public class ADODirect_ITEM
     {
-        private IBridge_Material _DAL_Instance = null;//数据层实例
+        private IBridge_ITEM _DAL_Instance = null;//数据层实例
 
-        public ADODirect_Material()
+        public ADODirect_ITEM()
         {
-            _DAL_Instance = new dalWMS_Material(Loginer.CurrentUser);
+            _DAL_Instance = new dalITEM(Loginer.CurrentUser);
         }
 
-        public IBridge_Material GetInstance()
+        public IBridge_ITEM GetInstance()
         {
             return _DAL_Instance;
         }
     }
 
-    public class WebService_Material : IBridge_Material
+    public class WebService_ITEM : IBridge_ITEM
     {
-        public WebService_Material()
+        public WebService_ITEM()
         {
         }
 

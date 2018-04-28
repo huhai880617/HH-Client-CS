@@ -155,7 +155,7 @@ namespace HHMES.Business
 
         public DataTable FuzzySearch(string content)
         {
-            bllWMS_Material bll = new bllWMS_Material();
+            bllITEM bll = new bllITEM();
             return bll.FuzzySearch(content);
         }
 

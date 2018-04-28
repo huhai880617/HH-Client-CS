@@ -77,7 +77,7 @@
     <Compile Include="DataDictModule\CommonDataDict_Bridge.cs" />
     <Compile Include="DataDictModule\Customer_Bridge.cs" />
     <Compile Include="DataDictModule\DataDict_Bridge.cs" />
-    <Compile Include="DataDictModule\WMS_Material_Bridge.cs" />
+    <Compile Include="DataDictModule\ITEM_Bridge.cs" />
     <Compile Include="DataDictModule\WAREHOUSE_Bridge.cs" />
     <Compile Include="DataDictModule\WMS_WareCell_Bridge.cs" />
     <Compile Include="DataDictModule\WMS_Pallet_Bridge.cs" />
