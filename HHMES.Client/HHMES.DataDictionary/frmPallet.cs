@@ -21,6 +21,7 @@ namespace HHMES.DataDictionary
     /// </summary>
     public partial class frmPallet : frmBaseDataDictionary
     {
+        
         public frmPallet()
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace HHMES.DataDictionary
         private void frmPerson_Load(object sender, EventArgs e)
         {
             this.InitializeForm();//自定义初始化操作
+           
         }
 
         protected override void InitializeForm()
@@ -36,18 +38,20 @@ namespace HHMES.DataDictionary
             _SummaryView = new DevGridView(gvSummary);//给成员变量赋值.每个业务窗体必需给这个变量赋值.
             _ActiveEditor = txtCode;
             _DetailGroupControl = gcDetailEditor;
-            _BLL = new bllWMS_Pallet();
+            _BLL = new bllPALLET();
 
             base.InitializeForm();
             
             BindingSummarySearchPanel(btnQuery, btnEmpty, panelSearch);//绑定搜索面板
 
-            //DataBinder.BindingLookupEditDataSource(txt_Spec, DataDictCache.Cache.PalletSpec, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            //DataBinder.BindingLookupEditDataSource(repositoryItemLookUpEdit1, DataDictCache.Cache.PalletSpec, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            //DataBinder.BindingLookupEditDataSource(lookUpEdit1, DataDictCache.Cache.PalletSpec, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            //DataBinder.BindingLookupEditDataSource(lookUpEdit2, DataDictCache.Cache.PalletStatus, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            //DataBinder.BindingLookupEditDataSource(txtPalletStatus, DataDictCache.Cache.PalletStatus, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
-            //DataBinder.BindingLookupEditDataSource(repositoryItemLookUpEdit2, DataDictCache.Cache.PalletStatus, tb_CommonDataDict.NativeName, tb_CommonDataDict.DataCode);
+            DataBinder.BindingLookupEditDataSource(txt_Spec, DataDictCache.GetCacheTableData("PALLETSPEC"), "NAME", "ID");
+            DataBinder.BindingLookupEditDataSource(rItemLookUpEdit_Spec, DataDictCache.GetCacheTableData("PALLETSPEC"), "NAME", "ID");
+            DataBinder.BindingLookupEditDataSource(lookUpEdit1, DataDictCache.GetCacheTableData("PALLETSPEC"), "NAME", "ID");
+            DataBinder.BindingLookupEditDataSource(lookUpEdit8, DataDictCache.GetCacheTableData("PALLETSPEC"), "NAME", "ID");
+
+            DataBinder.BindingLookupEditDataSource(lookUpEdit2, DataDictCache.GetCacheConfigData("PALLET_STATUS"), "NAME", "ID");
+            DataBinder.BindingLookupEditDataSource(txtPalletStatus, DataDictCache.GetCacheConfigData("PALLET_STATUS"), "NAME", "ID");
+            DataBinder.BindingLookupEditDataSource(rItemLookUpEdit_status, DataDictCache.GetCacheConfigData("PALLET_STATUS"), "NAME", "ID");
         }
 
         protected override void ButtonStateChanged(UpdateType currentState)
@@ -61,14 +65,14 @@ namespace HHMES.DataDictionary
         {
             if (txtCode.Text == string.Empty)
             {
-                Msg.Warning("托盘编号不能为空!");
+                Msg.Warning("编号不能为空!");
                 txtCode.Focus();
                 return false;
             }
 
             if (lookUpEdit1.EditValue.ToString() == string.Empty)
             {
-                Msg.Warning("托盘规格不能为空!");
+                Msg.Warning("规格不能为空!");
                 lookUpEdit1.Focus();
                 return false;
             }
@@ -77,7 +81,7 @@ namespace HHMES.DataDictionary
             {
                 if (_BLL.CheckNoExists(txtCode.Text))
                 {
-                    Msg.Warning("托盘编号已存在!");
+                    Msg.Warning("编号已存在!");
                     txtCode.Focus();
                     return false;
                 }
@@ -94,12 +98,12 @@ namespace HHMES.DataDictionary
             try
             {
                 if (summary == null) return;
-                DataBinder.BindingTextEdit(txtCode, summary, tb_WMS_Pallet.Pallet_No);
-                DataBinder.BindingTextEdit(txtQty, summary, tb_WMS_Pallet.Pallet_PrintQty);
-                DataBinder.BindingTextEdit(lookUpEdit1, summary,tb_WMS_Pallet.Pallet_Spec);
-                DataBinder.BindingCheckEdit(chkInUse, summary, tb_WMS_Pallet.Pallet_InUse);
-                DataBinder.BindingTextEdit(lookUpEdit2, summary, tb_WMS_Pallet.Pallet_Status);
-                DataBinder.BindingTextEdit(textNotes, summary, tb_WMS_Pallet.Pallet_Notes);
+                DataBinder.BindingTextEdit(txtCode, summary, tb_PALLET.CODE);
+                DataBinder.BindingTextEdit(txtQty, summary, tb_PALLET.PRINTCOUNT);
+                DataBinder.BindingTextEdit(lookUpEdit1, summary,tb_PALLET.PALLETSPECID);
+                DataBinder.BindingCheckEdit(chkInUse, summary, tb_PALLET.ENABLE);
+                DataBinder.BindingTextEdit(lookUpEdit2, summary, tb_PALLET.STATUS_CFG);
+                DataBinder.BindingTextEdit(textNotes, summary, tb_PALLET.REMARK);
             }
             catch (Exception ex)
             { Msg.ShowException(ex); }
@@ -113,21 +117,21 @@ namespace HHMES.DataDictionary
         {
             try
             {
-                sqlCondition="";
+                sqlCondition=" AND ISDELETED=0 ";
                 if(txt_PalletNo.Text!="")
                 {
-                    sqlCondition += string.Format(" And Pallet_No like '%{0}%' ",txt_PalletNo.Text.Trim());
+                    sqlCondition += string.Format(" And CODE like '%{0}%' ",txt_PalletNo.Text.Trim());
                 }
                 if (txt_Spec.EditValue!=null && txt_Spec.EditValue.ToString() != string.Empty)
                 {
-                    sqlCondition += string.Format(" And Pallet_Spec like '%{0}%' ", txt_Spec.EditValue.ToString());
+                    sqlCondition += string.Format(" And PALLETSPECID = '{0}' ", txt_Spec.EditValue.ToString());
                 }
                 if (txtPalletStatus.EditValue != null && txtPalletStatus.EditValue.ToString() != string.Empty)
                 {
-                    sqlCondition += string.Format(" And Pallet_Status like '%{0}%' ", txtPalletStatus.EditValue.ToString());
+                    sqlCondition += string.Format(" And STATUS_CFG = '{0}' ", txtPalletStatus.EditValue.ToString());
                 }
 
-                DataTable dt = (_BLL as bllWMS_Pallet).FuzzySearch(sqlCondition);
+                DataTable dt = (_BLL as bllPALLET).FuzzySearch(sqlCondition);
                 DoBindingSummaryGrid(dt); //绑定主表的Grid
                 ShowSummaryPage(true); //显示Summary页面.                         
                 return dt != null && dt.Rows.Count > 0;
@@ -167,7 +171,8 @@ namespace HHMES.DataDictionary
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             string msg="";
-            (_BLL as bllWMS_Pallet).CreatePallet(textEdit10.Text, lookUpEdit8.EditValue.ToString(), int.Parse(textEdit1.Text), int.Parse(textEdit2.Text), out msg);
+           
+            (_BLL as bllPALLET).CreatePallet(IP,client,user,textEdit10.Text, lookUpEdit8.EditValue.ToString(),  int.Parse(textEdit2.Text), out msg);
             Msg.ShowInformation(msg);
         }
 
@@ -179,7 +184,7 @@ namespace HHMES.DataDictionary
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             string msg = "";
-            (_BLL as bllWMS_Pallet).DeletePallet(textEdit10.Text, lookUpEdit8.EditValue.ToString(), int.Parse(textEdit1.Text), int.Parse(textEdit2.Text), out msg);
+            (_BLL as bllPALLET).DeletePallet(IP,client,user,textEdit10.Text, lookUpEdit8.EditValue.ToString(), out msg);
             Msg.ShowInformation(msg);
         }
 

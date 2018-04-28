@@ -165,7 +165,7 @@ namespace HHMES.DataDictionary
                     sqlCondition += (" And WareCell_IsStop ='N' ");
                 }
 
-                DataTable dt = (_BLL as bllWMS_Pallet).FuzzySearch(sqlCondition);
+                DataTable dt = (_BLL as bllPALLET).FuzzySearch(sqlCondition);
                 DoBindingSummaryGrid(dt); //绑定主表的Grid
                 ShowSummaryPage(true); //显示Summary页面.                         
                 return dt != null && dt.Rows.Count > 0;

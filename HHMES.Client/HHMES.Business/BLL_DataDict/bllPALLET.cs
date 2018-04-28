@@ -15,7 +15,7 @@ using HHMES.Bridge.DataDictModule;
 using HHMES.Interfaces.Interfaces_Bridge;
 
 /*==========================================
- *   程序说明: WMS_Pallet的业务逻辑层
+ *   程序说明: PALLET的业务逻辑层
  *   作者姓名: HHMES.com
  *   创建日期: 2016-09-29 03:02:11
  *   最后修改: 2016-09-29 03:02:11
@@ -26,25 +26,25 @@ using HHMES.Interfaces.Interfaces_Bridge;
 
 namespace HHMES.Business
 {
-    public class bllWMS_Pallet : bllBaseDataDict
+    public class bllPALLET : bllBaseDataDict
     {
-        private IBridge_WMS_Pallet _MyBridge = null;
-         public bllWMS_Pallet()
+        private IBridge_PALLET _MyBridge = null;
+         public bllPALLET()
          {
-             _KeyFieldName = tb_WMS_Pallet.__KeyName; //主键字段
-             _SummaryTableName = tb_WMS_Pallet.__TableName;//表名
+             _KeyFieldName = tb_PALLET.__KeyName; //主键字段
+             _SummaryTableName = tb_PALLET.__TableName;//表名
              _WriteDataLog = true;//是否保存日志
-             _DataDictBridge = new dalWMS_Pallet(Loginer.CurrentUser);//数据层的实例
+             _DataDictBridge = new dalPALLET(Loginer.CurrentUser);//数据层的实例
              _MyBridge = this.CreateBridge();
          }
 
-         private IBridge_WMS_Pallet CreateBridge()
+         private IBridge_PALLET CreateBridge()
          {
              if (BridgeFactory.BridgeType == BridgeType.ADODirect)
-                 return new ADODirect_WMS_Pallet().GetInstance();
+                 return new ADODirect_PALLET().GetInstance();
 
              if (BridgeFactory.BridgeType == BridgeType.WebService)
-                 return new WebService_WMS_Pallet();
+                 return new WebService_PALLET();
 
              return null;
          }
@@ -57,16 +57,16 @@ namespace HHMES.Business
         /// <summary>
         /// 创建托盘
         /// </summary>
-         public void CreatePallet(string Prefix,string palletSpec,int startNo,int Qty,out string Errmsg)
+         public void CreatePallet(string IP,string client,string user,string Prefix,string palletSpec,int Qty,out string Errmsg)
          {
              //string procedureName = "sp_WMS_CreatePallet";
-             //SqlCommand sqlcmd = new SqlCommand(procedureName);
+             //SqlCommand sqlcmd = new SqlCommand(procedureName);   
              //sqlcmd.CommandType = CommandType.StoredProcedure;
              //sqlcmd.Parameters.Add("@Prefix",SqlDbType.NVarChar).Value=Prefix;
              //sqlcmd.Parameters.Add("@PalletSpec", SqlDbType.NVarChar).Value=palletSpec;
              //sqlcmd.Parameters.Add("@StartNo", SqlDbType.Int).Value=startNo;
              //sqlcmd.Parameters.Add("@Qty", SqlDbType.Int).Value=Qty;
-             string sqlcmd = string.Format(" exec sp_WMS_CreatePallet '{0}','{1}','{2}','{3}'", Prefix, palletSpec, startNo, Qty);
+             string sqlcmd = string.Format(" exec p_info_CreatePallet '{0}','{1}','{2}','{3}','{4}','{5}'", IP,client,user, Prefix, palletSpec, Qty);
              DataSet ds= ExecuteProcedure(sqlcmd);
              if (ds != null && ds.Tables[0] != null && ds.Tables[0].Rows.Count > 0)
              {
@@ -86,7 +86,7 @@ namespace HHMES.Business
          /// <summary>
          /// 删除托盘
          /// </summary>
-         public void DeletePallet(string Prefix, string palletSpec, int startNo, int Qty,out string Errmsg)
+         public void DeletePallet(string IP, string client, string user, string Prefix, string palletSpec, out string Errmsg)
          {
              //string procedureName="sp_WMS_DeletePallet";
              //SqlCommand sqlcmd = new SqlCommand(procedureName);
@@ -95,7 +95,7 @@ namespace HHMES.Business
              //sqlcmd.Parameters.Add("@PalletSpec", SqlDbType.NVarChar).Value = palletSpec;
              //sqlcmd.Parameters.Add("@StartNo", SqlDbType.Int).Value = startNo;
              //sqlcmd.Parameters.Add("@Qty", SqlDbType.Int).Value = Qty;
-             string sqlcmd = string.Format(" exec sp_WMS_CreatePallet '{0}','{1}','{2}','{3}'", Prefix, palletSpec, startNo, Qty);
+             string sqlcmd = string.Format(" exec p_info_DeletePalletBySpec '{0}','{1}','{2}','{3}','{4}'", IP,client,user, Prefix, palletSpec);
              DataSet ds = ExecuteProcedure(sqlcmd);
              if (ds != null && ds.Tables[0] != null && ds.Tables[0].Rows.Count > 0)
              {

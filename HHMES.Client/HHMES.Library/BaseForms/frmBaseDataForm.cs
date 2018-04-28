@@ -67,6 +67,11 @@ namespace HHMES.Library
         protected bool _AllowDataOperate = true;
 
         #endregion
+        
+
+       public string IP = Globals.DEF_ClientIP();
+       public string client = Globals.DEF_ClientName();
+       public string user = Loginer.CurrentUser.Account;
 
         public frmBaseDataForm()
         {

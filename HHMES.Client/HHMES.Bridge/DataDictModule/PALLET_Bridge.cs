@@ -15,16 +15,16 @@ using HHMES.Server.DataAccess;
 
 namespace HHMES.Bridge.DataDictModule
 {
-    public class ADODirect_WMS_Pallet
+    public class ADODirect_PALLET
     {
-        private IBridge_WMS_Pallet _DAL_Instance = null;//数据层实例
+        private IBridge_PALLET _DAL_Instance = null;//数据层实例
 
-        public ADODirect_WMS_Pallet()
+        public ADODirect_PALLET()
         {
-            _DAL_Instance = new dalWMS_Pallet(Loginer.CurrentUser);
+            _DAL_Instance = new dalPALLET(Loginer.CurrentUser);
         }
 
-        public IBridge_WMS_Pallet GetInstance()
+        public IBridge_PALLET GetInstance()
         {
             return _DAL_Instance;
         }
@@ -32,13 +32,13 @@ namespace HHMES.Bridge.DataDictModule
        
     }
 
-    public class WebService_WMS_Pallet : IBridge_WMS_Pallet
+    public class WebService_PALLET : IBridge_PALLET
     {
-        public WebService_WMS_Pallet()
+        public WebService_PALLET()
         {
         }
 
-        #region IBridge_WMS_Pallet 成员
+        #region IBridge_PALLET 成员
 
         public DataTable FuzzySearch(string content)
         {

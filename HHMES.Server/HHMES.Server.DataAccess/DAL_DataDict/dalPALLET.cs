@@ -11,7 +11,7 @@ using HHMES.Interfaces;
 using HHMES.Server.DataAccess.DAL_Base;
 
 /*==========================================
- *   程序说明: WMS_Pallet的数据访问层
+ *   程序说明: PALLET的数据访问层
  *   作者姓名: HHMES.com
  *   创建日期: 2016-09-29 03:02:44
  *   最后修改: 2016-09-29 03:02:44
@@ -23,19 +23,19 @@ using HHMES.Server.DataAccess.DAL_Base;
 namespace HHMES.Server.DataAccess
 {
     /// <summary>
-    /// dalWMS_Pallet
+    /// dalPALLET
     /// </summary>
-    public class dalWMS_Pallet : dalBaseDataDict, IBridge_WMS_Pallet
+    public class dalPALLET : dalBaseDataDict, IBridge_PALLET
     {
          /// <summary>
          /// 构造器
          /// </summary>
          /// <param name="loginer">当前登录用户</param>
-         public dalWMS_Pallet(Loginer loginer): base(loginer)
+         public dalPALLET(Loginer loginer): base(loginer)
          {
-             _KeyName = tb_WMS_Pallet.__KeyName; //主键字段
-             _TableName = tb_WMS_Pallet.__TableName;//表名
-             _ModelType = typeof(tb_WMS_Pallet);
+             _KeyName = tb_PALLET.__KeyName; //主键字段
+             _TableName = tb_PALLET.__TableName;//表名
+             _ModelType = typeof(tb_PALLET);
          }
 
          /// <summary>
@@ -46,7 +46,7 @@ namespace HHMES.Server.DataAccess
          protected override IGenerateSqlCommand CreateSqlGenerator(string tableName)
          {
            Type ORM = null;
-           if (tableName == tb_WMS_Pallet.__TableName) ORM = typeof(tb_WMS_Pallet);
+           if (tableName == tb_PALLET.__TableName) ORM = typeof(tb_PALLET);
            if (ORM == null) throw new Exception(tableName + "表没有ORM模型！");
            return new GenerateSqlCmdByTableFields(ORM);
          }

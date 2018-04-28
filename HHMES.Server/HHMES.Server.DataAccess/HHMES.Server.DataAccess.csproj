@@ -55,7 +55,7 @@
     <Compile Include="DAL_Business\dalWMS_Task.cs" />
     <Compile Include="DAL_DataDict\dalWMS_WareCell.cs" />
     <Compile Include="DAL_DataDict\dalWAREHOUSE.cs" />
-    <Compile Include="DAL_DataDict\dalWMS_Pallet.cs" />
+    <Compile Include="DAL_DataDict\dalPALLET.cs" />
     <Compile Include="DAL_DataDict\dalWMS_Stock.cs" />
     <Compile Include="DAL_DataDict\dalWMS_StockHistory.cs" />
     <Compile Include="DAL_System\dalAttachFile.cs" />

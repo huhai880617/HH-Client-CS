@@ -80,7 +80,7 @@
     <Compile Include="DataDictModule\ITEM_Bridge.cs" />
     <Compile Include="DataDictModule\WAREHOUSE_Bridge.cs" />
     <Compile Include="DataDictModule\WMS_WareCell_Bridge.cs" />
-    <Compile Include="DataDictModule\WMS_Pallet_Bridge.cs" />
+    <Compile Include="DataDictModule\PALLET_Bridge.cs" />
     <Compile Include="DocumentModule\WMS_BillOut_Bridge.cs" />
     <Compile Include="InventoryModule\WMS_StockHistory_Bridge.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

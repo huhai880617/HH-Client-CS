@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 namespace HHMES.Interfaces
 {
-    public interface IBridge_WMS_Pallet
+    public interface IBridge_PALLET
     {
         System.Data.DataTable FuzzySearch(string content);
 
