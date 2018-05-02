@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
-using System.Data.SqlClient;
 using HHMES.Models;
 using HHMES.Common;
 using HHMES.ORM;
@@ -11,7 +10,7 @@ using HHMES.Interfaces;
 using HHMES.Server.DataAccess.DAL_Base;
 
 /*==========================================
- *   程序说明: WMS_StockHistory的数据访问层
+ *   程序说明: ZONE的数据访问层
  *   作者姓名: HHMES.com
  *   创建日期: 2016-09-29 03:02:44
  *   最后修改: 2016-09-29 03:02:44
@@ -23,19 +22,19 @@ using HHMES.Server.DataAccess.DAL_Base;
 namespace HHMES.Server.DataAccess
 {
     /// <summary>
-    /// dalWMS_StockHistory
+    /// dalZONE
     /// </summary>
-    public class dalWMS_StockHistory : dalBaseDataDict, IBridge_WMS_StockHistory
+    public class dalZONE : dalBaseDataDict, IBridge_ZONE
     {
          /// <summary>
          /// 构造器
          /// </summary>
          /// <param name="loginer">当前登录用户</param>
-         public dalWMS_StockHistory(Loginer loginer): base(loginer)
+         public dalZONE(Loginer loginer): base(loginer)
          {
-             _KeyName = tb_WMS_StockHistory.__KeyName; //主键字段
-             _TableName = tb_WMS_StockHistory.__TableName;//表名
-             _ModelType = typeof(tb_WMS_StockHistory);
+             _KeyName = tb_ZONE.__KeyName; //主键字段
+             _TableName = tb_ZONE.__TableName;//表名
+             _ModelType = typeof(tb_ZONE);
          }
 
          /// <summary>
@@ -46,7 +45,7 @@ namespace HHMES.Server.DataAccess
          protected override IGenerateSqlCommand CreateSqlGenerator(string tableName)
          {
            Type ORM = null;
-           if (tableName == tb_WMS_StockHistory.__TableName) ORM = typeof(tb_WMS_StockHistory);
+           if (tableName == tb_ZONE.__TableName) ORM = typeof(tb_ZONE);
            if (ORM == null) throw new Exception(tableName + "表没有ORM模型！");
            return new GenerateSqlCmdByTableFields(ORM);
          }
@@ -64,6 +63,5 @@ namespace HHMES.Server.DataAccess
              
              return DataProvider.Instance.GetTable(_Loginer.DBName,strSql,this.TableName);
          }
-         
      }
 }

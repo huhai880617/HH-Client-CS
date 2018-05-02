@@ -207,7 +207,7 @@ namespace HHMES.Server.DataAccess.DAL_System
 
         public DataSet GetUserReportData(DateTime createDateFrom, DateTime createDateTo)
         {
-            StringBuilder sb = new StringBuilder("select * from [C_User] where 1=1 ");
+            StringBuilder sb = new StringBuilder("select * from [C_User] where ISDELETED=0 ");
 
             if (createDateFrom.Year > 1901)
                 sb.Append(" AND CONVERT(VARCHAR,[CreateTime],112)>='" + createDateFrom.ToString("yyyyMMdd") + "'");

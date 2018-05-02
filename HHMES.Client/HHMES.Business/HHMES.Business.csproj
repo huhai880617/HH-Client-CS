@@ -74,8 +74,11 @@
     <Compile Include="BLL_DataDict\bllNullObjectDataDict.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BLL_DataDict\bllWARECELLSPEC.cs" />
+    <Compile Include="BLL_DataDict\bllPALLETSPEC.cs" />
     <Compile Include="BLL_DataDict\bllPerson.cs" />
     <Compile Include="BLL_DataDict\bllITME.cs" />
+    <Compile Include="BLL_DataDict\bllZONE.cs" />
     <Compile Include="BLL_DataDict\bllWMS_WareCell.cs" />
     <Compile Include="BLL_DataDict\bllWAREHOUSE.cs" />
     <Compile Include="BLL_DataDict\bllPALLET.cs" />

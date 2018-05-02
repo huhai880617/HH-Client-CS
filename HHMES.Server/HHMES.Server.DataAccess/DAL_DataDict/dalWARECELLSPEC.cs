@@ -11,7 +11,7 @@ using HHMES.Interfaces;
 using HHMES.Server.DataAccess.DAL_Base;
 
 /*==========================================
- *   程序说明: WMS_StockHistory的数据访问层
+ *   程序说明: WARECELLSPEC的数据访问层
  *   作者姓名: HHMES.com
  *   创建日期: 2016-09-29 03:02:44
  *   最后修改: 2016-09-29 03:02:44
@@ -23,19 +23,19 @@ using HHMES.Server.DataAccess.DAL_Base;
 namespace HHMES.Server.DataAccess
 {
     /// <summary>
-    /// dalWMS_StockHistory
+    /// dalWARECELLSPEC
     /// </summary>
-    public class dalWMS_StockHistory : dalBaseDataDict, IBridge_WMS_StockHistory
+    public class dalWARECELLSPEC : dalBaseDataDict, IBridge_WARECELLSPEC
     {
          /// <summary>
          /// 构造器
          /// </summary>
          /// <param name="loginer">当前登录用户</param>
-         public dalWMS_StockHistory(Loginer loginer): base(loginer)
+         public dalWARECELLSPEC(Loginer loginer): base(loginer)
          {
-             _KeyName = tb_WMS_StockHistory.__KeyName; //主键字段
-             _TableName = tb_WMS_StockHistory.__TableName;//表名
-             _ModelType = typeof(tb_WMS_StockHistory);
+             _KeyName = tb_WARECELLSPEC.__KeyName; //主键字段
+             _TableName = tb_WARECELLSPEC.__TableName;//表名
+             _ModelType = typeof(tb_WARECELLSPEC);
          }
 
          /// <summary>
@@ -46,7 +46,7 @@ namespace HHMES.Server.DataAccess
          protected override IGenerateSqlCommand CreateSqlGenerator(string tableName)
          {
            Type ORM = null;
-           if (tableName == tb_WMS_StockHistory.__TableName) ORM = typeof(tb_WMS_StockHistory);
+           if (tableName == tb_WARECELLSPEC.__TableName) ORM = typeof(tb_WARECELLSPEC);
            if (ORM == null) throw new Exception(tableName + "表没有ORM模型！");
            return new GenerateSqlCmdByTableFields(ORM);
          }

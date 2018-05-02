@@ -14,10 +14,10 @@ using HHMES.Common;
 
 namespace HHMES.DataDictionary
 {
-    public partial class frmWareCell : HHMES.Library.frmBaseDataDictionary
+    public partial class frmWARECELL : HHMES.Library.frmBaseDataDictionary
     {
         private bllWMS_WareCell _BllInstance ;
-        public frmWareCell()
+        public frmWARECELL()
         {
             InitializeComponent();
         }

@@ -155,7 +155,6 @@
             // tcBusiness
             // 
             this.tcBusiness.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.tcBusiness.SelectedTabPage = this.tpSummary;
             this.tcBusiness.Size = new System.Drawing.Size(965, 527);
             // 
             // tpDetail
@@ -166,7 +165,7 @@
             this.tpDetail.Controls.Add(this.gcDetailEditor);
             this.tpDetail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpDetail.Padding = new System.Windows.Forms.Padding(5);
-            this.tpDetail.Size = new System.Drawing.Size(959, 498);
+            this.tpDetail.Size = new System.Drawing.Size(932, 564);
             // 
             // gcNavigator
             // 
@@ -336,9 +335,6 @@
             this.checkEdit2.Location = new System.Drawing.Point(159, 328);
             this.checkEdit2.Name = "checkEdit2";
             this.checkEdit2.Properties.Caption = "是否质检";
-            //this.checkEdit2.Properties.ValueChecked = "Y";
-            //this.checkEdit2.Properties.ValueGrayed = "";
-            //this.checkEdit2.Properties.ValueUnchecked = "N";
             this.checkEdit2.Size = new System.Drawing.Size(75, 19);
             this.checkEdit2.TabIndex = 82;
             // 
@@ -461,9 +457,6 @@
             this.checkEdit1.Location = new System.Drawing.Point(159, 298);
             this.checkEdit1.Name = "checkEdit1";
             this.checkEdit1.Properties.Caption = "是否启用";
-            //this.checkEdit1.Properties.ValueChecked = "Y";
-            //this.checkEdit1.Properties.ValueGrayed = "";
-            //this.checkEdit1.Properties.ValueUnchecked = "N";
             this.checkEdit1.Size = new System.Drawing.Size(75, 19);
             this.checkEdit1.TabIndex = 45;
             // 
@@ -471,7 +464,7 @@
             // 
             this.splitterControl1.Location = new System.Drawing.Point(5, 5);
             this.splitterControl1.Name = "splitterControl1";
-            this.splitterControl1.Size = new System.Drawing.Size(5, 488);
+            this.splitterControl1.Size = new System.Drawing.Size(5, 554);
             this.splitterControl1.TabIndex = 16;
             this.splitterControl1.TabStop = false;
             // 
@@ -688,7 +681,6 @@
             // colCLASS01
             // 
             this.colCLASS01.Caption = "类别";
-            this.colCLASS01.ColumnEdit = this.repositoryItemLookUpEdit_C;
             this.colCLASS01.FieldName = "CLASS01";
             this.colCLASS01.Name = "colCLASS01";
             this.colCLASS01.Visible = true;
@@ -710,7 +702,6 @@
             // colIQCTYPE
             // 
             this.colIQCTYPE.Caption = "质检属性";
-            this.colIQCTYPE.ColumnEdit = this.repositoryItemLookUpEdit_W;
             this.colIQCTYPE.FieldName = "IQCTYPE";
             this.colIQCTYPE.Name = "colIQCTYPE";
             this.colIQCTYPE.Visible = true;

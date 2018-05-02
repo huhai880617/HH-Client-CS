@@ -66,7 +66,7 @@ namespace HHMES.Server.DataAccess
               //
               if (sql.ToString() != "") //有查询条件
               {
-                  string query = "select * from " + _SummaryTableName + " where 1=1 " + sql.ToString();
+                  string query = "select * from " + _SummaryTableName + " where ISDELETED=0 " + sql.ToString();
                   SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(query);
                   DataTable dt = DataProvider.Instance.GetTable(_Loginer.DBName, cmd.SqlCommand, tb_WMS_BillCheck.__TableName);
                   return dt;

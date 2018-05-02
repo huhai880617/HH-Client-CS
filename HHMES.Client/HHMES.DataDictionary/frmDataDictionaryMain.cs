@@ -89,7 +89,7 @@ namespace HHMES.DataDictionary
 
         private void MenuItemWarehouse_Click(object sender, EventArgs e)
         {
-            MdiTools.OpenChildForm(this.MdiParent as IMdiForm, typeof(frmWareHouse), MenuItemWarehouse);
+            MdiTools.OpenChildForm(this.MdiParent as IMdiForm, typeof(frmWAREHOUSE), MenuItemWarehouse);
         }
 
         private void frmDataDictionaryMain_Load(object sender, EventArgs e)
@@ -115,7 +115,7 @@ namespace HHMES.DataDictionary
         /// <param name="e"></param>
         private void MenuItemWareCell_Click(object sender, EventArgs e)
         {
-            MdiTools.OpenChildForm(this.MdiParent as IMdiForm, typeof(frmWareCell), MenuItemWareCell);
+            MdiTools.OpenChildForm(this.MdiParent as IMdiForm, typeof(frmWARECELL), MenuItemWareCell);
         }
     }
 }

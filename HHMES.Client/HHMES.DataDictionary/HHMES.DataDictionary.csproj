@@ -62,17 +62,35 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmWareCell.cs">
+    <Compile Include="frmWARECELLSPEC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmWareCell.Designer.cs">
-      <DependentUpon>frmWareCell.cs</DependentUpon>
+    <Compile Include="frmWARECELLSPEC.Designer.cs">
+      <DependentUpon>frmWARECELLSPEC.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmWareHouse.cs">
+    <Compile Include="frmPALLETSPEC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmWareHouse.Designer.cs">
-      <DependentUpon>frmWareHouse.cs</DependentUpon>
+    <Compile Include="frmPALLETSPEC.Designer.cs">
+      <DependentUpon>frmPALLETSPEC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWARECELL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWARECELL.Designer.cs">
+      <DependentUpon>frmWARECELL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmZONE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmZONE.Designer.cs">
+      <DependentUpon>frmZONE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWAREHOUSE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWAREHOUSE.Designer.cs">
+      <DependentUpon>frmWAREHOUSE.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCommonDataDict.cs">
       <SubType>Form</SubType>
@@ -133,8 +151,14 @@
       <SubType>Designer</SubType>
       <DependentUpon>frmDataDictionaryMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmWareCell.resx">
-      <DependentUpon>frmWareCell.cs</DependentUpon>
+    <EmbeddedResource Include="frmWARECELLSPEC.resx">
+      <DependentUpon>frmWARECELLSPEC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPALLETSPEC.resx">
+      <DependentUpon>frmPALLETSPEC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWARECELL.resx">
+      <DependentUpon>frmWARECELL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPallet.resx">
       <DependentUpon>frmPallet.cs</DependentUpon>
@@ -146,8 +170,11 @@
     <EmbeddedResource Include="frmTestChild.resx">
       <DependentUpon>frmTestChild.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmWareHouse.resx">
-      <DependentUpon>frmWareHouse.cs</DependentUpon>
+    <EmbeddedResource Include="frmZONE.resx">
+      <DependentUpon>frmZONE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWAREHOUSE.resx">
+      <DependentUpon>frmWAREHOUSE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

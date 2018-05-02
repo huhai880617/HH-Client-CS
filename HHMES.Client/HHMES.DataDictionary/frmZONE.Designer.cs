@@ -1,6 +1,6 @@
 ﻿namespace HHMES.DataDictionary
 {
-    partial class frmWAREHOUSE
+    partial class frmZONE
     {
         /// <summary>
         /// 必需的设计器变量。

@@ -15,16 +15,16 @@ using HHMES.Models;
 
 namespace HHMES.DataDictionary
 {
-    public partial class frmWAREHOUSE : HHMES.Library.frmBaseDataDictionary
+    public partial class frmZONE : HHMES.Library.frmBaseDataDictionary
     {
-        private bllWAREHOUSE _BllInstance;//业务层逻辑引用；
+        private bllZONE _BllInstance;//业务层逻辑引用；
 
-        public frmWAREHOUSE()
+        public frmZONE()
         {
             InitializeComponent();
         }
 
-        private void frmWareHouse_Load(object sender, EventArgs e)
+        private void frmZONE_Load(object sender, EventArgs e)
         {
             this.InitializeForm();
         }
@@ -32,11 +32,11 @@ namespace HHMES.DataDictionary
         protected override void InitializeForm()
         {
             _SummaryView = new DevGridView(gvSummary);//每个业务窗体必需给这个变量赋值.
-            _ActiveEditor = txtWarehouseId;
-            _KeyEditor = txtWarehouseId;
+            _ActiveEditor = txtZONEId;
+            _KeyEditor = txtZONEId;
             _DetailGroupControl = gcDetailEditor;
-            _BLL = new bllWAREHOUSE(); //业务逻辑实例
-            _BllInstance = _BLL as bllWAREHOUSE; //本窗体引用
+            _BLL = new bllZONE(); //业务逻辑实例
+            _BllInstance = _BLL as bllZONE; //本窗体引用
 
             base.InitializeForm();
         }
@@ -50,16 +50,16 @@ namespace HHMES.DataDictionary
             try
             {
                 if (summary == null) return;
-                DataBinder.BindingTextEdit(txtWarehouseId, summary, tb_WAREHOUSE.CODE);
-                DataBinder.BindingTextEdit(txtWarehouseName, summary, tb_WAREHOUSE.NAME);
-                DataBinder.BindingTextEdit(txtWarehousePosition, summary, tb_WAREHOUSE.ADDRESS);
+                DataBinder.BindingTextEdit(txtZONEId, summary, tb_ZONE.CODE);
+                DataBinder.BindingTextEdit(txtZONEName, summary, tb_ZONE.NAME);
+                DataBinder.BindingTextEdit(txtZONEPosition, summary, tb_ZONE.ADDRESS);
                 
-                //DataBinder.BindingTextEdit(chkWarehouse_Status, summary, tb_WAREHOUSE.Warehouse_Status);
-                DataBinder.BindingCheckEdit(chkWarehouse_Status, summary, tb_WAREHOUSE.ENABLE);
-                DataBinder.BindingTextEdit(txtWarehouseCreator, summary, tb_WAREHOUSE.CREATEBY);
-                DataBinder.BindingTextEdit(txtWarehouseCreateTime, summary, tb_WAREHOUSE.CREATETIME);
-                DataBinder.BindingTextEdit(txtWarehouseEditor, summary, tb_WAREHOUSE.MODIFYBY);
-                DataBinder.BindingTextEdit(txtWarehouseEditTime, summary, tb_WAREHOUSE.MODIFYTIME);
+                //DataBinder.BindingTextEdit(chkZONE_Status, summary, tb_ZONE.ZONE_Status);
+                DataBinder.BindingCheckEdit(chkZONE_Status, summary, tb_ZONE.ENABLE);
+                DataBinder.BindingTextEdit(txtZONECreator, summary, tb_ZONE.CREATEBY);
+                DataBinder.BindingTextEdit(txtZONECreateTime, summary, tb_ZONE.CREATETIME);
+                DataBinder.BindingTextEdit(txtZONEEditor, summary, tb_ZONE.MODIFYBY);
+                DataBinder.BindingTextEdit(txtZONEEditTime, summary, tb_ZONE.MODIFYTIME);
             }
             catch (Exception ex)
             { Msg.ShowException(ex); }
@@ -68,27 +68,27 @@ namespace HHMES.DataDictionary
         // 检查主表数据是否完整或合法
         protected override bool ValidatingData()
         {
-            if (txtWarehouseId.Text == string.Empty)
+            if (txtZONEId.Text == string.Empty)
             {
                 Msg.Warning("编号不能为空!");
-                txtWarehouseId.Focus();
+                txtZONEId.Focus();
                 return false;
             }
 
-            if (txtWarehouseName.Text.Trim() == string.Empty)
+            if (txtZONEName.Text.Trim() == string.Empty)
             {
                 Msg.Warning("名称不能为空!");
-                txtWarehouseName.Focus();
+                txtZONEName.Focus();
                 return false;
             }
 
 
             if (_UpdateType == UpdateType.Add)
             {
-                if (_BLL.CheckNoExists(txtWarehouseId.Text))
+                if (_BLL.CheckNoExists(txtZONEId.Text))
                 {
                     Msg.Warning("编号已存在!");
-                    txtWarehouseId.Focus();
+                    txtZONEId.Focus();
                     return false;
                 }
             }
@@ -100,15 +100,15 @@ namespace HHMES.DataDictionary
         public override void DoAdd(IButtonInfo sender)
         {
             base.DoAdd(sender);
-            SetEditorBindingValue(txtWarehouseCreator, Loginer.CurrentUser.Account);
-            SetEditorBindingValue(txtWarehouseCreateTime,ConvertEx.ToCharYYYY_MM_DD_HHMMSS(DateTime.Now));
+            SetEditorBindingValue(txtZONECreator, Loginer.CurrentUser.Account);
+            SetEditorBindingValue(txtZONECreateTime,ConvertEx.ToCharYYYY_MM_DD_HHMMSS(DateTime.Now));
         }
 
         public override void DoEdit(IButtonInfo sender)
         {
            base.DoEdit(sender);
-           SetEditorBindingValue(txtWarehouseEditor, Loginer.CurrentUser.Account);
-           SetEditorBindingValue(txtWarehouseEditTime, ConvertEx.ToCharYYYY_MM_DD_HHMMSS(DateTime.Now));
+           SetEditorBindingValue(txtZONEEditor, Loginer.CurrentUser.Account);
+           SetEditorBindingValue(txtZONEEditTime, ConvertEx.ToCharYYYY_MM_DD_HHMMSS(DateTime.Now));
         }
 
        

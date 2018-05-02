@@ -30,7 +30,7 @@
         {
             this.gcSummary = new DevExpress.XtraGrid.GridControl();
             this.gvSummary = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.CODE = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCODE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPALLETSPECID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rItemLookUpEdit_Spec = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.colCFG_STATUS = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -166,7 +166,7 @@
             // gvSummary
             // 
             this.gvSummary.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.CODE,
+            this.colCODE,
             this.colPALLETSPECID,
             this.colCFG_STATUS,
             this.colUSECOUNT,
@@ -179,14 +179,14 @@
             this.gvSummary.OptionsView.ShowFooter = true;
             this.gvSummary.OptionsView.ShowGroupPanel = false;
             // 
-            // CODE
+            // colCODE
             // 
-            this.CODE.Caption = "编码";
-            this.CODE.FieldName = "Pallet_No";
-            this.CODE.Name = "CODE";
-            this.CODE.Visible = true;
-            this.CODE.VisibleIndex = 0;
-            this.CODE.Width = 105;
+            this.colCODE.Caption = "编码";
+            this.colCODE.FieldName = "CODE";
+            this.colCODE.Name = "colCODE";
+            this.colCODE.Visible = true;
+            this.colCODE.VisibleIndex = 0;
+            this.colCODE.Width = 105;
             // 
             // colPALLETSPECID
             // 
@@ -667,7 +667,7 @@
 
         private DevExpress.XtraGrid.GridControl gcSummary;
         private DevExpress.XtraGrid.Views.Grid.GridView gvSummary;
-        private DevExpress.XtraGrid.Columns.GridColumn CODE;
+        private DevExpress.XtraGrid.Columns.GridColumn colCODE;
         private DevExpress.XtraGrid.Columns.GridColumn colPALLETSPECID;
         private DevExpress.XtraGrid.Columns.GridColumn colPRINTCOUNT;
         private DevExpress.XtraGrid.Columns.GridColumn colENABLE;

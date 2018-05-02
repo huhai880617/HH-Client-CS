@@ -168,7 +168,7 @@ namespace HHMES.ORM
                         sb.Append("[" + colProper.ColumnName + "]=@" + colProper.ColumnName + ",");
                 }
                 sb.Remove(sb.Length - 1, 1);
-                sb.Append(" where 1=1 " + SplitKeyName(keyName));
+                sb.Append(" where ISDELETED=0 " + SplitKeyName(keyName));
                 return sb.ToString();
             }
             catch
@@ -187,7 +187,7 @@ namespace HHMES.ORM
             try
             {
                 StringBuilder sb = new StringBuilder();
-                sb.Append("Delete " + tableName + " where 1=1" + SplitKeyName(keyName));
+                sb.Append("UPDATE " + tableName + "SET ISDELETED=1 where ISDELETED=0" + SplitKeyName(keyName));
                 return sb.ToString();
             }
             catch

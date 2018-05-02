@@ -265,7 +265,7 @@ namespace HHMES.Server.DataAccess.DAL_Base
         /// <returns></returns>
         public virtual bool CheckNoExists(string TableName,string SqlCondition)
         {
-            string sql = string.Format("SELECT COUNT(*) C FROM [{0}] WHERE 1=1  {1}", TableName, SqlCondition);
+            string sql = string.Format("SELECT COUNT(*) C FROM [{0}] WHERE ISDELETED=0  {1}", TableName, SqlCondition);
             SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(sql);
             //cmd.AddParam("@KEY", SqlDbType.VarChar, SqlCondition);
             object o = DataProvider.Instance.ExecuteScalar(_Loginer.DBName, cmd.SqlCommand);

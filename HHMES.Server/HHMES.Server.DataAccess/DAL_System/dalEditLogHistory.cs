@@ -32,7 +32,7 @@ namespace HHMES.Server.DataAccess.DAL_System
         {
             string sqlAdd = "INSERT INTO C_LogFields(TableName,FieldName) VALUES (@TableName,@FieldName)";
             string sqlEdt = "UPDATE C_LogFields SET TableName=@TableName,FieldName=@FieldName WHERE ID=@ID ";
-            string sqlDel = "UPDATE C_LogFields SET ISDELETED=1 WHERE ID=@ID";
+            string sqlDel = "UPDATE C_LogFields SET ISDELETED=0 WHERE ID=@ID";
 
             SqlConnection conn = DataProvider.Instance.CreateConnection(_Loginer.DBName);
 

@@ -163,7 +163,7 @@ namespace HHMES.ORM
             builder.AppendLine("              //");
             builder.AppendLine("              if (sql.ToString() != \"\") //有查询条件");
             builder.AppendLine("              {");
-            builder.AppendLine("                  string query = \"select * from \" + _SummaryTableName + \" where 1=1 \" + sql.ToString();");
+            builder.AppendLine("                  string query = \"select * from \" + _SummaryTableName + \" where ISDELETED=0 \" + sql.ToString();");
             builder.AppendLine("                  SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(query);");
             builder.AppendLine("                  DataTable dt = DataProvider.Instance.GetTable(_Loginer.DBName,cmd.SqlCommand, " + param.ORM_Name + ".__TableName);");
             builder.AppendLine("                  return dt;");

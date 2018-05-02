@@ -55,7 +55,7 @@ namespace HHMES.Server.DataAccess
              //SqlProcedure sp = SqlBuilder.BuildSqlProcedure("sp_FuzzySearchProduct");
              //sp.AddParam("@Content", SqlDbType.NVarChar, content);
              //return DataProvider.Instance.GetTable(_Loginer.DBName, sp.SqlCommand, tb_Product.__TableName);
-             string strSql = string.Format("select * from {0} where 1=1 ",this.TableName);
+             string strSql = string.Format("select * from {0} where ISDELETED=0 ",this.TableName);
              if (content != "")
              {
                  strSql += content;

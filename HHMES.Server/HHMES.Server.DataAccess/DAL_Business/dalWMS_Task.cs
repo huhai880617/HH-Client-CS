@@ -66,7 +66,7 @@ namespace HHMES.Server.DataAccess
              //
              if (sql.ToString() != "") //有查询条件
              {
-                 string query = "select * from " + _SummaryTableName + " where 1=1 " + sql.ToString();
+                 string query = "select * from " + _SummaryTableName + " where ISDELETED=0 " + sql.ToString();
                  SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(query);
                  DataTable dt = DataProvider.Instance.GetTable(_Loginer.DBName, cmd.SqlCommand, tb_WMS_BillIn.__TableName);
                  return dt;
@@ -105,7 +105,7 @@ namespace HHMES.Server.DataAccess
 
          public DataTable GetTask(string conditional)
          {
-             string sql = "select * from "+tb_WMS_Task.__TableName + " Where 1=1 And " + conditional;
+             string sql = "select * from "+tb_WMS_Task.__TableName + " Where ISDELETED=0 And " + conditional;
              SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(sql);
              return DataProvider.Instance.GetTable(_Loginer.DBName, cmd.SqlCommand, tb_WMS_Task.__TableName);
          }
