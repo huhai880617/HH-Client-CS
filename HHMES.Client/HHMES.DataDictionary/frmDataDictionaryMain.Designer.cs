@@ -61,6 +61,9 @@ namespace HHMES.DataDictionary
             this.btnProduct = new DevExpress.XtraEditors.SimpleButton();
             this.btnCommonDataDict = new DevExpress.XtraEditors.SimpleButton();
             this.btnCustomer = new DevExpress.XtraEditors.SimpleButton();
+            this.MenuItemZone = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemPalletSpec = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemWarecellSpec = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pnlContainer)).BeginInit();
             this.pnlContainer.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -100,7 +103,7 @@ namespace HHMES.DataDictionary
             this.pnlContainer.Controls.Add(this.btnCommonDataDict);
             this.pnlContainer.Controls.Add(this.btnCustomer);
             this.pnlContainer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnlContainer.Size = new System.Drawing.Size(811, 569);
+            this.pnlContainer.Size = new System.Drawing.Size(827, 520);
             // 
             // menuStrip1
             // 
@@ -109,16 +112,16 @@ namespace HHMES.DataDictionary
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(811, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(827, 25);
             this.menuStrip1.TabIndex = 27;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // menuMainDataDict
             // 
             this.menuMainDataDict.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuCommonDataDict,
             this.menuProduct,
             this.menuItemCustomer,
-            this.menuCommonDataDict,
             this.MenuItemWarehouse,
             this.MenuItemPallet,
             this.MenuItemWareCell});
@@ -129,42 +132,48 @@ namespace HHMES.DataDictionary
             // menuProduct
             // 
             this.menuProduct.Name = "menuProduct";
-            this.menuProduct.Size = new System.Drawing.Size(124, 22);
+            this.menuProduct.Size = new System.Drawing.Size(152, 22);
             this.menuProduct.Text = "产品资料";
             this.menuProduct.Click += new System.EventHandler(this.menuProduct_Click);
             // 
             // menuItemCustomer
             // 
             this.menuItemCustomer.Name = "menuItemCustomer";
-            this.menuItemCustomer.Size = new System.Drawing.Size(124, 22);
+            this.menuItemCustomer.Size = new System.Drawing.Size(152, 22);
             this.menuItemCustomer.Text = "客户资料";
             this.menuItemCustomer.Click += new System.EventHandler(this.menuItemCustomer_Click);
             // 
             // menuCommonDataDict
             // 
             this.menuCommonDataDict.Name = "menuCommonDataDict";
-            this.menuCommonDataDict.Size = new System.Drawing.Size(124, 22);
+            this.menuCommonDataDict.Size = new System.Drawing.Size(152, 22);
             this.menuCommonDataDict.Text = "公共字典";
             this.menuCommonDataDict.Click += new System.EventHandler(this.menuCommonDataDict_Click);
             // 
             // MenuItemWarehouse
             // 
+            this.MenuItemWarehouse.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuItemZone});
             this.MenuItemWarehouse.Name = "MenuItemWarehouse";
-            this.MenuItemWarehouse.Size = new System.Drawing.Size(124, 22);
+            this.MenuItemWarehouse.Size = new System.Drawing.Size(152, 22);
             this.MenuItemWarehouse.Text = "仓库名称";
             this.MenuItemWarehouse.Click += new System.EventHandler(this.MenuItemWarehouse_Click);
             // 
             // MenuItemPallet
             // 
+            this.MenuItemPallet.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuItemPalletSpec});
             this.MenuItemPallet.Name = "MenuItemPallet";
-            this.MenuItemPallet.Size = new System.Drawing.Size(124, 22);
+            this.MenuItemPallet.Size = new System.Drawing.Size(152, 22);
             this.MenuItemPallet.Text = "托盘资料";
             this.MenuItemPallet.Click += new System.EventHandler(this.MenuItemPallet_Click);
             // 
             // MenuItemWareCell
             // 
+            this.MenuItemWareCell.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuItemWarecellSpec});
             this.MenuItemWareCell.Name = "MenuItemWareCell";
-            this.MenuItemWareCell.Size = new System.Drawing.Size(124, 22);
+            this.MenuItemWareCell.Size = new System.Drawing.Size(152, 22);
             this.MenuItemWareCell.Text = "货柜资料";
             this.MenuItemWareCell.Click += new System.EventHandler(this.MenuItemWareCell_Click);
             // 
@@ -173,7 +182,7 @@ namespace HHMES.DataDictionary
             this.panelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl4.Controls.Add(this.label2);
             this.panelControl4.Controls.Add(this.label7);
-            this.panelControl4.Location = new System.Drawing.Point(163, 74);
+            this.panelControl4.Location = new System.Drawing.Point(163, 70);
             this.panelControl4.Name = "panelControl4";
             this.panelControl4.Size = new System.Drawing.Size(254, 59);
             this.panelControl4.TabIndex = 52;
@@ -203,7 +212,7 @@ namespace HHMES.DataDictionary
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Controls.Add(this.label3);
-            this.panelControl1.Location = new System.Drawing.Point(163, 181);
+            this.panelControl1.Location = new System.Drawing.Point(163, 190);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(254, 59);
             this.panelControl1.TabIndex = 53;
@@ -233,7 +242,7 @@ namespace HHMES.DataDictionary
             this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl3.Controls.Add(this.label4);
             this.panelControl3.Controls.Add(this.label5);
-            this.panelControl3.Location = new System.Drawing.Point(163, 284);
+            this.panelControl3.Location = new System.Drawing.Point(163, 293);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(254, 73);
             this.panelControl3.TabIndex = 54;
@@ -263,7 +272,7 @@ namespace HHMES.DataDictionary
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl2.Controls.Add(this.label11);
             this.panelControl2.Controls.Add(this.label12);
-            this.panelControl2.Location = new System.Drawing.Point(533, 74);
+            this.panelControl2.Location = new System.Drawing.Point(533, 70);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(254, 59);
             this.panelControl2.TabIndex = 59;
@@ -293,7 +302,7 @@ namespace HHMES.DataDictionary
             this.panelControl7.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl7.Controls.Add(this.label13);
             this.panelControl7.Controls.Add(this.label14);
-            this.panelControl7.Location = new System.Drawing.Point(533, 297);
+            this.panelControl7.Location = new System.Drawing.Point(539, 293);
             this.panelControl7.Name = "panelControl7";
             this.panelControl7.Size = new System.Drawing.Size(254, 59);
             this.panelControl7.TabIndex = 63;
@@ -343,7 +352,7 @@ namespace HHMES.DataDictionary
             this.panelControl6.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl6.Controls.Add(this.label9);
             this.panelControl6.Controls.Add(this.label10);
-            this.panelControl6.Location = new System.Drawing.Point(533, 168);
+            this.panelControl6.Location = new System.Drawing.Point(539, 177);
             this.panelControl6.Name = "panelControl6";
             this.panelControl6.Size = new System.Drawing.Size(254, 59);
             this.panelControl6.TabIndex = 61;
@@ -353,7 +362,7 @@ namespace HHMES.DataDictionary
             this.btnWareCell.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnWareCell.BackgroundImage")));
             this.btnWareCell.Image = global::HHMES.DataDictionary.Properties.Resources._48_NewProduct;
             this.btnWareCell.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnWareCell.Location = new System.Drawing.Point(443, 284);
+            this.btnWareCell.Location = new System.Drawing.Point(443, 292);
             this.btnWareCell.Name = "btnWareCell";
             this.btnWareCell.Size = new System.Drawing.Size(84, 84);
             this.btnWareCell.TabIndex = 62;
@@ -366,7 +375,7 @@ namespace HHMES.DataDictionary
             this.btnPallet.BackgroundImage = global::HHMES.DataDictionary.Properties.Resources.Pallet;
             this.btnPallet.Image = global::HHMES.DataDictionary.Properties.Resources._48_Item;
             this.btnPallet.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnPallet.Location = new System.Drawing.Point(443, 168);
+            this.btnPallet.Location = new System.Drawing.Point(443, 181);
             this.btnPallet.Name = "btnPallet";
             this.btnPallet.Size = new System.Drawing.Size(84, 84);
             this.btnPallet.TabIndex = 60;
@@ -378,7 +387,7 @@ namespace HHMES.DataDictionary
             // 
             this.btnWarehouse.Image = global::HHMES.DataDictionary.Properties.Resources._48_Warehouse;
             this.btnWarehouse.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnWarehouse.Location = new System.Drawing.Point(443, 61);
+            this.btnWarehouse.Location = new System.Drawing.Point(443, 70);
             this.btnWarehouse.Name = "btnWarehouse";
             this.btnWarehouse.Size = new System.Drawing.Size(84, 84);
             this.btnWarehouse.TabIndex = 58;
@@ -389,7 +398,7 @@ namespace HHMES.DataDictionary
             // 
             this.btnProduct.Image = global::HHMES.DataDictionary.Properties.Resources._48_Stock;
             this.btnProduct.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnProduct.Location = new System.Drawing.Point(61, 61);
+            this.btnProduct.Location = new System.Drawing.Point(61, 70);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Size = new System.Drawing.Size(84, 84);
             this.btnProduct.TabIndex = 50;
@@ -401,7 +410,7 @@ namespace HHMES.DataDictionary
             this.btnCommonDataDict.Enabled = false;
             this.btnCommonDataDict.Image = global::HHMES.DataDictionary.Properties.Resources._48_GiftExchange;
             this.btnCommonDataDict.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnCommonDataDict.Location = new System.Drawing.Point(61, 273);
+            this.btnCommonDataDict.Location = new System.Drawing.Point(61, 286);
             this.btnCommonDataDict.Name = "btnCommonDataDict";
             this.btnCommonDataDict.Size = new System.Drawing.Size(84, 84);
             this.btnCommonDataDict.TabIndex = 49;
@@ -412,17 +421,38 @@ namespace HHMES.DataDictionary
             // 
             this.btnCustomer.Image = global::HHMES.DataDictionary.Properties.Resources._48_Customer;
             this.btnCustomer.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnCustomer.Location = new System.Drawing.Point(61, 168);
+            this.btnCustomer.Location = new System.Drawing.Point(61, 178);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Size = new System.Drawing.Size(84, 84);
             this.btnCustomer.TabIndex = 42;
             this.btnCustomer.Text = "客户资料";
             this.btnCustomer.Click += new System.EventHandler(this.menuItemCustomer_Click);
             // 
+            // MenuItemZone
+            // 
+            this.MenuItemZone.Name = "MenuItemZone";
+            this.MenuItemZone.Size = new System.Drawing.Size(152, 22);
+            this.MenuItemZone.Text = "区域管理";
+            this.MenuItemZone.Click += new System.EventHandler(this.MenuItemZone_Click);
+            // 
+            // MenuItemPalletSpec
+            // 
+            this.MenuItemPalletSpec.Name = "MenuItemPalletSpec";
+            this.MenuItemPalletSpec.Size = new System.Drawing.Size(152, 22);
+            this.MenuItemPalletSpec.Text = "托盘规格";
+            this.MenuItemPalletSpec.Click += new System.EventHandler(this.MenuItemPalletSpec_Click);
+            // 
+            // MenuItemWarecellSpec
+            // 
+            this.MenuItemWarecellSpec.Name = "MenuItemWarecellSpec";
+            this.MenuItemWarecellSpec.Size = new System.Drawing.Size(152, 22);
+            this.MenuItemWarecellSpec.Text = "货柜规格";
+            this.MenuItemWarecellSpec.Click += new System.EventHandler(this.MenuItemWarecellSpec_Click);
+            // 
             // frmDataDictionaryMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
-            this.ClientSize = new System.Drawing.Size(811, 569);
+            this.ClientSize = new System.Drawing.Size(827, 520);
             this.Controls.Add(this.menuStrip1);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "frmDataDictionaryMain";
@@ -491,5 +521,8 @@ namespace HHMES.DataDictionary
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private DevExpress.XtraEditors.SimpleButton btnPallet;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemZone;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemPalletSpec;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemWarecellSpec;
     }
 }

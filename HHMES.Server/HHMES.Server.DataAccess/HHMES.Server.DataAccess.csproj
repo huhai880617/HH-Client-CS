@@ -56,7 +56,7 @@
     <Compile Include="DAL_DataDict\dalWARECELLSPEC.cs" />
     <Compile Include="DAL_DataDict\dalPALLETSPEC.cs" />
     <Compile Include="DAL_DataDict\dalZONE.cs" />
-    <Compile Include="DAL_DataDict\dalWMS_WareCell.cs" />
+    <Compile Include="DAL_DataDict\dalWARECELL.cs" />
     <Compile Include="DAL_DataDict\dalWAREHOUSE.cs" />
     <Compile Include="DAL_DataDict\dalPALLET.cs" />
     <Compile Include="DAL_DataDict\dalWMS_Stock.cs" />

@@ -117,7 +117,7 @@ namespace HHMES.DataDictionary
         {
             try
             {
-                sqlCondition=" AND ISDELETED=0 ";
+                sqlCondition=" ";
                 if(txt_PalletNo.Text!="")
                 {
                     sqlCondition += string.Format(" And CODE like '%{0}%' ",txt_PalletNo.Text.Trim());

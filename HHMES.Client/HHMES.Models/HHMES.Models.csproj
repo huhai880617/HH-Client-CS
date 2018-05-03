@@ -72,7 +72,6 @@
     <Compile Include="DataDictModels\tb_WMS_Department.cs" />
     <Compile Include="DataDictModels\tb_ITEM.cs" />
     <Compile Include="DataDictModels\tb_PALLET.cs" />
-    <Compile Include="DataDictModels\tb_WMS_WareCell.cs" />
     <Compile Include="DataDictModels\tb_ZONE.cs" />
     <Compile Include="SystemModels\tb_DataSet.cs" />
     <Compile Include="DataDictModels\tb_CommonDataDict.cs" />

@@ -58,7 +58,7 @@
     <Compile Include="Interfaces_Bridge\DocumentModule\IBridge_WMS_BillIn.cs" />
     <Compile Include="Interfaces_Bridge\IBridge_ZONE.cs" />
     <Compile Include="Interfaces_Bridge\IBridge_WAREHOUSE.cs" />
-    <Compile Include="Interfaces_Bridge\IBridge_WMS_WareCell.cs" />
+    <Compile Include="Interfaces_Bridge\IBridge_WARECELL.cs" />
     <Compile Include="Interfaces_Bridge\IBridge_PALLET.cs" />
     <Compile Include="Interfaces_Bridge\DocumentModule\IBridge_WMS_BillOut.cs" />
     <Compile Include="Interfaces_Bridge\DocumentModule\IBridge_WMS_BillAccount.cs" />

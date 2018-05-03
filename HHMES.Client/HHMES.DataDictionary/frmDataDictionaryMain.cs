@@ -48,6 +48,9 @@ namespace HHMES.DataDictionary
             MenuItemWarehouse.Tag = new MenuItemTag(MenuType.DataForm, (int)ModuleID.DataDictionary, AuthorityCategory.MASTER_ACTION);
             MenuItemPallet.Tag = new MenuItemTag(MenuType.DataForm, (int)ModuleID.DataDictionary, AuthorityCategory.MASTER_ACTION);
             MenuItemWareCell.Tag = new MenuItemTag(MenuType.DataForm, (int)ModuleID.DataDictionary, AuthorityCategory.MASTER_ACTION);
+            MenuItemPalletSpec.Tag = new MenuItemTag(MenuType.DataForm, (int)ModuleID.DataDictionary, AuthorityCategory.MASTER_ACTION);
+            MenuItemWarecellSpec.Tag = new MenuItemTag(MenuType.DataForm, (int)ModuleID.DataDictionary, AuthorityCategory.MASTER_ACTION);
+            MenuItemZone.Tag = new MenuItemTag(MenuType.DataForm, (int)ModuleID.DataDictionary, AuthorityCategory.MASTER_ACTION);
         }
 
         /// <summary>
@@ -116,6 +119,36 @@ namespace HHMES.DataDictionary
         private void MenuItemWareCell_Click(object sender, EventArgs e)
         {
             MdiTools.OpenChildForm(this.MdiParent as IMdiForm, typeof(frmWARECELL), MenuItemWareCell);
+        }
+
+        /// <summary>
+        /// 区域管理
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MenuItemZone_Click(object sender, EventArgs e)
+        {
+            MdiTools.OpenChildForm(this.MdiParent as IMdiForm, typeof(frmZONE), MenuItemZone);
+        }
+
+        /// <summary>
+        /// 托盘规格
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MenuItemPalletSpec_Click(object sender, EventArgs e)
+        {
+            MdiTools.OpenChildForm(this.MdiParent as IMdiForm, typeof(frmPALLETSPEC), MenuItemPalletSpec);
+        }
+
+        /// <summary>
+        /// 货柜规格
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MenuItemWarecellSpec_Click(object sender, EventArgs e)
+        {
+            MdiTools.OpenChildForm(this.MdiParent as IMdiForm, typeof(frmWARECELLSPEC), MenuItemWarecellSpec);
         }
     }
 }

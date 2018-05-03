@@ -32,8 +32,7 @@
             this.gvSummary = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colCODE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNAME = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colADDRESS = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colENALBE = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colWAREHOUSEID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCREATEBY = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCREATETIME = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMODIFYBY = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -47,31 +46,27 @@
             this.txtWarehouseCreateTime = new DevExpress.XtraEditors.TextEdit();
             this.txtWarehouseEditor = new DevExpress.XtraEditors.TextEdit();
             this.txtWarehouseEditTime = new DevExpress.XtraEditors.TextEdit();
-            this.chkWarehouse_Status = new DevExpress.XtraEditors.CheckEdit();
-            this.txtWarehouseId = new DevExpress.XtraEditors.TextEdit();
+            this.txtCODE = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.txtWarehouseName = new DevExpress.XtraEditors.TextEdit();
+            this.txtNAME = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.txtWarehousePosition = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.txt_Name = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
+            this.panelSearch = new DevExpress.XtraEditors.PanelControl();
             this.btnEmpty = new DevExpress.XtraEditors.SimpleButton();
             this.btnQuery = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSpec = new DevExpress.XtraEditors.TextEdit();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtId = new DevExpress.XtraEditors.TextEdit();
             this.labelControl27 = new DevExpress.XtraEditors.LabelControl();
+            this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.S_WAREHOUSEID = new DevExpress.XtraEditors.LookUpEdit();
+            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
             this.tpSummary.SuspendLayout();
             this.pnlSummary.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tcBusiness)).BeginInit();
@@ -88,21 +83,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtWarehouseCreateTime.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWarehouseEditor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWarehouseEditTime.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkWarehouse_Status.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWarehouseId.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWarehouseName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWarehousePosition.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCODE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
-            this.panelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_Name.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSpec.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelSearch)).BeginInit();
+            this.panelSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.S_WAREHOUSEID.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tpSummary
@@ -121,18 +114,18 @@
             // tcBusiness
             // 
             this.tcBusiness.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.tcBusiness.SelectedTabPage = this.tpSummary;
             this.tcBusiness.Size = new System.Drawing.Size(948, 595);
             // 
             // tpDetail
             // 
             this.tpDetail.Appearance.PageClient.BackColor = System.Drawing.SystemColors.Control;
             this.tpDetail.Appearance.PageClient.Options.UseBackColor = true;
-            this.tpDetail.Controls.Add(this.pictureBox2);
             this.tpDetail.Controls.Add(this.panelControl2);
             this.tpDetail.Controls.Add(this.label2);
             this.tpDetail.Controls.Add(this.gcDetailEditor);
             this.tpDetail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tpDetail.Size = new System.Drawing.Size(932, 566);
+            this.tpDetail.Size = new System.Drawing.Size(942, 566);
             // 
             // gcNavigator
             // 
@@ -175,6 +168,8 @@
             this.gcSummary.Location = new System.Drawing.Point(3, 63);
             this.gcSummary.MainView = this.gvSummary;
             this.gcSummary.Name = "gcSummary";
+            this.gcSummary.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemLookUpEdit1});
             this.gcSummary.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.gcSummary.Size = new System.Drawing.Size(936, 502);
             this.gcSummary.TabIndex = 10;
@@ -186,8 +181,7 @@
             this.gvSummary.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colCODE,
             this.colNAME,
-            this.colADDRESS,
-            this.colENALBE,
+            this.colWAREHOUSEID,
             this.colCREATEBY,
             this.colCREATETIME,
             this.colMODIFYBY,
@@ -199,7 +193,7 @@
             // 
             // colCODE
             // 
-            this.colCODE.Caption = "仓库编号";
+            this.colCODE.Caption = "区域编码";
             this.colCODE.FieldName = "CODE";
             this.colCODE.Name = "colCODE";
             this.colCODE.Visible = true;
@@ -208,30 +202,22 @@
             // 
             // colNAME
             // 
-            this.colNAME.Caption = "仓库名称";
+            this.colNAME.Caption = "区域名称";
             this.colNAME.FieldName = "NAME";
             this.colNAME.Name = "colNAME";
             this.colNAME.Visible = true;
             this.colNAME.VisibleIndex = 1;
             this.colNAME.Width = 149;
             // 
-            // colADDRESS
+            // colWAREHOUSEID
             // 
-            this.colADDRESS.Caption = "仓库位置";
-            this.colADDRESS.FieldName = "ADDRESS";
-            this.colADDRESS.Name = "colADDRESS";
-            this.colADDRESS.Visible = true;
-            this.colADDRESS.VisibleIndex = 2;
-            this.colADDRESS.Width = 197;
-            // 
-            // colENALBE
-            // 
-            this.colENALBE.Caption = "仓库状态";
-            this.colENALBE.FieldName = "ENABLE";
-            this.colENALBE.Name = "colENALBE";
-            this.colENALBE.Visible = true;
-            this.colENALBE.VisibleIndex = 3;
-            this.colENALBE.Width = 69;
+            this.colWAREHOUSEID.Caption = "仓库位置";
+            this.colWAREHOUSEID.ColumnEdit = this.repositoryItemLookUpEdit1;
+            this.colWAREHOUSEID.FieldName = "WAREHOUSEID";
+            this.colWAREHOUSEID.Name = "colWAREHOUSEID";
+            this.colWAREHOUSEID.Visible = true;
+            this.colWAREHOUSEID.VisibleIndex = 2;
+            this.colWAREHOUSEID.Width = 197;
             // 
             // colCREATEBY
             // 
@@ -239,7 +225,7 @@
             this.colCREATEBY.FieldName = "CREATEBY";
             this.colCREATEBY.Name = "colCREATEBY";
             this.colCREATEBY.Visible = true;
-            this.colCREATEBY.VisibleIndex = 4;
+            this.colCREATEBY.VisibleIndex = 3;
             // 
             // colCREATETIME
             // 
@@ -249,7 +235,7 @@
             this.colCREATETIME.FieldName = "CREATETIME";
             this.colCREATETIME.Name = "colCREATETIME";
             this.colCREATETIME.Visible = true;
-            this.colCREATETIME.VisibleIndex = 5;
+            this.colCREATETIME.VisibleIndex = 4;
             // 
             // colMODIFYBY
             // 
@@ -257,7 +243,7 @@
             this.colMODIFYBY.FieldName = "MODIFYBY";
             this.colMODIFYBY.Name = "colMODIFYBY";
             this.colMODIFYBY.Visible = true;
-            this.colMODIFYBY.VisibleIndex = 6;
+            this.colMODIFYBY.VisibleIndex = 5;
             // 
             // colMODIFYTIME
             // 
@@ -267,10 +253,11 @@
             this.colMODIFYTIME.FieldName = "MODIFYTIME";
             this.colMODIFYTIME.Name = "colMODIFYTIME";
             this.colMODIFYTIME.Visible = true;
-            this.colMODIFYTIME.VisibleIndex = 7;
+            this.colMODIFYTIME.VisibleIndex = 6;
             // 
             // gcDetailEditor
             // 
+            this.gcDetailEditor.Controls.Add(this.lookUpEdit1);
             this.gcDetailEditor.Controls.Add(this.labelControl6);
             this.gcDetailEditor.Controls.Add(this.labelControl8);
             this.gcDetailEditor.Controls.Add(this.labelControl9);
@@ -279,18 +266,15 @@
             this.gcDetailEditor.Controls.Add(this.txtWarehouseCreateTime);
             this.gcDetailEditor.Controls.Add(this.txtWarehouseEditor);
             this.gcDetailEditor.Controls.Add(this.txtWarehouseEditTime);
-            this.gcDetailEditor.Controls.Add(this.chkWarehouse_Status);
-            this.gcDetailEditor.Controls.Add(this.txtWarehouseId);
+            this.gcDetailEditor.Controls.Add(this.txtCODE);
             this.gcDetailEditor.Controls.Add(this.labelControl1);
-            this.gcDetailEditor.Controls.Add(this.labelControl5);
-            this.gcDetailEditor.Controls.Add(this.txtWarehouseName);
+            this.gcDetailEditor.Controls.Add(this.txtNAME);
             this.gcDetailEditor.Controls.Add(this.labelControl2);
-            this.gcDetailEditor.Controls.Add(this.txtWarehousePosition);
             this.gcDetailEditor.Controls.Add(this.labelControl3);
-            this.gcDetailEditor.Dock = System.Windows.Forms.DockStyle.Left;
+            this.gcDetailEditor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcDetailEditor.Location = new System.Drawing.Point(0, 0);
             this.gcDetailEditor.Name = "gcDetailEditor";
-            this.gcDetailEditor.Size = new System.Drawing.Size(480, 566);
+            this.gcDetailEditor.Size = new System.Drawing.Size(942, 566);
             this.gcDetailEditor.TabIndex = 15;
             this.gcDetailEditor.Text = "仓库名称数据维护";
             // 
@@ -362,23 +346,12 @@
             this.txtWarehouseEditTime.TabIndex = 66;
             this.txtWarehouseEditTime.Visible = false;
             // 
-            // chkWarehouse_Status
+            // txtCODE
             // 
-            this.chkWarehouse_Status.Location = new System.Drawing.Point(102, 167);
-            this.chkWarehouse_Status.Name = "chkWarehouse_Status";
-            this.chkWarehouse_Status.Properties.Caption = "在用状态";
-            //this.chkWarehouse_Status.Properties.ValueChecked = "1";
-            //this.chkWarehouse_Status.Properties.ValueGrayed = "";
-            //this.chkWarehouse_Status.Properties.ValueUnchecked = "0";
-            this.chkWarehouse_Status.Size = new System.Drawing.Size(166, 19);
-            this.chkWarehouse_Status.TabIndex = 59;
-            // 
-            // txtWarehouseId
-            // 
-            this.txtWarehouseId.Location = new System.Drawing.Point(104, 47);
-            this.txtWarehouseId.Name = "txtWarehouseId";
-            this.txtWarehouseId.Size = new System.Drawing.Size(352, 20);
-            this.txtWarehouseId.TabIndex = 2;
+            this.txtCODE.Location = new System.Drawing.Point(104, 47);
+            this.txtCODE.Name = "txtCODE";
+            this.txtCODE.Size = new System.Drawing.Size(352, 20);
+            this.txtCODE.TabIndex = 2;
             // 
             // labelControl1
             // 
@@ -386,22 +359,14 @@
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(60, 14);
             this.labelControl1.TabIndex = 3;
-            this.labelControl1.Text = "仓库编号：";
+            this.labelControl1.Text = "区域编码：";
             // 
-            // labelControl5
+            // txtNAME
             // 
-            this.labelControl5.Location = new System.Drawing.Point(38, 167);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(60, 14);
-            this.labelControl5.TabIndex = 11;
-            this.labelControl5.Text = "仓库状态：";
-            // 
-            // txtWarehouseName
-            // 
-            this.txtWarehouseName.Location = new System.Drawing.Point(104, 78);
-            this.txtWarehouseName.Name = "txtWarehouseName";
-            this.txtWarehouseName.Size = new System.Drawing.Size(352, 20);
-            this.txtWarehouseName.TabIndex = 4;
+            this.txtNAME.Location = new System.Drawing.Point(104, 78);
+            this.txtNAME.Name = "txtNAME";
+            this.txtNAME.Size = new System.Drawing.Size(352, 20);
+            this.txtNAME.TabIndex = 4;
             // 
             // labelControl2
             // 
@@ -409,14 +374,7 @@
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(60, 14);
             this.labelControl2.TabIndex = 5;
-            this.labelControl2.Text = "仓库名称：";
-            // 
-            // txtWarehousePosition
-            // 
-            this.txtWarehousePosition.Location = new System.Drawing.Point(104, 108);
-            this.txtWarehousePosition.Name = "txtWarehousePosition";
-            this.txtWarehousePosition.Size = new System.Drawing.Size(352, 20);
-            this.txtWarehousePosition.TabIndex = 6;
+            this.labelControl2.Text = "区域名称：";
             // 
             // labelControl3
             // 
@@ -424,7 +382,7 @@
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(60, 14);
             this.labelControl3.TabIndex = 7;
-            this.labelControl3.Text = "仓库位置：";
+            this.labelControl3.Text = "仓库名称：";
             // 
             // panelControl2
             // 
@@ -475,21 +433,12 @@
             this.label2.Size = new System.Drawing.Size(0, 14);
             this.label2.TabIndex = 18;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Location = new System.Drawing.Point(480, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(452, 566);
-            this.pictureBox2.TabIndex = 21;
-            this.pictureBox2.TabStop = false;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.gcSummary, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panelControl3, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panelSearch, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -499,37 +448,20 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(942, 566);
             this.tableLayoutPanel1.TabIndex = 12;
             // 
-            // panelControl3
+            // panelSearch
             // 
-            this.panelControl3.Controls.Add(this.txt_Name);
-            this.panelControl3.Controls.Add(this.labelControl22);
-            this.panelControl3.Controls.Add(this.btnEmpty);
-            this.panelControl3.Controls.Add(this.btnQuery);
-            this.panelControl3.Controls.Add(this.labelControl26);
-            this.panelControl3.Controls.Add(this.txtSpec);
-            this.panelControl3.Controls.Add(this.pictureBox3);
-            this.panelControl3.Controls.Add(this.txtId);
-            this.panelControl3.Controls.Add(this.labelControl27);
-            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl3.Location = new System.Drawing.Point(3, 3);
-            this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(936, 54);
-            this.panelControl3.TabIndex = 11;
-            // 
-            // txt_Name
-            // 
-            this.txt_Name.Location = new System.Drawing.Point(342, 16);
-            this.txt_Name.Name = "txt_Name";
-            this.txt_Name.Size = new System.Drawing.Size(119, 20);
-            this.txt_Name.TabIndex = 27;
-            // 
-            // labelControl22
-            // 
-            this.labelControl22.Location = new System.Drawing.Point(276, 19);
-            this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(60, 14);
-            this.labelControl22.TabIndex = 28;
-            this.labelControl22.Text = "仓库名称：";
+            this.panelSearch.Controls.Add(this.S_WAREHOUSEID);
+            this.panelSearch.Controls.Add(this.btnEmpty);
+            this.panelSearch.Controls.Add(this.btnQuery);
+            this.panelSearch.Controls.Add(this.labelControl26);
+            this.panelSearch.Controls.Add(this.pictureBox3);
+            this.panelSearch.Controls.Add(this.txtId);
+            this.panelSearch.Controls.Add(this.labelControl27);
+            this.panelSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelSearch.Location = new System.Drawing.Point(3, 3);
+            this.panelSearch.Name = "panelSearch";
+            this.panelSearch.Size = new System.Drawing.Size(936, 54);
+            this.panelSearch.TabIndex = 11;
             // 
             // btnEmpty
             // 
@@ -551,18 +483,11 @@
             // 
             // labelControl26
             // 
-            this.labelControl26.Location = new System.Drawing.Point(477, 19);
+            this.labelControl26.Location = new System.Drawing.Point(339, 19);
             this.labelControl26.Name = "labelControl26";
-            this.labelControl26.Size = new System.Drawing.Size(52, 14);
+            this.labelControl26.Size = new System.Drawing.Size(28, 14);
             this.labelControl26.TabIndex = 24;
-            this.labelControl26.Text = "仓库位置:";
-            // 
-            // txtSpec
-            // 
-            this.txtSpec.Location = new System.Drawing.Point(543, 16);
-            this.txtSpec.Name = "txtSpec";
-            this.txtSpec.Size = new System.Drawing.Size(118, 20);
-            this.txtSpec.TabIndex = 15;
+            this.labelControl26.Text = "仓库:";
             // 
             // pictureBox3
             // 
@@ -583,20 +508,59 @@
             // 
             // labelControl27
             // 
-            this.labelControl27.Location = new System.Drawing.Point(75, 18);
+            this.labelControl27.Location = new System.Drawing.Point(100, 19);
             this.labelControl27.Name = "labelControl27";
-            this.labelControl27.Size = new System.Drawing.Size(60, 14);
+            this.labelControl27.Size = new System.Drawing.Size(36, 14);
             this.labelControl27.TabIndex = 16;
-            this.labelControl27.Text = "仓库编号：";
+            this.labelControl27.Text = "编码：";
             // 
-            // frmWareHouse
+            // repositoryItemLookUpEdit1
+            // 
+            this.repositoryItemLookUpEdit1.AutoHeight = false;
+            this.repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEdit1.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", "编码"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", "名称"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
+            this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
+            // 
+            // S_WAREHOUSEID
+            // 
+            this.S_WAREHOUSEID.Location = new System.Drawing.Point(389, 16);
+            this.S_WAREHOUSEID.Name = "S_WAREHOUSEID";
+            this.S_WAREHOUSEID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.S_WAREHOUSEID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", 50, "编码"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", 100, "名称"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
+            this.S_WAREHOUSEID.Properties.NullText = "";
+            this.S_WAREHOUSEID.Size = new System.Drawing.Size(143, 20);
+            this.S_WAREHOUSEID.TabIndex = 30;
+            // 
+            // lookUpEdit1
+            // 
+            this.lookUpEdit1.Location = new System.Drawing.Point(104, 108);
+            this.lookUpEdit1.Name = "lookUpEdit1";
+            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit1.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", 50, "编码"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", 100, "名称"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
+            this.lookUpEdit1.Properties.NullText = "";
+            this.lookUpEdit1.Size = new System.Drawing.Size(352, 20);
+            this.lookUpEdit1.TabIndex = 71;
+            // 
+            // frmZONE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.ClientSize = new System.Drawing.Size(948, 621);
             this.Margin = new System.Windows.Forms.Padding(3, 8, 3, 8);
-            this.Name = "frmWareHouse";
-            this.Text = "仓库资料";
-            this.Load += new System.EventHandler(this.frmWareHouse_Load);
+            this.Name = "frmZONE";
+            this.Text = "区域管理";
+            this.Load += new System.EventHandler(this.frmZONE_Load);
             this.tpSummary.ResumeLayout(false);
             this.pnlSummary.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tcBusiness)).EndInit();
@@ -616,23 +580,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtWarehouseCreateTime.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWarehouseEditor.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWarehouseEditTime.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkWarehouse_Status.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWarehouseId.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWarehouseName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWarehousePosition.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCODE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
-            this.panelControl3.ResumeLayout(false);
-            this.panelControl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_Name.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSpec.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelSearch)).EndInit();
+            this.panelSearch.ResumeLayout(false);
+            this.panelSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.S_WAREHOUSEID.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -644,27 +606,22 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gvSummary;
         private DevExpress.XtraGrid.Columns.GridColumn colCODE;
         private DevExpress.XtraGrid.Columns.GridColumn colNAME;
-        private DevExpress.XtraGrid.Columns.GridColumn colADDRESS;
-        private DevExpress.XtraGrid.Columns.GridColumn colENALBE;
+        private DevExpress.XtraGrid.Columns.GridColumn colWAREHOUSEID;
         private DevExpress.XtraGrid.Columns.GridColumn colCREATEBY;
         private DevExpress.XtraGrid.Columns.GridColumn colCREATETIME;
         private DevExpress.XtraGrid.Columns.GridColumn colMODIFYBY;
         private DevExpress.XtraGrid.Columns.GridColumn colMODIFYTIME;
         private DevExpress.XtraEditors.GroupControl gcDetailEditor;
-        private DevExpress.XtraEditors.TextEdit txtWarehouseId;
+        private DevExpress.XtraEditors.TextEdit txtCODE;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit txtWarehouseName;
+        private DevExpress.XtraEditors.TextEdit txtNAME;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit txtWarehousePosition;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private DevExpress.XtraEditors.CheckEdit chkWarehouse_Status;
         private DevExpress.XtraEditors.TextEdit txtWarehouseCreator;
         private DevExpress.XtraEditors.TextEdit txtWarehouseCreateTime;
         private DevExpress.XtraEditors.TextEdit txtWarehouseEditor;
@@ -674,15 +631,15 @@
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private DevExpress.XtraEditors.PanelControl panelControl3;
-        private DevExpress.XtraEditors.TextEdit txt_Name;
-        private DevExpress.XtraEditors.LabelControl labelControl22;
+        private DevExpress.XtraEditors.PanelControl panelSearch;
         private DevExpress.XtraEditors.SimpleButton btnEmpty;
         private DevExpress.XtraEditors.SimpleButton btnQuery;
         private DevExpress.XtraEditors.LabelControl labelControl26;
-        private DevExpress.XtraEditors.TextEdit txtSpec;
         private System.Windows.Forms.PictureBox pictureBox3;
         private DevExpress.XtraEditors.TextEdit txtId;
         private DevExpress.XtraEditors.LabelControl labelControl27;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
+        private DevExpress.XtraEditors.LookUpEdit S_WAREHOUSEID;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
     }
 }

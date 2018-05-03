@@ -79,7 +79,7 @@
     <Compile Include="BLL_DataDict\bllPerson.cs" />
     <Compile Include="BLL_DataDict\bllITME.cs" />
     <Compile Include="BLL_DataDict\bllZONE.cs" />
-    <Compile Include="BLL_DataDict\bllWMS_WareCell.cs" />
+    <Compile Include="BLL_DataDict\bllWARECELL.cs" />
     <Compile Include="BLL_DataDict\bllWAREHOUSE.cs" />
     <Compile Include="BLL_DataDict\bllPALLET.cs" />
     <Compile Include="BLL_DataDict\bllWMS_Stock.cs" />

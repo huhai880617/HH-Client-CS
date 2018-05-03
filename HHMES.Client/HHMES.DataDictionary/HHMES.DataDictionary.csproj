@@ -281,7 +281,6 @@
   <ItemGroup>
     <Content Include="Resources\48_Pallet.bmp" />
     <Content Include="Resources\48_WareCell.bmp" />
-    <Content Include="Resources\Pallet.jpg" />
     <None Include="Resources\Pallet.png" />
     <Content Include="Resources\WareCell.jpg" />
   </ItemGroup>
