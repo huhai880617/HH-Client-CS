@@ -265,10 +265,6 @@
             // 
             this.chkInUse.Location = new System.Drawing.Point(128, 127);
             this.chkInUse.Name = "chkInUse";
-            this.chkInUse.Properties.Caption = "";
-            this.chkInUse.Properties.ValueChecked = "Y";
-            this.chkInUse.Properties.ValueGrayed = "";
-            this.chkInUse.Properties.ValueUnchecked = "N";
             this.chkInUse.Size = new System.Drawing.Size(63, 19);
             this.chkInUse.TabIndex = 58;
             // 

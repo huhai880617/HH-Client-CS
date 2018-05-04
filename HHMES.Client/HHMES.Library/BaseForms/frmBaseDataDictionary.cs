@@ -168,10 +168,12 @@ namespace HHMES.Library
             bool ret = _BLL.Update(_UpdateType);//调用业务逻辑层的Update方法提交数据
             if (ret)
             {
+                
                 //只有修改状态才生成日志
                 //if (_UpdateType == UpdateType.Modify) _BLL.WriteLog(original, _BLL.DataBinder); //保存修改日志
 
-                this.UpdateSummaryRow(_BLL.DataBinder.Rows[0]); //刷新表格内的数据.                                    
+                this.UpdateSummaryRow(_BLL.DataBinder.Rows[0]); //刷新表格内的数据.    
+                                                 
                 base.DoSave(sender);
                 Msg.ShowInformation("保存成功!");
             }

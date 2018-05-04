@@ -106,6 +106,19 @@ namespace HHMES.Business.BLL_Base
             DataSet data = new DataSet();
             data.Tables.Add(_DataBinder.Copy());
 
+            // 判断公共字段 CREATEBY、CREATETIME、MODIFYBY、MODIFYTIME、ISDELETED
+            
+            if (data.Tables[0].Columns.Contains("ISDELETED")==true && data.Tables[0].Rows[0]["ISDELETED"] == DBNull.Value)
+            { data.Tables[0].Rows[0]["ISDELETED"] =false; }
+            if (data.Tables[0].Columns.Contains("CREATEBY") == true && data.Tables[0].Rows[0]["CREATEBY"] == DBNull.Value)
+            { data.Tables[0].Rows[0]["CREATEBY"] = Loginer.CurrentUser.Account; }
+            if (data.Tables[0].Columns.Contains("CREATETIME") == true && data.Tables[0].Rows[0]["CREATETIME"] == DBNull.Value)
+            { data.Tables[0].Rows[0]["CREATETIME"] = DateTime.Now; }
+            if (data.Tables[0].Columns.Contains("MODIFYBY") == true && data.Tables[0].Rows[0]["MODIFYBY"] == DBNull.Value)
+            { data.Tables[0].Rows[0]["MODIFYBY"] = Loginer.CurrentUser.Account; }
+            if (data.Tables[0].Columns.Contains("MODIFYTIME") == true && data.Tables[0].Rows[0]["MODIFYTIME"] == DBNull.Value)
+            { data.Tables[0].Rows[0]["MODIFYTIME"] = DateTime.Now; }
+
             //取当前记录的主键值
             string key = ConvertEx.ToString(_DataBinder.Rows[0][_KeyFieldName]);
 

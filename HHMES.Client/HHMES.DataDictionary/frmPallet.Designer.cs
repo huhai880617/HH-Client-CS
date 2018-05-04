@@ -299,10 +299,10 @@
             // 
             this.chkInUse.Location = new System.Drawing.Point(128, 169);
             this.chkInUse.Name = "chkInUse";
-            this.chkInUse.Properties.Caption = "启用";
-            this.chkInUse.Properties.ValueChecked = "Y";
-            this.chkInUse.Properties.ValueGrayed = "";
-            this.chkInUse.Properties.ValueUnchecked = "N";
+            //this.chkInUse.Properties.Caption = "启用";
+            //this.chkInUse.Properties.ValueChecked = "Y";
+            //this.chkInUse.Properties.ValueGrayed = "";
+            //this.chkInUse.Properties.ValueUnchecked = "N";
             this.chkInUse.Size = new System.Drawing.Size(121, 19);
             this.chkInUse.TabIndex = 58;
             // 

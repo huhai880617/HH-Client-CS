@@ -82,7 +82,9 @@ namespace HHMES.Business
             //下载小字典表数据
             _AllDataDicts = bridge.DownloadDicts();
             _DataDictType = _AllDataDicts.Tables[1];
-            string[] TableNames = new string[] { "CONFIG_DETAIL","CONFIG_HEADER","WAREHOUSE","COMPANY","PALLETSPEC","PALLET","WARECELLSPEC","WARECELL"};
+            string[] TableNames = new string[] { "CONFIG_DETAIL","CONFIG_HEADER","WAREHOUSE","COMPANY"
+                                                ,"PALLETSPEC","PALLET","WARECELLSPEC","WARECELL"
+                                                ,"ZONE","ROADWAY"};
             for (int i = 0; i < _AllDataDicts.Tables.Count; i++)
             {
                 _AllDataDicts.Tables[i].TableName = TableNames[i];

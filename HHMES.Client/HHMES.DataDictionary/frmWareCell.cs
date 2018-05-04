@@ -44,23 +44,23 @@ namespace HHMES.DataDictionary
             DataBinder.BindingLookupEditDataSource(R_ROADWAYID, DataDictCache.GetCacheTableData("ROADWAY"), "NAME", "ID");
             DataBinder.BindingLookupEditDataSource(R_STATUS_CFG, DataDictCache.GetCacheConfigData("WARECELL_STATUS"), "NAME", "ID");
             DataBinder.BindingLookupEditDataSource(R_WARECELLSPECID, DataDictCache.GetCacheTableData("WARECELLSPEC"), "NAME", "ID");
-            DataBinder.BindingLookupEditDataSource(R_ZONEID, DataDictCache.GetCacheTableData("ZONEID"), "NAME", "ID");
+            DataBinder.BindingLookupEditDataSource(R_ZONEID, DataDictCache.GetCacheTableData("ZONE"), "NAME", "ID");
 
             DataBinder.BindingLookupEditDataSource(S_PALLETID, DataDictCache.GetCacheTableData("PALLET"), "NAME", "ID");
             DataBinder.BindingLookupEditDataSource(S_ROADWAYID, DataDictCache.GetCacheTableData("ROADWAY"), "NAME", "ID");
             DataBinder.BindingLookupEditDataSource(S_STATUS_CFG, DataDictCache.GetCacheConfigData("WARECELL_STATUS"), "NAME", "ID");
             DataBinder.BindingLookupEditDataSource(S_WARECELLSPECID, DataDictCache.GetCacheTableData("WARECELLSPEC"), "NAME", "ID");
-            DataBinder.BindingLookupEditDataSource(S_ZONEID, DataDictCache.GetCacheTableData("ZONEID"), "NAME", "ID");
+            DataBinder.BindingLookupEditDataSource(S_ZONEID, DataDictCache.GetCacheTableData("ZONE"), "NAME", "ID");
 
             DataBinder.BindingLookupEditDataSource(E_PALLETID, DataDictCache.GetCacheTableData("PALLET"), "NAME", "ID");
             DataBinder.BindingLookupEditDataSource(E_ROADWAYID, DataDictCache.GetCacheTableData("ROADWAY"), "NAME", "ID");
             DataBinder.BindingLookupEditDataSource(E_STATUS_CFG, DataDictCache.GetCacheConfigData("WARECELL_STATUS"), "NAME", "ID");
             DataBinder.BindingLookupEditDataSource(E_WARECELLSPECID, DataDictCache.GetCacheTableData("WARECELLSPEC"), "NAME", "ID");
-            DataBinder.BindingLookupEditDataSource(E_ZONEID, DataDictCache.GetCacheTableData("ZONEID"), "NAME", "ID");
+            DataBinder.BindingLookupEditDataSource(E_ZONEID, DataDictCache.GetCacheTableData("ZONE"), "NAME", "ID");
             
            
             DataBinder.BindingLookupEditDataSource(P_WARECELLSPECID, DataDictCache.GetCacheTableData("WARECELLSPEC"), "NAME", "ID");
-            DataBinder.BindingLookupEditDataSource(P_ZONEID, DataDictCache.GetCacheTableData("ZONEID"), "NAME", "ID");
+            DataBinder.BindingLookupEditDataSource(P_ZONEID, DataDictCache.GetCacheTableData("ZONE"), "NAME", "ID");
 
         }
 

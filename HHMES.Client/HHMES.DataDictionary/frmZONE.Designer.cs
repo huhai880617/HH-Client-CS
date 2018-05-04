@@ -33,11 +33,13 @@
             this.colCODE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNAME = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colWAREHOUSEID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.colCREATEBY = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCREATETIME = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMODIFYBY = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMODIFYTIME = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcDetailEditor = new DevExpress.XtraEditors.GroupControl();
+            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
@@ -58,15 +60,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelSearch = new DevExpress.XtraEditors.PanelControl();
+            this.S_WAREHOUSEID = new DevExpress.XtraEditors.LookUpEdit();
             this.btnEmpty = new DevExpress.XtraEditors.SimpleButton();
             this.btnQuery = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.txtId = new DevExpress.XtraEditors.TextEdit();
+            this.S_CODE = new DevExpress.XtraEditors.TextEdit();
             this.labelControl27 = new DevExpress.XtraEditors.LabelControl();
-            this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.S_WAREHOUSEID = new DevExpress.XtraEditors.LookUpEdit();
-            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
             this.tpSummary.SuspendLayout();
             this.pnlSummary.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tcBusiness)).BeginInit();
@@ -77,8 +77,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcSummary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvSummary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcDetailEditor)).BeginInit();
             this.gcDetailEditor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWarehouseCreator.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWarehouseCreateTime.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWarehouseEditor.Properties)).BeginInit();
@@ -91,11 +93,9 @@
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelSearch)).BeginInit();
             this.panelSearch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.S_WAREHOUSEID.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.S_CODE.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tpSummary
@@ -114,7 +114,6 @@
             // tcBusiness
             // 
             this.tcBusiness.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.tcBusiness.SelectedTabPage = this.tpSummary;
             this.tcBusiness.Size = new System.Drawing.Size(948, 595);
             // 
             // tpDetail
@@ -125,7 +124,7 @@
             this.tpDetail.Controls.Add(this.label2);
             this.tpDetail.Controls.Add(this.gcDetailEditor);
             this.tpDetail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tpDetail.Size = new System.Drawing.Size(942, 566);
+            this.tpDetail.Size = new System.Drawing.Size(932, 566);
             // 
             // gcNavigator
             // 
@@ -219,6 +218,17 @@
             this.colWAREHOUSEID.VisibleIndex = 2;
             this.colWAREHOUSEID.Width = 197;
             // 
+            // repositoryItemLookUpEdit1
+            // 
+            this.repositoryItemLookUpEdit1.AutoHeight = false;
+            this.repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEdit1.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", "编码"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", "名称"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
+            this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
+            // 
             // colCREATEBY
             // 
             this.colCREATEBY.Caption = "创建者";
@@ -274,9 +284,23 @@
             this.gcDetailEditor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcDetailEditor.Location = new System.Drawing.Point(0, 0);
             this.gcDetailEditor.Name = "gcDetailEditor";
-            this.gcDetailEditor.Size = new System.Drawing.Size(942, 566);
+            this.gcDetailEditor.Size = new System.Drawing.Size(932, 566);
             this.gcDetailEditor.TabIndex = 15;
             this.gcDetailEditor.Text = "仓库名称数据维护";
+            // 
+            // lookUpEdit1
+            // 
+            this.lookUpEdit1.Location = new System.Drawing.Point(104, 108);
+            this.lookUpEdit1.Name = "lookUpEdit1";
+            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit1.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", 50, "编码"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", 100, "名称"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
+            this.lookUpEdit1.Properties.NullText = "";
+            this.lookUpEdit1.Size = new System.Drawing.Size(352, 20);
+            this.lookUpEdit1.TabIndex = 71;
             // 
             // labelControl6
             // 
@@ -455,13 +479,27 @@
             this.panelSearch.Controls.Add(this.btnQuery);
             this.panelSearch.Controls.Add(this.labelControl26);
             this.panelSearch.Controls.Add(this.pictureBox3);
-            this.panelSearch.Controls.Add(this.txtId);
+            this.panelSearch.Controls.Add(this.S_CODE);
             this.panelSearch.Controls.Add(this.labelControl27);
             this.panelSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSearch.Location = new System.Drawing.Point(3, 3);
             this.panelSearch.Name = "panelSearch";
             this.panelSearch.Size = new System.Drawing.Size(936, 54);
             this.panelSearch.TabIndex = 11;
+            // 
+            // S_WAREHOUSEID
+            // 
+            this.S_WAREHOUSEID.Location = new System.Drawing.Point(389, 16);
+            this.S_WAREHOUSEID.Name = "S_WAREHOUSEID";
+            this.S_WAREHOUSEID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.S_WAREHOUSEID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", 50, "编码"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", 100, "名称"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
+            this.S_WAREHOUSEID.Properties.NullText = "";
+            this.S_WAREHOUSEID.Size = new System.Drawing.Size(143, 20);
+            this.S_WAREHOUSEID.TabIndex = 30;
             // 
             // btnEmpty
             // 
@@ -499,12 +537,12 @@
             this.pictureBox3.TabIndex = 22;
             this.pictureBox3.TabStop = false;
             // 
-            // txtId
+            // S_CODE
             // 
-            this.txtId.Location = new System.Drawing.Point(142, 16);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(118, 20);
-            this.txtId.TabIndex = 14;
+            this.S_CODE.Location = new System.Drawing.Point(142, 16);
+            this.S_CODE.Name = "S_CODE";
+            this.S_CODE.Size = new System.Drawing.Size(118, 20);
+            this.S_CODE.TabIndex = 14;
             // 
             // labelControl27
             // 
@@ -513,45 +551,6 @@
             this.labelControl27.Size = new System.Drawing.Size(36, 14);
             this.labelControl27.TabIndex = 16;
             this.labelControl27.Text = "编码：";
-            // 
-            // repositoryItemLookUpEdit1
-            // 
-            this.repositoryItemLookUpEdit1.AutoHeight = false;
-            this.repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpEdit1.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", "编码"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", "名称"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
-            this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
-            // 
-            // S_WAREHOUSEID
-            // 
-            this.S_WAREHOUSEID.Location = new System.Drawing.Point(389, 16);
-            this.S_WAREHOUSEID.Name = "S_WAREHOUSEID";
-            this.S_WAREHOUSEID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.S_WAREHOUSEID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", 50, "编码"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", 100, "名称"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
-            this.S_WAREHOUSEID.Properties.NullText = "";
-            this.S_WAREHOUSEID.Size = new System.Drawing.Size(143, 20);
-            this.S_WAREHOUSEID.TabIndex = 30;
-            // 
-            // lookUpEdit1
-            // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(104, 108);
-            this.lookUpEdit1.Name = "lookUpEdit1";
-            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", 50, "编码"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", 100, "名称"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
-            this.lookUpEdit1.Properties.NullText = "";
-            this.lookUpEdit1.Size = new System.Drawing.Size(352, 20);
-            this.lookUpEdit1.TabIndex = 71;
             // 
             // frmZONE
             // 
@@ -573,9 +572,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcSummary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvSummary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcDetailEditor)).EndInit();
             this.gcDetailEditor.ResumeLayout(false);
             this.gcDetailEditor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWarehouseCreator.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWarehouseCreateTime.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWarehouseEditor.Properties)).EndInit();
@@ -590,11 +591,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelSearch)).EndInit();
             this.panelSearch.ResumeLayout(false);
             this.panelSearch.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.S_WAREHOUSEID.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.S_CODE.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -636,7 +635,7 @@
         private DevExpress.XtraEditors.SimpleButton btnQuery;
         private DevExpress.XtraEditors.LabelControl labelControl26;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private DevExpress.XtraEditors.TextEdit txtId;
+        private DevExpress.XtraEditors.TextEdit S_CODE;
         private DevExpress.XtraEditors.LabelControl labelControl27;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
         private DevExpress.XtraEditors.LookUpEdit S_WAREHOUSEID;

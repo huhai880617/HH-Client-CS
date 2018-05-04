@@ -124,13 +124,13 @@ namespace HHMES.DataDictionary
 
         private void btnQuery_Click(object sender, EventArgs e)
         {
-            string sql="AND ISDELETED=0 ";
-            if(txtCODE.Text!="")
+            string sql=" ";
+            if(S_CODE.Text!="")
             {
-                sql+= string.Format(" and CODE like '%{0}%' ", txtCODE.Text);
+                sql+= string.Format(" and CODE like '%{0}%' ", S_CODE.Text);
             }
             
-            if(S_WAREHOUSEID.EditValue.ToString()!="")
+            if(S_WAREHOUSEID.EditValue!=null&& S_WAREHOUSEID.EditValue.ToString()!="")
             {
                 sql+= string.Format(" and WAREHOUSEID = '{0}' ", S_WAREHOUSEID.EditValue.ToString());
             }

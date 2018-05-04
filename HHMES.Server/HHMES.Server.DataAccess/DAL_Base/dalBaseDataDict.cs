@@ -249,7 +249,7 @@ namespace HHMES.Server.DataAccess.DAL_Base
         /// <returns></returns>
         public virtual bool CheckNoExists(string keyValue)
         {
-            string sql = string.Format("SELECT COUNT(*) C FROM [{0}] WHERE [{1}]=@KEY", _TableName, _CodeName);
+            string sql = string.Format("SELECT COUNT(*) C FROM [{0}] WHERE ISDELETED=0  AND [{1}]=@KEY", _TableName, _CodeName);
             SqlCommandBase cmd = SqlBuilder.BuildSqlCommandBase(sql);
             cmd.AddParam("@KEY", SqlDbType.VarChar, keyValue);
             object o = DataProvider.Instance.ExecuteScalar(_Loginer.DBName, cmd.SqlCommand);
