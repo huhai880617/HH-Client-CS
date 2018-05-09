@@ -53,8 +53,10 @@
     <Compile Include="DAL_Business\dalWMS_BillCheck.cs" />
     <Compile Include="DAL_Business\dalWMS_BillMove.cs" />
     <Compile Include="DAL_Business\dalWMS_Task.cs" />
+    <Compile Include="DAL_DataDict\dalITEM_PALLET_CAPACITY.cs" />
     <Compile Include="DAL_DataDict\dalPORT.cs" />
     <Compile Include="DAL_DataDict\dalROADWAY.cs" />
+    <Compile Include="DAL_DataDict\dalSERIAL_NUMBER.cs" />
     <Compile Include="DAL_DataDict\dalSTACKER.cs" />
     <Compile Include="DAL_DataDict\dalWARECELLSPEC.cs" />
     <Compile Include="DAL_DataDict\dalPALLETSPEC.cs" />

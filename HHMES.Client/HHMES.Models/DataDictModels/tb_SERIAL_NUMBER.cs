@@ -32,7 +32,10 @@ namespace HHMES.Models
         public static string ID = "ID";
 
         [ORM_FieldAttribute(SqlDbType.NVarChar, 100, false, true, false, false, false)]
-        public static string PRIMARYFIELD = "PRIMARYFIELD";
+        public static string CODE = "CODE";
+
+        [ORM_FieldAttribute(SqlDbType.NVarChar, 100, false, true, false, false, false)]
+        public static string NAME = "NAME";
 
         [ORM_FieldAttribute(SqlDbType.NVarChar, 100, false, true, false, false, false)]
         public static string PREFIX = "PREFIX";

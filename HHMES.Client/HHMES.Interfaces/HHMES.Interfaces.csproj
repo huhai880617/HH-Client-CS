@@ -51,8 +51,10 @@
   <ItemGroup>
     <Compile Include="Interfaces_Bridge\IBridge_AttachFile.cs" />
     <Compile Include="Interfaces_Bridge\IBridge_CommonDAL.cs" />
+    <Compile Include="Interfaces_Bridge\IBridge_ITEM_PALLET_CAPACITY.cs" />
     <Compile Include="Interfaces_Bridge\IBridge_PORT.cs" />
     <Compile Include="Interfaces_Bridge\IBridge_ROADWAY.cs" />
+    <Compile Include="Interfaces_Bridge\IBridge_SERIAL_NUMBER.cs" />
     <Compile Include="Interfaces_Bridge\IBridge_STACKER.cs" />
     <Compile Include="Interfaces_Bridge\IBridge_WARECELLSPEC.cs" />
     <Compile Include="Interfaces_Bridge\IBridge_PALLETSPEC.cs" />

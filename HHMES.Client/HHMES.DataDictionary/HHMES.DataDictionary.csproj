@@ -74,6 +74,12 @@
     <Compile Include="frmROADWAY.Designer.cs">
       <DependentUpon>frmROADWAY.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSERIAL_NUMBER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSERIAL_NUMBER.Designer.cs">
+      <DependentUpon>frmSERIAL_NUMBER.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSTACKER.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,12 @@
     </Compile>
     <Compile Include="frmWARECELL.Designer.cs">
       <DependentUpon>frmWARECELL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmITEM_PALLET_CAPACITY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmITEM_PALLET_CAPACITY.Designer.cs">
+      <DependentUpon>frmITEM_PALLET_CAPACITY.cs</DependentUpon>
     </Compile>
     <Compile Include="frmZONE.cs">
       <SubType>Form</SubType>
@@ -175,6 +187,9 @@
     <EmbeddedResource Include="frmROADWAY.resx">
       <DependentUpon>frmROADWAY.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSERIAL_NUMBER.resx">
+      <DependentUpon>frmSERIAL_NUMBER.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSTACKER.resx">
       <DependentUpon>frmSTACKER.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTestChild.resx">
       <DependentUpon>frmTestChild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmITEM_PALLET_CAPACITY.resx">
+      <DependentUpon>frmITEM_PALLET_CAPACITY.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmZONE.resx">
       <DependentUpon>frmZONE.cs</DependentUpon>

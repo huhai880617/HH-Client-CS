@@ -151,9 +151,54 @@ namespace HHMES.DataDictionary
             MdiTools.OpenChildForm(this.MdiParent as IMdiForm, typeof(frmWARECELLSPEC), MenuItemWarecellSpec);
         }
 
+        /// <summary>
+        /// 巷道
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MenuItemRoadway_Click(object sender, EventArgs e)
         {
+            MdiTools.OpenChildForm(this.MdiParent as IMdiForm, typeof(frmROADWAY), MenuItemRoadway);
+        }
 
+        /// <summary>
+        /// 单据序列
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MenuItemSerialNumber_Click(object sender, EventArgs e)
+        {
+            MdiTools.OpenChildForm(this.MdiParent as IMdiForm, typeof(frmSERIAL_NUMBER), MenuItemSerialNumber);
+        }
+
+        /// <summary>
+        /// 库口
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MenuItemPort_Click(object sender, EventArgs e)
+        {
+            MdiTools.OpenChildForm(this.MdiParent as IMdiForm, typeof(frmPORT), MenuItemPort);
+        }
+
+        /// <summary>
+        /// 托盘容量
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MenuItemPalletCapacity_Click(object sender, EventArgs e)
+        {
+            MdiTools.OpenChildForm(this.MdiParent as IMdiForm, typeof(frmWARECELLSPEC), MenuItemWarecellSpec);
+        }
+
+        /// <summary>
+        /// 区域容量
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MenuItemZoneCapacity_Click(object sender, EventArgs e)
+        {
+            MdiTools.OpenChildForm(this.MdiParent as IMdiForm, typeof(frmWARECELLSPEC), MenuItemWarecellSpec);
         }
     }
 }

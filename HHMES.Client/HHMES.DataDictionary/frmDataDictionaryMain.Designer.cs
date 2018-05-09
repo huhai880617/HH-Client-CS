@@ -40,11 +40,11 @@ namespace HHMES.DataDictionary
             this.MenuItemZone = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemRoadway = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemPort = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuItemCustomer = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemPallet = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemPalletSpec = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemWareCell = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemWarecellSpec = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemCustomer = new System.Windows.Forms.ToolStripMenuItem();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -146,8 +146,9 @@ namespace HHMES.DataDictionary
             // MenuItemSerialNumber
             // 
             this.MenuItemSerialNumber.Name = "MenuItemSerialNumber";
-            this.MenuItemSerialNumber.Size = new System.Drawing.Size(148, 22);
+            this.MenuItemSerialNumber.Size = new System.Drawing.Size(152, 22);
             this.MenuItemSerialNumber.Text = "单据序列管理";
+            this.MenuItemSerialNumber.Click += new System.EventHandler(this.MenuItemSerialNumber_Click);
             // 
             // menuProduct
             // 
@@ -164,12 +165,14 @@ namespace HHMES.DataDictionary
             this.MenuItemPalletCapacity.Name = "MenuItemPalletCapacity";
             this.MenuItemPalletCapacity.Size = new System.Drawing.Size(152, 22);
             this.MenuItemPalletCapacity.Text = "托盘容量管理";
+            this.MenuItemPalletCapacity.Click += new System.EventHandler(this.MenuItemPalletCapacity_Click);
             // 
             // MenuItemZoneCapacity
             // 
             this.MenuItemZoneCapacity.Name = "MenuItemZoneCapacity";
             this.MenuItemZoneCapacity.Size = new System.Drawing.Size(152, 22);
             this.MenuItemZoneCapacity.Text = "水位区域管理";
+            this.MenuItemZoneCapacity.Click += new System.EventHandler(this.MenuItemZoneCapacity_Click);
             // 
             // MenuItemWarehouse
             // 
@@ -185,14 +188,14 @@ namespace HHMES.DataDictionary
             // MenuItemZone
             // 
             this.MenuItemZone.Name = "MenuItemZone";
-            this.MenuItemZone.Size = new System.Drawing.Size(152, 22);
+            this.MenuItemZone.Size = new System.Drawing.Size(124, 22);
             this.MenuItemZone.Text = "区域管理";
             this.MenuItemZone.Click += new System.EventHandler(this.MenuItemZone_Click);
             // 
             // MenuItemRoadway
             // 
             this.MenuItemRoadway.Name = "MenuItemRoadway";
-            this.MenuItemRoadway.Size = new System.Drawing.Size(152, 22);
+            this.MenuItemRoadway.Size = new System.Drawing.Size(124, 22);
             this.MenuItemRoadway.Text = "巷道管理";
             this.MenuItemRoadway.Click += new System.EventHandler(this.MenuItemRoadway_Click);
             // 
@@ -201,13 +204,7 @@ namespace HHMES.DataDictionary
             this.MenuItemPort.Name = "MenuItemPort";
             this.MenuItemPort.Size = new System.Drawing.Size(152, 22);
             this.MenuItemPort.Text = "库口管理";
-            // 
-            // menuItemCustomer
-            // 
-            this.menuItemCustomer.Name = "menuItemCustomer";
-            this.menuItemCustomer.Size = new System.Drawing.Size(152, 22);
-            this.menuItemCustomer.Text = "客户资料";
-            this.menuItemCustomer.Click += new System.EventHandler(this.menuItemCustomer_Click);
+            this.MenuItemPort.Click += new System.EventHandler(this.MenuItemPort_Click);
             // 
             // MenuItemPallet
             // 
@@ -221,7 +218,7 @@ namespace HHMES.DataDictionary
             // MenuItemPalletSpec
             // 
             this.MenuItemPalletSpec.Name = "MenuItemPalletSpec";
-            this.MenuItemPalletSpec.Size = new System.Drawing.Size(152, 22);
+            this.MenuItemPalletSpec.Size = new System.Drawing.Size(124, 22);
             this.MenuItemPalletSpec.Text = "托盘规格";
             this.MenuItemPalletSpec.Click += new System.EventHandler(this.MenuItemPalletSpec_Click);
             // 
@@ -237,9 +234,16 @@ namespace HHMES.DataDictionary
             // MenuItemWarecellSpec
             // 
             this.MenuItemWarecellSpec.Name = "MenuItemWarecellSpec";
-            this.MenuItemWarecellSpec.Size = new System.Drawing.Size(152, 22);
+            this.MenuItemWarecellSpec.Size = new System.Drawing.Size(124, 22);
             this.MenuItemWarecellSpec.Text = "货柜规格";
             this.MenuItemWarecellSpec.Click += new System.EventHandler(this.MenuItemWarecellSpec_Click);
+            // 
+            // menuItemCustomer
+            // 
+            this.menuItemCustomer.Name = "menuItemCustomer";
+            this.menuItemCustomer.Size = new System.Drawing.Size(152, 22);
+            this.menuItemCustomer.Text = "客户资料";
+            this.menuItemCustomer.Click += new System.EventHandler(this.menuItemCustomer_Click);
             // 
             // panelControl4
             // 

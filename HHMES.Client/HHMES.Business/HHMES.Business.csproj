@@ -70,8 +70,10 @@
     <Compile Include="BLL_Business\bllWMS_BillMove.cs" />
     <Compile Include="BLL_Business\bllWMS_Task.cs" />
     <Compile Include="BLL_DataDict\bllCommonDataDict.cs" />
+    <Compile Include="BLL_DataDict\bllITEM_PALLET_CAPACITY.cs" />
     <Compile Include="BLL_DataDict\bllPORT.cs" />
     <Compile Include="BLL_DataDict\bllROADWAY.cs" />
+    <Compile Include="BLL_DataDict\bllSERIAL_NUMBER.cs" />
     <Compile Include="BLL_DataDict\bllSUPPLIERCUSTOMER.cs" />
     <Compile Include="BLL_DataDict\bllNullObjectDataDict.cs">
       <SubType>Code</SubType>

@@ -79,16 +79,16 @@
             this.colBARCODE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUSERDEF01 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCLASS01 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEdit_C = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.colIQCTYPE = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEdit_W = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.colENABLE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUNIT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDAYSTOEXPIRE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEXPIRINGDAYS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMINSHELFLIFEDAYS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCOMPANYID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEdit_C = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.colWAREHOUSEID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEdit_W = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.colCREATEBY = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCREATETIME = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMODIFYBY = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -165,7 +165,7 @@
             this.tpDetail.Controls.Add(this.gcDetailEditor);
             this.tpDetail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpDetail.Padding = new System.Windows.Forms.Padding(5);
-            this.tpDetail.Size = new System.Drawing.Size(932, 564);
+            this.tpDetail.Size = new System.Drawing.Size(959, 498);
             // 
             // gcNavigator
             // 
@@ -464,7 +464,7 @@
             // 
             this.splitterControl1.Location = new System.Drawing.Point(5, 5);
             this.splitterControl1.Name = "splitterControl1";
-            this.splitterControl1.Size = new System.Drawing.Size(5, 554);
+            this.splitterControl1.Size = new System.Drawing.Size(5, 488);
             this.splitterControl1.TabIndex = 16;
             this.splitterControl1.TabStop = false;
             // 
@@ -687,18 +687,6 @@
             this.colCLASS01.VisibleIndex = 3;
             this.colCLASS01.Width = 86;
             // 
-            // repositoryItemLookUpEdit_C
-            // 
-            this.repositoryItemLookUpEdit_C.AutoHeight = false;
-            this.repositoryItemLookUpEdit_C.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpEdit_C.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", "编码"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", "名称"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
-            this.repositoryItemLookUpEdit_C.Name = "repositoryItemLookUpEdit_C";
-            this.repositoryItemLookUpEdit_C.NullText = "";
-            // 
             // colIQCTYPE
             // 
             this.colIQCTYPE.Caption = "质检属性";
@@ -707,18 +695,6 @@
             this.colIQCTYPE.Visible = true;
             this.colIQCTYPE.VisibleIndex = 4;
             this.colIQCTYPE.Width = 56;
-            // 
-            // repositoryItemLookUpEdit_W
-            // 
-            this.repositoryItemLookUpEdit_W.AutoHeight = false;
-            this.repositoryItemLookUpEdit_W.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpEdit_W.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", "编码"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", "名称"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
-            this.repositoryItemLookUpEdit_W.Name = "repositoryItemLookUpEdit_W";
-            this.repositoryItemLookUpEdit_W.NullText = "";
             // 
             // colENABLE
             // 
@@ -774,6 +750,18 @@
             this.colCOMPANYID.VisibleIndex = 11;
             this.colCOMPANYID.Width = 105;
             // 
+            // repositoryItemLookUpEdit_C
+            // 
+            this.repositoryItemLookUpEdit_C.AutoHeight = false;
+            this.repositoryItemLookUpEdit_C.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEdit_C.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", "编码"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", "名称"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
+            this.repositoryItemLookUpEdit_C.Name = "repositoryItemLookUpEdit_C";
+            this.repositoryItemLookUpEdit_C.NullText = "";
+            // 
             // colWAREHOUSEID
             // 
             this.colWAREHOUSEID.Caption = "仓库";
@@ -782,6 +770,18 @@
             this.colWAREHOUSEID.Name = "colWAREHOUSEID";
             this.colWAREHOUSEID.Visible = true;
             this.colWAREHOUSEID.VisibleIndex = 16;
+            // 
+            // repositoryItemLookUpEdit_W
+            // 
+            this.repositoryItemLookUpEdit_W.AutoHeight = false;
+            this.repositoryItemLookUpEdit_W.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEdit_W.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", "编码"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", "名称"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
+            this.repositoryItemLookUpEdit_W.Name = "repositoryItemLookUpEdit_W";
+            this.repositoryItemLookUpEdit_W.NullText = "";
             // 
             // colCREATEBY
             // 
