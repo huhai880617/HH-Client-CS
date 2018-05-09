@@ -63,9 +63,15 @@
     <Compile Include="BusinessModels\tb_WMS_StockHistory.cs" />
     <Compile Include="DataDictModels\tb_AccountIDs.cs" />
     <Compile Include="DataDictModels\tb_Currency.cs" />
+    <Compile Include="DataDictModels\tb_ITEM_PALLET_CAPACITY.cs" />
+    <Compile Include="DataDictModels\tb_ITEM_ZONE_CAPACITY.cs" />
     <Compile Include="DataDictModels\tb_Location.cs" />
     <Compile Include="DataDictModels\sys_BusinessTables.cs" />
     <Compile Include="DataDictModels\tb_PALLETSPEC.cs" />
+    <Compile Include="DataDictModels\tb_PORT.cs" />
+    <Compile Include="DataDictModels\tb_ROADWAY.cs" />
+    <Compile Include="DataDictModels\tb_SERIAL_NUMBER.cs" />
+    <Compile Include="DataDictModels\tb_STACKER.cs" />
     <Compile Include="DataDictModels\tb_WARECELL.cs" />
     <Compile Include="DataDictModels\tb_WARECELLSPEC.cs" />
     <Compile Include="DataDictModels\tb_WAREHOUSE.cs" />

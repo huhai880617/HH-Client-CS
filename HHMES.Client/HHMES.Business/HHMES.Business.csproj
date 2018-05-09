@@ -70,10 +70,13 @@
     <Compile Include="BLL_Business\bllWMS_BillMove.cs" />
     <Compile Include="BLL_Business\bllWMS_Task.cs" />
     <Compile Include="BLL_DataDict\bllCommonDataDict.cs" />
-    <Compile Include="BLL_DataDict\bllCustomer.cs" />
+    <Compile Include="BLL_DataDict\bllPORT.cs" />
+    <Compile Include="BLL_DataDict\bllROADWAY.cs" />
+    <Compile Include="BLL_DataDict\bllSUPPLIERCUSTOMER.cs" />
     <Compile Include="BLL_DataDict\bllNullObjectDataDict.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BLL_DataDict\bllSTACKER.cs" />
     <Compile Include="BLL_DataDict\bllWARECELLSPEC.cs" />
     <Compile Include="BLL_DataDict\bllPALLETSPEC.cs" />
     <Compile Include="BLL_DataDict\bllPerson.cs" />

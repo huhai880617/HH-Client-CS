@@ -145,7 +145,7 @@ namespace HHMES.Library
             {
                 btnQuery.Enabled = false;
                 Cursor.Current = Cursors.WaitCursor;
-                DataTable dt = new bllCustomer().FuzzySearch(_AttributeCodes, content);
+                DataTable dt = new bllSUPPLIERCUSTOMER().FuzzySearch(_AttributeCodes, content);
                 gvSummary.GridControl.DataSource = dt;
             }
             finally

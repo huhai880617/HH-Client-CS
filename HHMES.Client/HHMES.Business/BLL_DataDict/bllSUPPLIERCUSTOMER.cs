@@ -15,11 +15,11 @@ namespace HHMES.Business
     /// <summary>
     /// 客户资料管理业务逻辑层
     /// </summary>
-    public class bllCustomer : bllBaseDataDict
+    public class bllSUPPLIERCUSTOMER : bllBaseDataDict
     {
-        private IBridge_Customer _MyBridge; //桥接/策略接口
+        private IBridge_SUPPLIERCUSTOMER _MyBridge; //桥接/策略接口
 
-        public bllCustomer()
+        public bllSUPPLIERCUSTOMER()
         {
             _KeyFieldName = tb_SUPPLIERCUSTOMER.__KeyName; //主键字段
             _SummaryTableName = tb_SUPPLIERCUSTOMER.__TableName;//表名
@@ -32,13 +32,13 @@ namespace HHMES.Business
         /// 创建桥接通信通道
         /// </summary>
         /// <returns></returns>
-        private IBridge_Customer CreateBridge()
+        private IBridge_SUPPLIERCUSTOMER CreateBridge()
         {
             if (BridgeFactory.BridgeType == BridgeType.ADODirect)
-                return new ADODirect_Customer().GetInstance();
+                return new ADODirect_SUPPLIERCUSTOMER().GetInstance();
 
             if (BridgeFactory.BridgeType == BridgeType.WebService)
-                return new WebService_Customer();
+                return new WebService_SUPPLIERCUSTOMER();
 
             return null;
         }
@@ -52,9 +52,9 @@ namespace HHMES.Business
             return data;
         }
 
-        public DataTable GetCustomerByAttributeCodes(string attributeCodes, bool nameWithCode)
+        public DataTable GetSUPPLIERCUSTOMERByAttributeCodes(string attributeCodes, bool nameWithCode)
         {
-            return _MyBridge.GetCustomerByAttributeCodes(attributeCodes, nameWithCode);
+            return _MyBridge.GetSUPPLIERCUSTOMERByAttributeCodes(attributeCodes, nameWithCode);
         }
 
         public DataTable FuzzySearch(string content)

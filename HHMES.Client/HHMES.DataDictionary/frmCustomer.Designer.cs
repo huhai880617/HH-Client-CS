@@ -51,7 +51,7 @@
             this.colCREATEBY = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCREATETIME = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMODIFYBY = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colContactPerson = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMODIFYTIME = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcDetailEditor = new DevExpress.XtraEditors.PanelControl();
             this.lookUpEdit1_warehouse = new DevExpress.XtraEditors.LookUpEdit();
             this.lookUpEdit1_typecfg = new DevExpress.XtraEditors.LookUpEdit();
@@ -155,7 +155,7 @@
             this.tpDetail.Appearance.PageClient.BackColor = System.Drawing.SystemColors.Control;
             this.tpDetail.Appearance.PageClient.Options.UseBackColor = true;
             this.tpDetail.Controls.Add(this.gcDetailEditor);
-            this.tpDetail.Size = new System.Drawing.Size(827, 566);
+            this.tpDetail.Size = new System.Drawing.Size(932, 566);
             // 
             // gcNavigator
             // 
@@ -220,7 +220,7 @@
             this.colCREATEBY,
             this.colCREATETIME,
             this.colMODIFYBY,
-            this.colContactPerson});
+            this.colMODIFYTIME});
             this.gvSummary.GridControl = this.gcSummary;
             this.gvSummary.Name = "gvSummary";
             this.gvSummary.OptionsView.ColumnAutoWidth = false;
@@ -423,15 +423,15 @@
             this.colMODIFYBY.Visible = true;
             this.colMODIFYBY.VisibleIndex = 15;
             // 
-            // colContactPerson
+            // colMODIFYTIME
             // 
-            this.colContactPerson.Caption = "修改时间";
-            this.colContactPerson.DisplayFormat.FormatString = "yyyy-MM-dd HH:mm:ss.fff";
-            this.colContactPerson.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.colContactPerson.FieldName = "MODIFYTIME";
-            this.colContactPerson.Name = "colContactPerson";
-            this.colContactPerson.Visible = true;
-            this.colContactPerson.VisibleIndex = 16;
+            this.colMODIFYTIME.Caption = "修改时间";
+            this.colMODIFYTIME.DisplayFormat.FormatString = "yyyy-MM-dd HH:mm:ss.fff";
+            this.colMODIFYTIME.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.colMODIFYTIME.FieldName = "MODIFYTIME";
+            this.colMODIFYTIME.Name = "colMODIFYTIME";
+            this.colMODIFYTIME.Visible = true;
+            this.colMODIFYTIME.VisibleIndex = 16;
             // 
             // gcDetailEditor
             // 
@@ -469,7 +469,7 @@
             this.gcDetailEditor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcDetailEditor.Location = new System.Drawing.Point(0, 0);
             this.gcDetailEditor.Name = "gcDetailEditor";
-            this.gcDetailEditor.Size = new System.Drawing.Size(827, 566);
+            this.gcDetailEditor.Size = new System.Drawing.Size(932, 566);
             this.gcDetailEditor.TabIndex = 0;
             // 
             // lookUpEdit1_warehouse
@@ -905,7 +905,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colEmail;
         private DevExpress.XtraGrid.Columns.GridColumn colCREATETIME;
         private DevExpress.XtraGrid.Columns.GridColumn colMODIFYBY;
-        private DevExpress.XtraGrid.Columns.GridColumn colContactPerson;
+        private DevExpress.XtraGrid.Columns.GridColumn colMODIFYTIME;
         private DevExpress.XtraGrid.Columns.GridColumn colENABLE;
         private DevExpress.XtraEditors.PanelControl gcDetailEditor;
         private DevExpress.XtraEditors.TextEdit txtCode;

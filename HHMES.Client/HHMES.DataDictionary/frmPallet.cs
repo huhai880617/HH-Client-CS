@@ -27,7 +27,7 @@ namespace HHMES.DataDictionary
             InitializeComponent();
         }
 
-        private void frmPerson_Load(object sender, EventArgs e)
+        private void frmPallet_Load(object sender, EventArgs e)
         {
             this.InitializeForm();//自定义初始化操作
            
@@ -52,6 +52,8 @@ namespace HHMES.DataDictionary
             DataBinder.BindingLookupEditDataSource(lookUpEdit2, DataDictCache.GetCacheConfigData("PALLET_STATUS"), "NAME", "ID");
             DataBinder.BindingLookupEditDataSource(txtPalletStatus, DataDictCache.GetCacheConfigData("PALLET_STATUS"), "NAME", "ID");
             DataBinder.BindingLookupEditDataSource(rItemLookUpEdit_status, DataDictCache.GetCacheConfigData("PALLET_STATUS"), "NAME", "ID");
+
+            labelAdmin.Visible = Loginer.CurrentUser.IsAdmin();
         }
 
         protected override void ButtonStateChanged(UpdateType currentState)

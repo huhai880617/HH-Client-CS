@@ -16,19 +16,19 @@ namespace HHMES.Bridge.DataDictModule
     /// <summary>
     /// 客户管理的ADO Direct桥接功能
     /// </summary>
-    public class ADODirect_Customer
+    public class ADODirect_SUPPLIERCUSTOMER
     {
-        //数据层实例,实现桥接口IBridge_Customer
-        private IBridge_Customer _DAL_Instance = null;
+        //数据层实例,实现桥接口IBridge_SUPPLIERCUSTOMER
+        private IBridge_SUPPLIERCUSTOMER _DAL_Instance = null;
 
         //构造器
-        public ADODirect_Customer()
+        public ADODirect_SUPPLIERCUSTOMER()
         {
-            _DAL_Instance = new dalCustomer(Loginer.CurrentUser);
+            _DAL_Instance = new dalSUPPLIERCUSTOMER(Loginer.CurrentUser);
         }
 
         //获取桥接功能实例
-        public IBridge_Customer GetInstance()
+        public IBridge_SUPPLIERCUSTOMER GetInstance()
         {
             return _DAL_Instance;
         }
@@ -37,27 +37,27 @@ namespace HHMES.Bridge.DataDictModule
     /// <summary>
     /// 客户管理WebService桥接功能
     /// </summary>
-    public class WebService_Customer : IBridge_Customer
+    public class WebService_SUPPLIERCUSTOMER : IBridge_SUPPLIERCUSTOMER
     {
 
-        public WebService_Customer()
+        public WebService_SUPPLIERCUSTOMER()
         {
         }
 
-        #region IBridge_Customer 成员
+        #region IBridge_SUPPLIERCUSTOMER 成员
 
         public DataTable SearchBy(string Code,  string Name, string type_Cfg)
         {
             //using (DataDictServiceClient client = SoapClientFactory.CreateDataDictClient())
             //{
             //    byte[] loginTicket = WebServiceSecurity.EncryptLoginer(Loginer.CurrentUser);
-            //    byte[] receivedData = client.FuzzySearchCustomer(loginTicket,Code,  Name, type_Cfg);
+            //    byte[] receivedData = client.FuzzySearchSUPPLIERCUSTOMER(loginTicket,Code,  Name, type_Cfg);
             //    return ZipTools.DecompressionDataSet(receivedData).Tables[0];
             //}
             return null;
         }
 
-        public DataTable GetCustomerByAttributeCodes(string attributeCodes, bool nameWithCode)
+        public DataTable GetSUPPLIERCUSTOMERByAttributeCodes(string attributeCodes, bool nameWithCode)
         {
             using (DataDictServiceClient client = SoapClientFactory.CreateDataDictClient())
             {

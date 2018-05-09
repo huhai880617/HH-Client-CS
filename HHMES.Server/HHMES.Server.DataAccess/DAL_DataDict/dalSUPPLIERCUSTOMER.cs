@@ -24,9 +24,9 @@ namespace HHMES.Server.DataAccess.DAL_DataDict
     /// Customer的数据访问层
     /// </summary>
     [DefaultORM_UpdateMode(typeof(tb_SUPPLIERCUSTOMER), true)]
-    public class dalCustomer : dalBaseDataDict, IBridge_Customer
+    public class dalSUPPLIERCUSTOMER : dalBaseDataDict, IBridge_SUPPLIERCUSTOMER
     {
-        public dalCustomer(Loginer loginer)
+        public dalSUPPLIERCUSTOMER(Loginer loginer)
             : base(loginer)
         {
             _KeyName = tb_SUPPLIERCUSTOMER.__KeyName; //主键字段
@@ -68,7 +68,7 @@ namespace HHMES.Server.DataAccess.DAL_DataDict
 
         }
 
-        public DataTable GetCustomerByAttributeCodes(string attributeCodes, bool nameWithCode)
+        public DataTable GetSUPPLIERCUSTOMERByAttributeCodes(string attributeCodes, bool nameWithCode)
         {
             SqlProcedure sp = SqlBuilder.BuildSqlProcedure("sp_GetCustomerByAttributeCodes");
             sp.AddParam("@AttributeCodes", SqlDbType.VarChar, attributeCodes);

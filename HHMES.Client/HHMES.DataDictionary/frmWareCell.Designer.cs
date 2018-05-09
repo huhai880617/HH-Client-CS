@@ -70,46 +70,50 @@
             this.colNCOLUMN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNLAYER = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colREMARK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCREATEBY = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCREATETIME = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMODIFYBY = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMODIFYTIME = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcDetailEditor = new DevExpress.XtraEditors.GroupControl();
+            this.E_NLAYER = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
+            this.E_NCOLUMN = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
+            this.E_NROW = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
+            this.E_ZONEID = new DevExpress.XtraEditors.LookUpEdit();
+            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
+            this.E_WARECELLSPECID = new DevExpress.XtraEditors.LookUpEdit();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.E_ENABLE = new DevExpress.XtraEditors.CheckEdit();
+            this.E_ROADWAYID = new DevExpress.XtraEditors.LookUpEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.E_STATUS_CFG = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtCODE = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.E_PALLETID = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.E_ROADWAYID = new DevExpress.XtraEditors.LookUpEdit();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.E_ENABLE = new DevExpress.XtraEditors.CheckEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelAdmin = new DevExpress.XtraEditors.LabelControl();
             this.panelAdmin = new System.Windows.Forms.Panel();
-            this.PS_NROW = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.P_WARECELLSPECID = new DevExpress.XtraEditors.LookUpEdit();
-            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.PS_NCOLUMN = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.PS_NLAYER = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.P_ZONEID = new DevExpress.XtraEditors.LookUpEdit();
             this.PE_NLAYER = new DevExpress.XtraEditors.TextEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.PE_NCOLUMN = new DevExpress.XtraEditors.TextEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.PE_NROW = new DevExpress.XtraEditors.TextEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.E_WARECELLSPECID = new DevExpress.XtraEditors.LookUpEdit();
-            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            this.E_ZONEID = new DevExpress.XtraEditors.LookUpEdit();
-            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
-            this.E_NROW = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
-            this.E_NCOLUMN = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
-            this.E_NLAYER = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
+            this.P_ZONEID = new DevExpress.XtraEditors.LookUpEdit();
+            this.PS_NLAYER = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.PS_NCOLUMN = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.PS_NROW = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.P_WARECELLSPECID = new DevExpress.XtraEditors.LookUpEdit();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.tpSummary.SuspendLayout();
             this.pnlSummary.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tcBusiness)).BeginInit();
@@ -144,25 +148,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.R_ROADWAYID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcDetailEditor)).BeginInit();
             this.gcDetailEditor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.E_NLAYER.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.E_NCOLUMN.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.E_NROW.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.E_ZONEID.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.E_WARECELLSPECID.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.E_ENABLE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.E_ROADWAYID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.E_STATUS_CFG.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCODE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.E_PALLETID.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.E_ROADWAYID.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.E_ENABLE.Properties)).BeginInit();
             this.panelAdmin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PS_NROW.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P_WARECELLSPECID.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PS_NCOLUMN.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PS_NLAYER.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P_ZONEID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PE_NLAYER.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PE_NCOLUMN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PE_NROW.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.E_WARECELLSPECID.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.E_ZONEID.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.E_NROW.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.E_NCOLUMN.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.E_NLAYER.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P_ZONEID.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PS_NLAYER.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PS_NCOLUMN.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PS_NROW.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P_WARECELLSPECID.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tpSummary
@@ -181,7 +185,6 @@
             // tcBusiness
             // 
             this.tcBusiness.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tcBusiness.SelectedTabPage = this.tpSummary;
             this.tcBusiness.Size = new System.Drawing.Size(1104, 595);
             // 
             // tpDetail
@@ -534,7 +537,11 @@
             this.colNROW,
             this.colNCOLUMN,
             this.colNLAYER,
-            this.colREMARK});
+            this.colREMARK,
+            this.colCREATEBY,
+            this.colCREATETIME,
+            this.colMODIFYBY,
+            this.colMODIFYTIME});
             this.gvSummary.GridControl = this.gcSummary;
             this.gvSummary.Name = "gvSummary";
             this.gvSummary.OptionsView.ColumnAutoWidth = false;
@@ -568,8 +575,9 @@
             this.R_PALLETID.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.R_PALLETID.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DataCode", "编码"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NativeName", "名称")});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", 50, "编码"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", 100, "名称"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
             this.R_PALLETID.Name = "R_PALLETID";
             this.R_PALLETID.NullText = "";
             // 
@@ -606,8 +614,9 @@
             this.R_STATUS_CFG.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.R_STATUS_CFG.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DataCode", "编码"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NativeName", "名称")});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", 50, "编码"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", 100, "名称"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
             this.R_STATUS_CFG.Name = "R_STATUS_CFG";
             this.R_STATUS_CFG.NullText = "";
             // 
@@ -627,8 +636,9 @@
             this.R_WARECELLSPECID.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.R_WARECELLSPECID.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DataCode", "编码"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NativeName", "编码")});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", 50, "编码"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", 100, "名称"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
             this.R_WARECELLSPECID.Name = "R_WARECELLSPECID";
             this.R_WARECELLSPECID.NullText = "";
             // 
@@ -691,7 +701,43 @@
             this.colREMARK.FieldName = "REMARK";
             this.colREMARK.Name = "colREMARK";
             this.colREMARK.Visible = true;
-            this.colREMARK.VisibleIndex = 10;
+            this.colREMARK.VisibleIndex = 11;
+            // 
+            // colCREATEBY
+            // 
+            this.colCREATEBY.Caption = "创建者";
+            this.colCREATEBY.FieldName = "CREATEBY";
+            this.colCREATEBY.Name = "colCREATEBY";
+            this.colCREATEBY.Visible = true;
+            this.colCREATEBY.VisibleIndex = 14;
+            // 
+            // colCREATETIME
+            // 
+            this.colCREATETIME.Caption = "创建时间";
+            this.colCREATETIME.DisplayFormat.FormatString = "yyyy-MM-dd HH:mm:ss.fff";
+            this.colCREATETIME.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.colCREATETIME.FieldName = "CREATETIME";
+            this.colCREATETIME.Name = "colCREATETIME";
+            this.colCREATETIME.Visible = true;
+            this.colCREATETIME.VisibleIndex = 12;
+            // 
+            // colMODIFYBY
+            // 
+            this.colMODIFYBY.Caption = "修改者";
+            this.colMODIFYBY.FieldName = "MODIFYBY";
+            this.colMODIFYBY.Name = "colMODIFYBY";
+            this.colMODIFYBY.Visible = true;
+            this.colMODIFYBY.VisibleIndex = 10;
+            // 
+            // colMODIFYTIME
+            // 
+            this.colMODIFYTIME.Caption = "修改时间";
+            this.colMODIFYTIME.DisplayFormat.FormatString = "yyyy-MM-dd HH:mm:ss.fff";
+            this.colMODIFYTIME.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.colMODIFYTIME.FieldName = "MODIFYTIME";
+            this.colMODIFYTIME.Name = "colMODIFYTIME";
+            this.colMODIFYTIME.Visible = true;
+            this.colMODIFYTIME.VisibleIndex = 13;
             // 
             // gcDetailEditor
             // 
@@ -721,6 +767,147 @@
             this.gcDetailEditor.Size = new System.Drawing.Size(500, 566);
             this.gcDetailEditor.TabIndex = 16;
             this.gcDetailEditor.Text = "货柜存放状态明细";
+            // 
+            // E_NLAYER
+            // 
+            this.E_NLAYER.Location = new System.Drawing.Point(142, 361);
+            this.E_NLAYER.Name = "E_NLAYER";
+            this.E_NLAYER.Size = new System.Drawing.Size(119, 20);
+            this.E_NLAYER.TabIndex = 116;
+            // 
+            // labelControl20
+            // 
+            this.labelControl20.Location = new System.Drawing.Point(98, 362);
+            this.labelControl20.Name = "labelControl20";
+            this.labelControl20.Size = new System.Drawing.Size(24, 14);
+            this.labelControl20.TabIndex = 115;
+            this.labelControl20.Text = "层：";
+            // 
+            // E_NCOLUMN
+            // 
+            this.E_NCOLUMN.Location = new System.Drawing.Point(142, 322);
+            this.E_NCOLUMN.Name = "E_NCOLUMN";
+            this.E_NCOLUMN.Size = new System.Drawing.Size(119, 20);
+            this.E_NCOLUMN.TabIndex = 114;
+            // 
+            // labelControl19
+            // 
+            this.labelControl19.Location = new System.Drawing.Point(98, 323);
+            this.labelControl19.Name = "labelControl19";
+            this.labelControl19.Size = new System.Drawing.Size(24, 14);
+            this.labelControl19.TabIndex = 113;
+            this.labelControl19.Text = "列：";
+            // 
+            // E_NROW
+            // 
+            this.E_NROW.Location = new System.Drawing.Point(142, 283);
+            this.E_NROW.Name = "E_NROW";
+            this.E_NROW.Size = new System.Drawing.Size(119, 20);
+            this.E_NROW.TabIndex = 112;
+            // 
+            // labelControl18
+            // 
+            this.labelControl18.Location = new System.Drawing.Point(98, 284);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(24, 14);
+            this.labelControl18.TabIndex = 111;
+            this.labelControl18.Text = "排：";
+            // 
+            // E_ZONEID
+            // 
+            this.E_ZONEID.Location = new System.Drawing.Point(142, 88);
+            this.E_ZONEID.Name = "E_ZONEID";
+            this.E_ZONEID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.E_ZONEID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", 50, "编码"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", 100, "名称"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
+            this.E_ZONEID.Properties.ImmediatePopup = true;
+            this.E_ZONEID.Properties.NullText = "";
+            this.E_ZONEID.Properties.PopupWidth = 180;
+            this.E_ZONEID.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
+            this.E_ZONEID.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.E_ZONEID.Size = new System.Drawing.Size(120, 20);
+            this.E_ZONEID.TabIndex = 110;
+            // 
+            // labelControl17
+            // 
+            this.labelControl17.Location = new System.Drawing.Point(86, 89);
+            this.labelControl17.Name = "labelControl17";
+            this.labelControl17.Size = new System.Drawing.Size(36, 14);
+            this.labelControl17.TabIndex = 109;
+            this.labelControl17.Text = "区域：";
+            // 
+            // E_WARECELLSPECID
+            // 
+            this.E_WARECELLSPECID.Location = new System.Drawing.Point(142, 166);
+            this.E_WARECELLSPECID.Name = "E_WARECELLSPECID";
+            this.E_WARECELLSPECID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.E_WARECELLSPECID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", 80, "编码"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", 100, "名称"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
+            this.E_WARECELLSPECID.Properties.ImmediatePopup = true;
+            this.E_WARECELLSPECID.Properties.NullText = "";
+            this.E_WARECELLSPECID.Properties.PopupWidth = 180;
+            this.E_WARECELLSPECID.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
+            this.E_WARECELLSPECID.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.E_WARECELLSPECID.Size = new System.Drawing.Size(120, 20);
+            this.E_WARECELLSPECID.TabIndex = 61;
+            // 
+            // labelControl16
+            // 
+            this.labelControl16.Location = new System.Drawing.Point(62, 167);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(60, 14);
+            this.labelControl16.TabIndex = 60;
+            this.labelControl16.Text = "货柜规格：";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(62, 401);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(60, 14);
+            this.labelControl6.TabIndex = 59;
+            this.labelControl6.Text = "是否可用：";
+            // 
+            // E_ENABLE
+            // 
+            this.E_ENABLE.EditValue = true;
+            this.E_ENABLE.Location = new System.Drawing.Point(142, 400);
+            this.E_ENABLE.Name = "E_ENABLE";
+            this.E_ENABLE.Properties.Caption = "";
+            this.E_ENABLE.Size = new System.Drawing.Size(75, 19);
+            this.E_ENABLE.TabIndex = 58;
+            this.E_ENABLE.TabStop = false;
+            // 
+            // E_ROADWAYID
+            // 
+            this.E_ROADWAYID.Location = new System.Drawing.Point(142, 244);
+            this.E_ROADWAYID.Name = "E_ROADWAYID";
+            this.E_ROADWAYID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.E_ROADWAYID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", 80, "编码"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", 100, "名称"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
+            this.E_ROADWAYID.Properties.ImmediatePopup = true;
+            this.E_ROADWAYID.Properties.NullText = "";
+            this.E_ROADWAYID.Properties.PopupWidth = 180;
+            this.E_ROADWAYID.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
+            this.E_ROADWAYID.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.E_ROADWAYID.Size = new System.Drawing.Size(119, 20);
+            this.E_ROADWAYID.TabIndex = 57;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(86, 245);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(36, 14);
+            this.labelControl5.TabIndex = 56;
+            this.labelControl5.Text = "巷道：";
             // 
             // E_STATUS_CFG
             // 
@@ -789,59 +976,16 @@
             this.labelControl1.TabIndex = 50;
             this.labelControl1.Text = "托盘编号：";
             // 
-            // E_ROADWAYID
-            // 
-            this.E_ROADWAYID.Location = new System.Drawing.Point(142, 244);
-            this.E_ROADWAYID.Name = "E_ROADWAYID";
-            this.E_ROADWAYID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.E_ROADWAYID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", 80, "编码"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", 100, "名称"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
-            this.E_ROADWAYID.Properties.ImmediatePopup = true;
-            this.E_ROADWAYID.Properties.NullText = "";
-            this.E_ROADWAYID.Properties.PopupWidth = 180;
-            this.E_ROADWAYID.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
-            this.E_ROADWAYID.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.E_ROADWAYID.Size = new System.Drawing.Size(119, 20);
-            this.E_ROADWAYID.TabIndex = 57;
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Location = new System.Drawing.Point(86, 245);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(36, 14);
-            this.labelControl5.TabIndex = 56;
-            this.labelControl5.Text = "巷道：";
-            // 
-            // E_ENABLE
-            // 
-            this.E_ENABLE.EditValue = true;
-            this.E_ENABLE.Location = new System.Drawing.Point(142, 400);
-            this.E_ENABLE.Name = "E_ENABLE";
-            this.E_ENABLE.Properties.Caption = "";
-            this.E_ENABLE.Size = new System.Drawing.Size(75, 19);
-            this.E_ENABLE.TabIndex = 58;
-            this.E_ENABLE.TabStop = false;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(62, 401);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(60, 14);
-            this.labelControl6.TabIndex = 59;
-            this.labelControl6.Text = "是否可用：";
-            // 
             // labelAdmin
             // 
             this.labelAdmin.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAdmin.Appearance.ForeColor = System.Drawing.Color.Green;
-            this.labelAdmin.Location = new System.Drawing.Point(539, 3);
+            this.labelAdmin.Location = new System.Drawing.Point(522, 29);
             this.labelAdmin.Name = "labelAdmin";
             this.labelAdmin.Size = new System.Drawing.Size(88, 18);
             this.labelAdmin.TabIndex = 72;
             this.labelAdmin.Text = "批量操作>>";
+            this.labelAdmin.Click += new System.EventHandler(this.labelAdmin_Click);
             // 
             // panelAdmin
             // 
@@ -862,23 +1006,116 @@
             this.panelAdmin.Controls.Add(this.P_WARECELLSPECID);
             this.panelAdmin.Controls.Add(this.labelControl14);
             this.panelAdmin.Controls.Add(this.labelControl15);
-            this.panelAdmin.Location = new System.Drawing.Point(539, 25);
+            this.panelAdmin.Location = new System.Drawing.Point(522, 52);
             this.panelAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelAdmin.Name = "panelAdmin";
             this.panelAdmin.Size = new System.Drawing.Size(533, 270);
             this.panelAdmin.TabIndex = 71;
             this.panelAdmin.Visible = false;
             // 
+            // PE_NLAYER
+            // 
+            this.PE_NLAYER.Location = new System.Drawing.Point(368, 141);
+            this.PE_NLAYER.Name = "PE_NLAYER";
+            this.PE_NLAYER.Size = new System.Drawing.Size(58, 20);
+            this.PE_NLAYER.TabIndex = 114;
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Location = new System.Drawing.Point(309, 144);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(52, 14);
+            this.labelControl10.TabIndex = 113;
+            this.labelControl10.Text = "结束-层：";
+            // 
+            // PE_NCOLUMN
+            // 
+            this.PE_NCOLUMN.Location = new System.Drawing.Point(223, 141);
+            this.PE_NCOLUMN.Name = "PE_NCOLUMN";
+            this.PE_NCOLUMN.Size = new System.Drawing.Size(58, 20);
+            this.PE_NCOLUMN.TabIndex = 112;
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Location = new System.Drawing.Point(164, 144);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(52, 14);
+            this.labelControl12.TabIndex = 111;
+            this.labelControl12.Text = "结束-列：";
+            // 
+            // PE_NROW
+            // 
+            this.PE_NROW.Location = new System.Drawing.Point(80, 141);
+            this.PE_NROW.Name = "PE_NROW";
+            this.PE_NROW.Size = new System.Drawing.Size(58, 20);
+            this.PE_NROW.TabIndex = 110;
+            // 
+            // labelControl13
+            // 
+            this.labelControl13.Location = new System.Drawing.Point(21, 144);
+            this.labelControl13.Name = "labelControl13";
+            this.labelControl13.Size = new System.Drawing.Size(52, 14);
+            this.labelControl13.TabIndex = 109;
+            this.labelControl13.Text = "结束-排：";
+            // 
+            // P_ZONEID
+            // 
+            this.P_ZONEID.Location = new System.Drawing.Point(79, 44);
+            this.P_ZONEID.Name = "P_ZONEID";
+            this.P_ZONEID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P_ZONEID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", 50, "编码"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", 100, "名称"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
+            this.P_ZONEID.Properties.ImmediatePopup = true;
+            this.P_ZONEID.Properties.NullText = "";
+            this.P_ZONEID.Properties.PopupWidth = 180;
+            this.P_ZONEID.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
+            this.P_ZONEID.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.P_ZONEID.Size = new System.Drawing.Size(142, 20);
+            this.P_ZONEID.TabIndex = 108;
+            // 
+            // PS_NLAYER
+            // 
+            this.PS_NLAYER.Location = new System.Drawing.Point(368, 110);
+            this.PS_NLAYER.Name = "PS_NLAYER";
+            this.PS_NLAYER.Size = new System.Drawing.Size(58, 20);
+            this.PS_NLAYER.TabIndex = 107;
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Location = new System.Drawing.Point(309, 113);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(52, 14);
+            this.labelControl9.TabIndex = 106;
+            this.labelControl9.Text = "起始-层：";
+            // 
+            // PS_NCOLUMN
+            // 
+            this.PS_NCOLUMN.Location = new System.Drawing.Point(223, 110);
+            this.PS_NCOLUMN.Name = "PS_NCOLUMN";
+            this.PS_NCOLUMN.Size = new System.Drawing.Size(58, 20);
+            this.PS_NCOLUMN.TabIndex = 105;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(164, 113);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(52, 14);
+            this.labelControl7.TabIndex = 104;
+            this.labelControl7.Text = "起始-列：";
+            // 
             // PS_NROW
             // 
-            this.PS_NROW.Location = new System.Drawing.Point(80, 93);
+            this.PS_NROW.Location = new System.Drawing.Point(80, 110);
             this.PS_NROW.Name = "PS_NROW";
             this.PS_NROW.Size = new System.Drawing.Size(58, 20);
             this.PS_NROW.TabIndex = 103;
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(21, 96);
+            this.labelControl8.Location = new System.Drawing.Point(21, 113);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(52, 14);
             this.labelControl8.TabIndex = 102;
@@ -886,7 +1123,7 @@
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(329, 25);
+            this.simpleButton2.Location = new System.Drawing.Point(329, 42);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(97, 42);
             this.simpleButton2.TabIndex = 98;
@@ -895,13 +1132,14 @@
             // 
             // P_WARECELLSPECID
             // 
-            this.P_WARECELLSPECID.Location = new System.Drawing.Point(80, 58);
+            this.P_WARECELLSPECID.Location = new System.Drawing.Point(80, 75);
             this.P_WARECELLSPECID.Name = "P_WARECELLSPECID";
             this.P_WARECELLSPECID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.P_WARECELLSPECID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DataCode", 80, "编号"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NativeName", 100, "名称")});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", 50, "编码"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", 100, "名称"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
             this.P_WARECELLSPECID.Properties.ImmediatePopup = true;
             this.P_WARECELLSPECID.Properties.NullText = "";
             this.P_WARECELLSPECID.Properties.PopupWidth = 180;
@@ -912,7 +1150,7 @@
             // 
             // labelControl14
             // 
-            this.labelControl14.Location = new System.Drawing.Point(37, 29);
+            this.labelControl14.Location = new System.Drawing.Point(37, 46);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(36, 14);
             this.labelControl14.TabIndex = 69;
@@ -920,199 +1158,11 @@
             // 
             // labelControl15
             // 
-            this.labelControl15.Location = new System.Drawing.Point(13, 60);
+            this.labelControl15.Location = new System.Drawing.Point(13, 77);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(60, 14);
             this.labelControl15.TabIndex = 70;
             this.labelControl15.Text = "货柜规格：";
-            // 
-            // PS_NCOLUMN
-            // 
-            this.PS_NCOLUMN.Location = new System.Drawing.Point(223, 93);
-            this.PS_NCOLUMN.Name = "PS_NCOLUMN";
-            this.PS_NCOLUMN.Size = new System.Drawing.Size(58, 20);
-            this.PS_NCOLUMN.TabIndex = 105;
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Location = new System.Drawing.Point(164, 96);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(52, 14);
-            this.labelControl7.TabIndex = 104;
-            this.labelControl7.Text = "起始-列：";
-            // 
-            // PS_NLAYER
-            // 
-            this.PS_NLAYER.Location = new System.Drawing.Point(368, 93);
-            this.PS_NLAYER.Name = "PS_NLAYER";
-            this.PS_NLAYER.Size = new System.Drawing.Size(58, 20);
-            this.PS_NLAYER.TabIndex = 107;
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Location = new System.Drawing.Point(309, 96);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(52, 14);
-            this.labelControl9.TabIndex = 106;
-            this.labelControl9.Text = "起始-层：";
-            // 
-            // P_ZONEID
-            // 
-            this.P_ZONEID.Location = new System.Drawing.Point(79, 27);
-            this.P_ZONEID.Name = "P_ZONEID";
-            this.P_ZONEID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.P_ZONEID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DataCode", 80, "编号"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NativeName", 100, "名称")});
-            this.P_ZONEID.Properties.ImmediatePopup = true;
-            this.P_ZONEID.Properties.NullText = "";
-            this.P_ZONEID.Properties.PopupWidth = 180;
-            this.P_ZONEID.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
-            this.P_ZONEID.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.P_ZONEID.Size = new System.Drawing.Size(142, 20);
-            this.P_ZONEID.TabIndex = 108;
-            // 
-            // PE_NLAYER
-            // 
-            this.PE_NLAYER.Location = new System.Drawing.Point(368, 124);
-            this.PE_NLAYER.Name = "PE_NLAYER";
-            this.PE_NLAYER.Size = new System.Drawing.Size(58, 20);
-            this.PE_NLAYER.TabIndex = 114;
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Location = new System.Drawing.Point(309, 127);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(52, 14);
-            this.labelControl10.TabIndex = 113;
-            this.labelControl10.Text = "结束-层：";
-            // 
-            // PE_NCOLUMN
-            // 
-            this.PE_NCOLUMN.Location = new System.Drawing.Point(223, 124);
-            this.PE_NCOLUMN.Name = "PE_NCOLUMN";
-            this.PE_NCOLUMN.Size = new System.Drawing.Size(58, 20);
-            this.PE_NCOLUMN.TabIndex = 112;
-            // 
-            // labelControl12
-            // 
-            this.labelControl12.Location = new System.Drawing.Point(164, 127);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(52, 14);
-            this.labelControl12.TabIndex = 111;
-            this.labelControl12.Text = "结束-列：";
-            // 
-            // PE_NROW
-            // 
-            this.PE_NROW.Location = new System.Drawing.Point(80, 124);
-            this.PE_NROW.Name = "PE_NROW";
-            this.PE_NROW.Size = new System.Drawing.Size(58, 20);
-            this.PE_NROW.TabIndex = 110;
-            // 
-            // labelControl13
-            // 
-            this.labelControl13.Location = new System.Drawing.Point(21, 127);
-            this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(52, 14);
-            this.labelControl13.TabIndex = 109;
-            this.labelControl13.Text = "结束-排：";
-            // 
-            // E_WARECELLSPECID
-            // 
-            this.E_WARECELLSPECID.Location = new System.Drawing.Point(142, 166);
-            this.E_WARECELLSPECID.Name = "E_WARECELLSPECID";
-            this.E_WARECELLSPECID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.E_WARECELLSPECID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", 80, "编码"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", 100, "名称"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
-            this.E_WARECELLSPECID.Properties.ImmediatePopup = true;
-            this.E_WARECELLSPECID.Properties.NullText = "";
-            this.E_WARECELLSPECID.Properties.PopupWidth = 180;
-            this.E_WARECELLSPECID.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
-            this.E_WARECELLSPECID.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.E_WARECELLSPECID.Size = new System.Drawing.Size(120, 20);
-            this.E_WARECELLSPECID.TabIndex = 61;
-            // 
-            // labelControl16
-            // 
-            this.labelControl16.Location = new System.Drawing.Point(62, 167);
-            this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(60, 14);
-            this.labelControl16.TabIndex = 60;
-            this.labelControl16.Text = "货柜规格：";
-            // 
-            // E_ZONEID
-            // 
-            this.E_ZONEID.Location = new System.Drawing.Point(142, 88);
-            this.E_ZONEID.Name = "E_ZONEID";
-            this.E_ZONEID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.E_ZONEID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DataCode", 80, "编号"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NativeName", 100, "名称")});
-            this.E_ZONEID.Properties.ImmediatePopup = true;
-            this.E_ZONEID.Properties.NullText = "";
-            this.E_ZONEID.Properties.PopupWidth = 180;
-            this.E_ZONEID.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
-            this.E_ZONEID.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.E_ZONEID.Size = new System.Drawing.Size(120, 20);
-            this.E_ZONEID.TabIndex = 110;
-            // 
-            // labelControl17
-            // 
-            this.labelControl17.Location = new System.Drawing.Point(86, 89);
-            this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(36, 14);
-            this.labelControl17.TabIndex = 109;
-            this.labelControl17.Text = "区域：";
-            // 
-            // E_NROW
-            // 
-            this.E_NROW.Location = new System.Drawing.Point(142, 283);
-            this.E_NROW.Name = "E_NROW";
-            this.E_NROW.Size = new System.Drawing.Size(119, 20);
-            this.E_NROW.TabIndex = 112;
-            // 
-            // labelControl18
-            // 
-            this.labelControl18.Location = new System.Drawing.Point(98, 284);
-            this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(24, 14);
-            this.labelControl18.TabIndex = 111;
-            this.labelControl18.Text = "排：";
-            // 
-            // E_NCOLUMN
-            // 
-            this.E_NCOLUMN.Location = new System.Drawing.Point(142, 322);
-            this.E_NCOLUMN.Name = "E_NCOLUMN";
-            this.E_NCOLUMN.Size = new System.Drawing.Size(119, 20);
-            this.E_NCOLUMN.TabIndex = 114;
-            // 
-            // labelControl19
-            // 
-            this.labelControl19.Location = new System.Drawing.Point(98, 323);
-            this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(24, 14);
-            this.labelControl19.TabIndex = 113;
-            this.labelControl19.Text = "列：";
-            // 
-            // E_NLAYER
-            // 
-            this.E_NLAYER.Location = new System.Drawing.Point(142, 361);
-            this.E_NLAYER.Name = "E_NLAYER";
-            this.E_NLAYER.Size = new System.Drawing.Size(119, 20);
-            this.E_NLAYER.TabIndex = 116;
-            // 
-            // labelControl20
-            // 
-            this.labelControl20.Location = new System.Drawing.Point(98, 362);
-            this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(24, 14);
-            this.labelControl20.TabIndex = 115;
-            this.labelControl20.Text = "层：";
             // 
             // frmWARECELL
             // 
@@ -1160,26 +1210,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.gcDetailEditor)).EndInit();
             this.gcDetailEditor.ResumeLayout(false);
             this.gcDetailEditor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.E_NLAYER.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.E_NCOLUMN.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.E_NROW.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.E_ZONEID.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.E_WARECELLSPECID.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.E_ENABLE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.E_ROADWAYID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.E_STATUS_CFG.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCODE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.E_PALLETID.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.E_ROADWAYID.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.E_ENABLE.Properties)).EndInit();
             this.panelAdmin.ResumeLayout(false);
             this.panelAdmin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PS_NROW.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P_WARECELLSPECID.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PS_NCOLUMN.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PS_NLAYER.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P_ZONEID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PE_NLAYER.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PE_NCOLUMN.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PE_NROW.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.E_WARECELLSPECID.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.E_ZONEID.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.E_NROW.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.E_NCOLUMN.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.E_NLAYER.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P_ZONEID.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PS_NLAYER.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PS_NCOLUMN.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PS_NROW.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P_WARECELLSPECID.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1209,6 +1259,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn colNROW;
         private DevExpress.XtraGrid.Columns.GridColumn colNCOLUMN;
         private DevExpress.XtraGrid.Columns.GridColumn colNLAYER;
+        private DevExpress.XtraGrid.Columns.GridColumn colCREATEBY;
+        private DevExpress.XtraGrid.Columns.GridColumn colCREATETIME;
+        private DevExpress.XtraGrid.Columns.GridColumn colMODIFYTIME;
+        private DevExpress.XtraGrid.Columns.GridColumn colMODIFYBY;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit R_PALLETID;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit R_STATUS_CFG;

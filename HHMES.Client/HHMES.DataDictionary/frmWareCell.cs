@@ -62,6 +62,7 @@ namespace HHMES.DataDictionary
             DataBinder.BindingLookupEditDataSource(P_WARECELLSPECID, DataDictCache.GetCacheTableData("WARECELLSPEC"), "NAME", "ID");
             DataBinder.BindingLookupEditDataSource(P_ZONEID, DataDictCache.GetCacheTableData("ZONE"), "NAME", "ID");
 
+            labelAdmin.Visible = Loginer.CurrentUser.IsAdmin();
         }
 
         protected override void ButtonStateChanged(UpdateType currentState)
@@ -197,7 +198,7 @@ namespace HHMES.DataDictionary
 
         private void labelAdmin_Click(object sender, EventArgs e)
         {
-            if (Loginer.CurrentUser.Account.ToUpper() == ("Admin").ToUpper())
+            if (Loginer.CurrentUser.Account.ToUpper() == ("ADMIN").ToUpper())
             {
                 if (labelAdmin.Text == "批量操作>>")
                 {

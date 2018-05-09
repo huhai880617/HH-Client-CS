@@ -70,7 +70,7 @@
       <Name>HHMES.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\HHMES.Interfaces\HHMES.Interfaces.csproj">
-      <Project>{E96FA431-A247-49F3-892B-03E411957180}</Project>
+      <Project>{e96fa431-a247-49f3-892b-03e411957180}</Project>
       <Name>HHMES.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>

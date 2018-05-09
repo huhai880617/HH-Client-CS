@@ -39,6 +39,10 @@
             this.colPRINTCOUNT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colENABLE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colREMARK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCREATEBY = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCREATETIME = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMODIFYBY = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMODIFYTIME = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtCode = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -117,6 +121,10 @@
             this.tpSummary.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.tpSummary.Size = new System.Drawing.Size(932, 566);
             // 
+            // tcBusiness
+            // 
+            this.tcBusiness.SelectedTabPage = this.tpSummary;
+            // 
             // tpDetail
             // 
             this.tpDetail.Appearance.PageClient.BackColor = System.Drawing.SystemColors.Control;
@@ -172,7 +180,11 @@
             this.colUSECOUNT,
             this.colPRINTCOUNT,
             this.colENABLE,
-            this.colREMARK});
+            this.colREMARK,
+            this.colCREATEBY,
+            this.colCREATETIME,
+            this.colMODIFYBY,
+            this.colMODIFYTIME});
             this.gvSummary.GridControl = this.gcSummary;
             this.gvSummary.Name = "gvSummary";
             this.gvSummary.OptionsView.ColumnAutoWidth = false;
@@ -264,6 +276,42 @@
             this.colREMARK.Visible = true;
             this.colREMARK.VisibleIndex = 4;
             // 
+            // colCREATEBY
+            // 
+            this.colCREATEBY.Caption = "创建者";
+            this.colCREATEBY.FieldName = "CREATEBY";
+            this.colCREATEBY.Name = "colCREATEBY";
+            this.colCREATEBY.Visible = true;
+            this.colCREATEBY.VisibleIndex = 7;
+            // 
+            // colCREATETIME
+            // 
+            this.colCREATETIME.Caption = "创建时间";
+            this.colCREATETIME.DisplayFormat.FormatString = "yyyy-MM-dd HH:mm:ss.fff";
+            this.colCREATETIME.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.colCREATETIME.FieldName = "CREATETIME";
+            this.colCREATETIME.Name = "colCREATETIME";
+            this.colCREATETIME.Visible = true;
+            this.colCREATETIME.VisibleIndex = 10;
+            // 
+            // colMODIFYBY
+            // 
+            this.colMODIFYBY.Caption = "修改者";
+            this.colMODIFYBY.FieldName = "MODIFYBY";
+            this.colMODIFYBY.Name = "colMODIFYBY";
+            this.colMODIFYBY.Visible = true;
+            this.colMODIFYBY.VisibleIndex = 9;
+            // 
+            // colMODIFYTIME
+            // 
+            this.colMODIFYTIME.Caption = "修改时间";
+            this.colMODIFYTIME.DisplayFormat.FormatString = "yyyy-MM-dd HH:mm:ss.fff";
+            this.colMODIFYTIME.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.colMODIFYTIME.FieldName = "MODIFYTIME";
+            this.colMODIFYTIME.Name = "colMODIFYTIME";
+            this.colMODIFYTIME.Visible = true;
+            this.colMODIFYTIME.VisibleIndex = 8;
+            // 
             // txtCode
             // 
             this.txtCode.Location = new System.Drawing.Point(128, 50);
@@ -299,10 +347,7 @@
             // 
             this.chkInUse.Location = new System.Drawing.Point(128, 169);
             this.chkInUse.Name = "chkInUse";
-            //this.chkInUse.Properties.Caption = "启用";
-            //this.chkInUse.Properties.ValueChecked = "Y";
-            //this.chkInUse.Properties.ValueGrayed = "";
-            //this.chkInUse.Properties.ValueUnchecked = "N";
+            this.chkInUse.Properties.Caption = "";
             this.chkInUse.Size = new System.Drawing.Size(121, 19);
             this.chkInUse.TabIndex = 58;
             // 
@@ -436,8 +481,9 @@
             this.txtPalletStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtPalletStatus.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DataCode", 50, "编号"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NativeName", 100, "名称")});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", 50, "编码"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", 50, "标识"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", 100, "名称")});
             this.txtPalletStatus.Properties.NullText = "";
             this.txtPalletStatus.Size = new System.Drawing.Size(114, 20);
             this.txtPalletStatus.TabIndex = 31;
@@ -522,6 +568,7 @@
             this.labelAdmin.Size = new System.Drawing.Size(88, 18);
             this.labelAdmin.TabIndex = 70;
             this.labelAdmin.Text = "批量操作>>";
+            this.labelAdmin.Click += new System.EventHandler(this.labelAdmin_Click);
             // 
             // panelAdmin
             // 
@@ -585,8 +632,9 @@
             this.lookUpEdit8.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookUpEdit8.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DataCode", 80, "编号"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NativeName", 100, "名称")});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CODE", 50, "编码"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NAME", 100, "名称"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "标识")});
             this.lookUpEdit8.Properties.ImmediatePopup = true;
             this.lookUpEdit8.Properties.NullText = "";
             this.lookUpEdit8.Properties.PopupWidth = 180;
@@ -618,7 +666,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 8, 3, 8);
             this.Name = "frmPallet";
             this.Text = "托盘资料";
-            this.Load += new System.EventHandler(this.frmPerson_Load);
+            this.Load += new System.EventHandler(this.frmPallet_Load);
             this.tpSummary.ResumeLayout(false);
             this.pnlSummary.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tcBusiness)).EndInit();
@@ -710,5 +758,9 @@
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraEditors.LabelControl labelControl15;
         private DevExpress.XtraGrid.Columns.GridColumn colUSECOUNT;
+        private DevExpress.XtraGrid.Columns.GridColumn colCREATEBY;
+        private DevExpress.XtraGrid.Columns.GridColumn colCREATETIME;
+        private DevExpress.XtraGrid.Columns.GridColumn colMODIFYTIME;
+        private DevExpress.XtraGrid.Columns.GridColumn colMODIFYBY;
     }
 }

@@ -62,6 +62,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPORT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPORT.Designer.cs">
+      <DependentUpon>frmPORT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmROADWAY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmROADWAY.Designer.cs">
+      <DependentUpon>frmROADWAY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSTACKER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSTACKER.Designer.cs">
+      <DependentUpon>frmSTACKER.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmWARECELLSPEC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +168,15 @@
     <EmbeddedResource Include="frmDataDictionaryMain.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmDataDictionaryMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPORT.resx">
+      <DependentUpon>frmPORT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmROADWAY.resx">
+      <DependentUpon>frmROADWAY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSTACKER.resx">
+      <DependentUpon>frmSTACKER.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmWARECELLSPEC.resx">
       <DependentUpon>frmWARECELLSPEC.cs</DependentUpon>

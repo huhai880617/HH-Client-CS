@@ -115,7 +115,7 @@ namespace HHMES.Library.UserControls
         /// </summary>
         public void DoRetriveData()
         {
-            DataTable data = new bllCustomer().GetCustomerByAttributeCodes(_AttributeCodes, _NameWithCode);
+            DataTable data = new bllSUPPLIERCUSTOMER().GetSUPPLIERCUSTOMERByAttributeCodes(_AttributeCodes, _NameWithCode);
             this.DoBindingDataSource(data);
         }
 

@@ -132,7 +132,7 @@
             this.tpDetail.Controls.Add(this.label2);
             this.tpDetail.Controls.Add(this.gcDetailEditor);
             this.tpDetail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tpDetail.Size = new System.Drawing.Size(932, 566);
+            this.tpDetail.Size = new System.Drawing.Size(942, 566);
             // 
             // gcNavigator
             // 
@@ -367,9 +367,6 @@
             this.chkWarehouse_Status.Location = new System.Drawing.Point(102, 167);
             this.chkWarehouse_Status.Name = "chkWarehouse_Status";
             this.chkWarehouse_Status.Properties.Caption = "在用状态";
-            //this.chkWarehouse_Status.Properties.ValueChecked = "1";
-            //this.chkWarehouse_Status.Properties.ValueGrayed = "";
-            //this.chkWarehouse_Status.Properties.ValueUnchecked = "0";
             this.chkWarehouse_Status.Size = new System.Drawing.Size(166, 19);
             this.chkWarehouse_Status.TabIndex = 59;
             // 
@@ -480,7 +477,7 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Location = new System.Drawing.Point(480, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(452, 566);
+            this.pictureBox2.Size = new System.Drawing.Size(462, 566);
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
             // 
@@ -589,12 +586,12 @@
             this.labelControl27.TabIndex = 16;
             this.labelControl27.Text = "仓库编号：";
             // 
-            // frmWareHouse
+            // frmWAREHOUSE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.ClientSize = new System.Drawing.Size(948, 621);
             this.Margin = new System.Windows.Forms.Padding(3, 8, 3, 8);
-            this.Name = "frmWareHouse";
+            this.Name = "frmWAREHOUSE";
             this.Text = "仓库资料";
             this.Load += new System.EventHandler(this.frmWareHouse_Load);
             this.tpSummary.ResumeLayout(false);

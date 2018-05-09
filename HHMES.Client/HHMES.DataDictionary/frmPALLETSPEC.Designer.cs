@@ -54,6 +54,10 @@
             this.colLENGTH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPREFIX = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNAME = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCREATEBY = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCREATETIME = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMODIFYTIME = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMODIFYBY = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtRemark = new DevExpress.XtraEditors.TextEdit();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -166,7 +170,11 @@
             this.colVOLUME,
             this.colTYPE,
             this.colENABLE,
-            this.colREMARK});
+            this.colREMARK,
+            this.colCREATEBY,
+            this.colCREATETIME,
+            this.colMODIFYBY,
+            this.colMODIFYTIME});
             this.gvSummary.GridControl = this.gcSummary;
             this.gvSummary.Name = "gvSummary";
             this.gvSummary.OptionsView.ColumnAutoWidth = false;
@@ -344,6 +352,44 @@
             this.labelControl27.Size = new System.Drawing.Size(36, 14);
             this.labelControl27.TabIndex = 16;
             this.labelControl27.Text = "编号：";
+
+
+            // 
+            // colCREATEBY
+            // 
+            this.colCREATEBY.Caption = "创建者";
+            this.colCREATEBY.FieldName = "CREATEBY";
+            this.colCREATEBY.Name = "colCREATEBY";
+            this.colCREATEBY.Visible = true;
+            this.colCREATEBY.VisibleIndex = 12;
+            // 
+            // colCREATETIME
+            // 
+            this.colCREATETIME.Caption = "创建时间";
+            this.colCREATETIME.DisplayFormat.FormatString = "yyyy-MM-dd HH:mm:ss.fff";
+            this.colCREATETIME.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.colCREATETIME.FieldName = "CREATETIME";
+            this.colCREATETIME.Name = "colCREATETIME";
+            this.colCREATETIME.Visible = true;
+            this.colCREATETIME.VisibleIndex = 10;
+            // 
+            // colMODIFYBY
+            // 
+            this.colMODIFYBY.Caption = "修改者";
+            this.colMODIFYBY.FieldName = "MODIFYBY";
+            this.colMODIFYBY.Name = "colMODIFYBY";
+            this.colMODIFYBY.Visible = true;
+            this.colMODIFYBY.VisibleIndex = 9;
+            // 
+            // colMODIFYTIME
+            // 
+            this.colMODIFYTIME.Caption = "修改时间";
+            this.colMODIFYTIME.DisplayFormat.FormatString = "yyyy-MM-dd HH:mm:ss.fff";
+            this.colMODIFYTIME.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.colMODIFYTIME.FieldName = "MODIFYTIME";
+            this.colMODIFYTIME.Name = "colMODIFYTIME";
+            this.colMODIFYTIME.Visible = true;
+            this.colMODIFYTIME.VisibleIndex = 11;
             // 
             // colVOLUME
             // 
@@ -542,7 +588,7 @@
             this.ClientSize = new System.Drawing.Size(938, 621);
             this.Margin = new System.Windows.Forms.Padding(3, 8, 3, 8);
             this.Name = "frmPALLETSPEC";
-            this.Text = "托盘资料";
+            this.Text = "托盘规格";
             this.Load += new System.EventHandler(this.frmPALLETSPEC_Load);
             this.tpSummary.ResumeLayout(false);
             this.pnlSummary.ResumeLayout(false);
@@ -611,6 +657,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn colWEIGHT;
         private DevExpress.XtraGrid.Columns.GridColumn colVOLUME;
         private DevExpress.XtraGrid.Columns.GridColumn colTYPE;
+        private DevExpress.XtraGrid.Columns.GridColumn colCREATEBY;
+        private DevExpress.XtraGrid.Columns.GridColumn colCREATETIME;
+        private DevExpress.XtraGrid.Columns.GridColumn colMODIFYTIME;
+        private DevExpress.XtraGrid.Columns.GridColumn colMODIFYBY;
         private DevExpress.XtraEditors.TextEdit txtVolume;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.TextEdit txtWeight;

@@ -19,7 +19,7 @@ namespace HHMES.DataDictionary
     /// </summary>
     public partial class frmCustomer : frmBaseDataDictionary
     {
-        private bllCustomer _BllCustomer; //业务逻辑层对象引用
+        private bllSUPPLIERCUSTOMER _BllCustomer; //业务逻辑层对象引用
 
         public frmCustomer()
         {
@@ -37,8 +37,8 @@ namespace HHMES.DataDictionary
             _ActiveEditor = txtCode;
             _KeyEditor = txtCode;
             _DetailGroupControl = gcDetailEditor;
-            _BLL = new bllCustomer(); //业务逻辑实例
-            _BllCustomer = _BLL as bllCustomer; //本窗体引用
+            _BLL = new bllSUPPLIERCUSTOMER(); //业务逻辑实例
+            _BllCustomer = _BLL as bllSUPPLIERCUSTOMER; //本窗体引用
 
             base.InitializeForm();
 

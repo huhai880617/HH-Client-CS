@@ -75,9 +75,12 @@
     <Compile Include="BridgeFactory.cs" />
     <Compile Include="CommonData_Bridge.cs" />
     <Compile Include="DataDictModule\CommonDataDict_Bridge.cs" />
-    <Compile Include="DataDictModule\Customer_Bridge.cs" />
+    <Compile Include="DataDictModule\PORT_Bridge.cs" />
+    <Compile Include="DataDictModule\ROADWAY_Bridge.cs" />
+    <Compile Include="DataDictModule\SUPPLIERCUSTOMER_Bridge.cs" />
     <Compile Include="DataDictModule\DataDict_Bridge.cs" />
     <Compile Include="DataDictModule\ITEM_Bridge.cs" />
+    <Compile Include="DataDictModule\STACKER_Bridge.cs" />
     <Compile Include="DataDictModule\WARECELLSPEC_Bridge.cs" />
     <Compile Include="DataDictModule\PALLETSPEC_Bridge.cs" />
     <Compile Include="DataDictModule\ZONE_Bridge.cs" />

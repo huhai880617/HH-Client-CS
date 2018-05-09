@@ -214,21 +214,6 @@
     <Compile Include="UserControls\ucConveyorG.Designer.cs">
       <DependentUpon>ucConveyorG.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ucDT_CustomerEditor.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="UserControls\ucDT_CustomerLookup.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\ucDT_CustomerLookup.Designer.cs">
-      <DependentUpon>ucDT_CustomerLookup.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\ucDT_UserLookup.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\ucDT_UserLookup.Designer.cs">
-      <DependentUpon>ucDT_UserLookup.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\ucValueEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -347,13 +332,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucConveyorG.resx">
       <DependentUpon>ucConveyorG.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucDT_CustomerLookup.resx">
-      <DependentUpon>ucDT_CustomerLookup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucDT_UserLookup.resx">
-      <DependentUpon>ucDT_UserLookup.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucValueEdit.resx">
       <DependentUpon>ucValueEdit.cs</DependentUpon>
